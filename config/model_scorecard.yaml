@@ -1,0 +1,18 @@
+version: "0.1.0"
+weights:
+  oos_rmse: 0.25
+  oos_mae: 0.15
+  directional_accuracy: 0.10
+  turning_point_accuracy: 0.15
+  regime_shock_robustness: 0.10
+  stability: 0.10
+  interpretability: 0.075
+  operational_data_burden: 0.05
+  ease_of_updating: 0.025
+constraints:
+  primary_target: headline_ppi_mom
+  no_random_split: true
+  preprocessing_inside_fold: true
+  compare_strict_and_harmonized_panels: true
+  report_maximum_forecast_miss: true
+

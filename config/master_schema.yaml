@@ -1,0 +1,75 @@
+schema_version: "0.1.0"
+timezone: "Asia/Shanghai"
+currency: "CNY"
+
+id_rules:
+  observation_id: "sha256(source_release_id|source_row_number|raw_product_name|specification|original_unit)"
+  source_release_id: "sha256(canonical_source_url|publication_datetime|reference_period_start|reference_period_end|vintage)"
+  exact_product_id: "EP_<stable curated slug>_<8-char hash of normalized Chinese name/spec/unit>"
+  harmonized_product_id: "HP_<stable curated slug>"
+  product_family_id: "PF_<stable curated slug>"
+  category_id: "CAT_<stable curated slug>"
+  ppi_industry_id: "PPI_<official classification code or curated stable slug>"
+  event_id: "EV_<start-date>_<stable slug>_<8-char hash>"
+  model_run_id: "MR_<UTC timestamp>_<git SHA or source snapshot hash>"
+
+required_time_semantics:
+  publication_datetime: "Actual publication timestamp when known; otherwise date with precision field"
+  available_at: "Earliest timestamp the value could enter a real-time forecast"
+  reference_period_start: "First date represented by the observation"
+  reference_period_end: "Last date represented by the observation"
+  target_month: "Calendar month whose PPI is forecast"
+  vintage: "Exact source version; never overwritten by a later revision"
+
+comparability_types:
+  - identical
+  - directly_comparable
+  - comparable_with_scaling
+  - partially_comparable
+  - successor_predecessor
+  - non_comparable
+
+link_confidence:
+  high: 0.85
+  medium: 0.60
+  low: 0.30
+
+observation_status:
+  - observed
+  - source_missing
+  - suppressed
+  - not_in_basket
+  - parse_failed
+  - duplicate
+  - revised
+
+nowcast_vintages:
+  early:
+    rule: "Only data available after the first ten-day release"
+  mid:
+    rule: "Only data available after the second ten-day release"
+  final:
+    rule: "Latest circulation-price release available before official PPI publication"
+
+weight_variants:
+  - equal_product
+  - equal_category
+  - industry_output
+  - ppi_relevance
+  - predictive
+  - hybrid
+
+shock_scenarios:
+  - baseline
+  - robust
+  - shock_adjusted
+
+regimes:
+  - persistent_structural_uplift
+  - elevated_level_reacceleration
+  - cyclical_rebound
+  - shock_normalization
+  - persistent_weakness
+  - policy_induced_repricing
+  - mixed_uncertain
+

@@ -1,0 +1,58 @@
+name: Update China PPI nowcasts
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/**', 'src/**', 'tests/**', 'pyproject.toml', '.github/workflows/**', 'seed/**']
+  schedule:
+    - cron: '17 2 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: ppi-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONPATH: src
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -e '.[dev]'
+      - name: Restore data and previous fitted models
+        run: |
+          mkdir -p restore
+          if gh release view --json tagName > restore/latest.json 2>/dev/null; then
+            gh release download --pattern state.zip --dir restore
+          else
+            cat seed/state.zip.part* > restore/state.zip
+          fi
+          python -m zipfile -e restore/state.zip .
+      - run: python -m pytest -q
+      - name: Collect official releases and update forecasts
+        run: python scripts/v2_update.py --refresh
+      - name: Record actual execution timestamp and model hashes
+        run: python scripts/v4_archive.py
+      - name: Preserve durable release snapshot
+        run: |
+          python scripts/deployment_state.py state.zip
+          python -m zipfile -c audit.zip data/prospective
+          tag="nowcast-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          gh release create "$tag" state.zip audit.zip reports/v4/China_PPI_Survey_Aligned.html --title "PPI snapshot $tag" --notes "Timestamped automated execution. Historical backtests remain retrospective. See audit.zip for actual registration times and SHA-256 manifests."
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: china-ppi-${{ github.run_id }}
+          path: |
+            reports/v4/
+            data/v4/live*csv
+            data/v2/runs/*/manifest.json
+          retention-days: 90
