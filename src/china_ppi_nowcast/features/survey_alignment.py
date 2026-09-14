@@ -110,6 +110,17 @@ def build_feature_vintage(
     vintage = target_vintage(target_month, windows)
     if vintage == "not_ready":
         raise ValueError("target month lacks prior 21-end carry and current 1-10 release")
+    relevant_windows = {
+        (str(month - 2), Window.THIRD.value),
+        (str(month - 1), Window.FIRST.value),
+        (str(month - 1), Window.SECOND.value),
+        (str(month - 1), Window.THIRD.value),
+        (str(month), Window.FIRST.value),
+        (str(month), Window.SECOND.value),
+    }
+    available = available[
+        pd.Series(list(zip(available["release_month"], available["window"])), index=available.index).isin(relevant_windows)
+    ].copy()
     table = _log_price_table(available)
     current_level, current_components = _month_log_level(
         table, month, carry_weight, allow_first_only=vintage == "early"

@@ -183,7 +183,7 @@ def parse_ppi_page(content: bytes, url: str, retrieved_at: datetime) -> dict[str
 
 def _store_snapshot(root: Path, link: ReleaseLink, content: bytes, retrieved_at: datetime) -> tuple[Path, bool]:
     digest = sha256_bytes(content)
-    directory = root / "data" / "raw" / "nbs" / retrieved_at.strftime("%Y-%m-%d")
+    directory = root / "data" / "raw" / "nbs" / "objects"
     html_path = directory / f"{digest}.html"
     meta_path = directory / f"{digest}.json"
     created = not html_path.exists()
@@ -227,7 +227,7 @@ def ingest_nbs(root: Path, index_url: str, pages: int = 4, client: NBSClient | N
                 continue
             parsed = parse_ten_day_page(content, link.url, retrieved_at)
             validate_release(parsed)
-            observations = pd.concat([observations, parsed], ignore_index=True)
+            observations = parsed.copy() if observations.empty else pd.concat([observations, parsed], ignore_index=True)
             counts["observations"] += len(parsed)
         else:
             row = parse_ppi_page(content, link.url, retrieved_at)

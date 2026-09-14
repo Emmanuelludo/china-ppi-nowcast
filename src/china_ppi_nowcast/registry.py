@@ -51,7 +51,7 @@ def append_actuals(path: Path, rows: list[dict[str, object]]) -> int:
             )
             if exact.any():
                 continue
-        current = pd.concat([current, pd.DataFrame([row])], ignore_index=True)
+        current = pd.DataFrame([row]) if current.empty else pd.concat([current, pd.DataFrame([row])], ignore_index=True)
         additions += 1
     if additions:
         atomic_write_csv(path, current[ACTUAL_COLUMNS])

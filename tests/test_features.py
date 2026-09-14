@@ -46,6 +46,10 @@ class FeatureTests(unittest.TestCase):
         actual = float(vintage.product_changes.iloc[0]["survey_aligned_change_pct"])
         self.assertEqual(vintage.manifest["vintage"], "final")
         self.assertFalse(vintage.manifest["current_21_end_used"])
+        self.assertNotIn(
+            ("2026-08", "21-end"),
+            {(item["release_month"], item["window"]) for item in vintage.manifest["sources"]},
+        )
         self.assertAlmostEqual(actual, expected, places=8)
 
     def test_early_vintage_uses_first_survey_only(self) -> None:

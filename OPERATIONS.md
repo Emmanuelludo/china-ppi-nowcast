@@ -15,7 +15,8 @@ new registries/reports back to `main`.
 
 ## Idempotency and failure behavior
 
-- Raw pages are keyed by SHA-256 content hash.
+- Raw pages are keyed globally by SHA-256 content hash, so unchanged pages are
+  not copied again on later runs.
 - Parsed rows retain source hash and retrieval timestamp.
 - Forecast logical keys cannot be overwritten.
 - Source/schema failures preserve the raw snapshot and fail visibly.
