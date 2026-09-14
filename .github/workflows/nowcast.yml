@@ -1,0 +1,77 @@
+name: China PPI prospective nowcast
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_month:
+        description: "Optional YYYY-MM target; defaults to current China month"
+        required: false
+        type: string
+      as_of:
+        description: "Optional ISO-8601 cutoff with offset; defaults to run time"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: china-ppi-nowcast
+  cancel-in-progress: false
+
+jobs:
+  nowcast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Test
+        run: python -m unittest discover -s tests -v
+
+      - name: Run ingestion and nowcast
+        env:
+          TARGET_MONTH: ${{ inputs.target_month }}
+          AS_OF: ${{ inputs.as_of }}
+        run: |
+          args=()
+          if [[ -n "$TARGET_MONTH" ]]; then args+=(--target-month "$TARGET_MONTH"); fi
+          if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
+          python -m china_ppi_nowcast.cli --root . run "${args[@]}"
+
+      - name: Commit new immutable vintages
+        run: |
+          if git diff --quiet -- data reports; then
+            echo "No new source or forecast vintage."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data reports
+          git commit -m "data: append prospective NBS and nowcast vintages"
+          git push
+
+      - name: Open failure issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Automated nowcast workflow failed"
+          body="Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          existing=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number // empty')
+          if [[ -n "$existing" ]]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body"
+          fi

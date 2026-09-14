@@ -1,0 +1,10 @@
+{
+  "nbs_index_url": "https://www.stats.gov.cn/sj/zxfb/index.html",
+  "index_pages": 4,
+  "request_timeout_seconds": 30,
+  "request_retries": 3,
+  "first_survey_carry_weight": 0.5,
+  "timezone": "Asia/Shanghai",
+  "minimum_products_warning": 40,
+  "model_bundle": "models/reconstructed-v1"
+}
