@@ -1,6 +1,14 @@
 name: China PPI prospective nowcast
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "config/**"
+      - "pyproject.toml"
+      - ".github/workflows/nowcast.yml"
   workflow_dispatch:
     inputs:
       target_month:
