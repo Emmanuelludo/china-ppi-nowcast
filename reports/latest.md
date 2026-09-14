@@ -12,7 +12,6 @@
 | `ingest_observations` | `0` |
 | `ingest_actuals` | `0` |
 | `target_month` | `2026-09` |
-| `as_of` | `2026-09-14T14:39:49.010014+08:00` |
 | `forecast_status` | `blocked` |
 | `forecast_reason` | `model bundle manifest not found: /home/runner/work/china-ppi-nowcast/china-ppi-nowcast/models/reconstructed-v1/manifest.json` |
 
