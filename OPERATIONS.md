@@ -2,8 +2,9 @@
 
 ## Safety state
 
-The workflow is manual-only on initial deployment. It has no `schedule` trigger
-until a clean GitHub Actions run is reviewed. Nothing runs on a user's device.
+The workflow runs on relevant repository pushes and can be started manually. It
+has no `schedule` trigger until a clean GitHub Actions run is reviewed. Nothing
+runs on a user's device.
 
 ## Intended scheduled operation
 
