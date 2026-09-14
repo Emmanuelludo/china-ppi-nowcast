@@ -28,6 +28,26 @@ def _commit_sha(root: Path) -> str:
         return "unknown"
 
 
+def _persist_vintage(vintage_dir: Path, vintage: object) -> None:
+    artifacts = (
+        vintage_dir / "features.csv",
+        vintage_dir / "products.csv",
+        vintage_dir / "manifest.json",
+    )
+    present = [path.exists() for path in artifacts]
+    if any(present):
+        if not all(present):
+            raise RuntimeError(f"incomplete immutable feature vintage: {vintage_dir}")
+        stored = json.loads(artifacts[2].read_text(encoding="utf-8"))
+        identity = ("target_month", "vintage", "feature_hash")
+        if any(str(stored.get(key)) != str(vintage.manifest.get(key)) for key in identity):
+            raise ValueError(f"immutable feature vintage identity conflict: {vintage_dir}")
+        return
+    atomic_write_csv(artifacts[0], vintage.frame)
+    atomic_write_csv(artifacts[1], vintage.product_changes)
+    atomic_write_text(artifacts[2], json.dumps(vintage.manifest, ensure_ascii=False, indent=2) + "\n")
+
+
 def create_forecast(
     root: Path,
     target_month: str,
@@ -64,9 +84,7 @@ def create_forecast(
         )
     added = append_forecasts(root / "data" / "registry" / "forecasts.csv", rows)
     vintage_dir = root / "data" / "processed" / "vintages" / target_month / vintage.manifest["feature_hash"][:16]
-    atomic_write_csv(vintage_dir / "features.csv", vintage.frame)
-    atomic_write_csv(vintage_dir / "products.csv", vintage.product_changes)
-    atomic_write_text(vintage_dir / "manifest.json", json.dumps(vintage.manifest, ensure_ascii=False, indent=2) + "\n")
+    _persist_vintage(vintage_dir, vintage)
     registry = pd.read_csv(root / "data" / "registry" / "forecasts.csv", keep_default_na=False)
     stored = registry[
         registry["target_month"].astype(str).eq(target_month)
