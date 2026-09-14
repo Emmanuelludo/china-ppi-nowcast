@@ -19,7 +19,7 @@ China (NBS) headline producer price index month-on-month change.
 | Survey-date-aligned feature construction | Implemented and tested |
 | Six reconstructed model families | Implemented; training data/artifacts required |
 | Append-only forecast and actual registries | Implemented and tested |
-| Scheduled GitHub Actions workflow | Push/manual verification only; schedule not enabled |
+| Scheduled GitHub Actions workflow | Enabled daily at 02:35 UTC; push/manual reruns supported |
 | Recovered original fitted model artifacts | Unavailable |
 | Production forecast generation | Blocked until models are trained and validated |
 

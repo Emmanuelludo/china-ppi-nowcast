@@ -33,7 +33,7 @@ def repository_status(root: Path) -> dict[str, object]:
 
 
 def write_status_report(root: Path, status: dict[str, object], run: dict[str, object] | None = None) -> None:
-    run = run or {}
+    run = {key: value for key, value in (run or {}).items() if key != "as_of"}
     lines = [
         "# China PPI nowcast status",
         "",

@@ -1,6 +1,8 @@
 name: China PPI prospective nowcast
 
 on:
+  schedule:
+    - cron: "35 2 * * *"
   push:
     branches: [main]
     paths:

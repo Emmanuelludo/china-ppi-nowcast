@@ -2,16 +2,14 @@
 
 ## Safety state
 
-The workflow runs on relevant repository pushes and can be started manually. It
-has no `schedule` trigger until a clean GitHub Actions run is reviewed. Nothing
-runs on a user's device.
+The workflow runs daily at 02:35 UTC, on relevant repository pushes, and by
+manual request. It runs only in GitHub Actions; nothing runs on a user's device.
 
 ## Intended scheduled operation
 
-After verification, a daily 02:35 UTC schedule may be enabled explicitly. The
-job tests the code, snapshots recent NBS releases, parses prices and official
-PPI results, attempts inference only with a validated model bundle, and commits
-new registries/reports back to `main`.
+The daily job tests the code, snapshots recent NBS releases, parses prices and
+official PPI results, attempts inference only with a validated model bundle,
+and commits new registries/reports back to `main`.
 
 ## Idempotency and failure behavior
 
