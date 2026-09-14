@@ -7,10 +7,17 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from china_ppi_nowcast.modeling import MODEL_SPECS, predict_bundle, train_bundle
+from china_ppi_nowcast.modeling import MODEL_SPECS, load_bundle, predict_bundle, train_bundle
 
 
 class ModelTests(unittest.TestCase):
+    def test_committed_reconstructed_bundles_load(self) -> None:
+        root = Path(__file__).parents[1] / "models" / "reconstructed-v1"
+        for vintage in ("early", "final"):
+            manifest, models = load_bundle(root / vintage, require_validated=True)
+            self.assertTrue(manifest["validated"])
+            self.assertEqual(set(models), {spec.key for spec in MODEL_SPECS})
+
     def test_all_six_reconstructed_models_train_and_predict(self) -> None:
         rng = np.random.default_rng(20260914)
         n = 30
