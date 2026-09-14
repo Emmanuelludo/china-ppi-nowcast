@@ -14,7 +14,7 @@ from .training_data import build_training_matrix, write_training_matrix
 
 
 def train_project_bundles(root: Path, bundle_root: Path, carry_weight: float = 0.5) -> dict[str, object]:
-    observations = pd.read_csv(root / "data" / "processed" / "nbs_ten_day_observations.csv")
+    observations = pd.read_csv(root / "data" / "processed" / "nbs_ten_day_observations.csv.gz")
     actuals = pd.read_csv(root / "data" / "registry" / "actuals.csv")
     variants: dict[str, dict[str, object]] = {}
     for vintage in ("early", "final"):

@@ -20,7 +20,7 @@ def load_config(root: Path) -> dict[str, object]:
 
 
 def repository_status(root: Path) -> dict[str, object]:
-    observations_path = root / "data" / "processed" / "nbs_ten_day_observations.csv"
+    observations_path = root / "data" / "processed" / "nbs_ten_day_observations.csv.gz"
     forecasts_path = root / "data" / "registry" / "forecasts.csv"
     config = load_config(root)
     bundle_path = root / str(config["model_bundle"]) / "manifest.json"

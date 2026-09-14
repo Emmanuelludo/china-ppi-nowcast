@@ -35,7 +35,7 @@ def create_forecast(
     bundle_dir: Path,
     carry_weight: float = 0.5,
 ) -> dict[str, object]:
-    observations_path = root / "data" / "processed" / "nbs_ten_day_observations.csv"
+    observations_path = root / "data" / "processed" / "nbs_ten_day_observations.csv.gz"
     if not observations_path.exists():
         raise FileNotFoundError("no processed NBS observations are available")
     observations = pd.read_csv(observations_path)

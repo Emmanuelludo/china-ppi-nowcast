@@ -94,7 +94,7 @@ def main(argv: list[str] | None = None) -> int:
                 float(config["first_survey_carry_weight"]),
             )
     elif args.command == "build-features":
-        observations = pd.read_csv(root / "data" / "processed" / "nbs_ten_day_observations.csv")
+        observations = pd.read_csv(root / "data" / "processed" / "nbs_ten_day_observations.csv.gz")
         vintage = build_feature_vintage(
             observations, args.target_month, args.as_of, float(config["first_survey_carry_weight"])
         )

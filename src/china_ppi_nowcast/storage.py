@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import gzip
 import json
 import os
 import tempfile
@@ -33,8 +34,24 @@ def atomic_write_text(path: Path, text: str) -> None:
             os.unlink(tmp)
 
 
+def atomic_write_bytes(path: Path, data: bytes) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(prefix=f".{path.name}.", dir=path.parent)
+    try:
+        with os.fdopen(fd, "wb") as handle:
+            handle.write(data)
+        os.replace(tmp, path)
+    finally:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
+
+
 def atomic_write_csv(path: Path, frame: pd.DataFrame) -> None:
-    atomic_write_text(path, frame.to_csv(index=False, lineterminator="\n"))
+    encoded = frame.to_csv(index=False, lineterminator="\n").encode("utf-8")
+    if path.suffix == ".gz":
+        atomic_write_bytes(path, gzip.compress(encoded, compresslevel=9, mtime=0))
+    else:
+        atomic_write_bytes(path, encoded)
 
 
 def read_csv_or_empty(path: Path, columns: Iterable[str]) -> pd.DataFrame:

@@ -246,7 +246,7 @@ def _ingest_links(
 ) -> dict[str, object]:
     client = client or NBSClient()
     retrieved_at = datetime.now(timezone.utc)
-    observations_path = root / "data" / "processed" / "nbs_ten_day_observations.csv"
+    observations_path = root / "data" / "processed" / "nbs_ten_day_observations.csv.gz"
     actuals_path = root / "data" / "registry" / "actuals.csv"
     observations = read_csv_or_empty(observations_path, OBSERVATION_COLUMNS)
     actuals = read_csv_or_empty(actuals_path, ["source_url"])
