@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 from .schema import ACTUAL_COLUMNS, FORECAST_COLUMNS
@@ -28,7 +29,9 @@ def append_forecasts(path: Path, rows: list[dict[str, object]]) -> int:
                 mask &= current[key].astype(str).eq(value)
             matches = current.loc[mask]
             if not matches.empty:
-                same = matches["estimate_mom_pct"].astype(str).eq(str(row["estimate_mom_pct"])).all()
+                stored = pd.to_numeric(matches["estimate_mom_pct"], errors="raise").to_numpy(dtype=float)
+                incoming = float(row["estimate_mom_pct"])
+                same = bool(np.isclose(stored, incoming, rtol=0.0, atol=1e-12).all())
                 if not same:
                     raise ValueError(f"immutable forecast conflict for {logical}")
                 continue

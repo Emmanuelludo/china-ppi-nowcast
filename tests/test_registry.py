@@ -26,6 +26,7 @@ class RegistryTests(unittest.TestCase):
             later_same_data = self.example()
             later_same_data["as_of"] = "2026-09-25T10:00:00+08:00"
             self.assertEqual(append_forecasts(path, [later_same_data]), 0)
+            self.assertEqual(append_forecasts(path, [self.example(0.2 + 1e-14)]), 0)
             self.assertEqual(len(pd.read_csv(path)), 1)
             with self.assertRaises(ValueError):
                 append_forecasts(path, [self.example(0.3)])
