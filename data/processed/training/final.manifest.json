@@ -1,0 +1,42 @@
+{
+  "vintage": "final",
+  "realtime_status": "pseudo_real_time",
+  "availability_basis": "publication",
+  "revision_vintage_correct": false,
+  "actual_after_cutoff": true,
+  "warning": "Historical pages were retrieved later; publication cutoffs prevent obvious look-ahead but do not reconstruct page revisions.",
+  "rows": 53,
+  "start": "2021-10",
+  "end": "2026-08",
+  "exclusions": [
+    {
+      "target_month": "2021-09",
+      "reason": "missing 11-20 release"
+    },
+    {
+      "target_month": "2022-02",
+      "reason": "target month lacks prior 21-end carry and current 1-10 release"
+    },
+    {
+      "target_month": "2023-02",
+      "reason": "target month lacks prior 21-end carry and current 1-10 release"
+    },
+    {
+      "target_month": "2024-02",
+      "reason": "missing 11-20 release"
+    },
+    {
+      "target_month": "2025-02",
+      "reason": "target month lacks prior 21-end carry and current 1-10 release"
+    },
+    {
+      "target_month": "2025-10",
+      "reason": "target month lacks prior 21-end carry and current 1-10 release"
+    },
+    {
+      "target_month": "2026-02",
+      "reason": "missing 11-20 release"
+    }
+  ],
+  "matrix_hash": "4dc1b19d930318291a8d6b55d1ce0cbaac19d970553c313a37d6b3fedb87e389"
+}

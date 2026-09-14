@@ -98,17 +98,7 @@ def _columns_for(frame: pd.DataFrame, spec: ModelSpec) -> list[str]:
     )
 
 
-def _oof_metrics(estimator: object, X: pd.DataFrame, y: pd.Series) -> dict[str, float | int]:
-    splits = min(5, max(2, len(X) // 6))
-    cv = TimeSeriesSplit(n_splits=splits)
-    truth: list[float] = []
-    predicted: list[float] = []
-    for train_idx, test_idx in cv.split(X):
-        fitted = clone(estimator).fit(X.iloc[train_idx], y.iloc[train_idx])
-        truth.extend(y.iloc[test_idx].astype(float).tolist())
-        predicted.extend(np.asarray(fitted.predict(X.iloc[test_idx]), dtype=float).tolist())
-    actual = np.asarray(truth)
-    estimate = np.asarray(predicted)
+def _metric_summary(actual: np.ndarray, estimate: np.ndarray) -> dict[str, float | int]:
     error = estimate - actual
     return {
         "n_oof": int(len(actual)),
@@ -119,7 +109,71 @@ def _oof_metrics(estimator: object, X: pd.DataFrame, y: pd.Series) -> dict[str, 
     }
 
 
-def train_bundle(training: pd.DataFrame, output_dir: Path, target_column: str = "target_mom_pct") -> dict[str, object]:
+def _oof_metrics(estimator: object, X: pd.DataFrame, y: pd.Series) -> dict[str, object]:
+    splits = min(5, max(2, len(X) // 6))
+    cv = TimeSeriesSplit(n_splits=splits)
+    truth: list[float] = []
+    predicted: list[float] = []
+    stressed: list[float] = []
+    stress_columns = [column for column in X.columns if column.startswith(("product__", "category__"))]
+    rng = np.random.default_rng(20260914)
+    for train_idx, test_idx in cv.split(X):
+        fitted = clone(estimator).fit(X.iloc[train_idx], y.iloc[train_idx])
+        truth.extend(y.iloc[test_idx].astype(float).tolist())
+        predicted.extend(np.asarray(fitted.predict(X.iloc[test_idx]), dtype=float).tolist())
+        stressed_X = X.iloc[test_idx].copy()
+        if stress_columns:
+            mask = rng.random((len(stressed_X), len(stress_columns))) < 0.10
+            stressed_X.loc[:, stress_columns] = stressed_X[stress_columns].mask(mask)
+        stressed.extend(np.asarray(fitted.predict(stressed_X), dtype=float).tolist())
+    actual = np.asarray(truth)
+    estimate = np.asarray(predicted)
+    stressed_estimate = np.asarray(stressed)
+    result: dict[str, object] = _metric_summary(actual, estimate)
+    result["missing_panel_stress"] = {
+        **_metric_summary(actual, stressed_estimate),
+        "mask_fraction": 0.10,
+        "mean_absolute_prediction_change": float(np.mean(np.abs(stressed_estimate - estimate))),
+    }
+    return result
+
+
+def _baseline_metrics(y: pd.Series, minimum_history: int = 12) -> dict[str, dict[str, float | int]]:
+    actual = y.to_numpy(dtype=float)[minimum_history:]
+    history_mean = np.array([y.iloc[:i].mean() for i in range(minimum_history, len(y))], dtype=float)
+    persistence = y.to_numpy(dtype=float)[minimum_history - 1 : -1]
+    return {
+        "no_change": _metric_summary(actual, np.zeros_like(actual)),
+        "prior_month_persistence": _metric_summary(actual, persistence),
+        "expanding_historical_mean": _metric_summary(actual, history_mean),
+    }
+
+
+def _panel_diagnostics(frame: pd.DataFrame) -> dict[str, object]:
+    product_columns = sorted(column for column in frame if column.startswith("product__"))
+    if not product_columns:
+        return {"product_columns": 0, "stable_90pct_products": 0, "median_product_coverage": 0.0}
+    coverage = frame[product_columns].notna().mean()
+    present = frame[product_columns].notna().astype(int)
+    transitions = present.diff().abs().iloc[1:].sum(axis=1) if len(present) > 1 else pd.Series(dtype=float)
+    return {
+        "product_columns": len(product_columns),
+        "stable_90pct_products": int((coverage >= 0.90).sum()),
+        "median_product_coverage": float(coverage.median()),
+        "median_monthly_entry_exit_count": float(transitions.median()) if len(transitions) else 0.0,
+        "maximum_monthly_entry_exit_count": int(transitions.max()) if len(transitions) else 0,
+    }
+
+
+def train_bundle(
+    training: pd.DataFrame,
+    output_dir: Path,
+    target_column: str = "target_mom_pct",
+    *,
+    validate: bool = False,
+    vintage: str | None = None,
+    training_metadata: dict[str, object] | None = None,
+) -> dict[str, object]:
     required = {"target_month", target_column}
     missing = required - set(training.columns)
     if missing:
@@ -152,17 +206,39 @@ def train_bundle(training: pd.DataFrame, output_dir: Path, target_column: str = 
                 "uses_economic_features": any(column.startswith("econ__") for column in columns),
             }
         )
+    checks = {
+        "at_least_36_months": len(frame) >= 36,
+        "six_models_fitted": len(entries) == len(MODEL_SPECS),
+        "at_least_12_oof_predictions_each": all(int(entry["metrics"]["n_oof"]) >= 12 for entry in entries),
+        "all_metrics_finite": all(
+            np.isfinite(float(entry["metrics"][key]))
+            for entry in entries for key in ("mae", "rmse", "bias", "directional_accuracy")
+        ),
+        "publication_precedes_actual": bool(
+            training_metadata and training_metadata.get("actual_after_cutoff", False)
+        ),
+        "pseudo_real_time_label_present": bool(
+            training_metadata and training_metadata.get("realtime_status") == "pseudo_real_time"
+        ),
+    }
+    validated = bool(validate and all(checks.values()))
     manifest: dict[str, object] = {
-        "bundle_version": "reconstructed-v1",
+        "bundle_version": f"reconstructed-v1-{vintage}" if vintage else "reconstructed-v1",
         "provenance": "reconstructed",
-        "validated": False,
+        "validated": validated,
+        "validation_scope": "operational_and_leakage_checks_not_model_superiority",
+        "validation_checks": checks,
         "created_at": datetime.now(timezone.utc).isoformat(),
         "training_rows": len(frame),
         "training_start": str(frame["target_month"].min()),
         "training_end": str(frame["target_month"].max()),
         "training_hash": stable_hash(frame.fillna("__NA__").to_dict(orient="records")),
         "target_column": target_column,
+        "vintage": vintage,
         "models": entries,
+        "baselines": _baseline_metrics(frame[target_column].astype(float)),
+        "panel_diagnostics": _panel_diagnostics(frame),
+        "training_metadata": training_metadata or {},
         "warning": "These estimators are reconstructed candidates, not recovered v0.4 fitted objects.",
     }
     atomic_write_text(output_dir / "manifest.json", json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")

@@ -9,6 +9,7 @@ from pathlib import Path
 import pandas as pd
 
 from .forecast import create_forecast
+from .evaluation import write_registry_evaluation
 from .ingest import NBSClient, ingest_nbs
 from .storage import atomic_write_text
 from .time import CHINA_TZ, default_target_month
@@ -21,7 +22,8 @@ def load_config(root: Path) -> dict[str, object]:
 def repository_status(root: Path) -> dict[str, object]:
     observations_path = root / "data" / "processed" / "nbs_ten_day_observations.csv"
     forecasts_path = root / "data" / "registry" / "forecasts.csv"
-    bundle_path = root / "models" / "reconstructed-v1" / "manifest.json"
+    config = load_config(root)
+    bundle_path = root / str(config["model_bundle"]) / "manifest.json"
     bundle = json.loads(bundle_path.read_text(encoding="utf-8")) if bundle_path.exists() else None
     return {
         "observations": int(len(pd.read_csv(observations_path))) if observations_path.exists() else 0,
@@ -62,7 +64,8 @@ def run_pipeline(root: Path, target_month: str | None = None, as_of: str | None 
         timeout=int(config["request_timeout_seconds"]), retries=int(config["request_retries"])
     )
     ingest_counts = ingest_nbs(
-        root, str(config["nbs_index_url"]), pages=int(config["index_pages"]), client=client
+        root, str(config["nbs_index_url"]), pages=int(config["index_pages"]), client=client,
+        workers=int(config["download_workers"]),
     )
     result: dict[str, object] = {**{f"ingest_{k}": v for k, v in ingest_counts.items()}, "target_month": target, "as_of": cutoff}
     bundle_dir = root / str(config["model_bundle"])
@@ -84,6 +87,7 @@ def run_pipeline(root: Path, target_month: str | None = None, as_of: str | None 
             raise
         result["forecast_status"] = "blocked"
         result["forecast_reason"] = message
+    result.update(write_registry_evaluation(root))
     status = repository_status(root)
     write_status_report(root, status, result)
     return result

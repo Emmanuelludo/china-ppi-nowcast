@@ -21,6 +21,10 @@ on:
         description: "Optional ISO-8601 cutoff with offset; defaults to run time"
         required: false
         type: string
+      backfill_start_month:
+        description: "Optional historical backfill start (YYYY-MM); also retrains both bundles"
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -54,7 +58,11 @@ jobs:
         env:
           TARGET_MONTH: ${{ inputs.target_month }}
           AS_OF: ${{ inputs.as_of }}
+          BACKFILL_START_MONTH: ${{ inputs.backfill_start_month }}
         run: |
+          if [[ -n "$BACKFILL_START_MONTH" ]]; then
+            python -m china_ppi_nowcast.cli --root . backfill --start-month "$BACKFILL_START_MONTH" --train
+          fi
           args=()
           if [[ -n "$TARGET_MONTH" ]]; then args+=(--target-month "$TARGET_MONTH"); fi
           if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
@@ -62,13 +70,13 @@ jobs:
 
       - name: Commit new immutable vintages
         run: |
-          if git diff --quiet -- data reports; then
+          if git diff --quiet -- data models reports; then
             echo "No new source or forecast vintage."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data reports
+          git add data models reports
           git commit -m "data: append prospective NBS and nowcast vintages"
           git push
 

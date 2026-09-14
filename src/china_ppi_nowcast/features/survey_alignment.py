@@ -20,15 +20,29 @@ class FeatureVintage:
     manifest: dict[str, object]
 
 
-def select_available_observations(observations: pd.DataFrame, as_of: str | datetime) -> pd.DataFrame:
-    """Return the latest immutable source snapshot genuinely available at cutoff."""
+def select_available_observations(
+    observations: pd.DataFrame,
+    as_of: str | datetime,
+    availability_basis: str = "strict",
+) -> pd.DataFrame:
+    """Return the latest eligible immutable source snapshot.
+
+    ``strict`` requires both publication and retrieval by the cutoff and is the
+    only permitted mode for live forecasts. ``publication`` is explicitly for
+    pseudo-real-time historical training when pages were retrieved later.
+    """
+    if availability_basis not in {"strict", "publication"}:
+        raise ValueError("availability_basis must be 'strict' or 'publication'")
     if observations.empty:
         return observations.copy()
     cutoff = pd.Timestamp(parse_as_of(as_of)).tz_convert("UTC")
     frame = observations.copy()
     frame["published_at"] = pd.to_datetime(frame["published_at"], utc=True, errors="raise")
     frame["retrieved_at"] = pd.to_datetime(frame["retrieved_at"], utc=True, errors="raise")
-    frame = frame[(frame["published_at"] <= cutoff) & (frame["retrieved_at"] <= cutoff)]
+    eligible = frame["published_at"] <= cutoff
+    if availability_basis == "strict":
+        eligible &= frame["retrieved_at"] <= cutoff
+    frame = frame[eligible]
     if frame.empty:
         return frame
     snapshot_keys = ["release_month", "window", "source_url", "content_sha256"]
@@ -100,12 +114,13 @@ def build_feature_vintage(
     target_month: str,
     as_of: str | datetime,
     carry_weight: float = 0.5,
+    availability_basis: str = "strict",
 ) -> FeatureVintage:
     if not 0 <= carry_weight <= 1:
         raise ValueError("carry_weight must lie in [0, 1]")
     cutoff = parse_as_of(as_of)
     month = parse_target_month(target_month)
-    available = select_available_observations(observations, cutoff)
+    available = select_available_observations(observations, cutoff, availability_basis)
     windows = set(zip(available.get("release_month", []), available.get("window", [])))
     vintage = target_vintage(target_month, windows)
     if vintage == "not_ready":
@@ -175,5 +190,11 @@ def build_feature_vintage(
         "feature_hash": feature_hash,
         "sources": source_vintages,
         "n_products": int(valid.size),
+        "availability_basis": availability_basis,
+        "realtime_status": "prospective" if availability_basis == "strict" else "pseudo_real_time",
+        "historical_snapshot_caveat": (
+            None if availability_basis == "strict"
+            else "Publication-time cutoff applied to pages retrieved later; revision-vintage correctness is not claimed."
+        ),
     }
     return FeatureVintage(pd.DataFrame([features]), product, manifest)

@@ -8,5 +8,4 @@ __pycache__/
 /tmp*/
 dist/
 build/
-models/*/*.joblib
 data/interim/

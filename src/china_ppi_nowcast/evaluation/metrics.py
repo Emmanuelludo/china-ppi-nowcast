@@ -7,6 +7,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from ..storage import atomic_write_csv, atomic_write_text
+
 
 def evaluate_registry(forecasts_path: Path, actuals_path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
     forecasts = pd.read_csv(forecasts_path)
@@ -33,3 +35,34 @@ def evaluate_registry(forecasts_path: Path, actuals_path: Path) -> tuple[pd.Data
         )
     )
     return merged, summary
+
+
+def write_registry_evaluation(root: Path) -> dict[str, int]:
+    forecasts_path = root / "data" / "registry" / "forecasts.csv"
+    actuals_path = root / "data" / "registry" / "actuals.csv"
+    if not forecasts_path.exists() or not actuals_path.exists():
+        return {"evaluated_forecasts": 0, "evaluated_target_months": 0}
+    errors, summary = evaluate_registry(forecasts_path, actuals_path)
+    directory = root / "data" / "processed" / "evaluation"
+    atomic_write_csv(directory / "forecast_errors.csv", errors)
+    atomic_write_csv(directory / "model_summary.csv", summary)
+    lines = [
+        "# Prospective forecast evaluation",
+        "",
+        "Forecast rows are joined to official results without altering the frozen registry.",
+        "With fewer than six prospective target months, individual errors should be read directly",
+        "and aggregate ranking should not be treated as decisive.",
+        "",
+        "| Model | Vintage | n | MAE | RMSE | Bias | Direction |",
+        "|---|---|---:|---:|---:|---:|---:|",
+    ]
+    for _, row in summary.iterrows():
+        lines.append(
+            f"| {row['model_key']} | {row['vintage']} | {int(row['n'])} | {row['mae']:.3f} | "
+            f"{row['rmse']:.3f} | {row['bias']:.3f} | {row['directional_accuracy']:.3f} |"
+        )
+    atomic_write_text(root / "reports" / "forecast_evaluation.md", "\n".join(lines) + "\n")
+    return {
+        "evaluated_forecasts": len(errors),
+        "evaluated_target_months": int(errors["target_month"].nunique()) if len(errors) else 0,
+    }

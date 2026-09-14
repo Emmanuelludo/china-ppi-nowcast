@@ -10,7 +10,7 @@ from .schema import ACTUAL_COLUMNS, FORECAST_COLUMNS
 from .storage import atomic_write_csv, read_csv_or_empty, stable_hash
 
 
-FORECAST_LOGICAL_KEY = ["target_month", "as_of", "model_key", "model_version", "feature_hash"]
+FORECAST_LOGICAL_KEY = ["target_month", "vintage", "model_key", "model_version", "feature_hash"]
 
 
 def append_forecasts(path: Path, rows: list[dict[str, object]]) -> int:

@@ -70,6 +70,18 @@ class FeatureTests(unittest.TestCase):
         value = selected.loc[(selected.release_month == "2026-08") & (selected.window == "1-10"), "price_cny"].iloc[0]
         self.assertEqual(float(value), 110.0)
 
+    def test_publication_basis_is_explicitly_pseudo_real_time(self) -> None:
+        rows = self.base_rows()[:6]
+        for item in rows:
+            item["retrieved_at"] = "2026-09-14T00:00:00Z"
+        vintage = build_feature_vintage(
+            pd.DataFrame(rows), "2026-08", "2026-08-24T23:00:00+08:00",
+            availability_basis="publication",
+        )
+        self.assertEqual(vintage.manifest["vintage"], "final")
+        self.assertEqual(vintage.manifest["realtime_status"], "pseudo_real_time")
+        self.assertFalse(vintage.manifest["current_21_end_used"])
+
 
 if __name__ == "__main__":
     unittest.main()

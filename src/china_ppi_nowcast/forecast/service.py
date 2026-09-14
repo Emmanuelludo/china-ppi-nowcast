@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
+import numpy as np
 
 from ..features import build_feature_vintage
 from ..modeling import predict_bundle
@@ -39,7 +40,10 @@ def create_forecast(
         raise FileNotFoundError("no processed NBS observations are available")
     observations = pd.read_csv(observations_path)
     vintage = build_feature_vintage(observations, target_month, as_of, carry_weight)
-    predictions = predict_bundle(bundle_dir, vintage.frame, require_validated=True)
+    variant_dir = bundle_dir / str(vintage.manifest["vintage"])
+    if not (variant_dir / "manifest.json").exists():
+        variant_dir = bundle_dir
+    predictions = predict_bundle(variant_dir, vintage.frame, require_validated=True)
     now = datetime.now(timezone.utc).isoformat()
     rows: list[dict[str, object]] = []
     for prediction in predictions:
@@ -63,4 +67,45 @@ def create_forecast(
     atomic_write_csv(vintage_dir / "features.csv", vintage.frame)
     atomic_write_csv(vintage_dir / "products.csv", vintage.product_changes)
     atomic_write_text(vintage_dir / "manifest.json", json.dumps(vintage.manifest, ensure_ascii=False, indent=2) + "\n")
+    registry = pd.read_csv(root / "data" / "registry" / "forecasts.csv", keep_default_na=False)
+    stored = registry[
+        registry["target_month"].astype(str).eq(target_month)
+        & registry["feature_hash"].astype(str).eq(str(vintage.manifest["feature_hash"]))
+        & registry["model_version"].astype(str).eq(str(rows[0]["model_version"]))
+    ]
+    report_manifest = dict(vintage.manifest)
+    if not stored.empty:
+        report_manifest["as_of"] = stored["as_of"].iloc[0]
+    _write_nowcast_report(root, report_manifest, stored.to_dict(orient="records") or rows)
     return {"forecasts_added": added, "vintage": vintage.manifest["vintage"], "feature_hash": vintage.manifest["feature_hash"]}
+
+
+def _write_nowcast_report(root: Path, manifest: dict[str, object], rows: list[dict[str, object]]) -> None:
+    estimates = np.asarray([float(row["estimate_mom_pct"]) for row in rows])
+    lines = [
+        "# Latest China headline PPI MoM nowcast",
+        "",
+        f"- Target month: **{manifest['target_month']}**",
+        f"- Frozen cutoff: **{manifest['as_of']}**",
+        f"- Information set: **{manifest['vintage']}**",
+        f"- Comparable products: **{manifest['n_products']}**",
+        f"- Model median: **{np.median(estimates):+.3f}% MoM**",
+        f"- Model range: **{estimates.min():+.3f}% to {estimates.max():+.3f}% MoM**",
+        "",
+        "| Model | Estimate (% MoM) | Provenance |",
+        "|---|---:|---|",
+    ]
+    for row in rows:
+        lines.append(
+            f"| {row['model_label']} | {float(row['estimate_mom_pct']):+.3f} | {row['model_provenance']} |"
+        )
+    lines.extend(
+        [
+            "",
+            "The cross-model range is descriptive dispersion, not a calibrated prediction interval.",
+            "All candidates are reconstructed because the original v0.4 fitted objects were not recovered.",
+            "No permanent model winner is selected from this backfill.",
+            "",
+        ]
+    )
+    atomic_write_text(root / "reports" / "latest_nowcast.md", "\n".join(lines))

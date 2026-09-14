@@ -1,6 +1,6 @@
 {
   "target_month": "2026-09",
-  "as_of": "2026-09-14T14:34:41+08:00",
+  "as_of": "2026-09-14T19:40:00+08:00",
   "vintage": "early",
   "carry_weight": 0.5,
   "first_survey_formula": "carry_weight*log(M-1:21-end)+(1-carry_weight)*log(M:1-10)",
@@ -49,5 +49,8 @@
       "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492"
     }
   ],
-  "n_products": 50
+  "n_products": 50,
+  "availability_basis": "strict",
+  "realtime_status": "prospective",
+  "historical_snapshot_caveat": null
 }

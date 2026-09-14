@@ -32,10 +32,30 @@ class ModelTests(unittest.TestCase):
             manifest = train_bundle(frame, output)
             self.assertFalse(manifest["validated"])
             self.assertEqual(len(manifest["models"]), len(MODEL_SPECS))
+            self.assertIn("missing_panel_stress", manifest["models"][0]["metrics"])
             feature_row = frame.drop(columns=["target_mom_pct"]).tail(1)
             predictions = predict_bundle(output, feature_row, require_validated=False)
             self.assertEqual(len(predictions), 6)
             self.assertTrue(all(np.isfinite(item["estimate_mom_pct"]) for item in predictions))
+
+    def test_operational_validation_requires_chronology_metadata(self) -> None:
+        rng = np.random.default_rng(7)
+        n = 40
+        signal = rng.normal(0, 0.4, n)
+        frame = pd.DataFrame({
+            "target_month": pd.period_range("2022-01", periods=n, freq="M").astype(str),
+            "target_mom_pct": signal,
+            "global__mean": signal + rng.normal(0, 0.1, n),
+            "category__测试__mean": signal,
+            "product__测试": signal,
+            "missing__测试": np.zeros(n),
+        })
+        metadata = {"actual_after_cutoff": True, "realtime_status": "pseudo_real_time"}
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest = train_bundle(
+                frame, Path(tmp), validate=True, vintage="early", training_metadata=metadata
+            )
+            self.assertTrue(manifest["validated"])
 
 
 if __name__ == "__main__":

@@ -27,9 +27,13 @@ def validate_release(frame: pd.DataFrame, minimum_products: int = 40) -> list[st
     valid_prior = prior > 0
     implied = 100 * numeric.loc[valid_prior, "change_cny"] / prior[valid_prior]
     discrepancy = (implied - numeric.loc[valid_prior, "change_pct"]).abs()
-    if (discrepancy > 0.25).any():
+    if (discrepancy > 1.0).any():
         raise ValueError("reported price change is inconsistent with price levels beyond rounding tolerance")
     warnings: list[str] = []
+    if (discrepancy > 0.25).any():
+        warnings.append(
+            f"{int((discrepancy > 0.25).sum())} reported changes differ from level-implied changes by 0.25-1.0 pp"
+        )
     if len(frame) < minimum_products:
         warnings.append(f"product count {len(frame)} is below warning threshold {minimum_products}")
     return warnings

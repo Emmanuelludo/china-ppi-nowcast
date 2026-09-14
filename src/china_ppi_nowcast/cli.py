@@ -11,8 +11,8 @@ import pandas as pd
 
 from .features import build_feature_vintage
 from .forecast import create_forecast
-from .ingest import NBSClient, ingest_nbs
-from .modeling import train_bundle
+from .ingest import NBSClient, ingest_nbs, ingest_nbs_history, rebuild_actuals_from_snapshots
+from .modeling import train_bundle, train_project_bundles
 from .pipeline import load_config, repository_status, run_pipeline, write_status_report
 from .storage import atomic_write_csv, atomic_write_text
 
@@ -28,6 +28,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     ingest = commands.add_parser("ingest")
     ingest.add_argument("--index-pages", type=int)
+
+    backfill = commands.add_parser("backfill")
+    backfill.add_argument("--start-month")
+    backfill.add_argument("--end-month")
+    backfill.add_argument("--index-pages", type=int)
+    backfill.add_argument("--workers", type=int)
+    backfill.add_argument("--train", action="store_true")
 
     features = commands.add_parser("build-features")
     features.add_argument("--target-month", required=True)
@@ -62,7 +69,30 @@ def main(argv: list[str] | None = None) -> int:
             str(config["nbs_index_url"]),
             pages=args.index_pages or int(config["index_pages"]),
             client=client,
+            workers=int(config["download_workers"]),
         )
+    elif args.command == "backfill":
+        now_month = datetime.now().strftime("%Y-%m")
+        client = NBSClient(int(config["request_timeout_seconds"]), int(config["request_retries"]))
+        result = ingest_nbs_history(
+            root,
+            str(config["nbs_index_url"]),
+            args.start_month or str(config["backfill_start_month"]),
+            args.end_month or now_month,
+            pages=args.index_pages or int(config["archive_index_pages"]),
+            workers=args.workers or int(config["download_workers"]),
+            client=client,
+        )
+        result["actual_registry_rebuild"] = rebuild_actuals_from_snapshots(root)
+        result["failed"] = int(result["failed"]) + int(result["actual_registry_rebuild"]["failed"])
+        if args.train:
+            if int(result["failed"]):
+                raise RuntimeError(f"backfill has {result['failed']} failed pages; rerun before training")
+            result["training"] = train_project_bundles(
+                root,
+                root / str(config["model_bundle"]),
+                float(config["first_survey_carry_weight"]),
+            )
     elif args.command == "build-features":
         observations = pd.read_csv(root / "data" / "processed" / "nbs_ten_day_observations.csv")
         vintage = build_feature_vintage(

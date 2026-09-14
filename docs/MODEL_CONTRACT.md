@@ -29,13 +29,15 @@ first retrieved later must be labeled pseudo-real-time.
 |---|---|
 | Category-factor regression | Median imputation + scaling + PCA + ridge |
 | Gradient boosting | `HistGradientBoostingRegressor` with native NaNs |
-| Economic + ML hybrid | Equal-weight ridge/histogram-boosting voting regressor |
+| Economic + ML hybrid | Equal-weight ridge/histogram-boosting voting regressor; currently NBS-only because no reviewed economic inputs were recovered |
 | Product-level ridge | Median imputation + missing indicators + ridge |
 | Sector-first aggregation | Ridge on global/category summaries |
 | Random forest | Median imputation + missing indicators + random forest |
 
 These are transparent defaults for prospective comparison, not assertions about
-the lost archive. Every bundle starts with `validated: false`.
+the lost archive. A bundle becomes operationally validated only after the
+minimum-history, chronology, finite-metric, six-artifact, and pseudo-real-time
+label checks pass. This gate does not assert model superiority.
 
 ## Minimum evaluation
 

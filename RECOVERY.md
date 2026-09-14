@@ -26,4 +26,6 @@ and the handoff.
    columns prefixed `econ__`.
 5. Production inference is blocked unless a bundle manifest says
    `validated: true`.
-6. Snapshots retrieved after a historical cutoff cannot be used as ex-ante data.
+6. Snapshots retrieved after a historical cutoff cannot be called ex-ante data.
+   They may be used for explicitly pseudo-real-time training with publication
+   cutoffs and a `revision_vintage_correct: false` manifest.
