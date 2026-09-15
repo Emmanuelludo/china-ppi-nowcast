@@ -7,8 +7,8 @@
 | `model_bundle_present` | `True` |
 | `model_bundle_validated` | `True` |
 | `production_inference` | `enabled` |
-| `ingest_discovered` | `16` |
-| `ingest_pending` | `16` |
+| `ingest_discovered` | `13` |
+| `ingest_pending` | `13` |
 | `ingest_snapshots` | `0` |
 | `ingest_observations` | `0` |
 | `ingest_actuals` | `0` |
