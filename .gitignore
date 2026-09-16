@@ -9,3 +9,6 @@ __pycache__/
 dist/
 build/
 data/interim/
+.venv-product/
+pip-metadata-*/
+pip-unpack-*/

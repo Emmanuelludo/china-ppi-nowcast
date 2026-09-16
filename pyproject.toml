@@ -18,6 +18,9 @@ dependencies = [
   "scipy==1.17.0"
 ]
 
+[project.optional-dependencies]
+product = ["xgboost-cpu==3.0.5", "catboost==1.2.8", "lightgbm==4.6.0", "shap==0.48.0"]
+
 [project.scripts]
 ppi-nowcast = "china_ppi_nowcast.cli:main"
 
