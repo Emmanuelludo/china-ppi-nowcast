@@ -1,7 +1,7 @@
 # Latest China headline PPI MoM nowcast
 
 - Target month: **2026-09**
-- Frozen cutoff: **2026-09-14T19:40:00+08:00**
+- Frozen cutoff: **2026-09-16T16:58:21.013573+08:00**
 - Information set: **early**
 - Comparable products: **50**
 - Model median: **+0.381% MoM**
@@ -17,5 +17,7 @@
 | Random forest | +0.515 | reconstructed |
 
 The cross-model range is descriptive dispersion, not a calibrated prediction interval.
+The direct 20th-to-20th index is an uncalibrated circulation-price proxy and is excluded from the model median/range.
+Both 20th-to-20th benchmarks require the current and prior months’ 11–20 releases; unavailable early in the month.
 All candidates are reconstructed because the original v0.4 fitted objects were not recovered.
 No permanent model winner is selected from this backfill.

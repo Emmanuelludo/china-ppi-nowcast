@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | `observations` | `8650` |
-| `forecasts` | `18` |
+| `forecasts` | `24` |
 | `model_bundle_present` | `True` |
 | `model_bundle_validated` | `True` |
 | `production_inference` | `enabled` |
@@ -16,9 +16,9 @@
 | `ingest_errors` | `[]` |
 | `ingest_warnings` | `[]` |
 | `target_month` | `2026-09` |
-| `forecasts_added` | `0` |
+| `forecasts_added` | `6` |
 | `vintage` | `early` |
-| `feature_hash` | `74d55289913d74a01c4ad37c1cade5a767aef39a9cc2b47a60df4f8443307843` |
+| `feature_hash` | `d76ff16f9995d07ccfab3d43b2f191323d5e07919d94d2cb87e640e9a3920ffa` |
 | `forecast_status` | `created_or_idempotent` |
 | `evaluated_forecasts` | `12` |
 | `evaluated_target_months` | `1` |
