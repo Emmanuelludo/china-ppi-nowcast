@@ -128,7 +128,7 @@ def train(root,variants=VARIANTS,min_train=24,stable=True):
     write_json(dest/'manifest.json',manifest)
     report=['# Additional product models','',f'Bundle: `{version}`','',
         'Existing models and forecasts are preserved. No permanent winner or ensemble promotion.',
-        f"Verified history: {catalog['first_observation']}–{catalog['last_observation']}; earlier official history remains outstanding.",
+        f"Verified history: {catalog['first_observation']}–{catalog['last_observation']}; see the historical discovery audit for remaining gaps.",
         '20th-to-20th uses current versus previous 11–20 period prices, not exact day-20 factory-gate prices.',
         'All models share eligible monthly OOS origins within a timing specification. Results are pseudo-real-time.',
         '', '|Timing|Panel|Model|OOS n|MAE|RMSE|Bias|','|---|---|---|---:|---:|---:|---:|']

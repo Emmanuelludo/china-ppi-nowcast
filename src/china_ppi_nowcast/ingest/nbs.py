@@ -24,7 +24,7 @@ from ..time import CHINA_TZ, parse_release_title
 from ..validation import validate_release
 
 TEN_DAY_PHRASE = "流通领域重要生产资料市场价格"
-PPI_TITLE_RE = re.compile(r"(20\d{2})年(\d{1,2})月份工业生产者出厂价格")
+PPI_TITLE_RE = re.compile(r"(20\d{2})年(\d{1,2})月份(?:全国)?工业生产者(?:出厂)?价格")
 PUBLISHED_RE = re.compile(r"(20\d{2})[/-](\d{2})[/-](\d{2})\s+(\d{2}):(\d{2})")
 PPI_MOM_RE = re.compile(
     r"环比(?:价格)?(?:均|分别|继续)?(上涨|下降)([0-9]+(?:\.[0-9]+)?)%"

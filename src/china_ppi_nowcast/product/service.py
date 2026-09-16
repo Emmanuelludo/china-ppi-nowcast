@@ -65,6 +65,18 @@ def run(root,bundle,month,as_of):
     for r in pending:lines.append(f"\nPending {r['variant']}: {r['reason']}")
     lines.extend(['','Direct tracker is uncalibrated. No ensemble weights or model winner have been promoted.',
         'Individual and grouped SHAP files are stored beside each tree forecast. They are model attributions, not causal contributions.',
-        'Earlier-than-2021 historical recovery remains outstanding. See the bundle for exact coverage.'])
+        f"Verified historical source range: {manifest['source_start']}–{manifest['source_end']}. See the historical discovery audit for gaps."])
+    for r in outputs:
+        if r['panel']!='union':continue
+        sp=root/'data/product/vintages'/month/r['forecast_id'][:20]/'shap.json'
+        if not sp.exists():continue
+        attr=json.loads(sp.read_text());lines.extend(['',f"## {r['variant']} / {r['model']} attribution",'',f"Baseline: {attr['baseline']:+.4f} pp; prediction: {attr['prediction']:+.4f}%.",'','|Product feature|SHAP (pp)|','|---|---:|'])
+        for c,v in sorted(attr['product'].items(),key=lambda item:abs(item[1]),reverse=True)[:8]:
+            label=catalog['products'][c.split('__',1)[1]]['canonical_name']
+            lines.append(f'|{c.split("__",1)[0]}: {label}|{v:+.4f}|')
+        lines.extend(['','|Group|SHAP (pp)|','|---|---:|'])
+        for g,v in sorted(attr['grouped'].items(),key=lambda item:abs(item[1]),reverse=True):lines.append(f'|{g}|{v:+.4f}|')
     (root/'reports/product_latest.md').write_text('\n'.join(lines)+'\n')
-    return dict(forecasts=len(outputs),pending=pending,bundle=manifest['version'])
+    from .evaluation import evaluate
+    evaluation=evaluate(root,bundle,as_of)
+    return dict(forecasts=len(outputs),pending=pending,bundle=manifest['version'],evaluation=evaluation)

@@ -73,6 +73,10 @@ def catalog_from(x):
             source_url=g.iloc[0].source_url,NBS_note=None,
             evidence='observed membership; onset bounded by available releases'))
         previous=present
+    for pid,record in products.items():
+        membership=[b for b in epochs if pid in b['active_products']]
+        record['basket_version_start']=membership[0]['basket_version']
+        record['basket_version_end']=membership[-1]['basket_version']
     return dict(products=products,baskets=epochs,first_observation=str(x.period_start.min().date()),
                 last_observation=str(x.period_end.max().date()),history_complete_from_2014=False)
 

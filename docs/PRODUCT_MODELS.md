@@ -67,11 +67,11 @@ No 20th-to-20th forecast is published before the current 11–20 release.
 
 ## Remaining work — not claimed complete
 
-The verified source history currently starts September 2021. Recovering January 2014 onward
-is still required; empty earlier rows are not fabricated. NBS states this series began
+Historical discovery uses the official NBS search API, partitioning date ranges to respect its
+25-page result limit. See `reports/history_search.json` and the current model manifest for the
+verified coverage and any outstanding gaps; empty earlier rows are never fabricated. NBS states this series began
 January 2014, so 2013 is not assumed available:
 https://www.stats.gov.cn/hd/cjwtjd/202302/t20230207_1902269.html
 
 Historical proxy sourcing/splicing, additional macro/breadth experiments, prospective ensemble
-promotion, exact-index YoY derivation and the full regime/performance dashboard remain separate
-follow-up work. YoY is explicitly null until a verified official index path is available.
+promotion and exact-index YoY derivation remain separate follow-up work. YoY is explicitly null until a verified official index path is available.

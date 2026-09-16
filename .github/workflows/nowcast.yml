@@ -68,6 +68,12 @@ jobs:
           if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
           python -m china_ppi_nowcast.cli --root . run "${args[@]}"
 
+      - name: Recover older official NBS releases
+        run: |
+          if [[ ! -f reports/history_search.json ]]; then
+            python -m china_ppi_nowcast.ingest.history_search --root .
+          fi
+
       - name: Run additive product candidates
         env:
           OMP_NUM_THREADS: "1"

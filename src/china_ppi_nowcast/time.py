@@ -30,15 +30,16 @@ def parse_target_month(value: str) -> pd.Period:
 
 
 def parse_release_title(title: str) -> tuple[str, Window] | None:
+    title = re.sub(r"[—–－]", "-", title).replace(" ", "")
     match = re.search(r"(20\d{2})年(\d{1,2})月(上旬|中旬|下旬).*流通领域重要生产资料", title)
     if match:
         return f"{int(match.group(1)):04d}-{int(match.group(2)):02d}", WINDOW_CN[match.group(3)]
     # The 2014-era archive used numeric ranges in parentheses rather than
     # 上旬/中旬/下旬 in the title.
-    match = re.search(r"流通领域重要生产资料.*[（(](20\d{2})年(\d{1,2})月(1-10|11-20|21-[0-9]{1,2})日[）)]", title)
+    match = re.search(r"流通领域重要生产资料.*[（(](20\d{2})年(\d{1,2})月(1|11|21)日?-(10|20|[0-9]{1,2})日[）)]", title)
     if not match:
         return None
-    window = {"1-10": Window.FIRST, "11-20": Window.SECOND}.get(match.group(3), Window.THIRD)
+    window = {"1": Window.FIRST, "11": Window.SECOND}.get(match.group(3), Window.THIRD)
     return f"{int(match.group(1)):04d}-{int(match.group(2)):02d}", window
 
 

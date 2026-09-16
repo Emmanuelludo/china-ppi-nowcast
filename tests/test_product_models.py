@@ -77,6 +77,13 @@ class ProductTests(unittest.TestCase):
         stable=ProductEstimator('ridge',stable=True).fit(X,y)
         self.assertEqual(stable.columns_,['a'])
 
+    def test_older_title_date_formats(self):
+        from china_ppi_nowcast.time import parse_release_title
+        from china_ppi_nowcast.ingest.nbs import PPI_TITLE_RE
+        self.assertEqual(parse_release_title('流通领域重要生产资料市场价格变动情况（2014年1月11—20日）')[0], '2014-01')
+        self.assertEqual(parse_release_title('流通领域重要生产资料市场价格变动情况（2018年1月1日-10日）')[0], '2018-01')
+        self.assertIsNotNone(PPI_TITLE_RE.search('2014年1月份工业生产者价格变动情况'))
+
     def test_retains_all_families(self):
         self.assertEqual(set(ALL_MODELS),{'ridge','histgb','xgboost','catboost','lightgbm',
             'category_factor','sector_first','random_forest','economic_ml_hybrid','direct_tracker'})
