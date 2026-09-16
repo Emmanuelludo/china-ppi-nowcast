@@ -16,7 +16,7 @@
 | `ingest_errors` | `[]` |
 | `ingest_warnings` | `[]` |
 | `target_month` | `2026-09` |
-| `forecasts_added` | `6` |
+| `forecasts_added` | `0` |
 | `vintage` | `early` |
 | `feature_hash` | `d76ff16f9995d07ccfab3d43b2f191323d5e07919d94d2cb87e640e9a3920ffa` |
 | `forecast_status` | `created_or_idempotent` |

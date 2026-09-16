@@ -1,0 +1,35 @@
+{
+  "forecast_id": "72762fd796f936348e0ac69b1cc6b69f46cb74dc259396c6efbf3b277a167830",
+  "target_month": "2026-09",
+  "as_of": "2026-09-16T23:37:11.005700+08:00",
+  "variant": "early",
+  "model": "catboost",
+  "panel": "union",
+  "model_version": "product-v3-f62708ba53ea7b1d",
+  "feature_version": "product-log-v3",
+  "feature_hash": "a7483d3405e868c6fe09a4230a1d28d23e4892cf1578016322796b593924844b",
+  "basket_versions": [
+    "basket_b9b653963c9d"
+  ],
+  "prediction_mom": 0.39533141647322523,
+  "implied_yoy": null,
+  "implied_yoy_status": "requires verified official index path",
+  "data_cutoff": "2026-09-14 01:30:00+00:00",
+  "hyperparameters": {
+    "iterations": 150,
+    "learning_rate": 0.04,
+    "depth": 2,
+    "l2_leaf_reg": 5.0,
+    "loss_function": "RMSE",
+    "nan_mode": "Min",
+    "thread_count": 1,
+    "random_seed": 20260916,
+    "verbose": false,
+    "random_strength": 1,
+    "allow_writing_files": false
+  },
+  "training_end": "2026-08",
+  "git_commit": "d90a3c2cae9d42514be00320fac4716b876e4f0a",
+  "status": "frozen_pre_release_candidate",
+  "unseen_training_features": []
+}
