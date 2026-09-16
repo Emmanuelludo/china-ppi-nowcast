@@ -7,16 +7,16 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from china_ppi_nowcast.modeling import MODEL_SPECS, load_bundle, predict_bundle, train_bundle
+from china_ppi_nowcast.modeling import MODEL_SPECS, load_bundle, model_specs_for_vintage, predict_bundle, train_bundle
 
 
 class ModelTests(unittest.TestCase):
     def test_committed_reconstructed_bundles_load(self) -> None:
-        root = Path(__file__).parents[1] / "models" / "reconstructed-v1"
+        root = Path(__file__).parents[1] / "models" / "reconstructed-v2"
         for vintage in ("early", "final"):
             manifest, models = load_bundle(root / vintage, require_validated=True)
             self.assertTrue(manifest["validated"])
-            self.assertEqual(set(models), {spec.key for spec in MODEL_SPECS})
+            self.assertEqual(set(models), {spec.key for spec in model_specs_for_vintage(vintage)})
 
     def test_all_six_reconstructed_models_train_and_predict(self) -> None:
         rng = np.random.default_rng(20260914)
@@ -38,7 +38,7 @@ class ModelTests(unittest.TestCase):
             output = Path(tmp)
             manifest = train_bundle(frame, output)
             self.assertFalse(manifest["validated"])
-            self.assertEqual(len(manifest["models"]), len(MODEL_SPECS))
+            self.assertEqual(len(manifest["models"]), len(model_specs_for_vintage(None)))
             self.assertIn("missing_panel_stress", manifest["models"][0]["metrics"])
             feature_row = frame.drop(columns=["target_mom_pct"]).tail(1)
             predictions = predict_bundle(output, feature_row, require_validated=False)

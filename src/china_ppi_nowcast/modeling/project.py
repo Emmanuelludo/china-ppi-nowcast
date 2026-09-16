@@ -28,7 +28,7 @@ def train_project_bundles(root: Path, bundle_root: Path, carry_weight: float = 0
             training_metadata=matrix_manifest,
         )
     root_manifest: dict[str, object] = {
-        "bundle_version": "reconstructed-v1",
+        "bundle_version": "reconstructed-v2",
         "provenance": "reconstructed",
         "validated": all(item["validated"] for item in variants.values()),
         "created_at": datetime.now(timezone.utc).isoformat(),
@@ -62,6 +62,7 @@ def _write_evaluation_report(root: Path, variants: dict[str, dict[str, object]])
         "|---|---|---:|---:|---:|---:|---:|---:|",
     ]
     for vintage, manifest in variants.items():
+        lines.extend(["", "| Vintage | Model | OOF n | MAE | RMSE | Bias | Direction | 10% mask MAE |", "|---|---|---:|---:|---:|---:|---:|---:|"])
         for model in manifest["models"]:
             metrics = model["metrics"]
             stress = metrics["missing_panel_stress"]

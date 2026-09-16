@@ -43,12 +43,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     train = commands.add_parser("train")
     train.add_argument("--training-file", required=True)
-    train.add_argument("--output-dir", default="models/reconstructed-v1")
+    train.add_argument("--output-dir", default="models/reconstructed-v2")
 
     forecast = commands.add_parser("forecast")
     forecast.add_argument("--target-month", required=True)
     forecast.add_argument("--as-of", required=True)
-    forecast.add_argument("--bundle-dir", default="models/reconstructed-v1")
+    forecast.add_argument("--bundle-dir", default="models/reconstructed-v2")
 
     run = commands.add_parser("run")
     run.add_argument("--target-month")

@@ -1,4 +1,4 @@
-"""Train and load six transparent reconstructed candidate models."""
+"""Train and load reconstructed candidates and transparent timing benchmarks."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
-from sklearn.base import clone
+from sklearn.base import BaseEstimator, RegressorMixin, clone
 from sklearn.compose import TransformedTargetRegressor
 from sklearn.decomposition import PCA
 from sklearn.ensemble import HistGradientBoostingRegressor, RandomForestRegressor, VotingRegressor
@@ -30,16 +30,77 @@ class ModelSpec:
     label: str
     prefixes: tuple[str, ...]
     estimator_kind: str
+    vintages: tuple[str, ...]
+    information_set: str
+    required_observed_prefix: str | None = None
 
 
-MODEL_SPECS = (
-    ModelSpec("category_factor_regression", "Category-factor regression", ("category__",), "factor_ridge"),
-    ModelSpec("gradient_boosting", "Gradient boosting", ("global__", "category__", "product__", "missing__"), "hist_gradient_boosting"),
-    ModelSpec("economic_ml_hybrid", "Economic + ML hybrid", ("global__", "category__", "econ__"), "voting_hybrid"),
-    ModelSpec("product_level_ridge", "Product-level ridge", ("product__", "missing__"), "ridge"),
-    ModelSpec("sector_first_aggregation", "Sector-first aggregation", ("global__", "category__"), "ridge"),
-    ModelSpec("random_forest", "Random forest", ("global__", "category__", "product__", "missing__"), "random_forest"),
+SURVEY_WINDOW_CONTRACT = (
+    "M-2:21-end, M-1:1-10/11-20/21-end, and M:1-10; final also uses M:11-20; "
+    "M:21-end is excluded"
 )
+TWENTIETH_WINDOW_CONTRACT = "M-1:11-20 and M:11-20 only; available in the final vintage"
+
+CORE_MODEL_SPECS = (
+    ModelSpec("category_factor_regression", "Category-factor regression", ("category__",), "factor_ridge", ("early", "final"), SURVEY_WINDOW_CONTRACT),
+    ModelSpec("gradient_boosting", "Gradient boosting", ("global__", "category__", "product__", "missing__"), "hist_gradient_boosting", ("early", "final"), SURVEY_WINDOW_CONTRACT),
+    ModelSpec("economic_ml_hybrid", "Economic + ML hybrid", ("global__", "category__", "econ__"), "voting_hybrid", ("early", "final"), SURVEY_WINDOW_CONTRACT),
+    ModelSpec("product_level_ridge", "Product-level ridge", ("product__", "missing__"), "ridge", ("early", "final"), SURVEY_WINDOW_CONTRACT),
+    ModelSpec("sector_first_aggregation", "Sector-first aggregation", ("global__", "category__"), "ridge", ("early", "final"), SURVEY_WINDOW_CONTRACT),
+    ModelSpec("random_forest", "Random forest", ("global__", "category__", "product__", "missing__"), "random_forest", ("early", "final"), SURVEY_WINDOW_CONTRACT),
+)
+
+FINAL_BENCHMARK_SPECS = (
+    ModelSpec(
+        "twentieth_to_twentieth_direct",
+        "20th-to-20th direct trimmed index",
+        ("twentieth_product__",),
+        "direct_trimmed_index",
+        ("final",),
+        TWENTIETH_WINDOW_CONTRACT,
+        "twentieth_product__",
+    ),
+    ModelSpec(
+        "twentieth_to_twentieth_ridge",
+        "20th-to-20th product ridge",
+        ("twentieth_product__", "twentieth_missing__"),
+        "ridge",
+        ("final",),
+        TWENTIETH_WINDOW_CONTRACT,
+        "twentieth_product__",
+    ),
+)
+
+MODEL_SPECS = CORE_MODEL_SPECS + FINAL_BENCHMARK_SPECS
+
+
+def model_specs_for_vintage(vintage: str | None) -> tuple[ModelSpec, ...]:
+    if vintage is None:
+        return CORE_MODEL_SPECS
+    return tuple(spec for spec in MODEL_SPECS if vintage in spec.vintages)
+
+
+class DirectTrimmedIndex(RegressorMixin, BaseEstimator):
+    """Return the row-wise trimmed mean of observed product changes without fitting weights."""
+
+    def __init__(self, trim_fraction: float = 0.1) -> None:
+        self.trim_fraction = trim_fraction
+
+    def fit(self, X: pd.DataFrame, y: pd.Series | None = None) -> "DirectTrimmedIndex":
+        self.n_features_in_ = X.shape[1]
+        return self
+
+    def predict(self, X: pd.DataFrame) -> np.ndarray:
+        output: list[float] = []
+        for row in np.asarray(X, dtype=float):
+            values = np.sort(row[np.isfinite(row)])
+            if not len(values):
+                output.append(np.nan)
+                continue
+            cut = int(len(values) * self.trim_fraction)
+            kept = values[cut : len(values) - cut] if cut and len(values) > 2 * cut else values
+            output.append(float(np.mean(kept)))
+        return np.asarray(output)
 
 
 def _ridge() -> Pipeline:
@@ -88,6 +149,8 @@ def _make_estimator(kind: str, n_rows: int, n_columns: int) -> object:
                 )),
             ]
         )
+    if kind == "direct_trimmed_index":
+        return DirectTrimmedIndex(trim_fraction=0.1)
     raise ValueError(f"unknown estimator kind: {kind}")
 
 
@@ -115,7 +178,10 @@ def _oof_metrics(estimator: object, X: pd.DataFrame, y: pd.Series) -> dict[str, 
     truth: list[float] = []
     predicted: list[float] = []
     stressed: list[float] = []
-    stress_columns = [column for column in X.columns if column.startswith(("product__", "category__"))]
+    stress_columns = [
+        column for column in X.columns
+        if column.startswith(("product__", "category__", "twentieth_product__", "twentieth_category__"))
+    ]
     rng = np.random.default_rng(20260914)
     for train_idx, test_idx in cv.split(X):
         fitted = clone(estimator).fit(X.iloc[train_idx], y.iloc[train_idx])
@@ -184,12 +250,18 @@ def train_bundle(
         raise ValueError("at least 24 monthly observations are required for reconstructed training")
     output_dir.mkdir(parents=True, exist_ok=True)
     entries: list[dict[str, object]] = []
-    for spec in MODEL_SPECS:
+    specs = model_specs_for_vintage(vintage)
+    for spec in specs:
         columns = _columns_for(frame, spec)
         if not columns:
             raise ValueError(f"no features available for {spec.key} with prefixes {spec.prefixes}")
         X = frame[columns].astype(float)
         y = frame[target_column].astype(float)
+        if spec.required_observed_prefix:
+            observed_columns = [c for c in columns if c.startswith(spec.required_observed_prefix)]
+            observed = X[observed_columns].notna().any(axis=1)
+            X = X.loc[observed].reset_index(drop=True)
+            y = y.loc[observed].reset_index(drop=True)
         estimator = _make_estimator(spec.estimator_kind, len(X), len(columns))
         metrics = _oof_metrics(estimator, X, y)
         estimator.fit(X, y)
@@ -202,13 +274,22 @@ def train_bundle(
                 "estimator_kind": spec.estimator_kind,
                 "file": filename,
                 "feature_columns": columns,
+                "training_rows": len(X),
                 "metrics": metrics,
                 "uses_economic_features": any(column.startswith("econ__") for column in columns),
+                "available_vintages": list(spec.vintages),
+                "information_set": spec.information_set,
+                "required_observed_prefix": spec.required_observed_prefix,
             }
         )
+    fitted_keys = {entry["key"] for entry in entries}
+    core_keys = {spec.key for spec in CORE_MODEL_SPECS}
+    benchmark_keys = {spec.key for spec in FINAL_BENCHMARK_SPECS}
     checks = {
         "at_least_36_months": len(frame) >= 36,
-        "six_models_fitted": len(entries) == len(MODEL_SPECS),
+        "expected_models_fitted": len(entries) == len(specs),
+        "six_core_models_fitted": core_keys.issubset(fitted_keys),
+        "final_twentieth_benchmarks_fitted": vintage != "final" or benchmark_keys.issubset(fitted_keys),
         "at_least_12_oof_predictions_each": all(int(entry["metrics"]["n_oof"]) >= 12 for entry in entries),
         "all_metrics_finite": all(
             np.isfinite(float(entry["metrics"][key]))
@@ -223,7 +304,7 @@ def train_bundle(
     }
     validated = bool(validate and all(checks.values()))
     manifest: dict[str, object] = {
-        "bundle_version": f"reconstructed-v1-{vintage}" if vintage else "reconstructed-v1",
+        "bundle_version": f"reconstructed-v2-{vintage}" if vintage else "reconstructed-v2",
         "provenance": "reconstructed",
         "validated": validated,
         "validation_scope": "operational_and_leakage_checks_not_model_superiority",
@@ -262,6 +343,11 @@ def predict_bundle(bundle_dir: Path, features: pd.DataFrame, require_validated: 
     for entry in manifest["models"]:
         columns = entry["feature_columns"]
         X = features.reindex(columns=columns).apply(pd.to_numeric, errors="coerce")
+        required_prefix = entry.get("required_observed_prefix")
+        if required_prefix:
+            required = [column for column in columns if column.startswith(required_prefix)]
+            if not required or not X[required].notna().any(axis=1).all():
+                continue
         estimate = float(models[entry["key"]].predict(X)[0])
         predictions.append(
             {

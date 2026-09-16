@@ -18,7 +18,7 @@ China (NBS) headline producer price index month-on-month change.
 | NBS release discovery and immutable snapshots | Implemented |
 | Survey-date-aligned feature construction | Implemented and tested |
 | Official NBS history backfill | 2021-09 through 2026-09; complete current index, with documented holiday omissions |
-| Six reconstructed model families | Early and final bundles trained and operationally validated |
+| Reconstructed candidates | Six survey-aligned models plus two final-only 20th-to-20th benchmarks |
 | Append-only forecast and actual registries | Implemented and tested |
 | Scheduled GitHub Actions workflow | Enabled daily at 02:35 UTC; push/manual reruns supported |
 | Recovered original fitted model artifacts | Unavailable |

@@ -1,0 +1,23 @@
+{
+  "bundle_version": "reconstructed-v2",
+  "provenance": "reconstructed",
+  "validated": true,
+  "created_at": "2026-09-16T08:54:33.069807+00:00",
+  "variants": {
+    "early": {
+      "directory": "early",
+      "validated": true,
+      "training_rows": 55,
+      "training_start": "2021-10",
+      "training_end": "2026-08"
+    },
+    "final": {
+      "directory": "final",
+      "validated": true,
+      "training_rows": 53,
+      "training_start": "2021-10",
+      "training_end": "2026-08"
+    }
+  },
+  "warning": "Operationally validated reconstructed candidates; this does not recover or reproduce the missing v0.4 objects."
+}

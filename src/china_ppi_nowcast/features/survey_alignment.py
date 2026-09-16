@@ -142,13 +142,19 @@ def build_feature_vintage(
     )
     prior_level, _ = _month_log_level(table, month - 1, carry_weight, allow_first_only=False)
     pct_change = 100.0 * np.expm1(current_level - prior_level)
+    twentieth_change = 100.0 * np.expm1(
+        _column(table, str(month), Window.SECOND)
+        - _column(table, str(month - 1), Window.SECOND)
+    )
     product = current_components.copy()
     product["prior_month_log_price"] = prior_level
     product["survey_aligned_change_pct"] = pct_change
+    product["twentieth_to_twentieth_change_pct"] = twentieth_change
     product["second_window_missing"] = product["second_survey_log_price"].isna().astype(int)
     product = product.reset_index()
 
     valid = product["survey_aligned_change_pct"].dropna()
+    twentieth_valid = product["twentieth_to_twentieth_change_pct"].dropna()
     features: dict[str, object] = {
         "target_month": target_month,
         "as_of": cutoff.isoformat(),
@@ -160,15 +166,26 @@ def build_feature_vintage(
         "global__n_products": int(valid.size),
         "global__missing_fraction": float(1.0 - valid.size / max(len(product), 1)),
         "global__second_window_missing_fraction": float(product["second_window_missing"].mean()),
+        "twentieth__mean": float(twentieth_valid.mean()) if len(twentieth_valid) else math.nan,
+        "twentieth__median": float(twentieth_valid.median()) if len(twentieth_valid) else math.nan,
+        "twentieth__trimmed_mean": _trimmed_mean(twentieth_valid),
+        "twentieth__std": float(twentieth_valid.std(ddof=1)) if len(twentieth_valid) > 1 else math.nan,
+        "twentieth__n_products": int(twentieth_valid.size),
+        "twentieth__missing_fraction": float(1.0 - twentieth_valid.size / max(len(product), 1)),
     }
     for category, group in product.groupby("category_cn", dropna=False):
         values = group["survey_aligned_change_pct"]
         features[f"category__{category}__mean"] = float(values.mean())
         features[f"category__{category}__missing"] = float(values.isna().mean())
+        twentieth_values = group["twentieth_to_twentieth_change_pct"]
+        features[f"twentieth_category__{category}__mean"] = float(twentieth_values.mean())
+        features[f"twentieth_category__{category}__missing"] = float(twentieth_values.isna().mean())
     for _, row in product.iterrows():
         name = row["product_name_cn"]
         features[f"product__{name}"] = row["survey_aligned_change_pct"]
         features[f"missing__{name}"] = int(pd.isna(row["survey_aligned_change_pct"]))
+        features[f"twentieth_product__{name}"] = row["twentieth_to_twentieth_change_pct"]
+        features[f"twentieth_missing__{name}"] = int(pd.isna(row["twentieth_to_twentieth_change_pct"]))
 
     source_vintages = (
         available[["release_month", "window", "published_at", "retrieved_at", "source_url", "content_sha256"]]
@@ -177,7 +194,7 @@ def build_feature_vintage(
         .astype(str)
         .to_dict(orient="records")
     )
-    feature_hash = stable_hash({"settings": {"carry_weight": carry_weight}, "sources": source_vintages})
+    feature_hash = stable_hash({"schema": "survey-plus-twentieth-v2", "target_month": target_month, "vintage": vintage, "settings": {"carry_weight": carry_weight}, "sources": source_vintages})
     features["feature_hash"] = feature_hash
     manifest = {
         "target_month": target_month,
@@ -186,10 +203,12 @@ def build_feature_vintage(
         "carry_weight": carry_weight,
         "first_survey_formula": "carry_weight*log(M-1:21-end)+(1-carry_weight)*log(M:1-10)",
         "second_survey_formula": "log(M:11-20)",
+        "twentieth_to_twentieth_formula": "100*(exp(log(M:11-20)-log(M-1:11-20))-1)",
         "current_21_end_used": False,
         "feature_hash": feature_hash,
         "sources": source_vintages,
         "n_products": int(valid.size),
+        "n_twentieth_to_twentieth_products": int(twentieth_valid.size),
         "availability_basis": availability_basis,
         "realtime_status": "prospective" if availability_basis == "strict" else "pseudo_real_time",
         "historical_snapshot_caveat": (

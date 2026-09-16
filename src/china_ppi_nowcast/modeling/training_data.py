@@ -87,6 +87,6 @@ def build_training_matrix(
 
 
 def write_training_matrix(root: Path, vintage: str, matrix: pd.DataFrame, manifest: dict[str, object]) -> None:
-    directory = root / "data" / "processed" / "training"
+    directory = root / "data" / "processed" / "training" / "reconstructed-v2"
     atomic_write_csv(directory / f"{vintage}.csv", matrix)
     atomic_write_text(directory / f"{vintage}.manifest.json", json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
