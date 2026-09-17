@@ -1,0 +1,17 @@
+{
+  "endpoint": "https://api.so-gov.cn/query/s",
+  "params": {
+    "siteCode": "bm36000002",
+    "qt": "流通领域重要生产资料",
+    "tab": "",
+    "keyPlace": 1,
+    "sort": "dateDesc",
+    "timeOption": 2,
+    "startDateStr": "2017-11-16",
+    "endDateStr": "2021-09-30",
+    "page": 4,
+    "pageSize": 20
+  },
+  "content_sha256": "c76b10ed2d5c6b53622c17fd27035682392327c7ae1107520f75dec0b519584b",
+  "retrieved_at": "2026-09-17T18:01:52.881837+00:00"
+}

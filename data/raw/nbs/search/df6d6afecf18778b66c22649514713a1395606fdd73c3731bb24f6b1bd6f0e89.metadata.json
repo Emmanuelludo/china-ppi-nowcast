@@ -1,0 +1,17 @@
+{
+  "endpoint": "https://api.so-gov.cn/query/s",
+  "params": {
+    "siteCode": "bm36000002",
+    "qt": "工业生产者",
+    "tab": "",
+    "keyPlace": 1,
+    "sort": "dateDesc",
+    "timeOption": 2,
+    "startDateStr": "2019-10-25",
+    "endDateStr": "2021-09-30",
+    "page": 16,
+    "pageSize": 20
+  },
+  "content_sha256": "df6d6afecf18778b66c22649514713a1395606fdd73c3731bb24f6b1bd6f0e89",
+  "retrieved_at": "2026-09-17T18:02:39.058046+00:00"
+}
