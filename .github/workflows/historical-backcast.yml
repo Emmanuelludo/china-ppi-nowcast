@@ -68,12 +68,15 @@ jobs:
           out_path = root / 'reports/historical_backcast_2025_2026.csv'
           out.to_csv(out_path, index=False)
 
+          text_table = out.to_csv(index=False, float_format='%.3f')
           md = [
               '# Historical PPI model backcast: Jan 2025–Aug 2026',
               '',
               'This is intentionally **contaminated/in-sample**. It applies the current reconstructed-v2 final-vintage fitted objects (trained through Aug 2026) to their own historical feature rows. It is not an ex-ante forecast evaluation.',
               '',
-              out.to_markdown(index=False, floatfmt='.3f'),
+              '```csv',
+              text_table.rstrip(),
+              '```',
               '',
               'Model labels:',
           ]
@@ -88,7 +91,7 @@ jobs:
             exit 0
           fi
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "4189826+github-actions[bot]@users.noreply.github.com"
           git add reports/historical_backcast_2025_2026.csv reports/historical_backcast_2025_2026.md
           git commit -m "analysis: add contaminated 2025-26 PPI model backcast"
           git push
