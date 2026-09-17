@@ -15,7 +15,7 @@ import time
 import urllib.parse
 import urllib.request
 
-from .nbs import NBSClient,ReleaseLink,PPI_TITLE_RE,_ingest_links
+from .nbs import NBSClient,ReleaseLink,PPI_TITLE_RE,_ingest_links,rebuild_actuals_from_snapshots
 from ..time import parse_release_title
 from ..storage import atomic_write_text
 
@@ -89,6 +89,11 @@ def backfill(root,start='2014-01-01',end='2021-09-30'):
         found,report=discover(root,kind,start,end);links.extend(found);discovery.append(report)
         print(json.dumps(report),flush=True)
     result=_ingest_links(root,links,NBSClient(timeout=30,retries=3),6,skip_known_urls=True)
+    if not result['failed']:
+        result['actual_registry_rebuild']=rebuild_actuals_from_snapshots(root)
+        result['failed']+=result['actual_registry_rebuild']['failed']
+        result['errors'].extend(result['actual_registry_rebuild']['errors'])
+    result['parser_version']='headline_v2'
     import pandas as pd
     observations=pd.read_csv(root/'data/processed/nbs_ten_day_observations.csv.gz')
     actuals=pd.read_csv(root/'data/registry/actuals.csv')

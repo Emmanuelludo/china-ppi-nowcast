@@ -70,18 +70,19 @@ jobs:
 
       - name: Recover older official NBS releases
         run: |
-          if [[ ! -f reports/history_search.json ]]; then
+          if [[ ! -f reports/history_search.json ]] || ! python -c 'import json; d=json.load(open("reports/history_search.json")); assert d.get("failed", 1)==0 and d.get("parser_version")=="headline_v2"'; then
             python -m china_ppi_nowcast.ingest.history_search --root .
           fi
 
-      - name: Checkpoint validated historical sources
+      - name: Checkpoint historical sources and parse diagnostics
+        if: ${{ always() && !cancelled() }}
         run: |
-          paths=(data/raw/nbs data/processed/nbs_ten_day_observations.csv.gz data/registry/actuals.csv reports/history_search.json)
+          paths=(data reports)
           if [[ -z "$(git status --porcelain -- "${paths[@]}")" ]]; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "${paths[@]}"
-          git commit -m "data: checkpoint validated historical NBS sources"
+          git commit -m "data: checkpoint historical NBS sources and diagnostics"
           git push
 
       - name: Run additive product candidates

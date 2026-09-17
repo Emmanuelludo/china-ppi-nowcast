@@ -27,6 +27,16 @@ class IngestTests(unittest.TestCase):
         self.assertEqual(row["target_month"], "2026-03")
         self.assertAlmostEqual(float(row["actual_mom_pct"]), 0.4)
 
+    def test_ppi_long_header_and_flat_headline_before_purchase_change(self):
+        page=('<html><head><meta charset="utf-8"><style>'+('padding ' * 1000)+
+              '</style><title>2014年1月份工业生产者价格变动情况</title></head><body>'+
+              '<nav>'+('navigation ' * 1000)+'</nav><div>2014/02/14 09:30</div>'+
+              '<div class="TRS_Editor">全国工业生产者出厂价格环比持平。工业生产者购进价格环比下降0.3%。</div></body></html>').encode()
+        row=parse_ppi_page(page,'https://www.stats.gov.cn/example',datetime(2026,9,17,tzinfo=timezone.utc))
+        self.assertEqual(row['target_month'],'2014-01')
+        self.assertEqual(row['actual_mom_pct'],0.)
+        self.assertTrue(row['published_at'].startswith('2014-02-14'))
+
     def test_parse_legacy_numeric_window_title(self) -> None:
         parsed = parse_release_title("流通领域重要生产资料市场价格变动情况（2014年1月1-10日）")
         self.assertEqual(parsed, ("2014-01", Window.FIRST))

@@ -175,15 +175,21 @@ def parse_ten_day_page(content: bytes, url: str, retrieved_at: datetime) -> pd.D
 
 def parse_ppi_page(content: bytes, url: str, retrieved_at: datetime) -> dict[str, object]:
     document = html.fromstring(content)
-    text = " ".join(document.text_content().split())
-    title_match = PPI_TITLE_RE.search(text[:1000])
+    # Release identity comes from its title, not an arbitrary page-text prefix.
+    # Site navigation, scripts and styles can precede the article by many KB.
+    title_text = " ".join(node.text_content() for node in document.xpath("//title | //h1 | //h2"))
+    for node in document.xpath("//script | //style | //noscript"):
+        node.drop_tree()
+    article = document.xpath("//*[contains(concat(' ', normalize-space(@class), ' '), ' TRS_Editor ')]")
+    text = " ".join((article[0] if article else document).text_content().split())
+    title_match = PPI_TITLE_RE.search(title_text) or PPI_TITLE_RE.search(text)
     if not title_match:
         raise ValueError("PPI target month not found")
     direction_match = PPI_MOM_RE.search(text)
     flat_match = PPI_MOM_FLAT_RE.search(text)
     if not direction_match and not flat_match:
         raise ValueError("headline PPI MoM value not found")
-    if direction_match:
+    if direction_match and (flat_match is None or direction_match.start() < flat_match.start()):
         direction, magnitude = direction_match.groups()
         value = float(magnitude)
         if direction == "下降":
@@ -357,5 +363,18 @@ def rebuild_actuals_from_snapshots(root: Path) -> dict[str, object]:
     frame = frame.drop_duplicates(["target_month", "content_sha256"], keep="last").sort_values(
         ["target_month", "published_at"]
     )
-    atomic_write_csv(root / "data" / "registry" / "actuals.csv", frame)
-    return {"actuals_rebuilt": len(frame), "failed": 0, "errors": []}
+    actual_path = root / "data" / "registry" / "actuals.csv"
+    previous = read_csv_or_empty(actual_path, ACTUAL_COLUMNS)
+    corrections = 0
+    for row in frame.to_dict("records"):
+        old = previous[(previous["target_month"] == row["target_month"]) &
+                       (previous["content_sha256"] == row["content_sha256"])]
+        if not old.empty and float(old.iloc[-1]["actual_mom_pct"]) != float(row["actual_mom_pct"]):
+            record = {"parser_version": "headline_v2", "reason": "headline precedes purchasing/sector changes",
+                      "before": old.iloc[-1].fillna("").to_dict(), "after": row}
+            encoded = json.dumps(record, ensure_ascii=False, sort_keys=True, default=str)
+            key = sha256_bytes(encoded.encode())
+            atomic_write_text(root / "data" / "registry" / "parser_corrections" / f"{key}.json", encoded + "\n")
+            corrections += 1
+    atomic_write_csv(actual_path, frame)
+    return {"actuals_rebuilt": len(frame), "parser_corrections": corrections, "failed": 0, "errors": []}
