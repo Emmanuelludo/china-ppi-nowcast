@@ -22,6 +22,12 @@ from ..storage import atomic_write_text
 ENDPOINT='https://api.so-gov.cn/query/s'
 
 
+def is_release_url(url):
+    parsed=urllib.parse.urlparse(url)
+    return parsed.hostname in ('www.stats.gov.cn','stats.gov.cn') and parsed.path.startswith(
+        ('/sj/zxfb/','/sj/zxfbhjd/','/tjsj/zxfb/','/xxgk/sjfb/'))
+
+
 def discover(root,kind,start='2014-01-01',end='2021-09-30',workers=4):
     directory=root/'data/raw/nbs/search';directory.mkdir(parents=True,exist_ok=True)
     cached={}
@@ -71,7 +77,7 @@ def discover(root,kind,start='2014-01-01',end='2021-09-30',workers=4):
     for data in all_pages:
         for result in data.get('resultDocs',[]):
             row=result['data'];url=row['url'];title=row['titleO']
-            if urllib.parse.urlparse(url).hostname not in ('www.stats.gov.cn','stats.gov.cn'):continue
+            if not is_release_url(url):continue
             valid=parse_release_title(title) if kind=='ten_day' else PPI_TITLE_RE.search(title)
             if valid:links[url]=ReleaseLink(title,url,kind)
     return list(links.values()),dict(kind=kind,pages=pages,total_hits=first['totalHits'],official_release_links=len(links))

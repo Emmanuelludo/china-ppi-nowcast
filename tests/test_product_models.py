@@ -84,6 +84,12 @@ class ProductTests(unittest.TestCase):
         self.assertEqual(parse_release_title('流通领域重要生产资料市场价格变动情况（2018年1月1日-10日）')[0], '2018-01')
         self.assertIsNotNone(PPI_TITLE_RE.search('2014年1月份工业生产者价格变动情况'))
 
+    def test_discovery_excludes_questions_quoting_release_titles(self):
+        from china_ppi_nowcast.ingest.history_search import is_release_url
+        self.assertFalse(is_release_url('https://www.stats.gov.cn/hd/lyzx/zxgk/202405/t20240524_1953441.html'))
+        self.assertTrue(is_release_url('https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1898426.html'))
+        self.assertFalse(is_release_url('https://example.test/sj/zxfb/fake.html'))
+
     def test_retains_all_families(self):
         self.assertEqual(set(ALL_MODELS),{'ridge','histgb','xgboost','catboost','lightgbm',
             'category_factor','sector_first','random_forest','economic_ml_hybrid','direct_tracker'})

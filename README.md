@@ -17,8 +17,9 @@ China (NBS) headline producer price index month-on-month change.
 | Frozen August 2026 forecast registry | Preserved |
 | NBS release discovery and immutable snapshots | Implemented |
 | Survey-date-aligned feature construction | Implemented and tested |
-| Official NBS history backfill | 2021-09 through 2026-09; complete current index, with documented holiday omissions |
-| Reconstructed candidates | Six survey-aligned models plus two final-only 20th-to-20th benchmarks |
+| Official NBS history backfill | Current index plus older official search; exact coverage and gaps in `reports/history_search.json` |
+| Retained candidates | Six survey-aligned models plus two original 20th-to-20th benchmarks |
+| Additional product candidates | Ten 20th-to-20th families; five stable-panel sensitivities; five each for early, early-plus-carry and final timing |
 | Append-only forecast and actual registries | Implemented and tested |
 | Scheduled GitHub Actions workflow | Enabled daily at 02:35 UTC; push/manual reruns supported |
 | Recovered original fitted model artifacts | Unavailable |
@@ -28,7 +29,27 @@ Nothing in this repository installs software or creates a scheduler on a user's
 device. Automation, when enabled, runs only in GitHub Actions and is visible in
 the repository's Actions tab.
 
-## Timing model
+## Additional product models
+
+All existing models and frozen forecasts are retained. The additional product suite uses
+individual absolute-price changes, native tree missingness, fold-local preprocessing,
+nested chronological validation, and reconciled product/group SHAP.
+
+- [Latest product forecasts](reports/product_latest.md)
+- [Historical candidate evaluation](reports/product_candidates.md)
+- [Prospective and rolling performance](reports/product_performance.md)
+- [Product methodology and commands](docs/PRODUCT_MODELS.md)
+- [Historical source discovery audit](reports/history_search.json)
+
+```bash
+python -m pip install -e '.[product]'
+python -m china_ppi_nowcast.product run --root .
+```
+
+The 20th-to-20th suite waits for the current month’s 11–20 release. Early forecasts
+remain separate. Training new bundles never overwrites old model objects.
+
+## Retained survey-aligned timing model
 
 For target month `M`, the primary specification treats the NBS ten-day data as a
 continuous price process:
@@ -75,7 +96,8 @@ page becomes a new immutable snapshot rather than silently replacing the old
 one.
 
 The current NBS release index contains 67 pages and reaches September 2021.
-Older official pages exist but are not exhaustively enumerated by that index, so
-the deployed reproducible backfill does not claim pre-September-2021 completeness.
+Older releases are discovered through the official NBS search API with date-partitioned
+queries. Only release-section URLs are accepted; Q&A and social results are excluded.
+The historical discovery report lists observed coverage and missing release windows.
 Historical training matrices use publication-time cutoffs and are explicitly
 `pseudo_real_time`; only live forecasts enforce both publication and retrieval cutoffs.

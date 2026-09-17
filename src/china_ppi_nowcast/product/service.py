@@ -1,5 +1,6 @@
 """Frozen prospective candidates, exact features, and reconciled SHAP artifacts."""
 import importlib.metadata
+import hashlib
 import json
 import subprocess
 import joblib
@@ -30,7 +31,10 @@ def run(root,bundle,month,as_of):
         for candidate in manifest['models']:
             if candidate['variant']!=variant:continue
             if candidate['training_end']>=month:raise ValueError('model target-month leakage')
-            model=joblib.load(bundle/candidate['artifact'])
+            artifact=bundle/candidate['artifact']
+            if candidate.get('artifact_sha256') and hashlib.sha256(artifact.read_bytes()).hexdigest()!=candidate['artifact_sha256']:
+                raise ValueError('saved model artifact hash mismatch')
+            model=joblib.load(artifact)
             X=pd.DataFrame([features]).reindex(columns=candidate['feature_order'])
             prediction=float(model.predict(X)[0])
             if not np.isfinite(prediction):raise ValueError('nonfinite forecast')

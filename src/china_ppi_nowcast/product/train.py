@@ -1,5 +1,7 @@
 """Monthly expanding validation; immutable fitted objects and attribution histories."""
 import importlib.metadata
+import hashlib
+import sys
 import itertools
 import json
 import subprocess
@@ -62,6 +64,7 @@ def train(root,variants=VARIANTS,min_train=24,stable=True):
         stable=stable,packages=packages,actuals=actuals.fillna('').to_dict('records')))[:16]
     dest=root/'models'/version;dest.mkdir(parents=True,exist_ok=True)
     if (dest/'manifest.json').exists(): return json.loads((dest/'manifest.json').read_text())
+    write_json(dest/'environment.json',dict(python=sys.version,packages={d.metadata['Name']:d.version for d in importlib.metadata.distributions() if d.metadata['Name']}))
     write_json(dest/'catalog.json',catalog)
     x['basket_version']=[next(b['basket_version'] for b in catalog['baskets'] if b['effective_from']<=str(d.date()) and (b['effective_to'] is None or str(d.date())<=b['effective_to'])) for d in x.period_start]
     x.to_csv(dest/'canonical_prices.csv.gz',index=False)
@@ -101,7 +104,7 @@ def train(root,variants=VARIANTS,min_train=24,stable=True):
                             target_month=row['target_month'],feature=c,group=groups[c],shap=float(v),baseline=float(baseline[0]),prediction=p))
                 fitted,tuning=select_fit(X,y,name,panel=='stable',groups,matrix)
                 file=f'{variant}/{panel}_{name}.joblib';joblib.dump(fitted,dest/file,compress=3)
-                models.append(dict(variant=variant,panel=panel,name=name,artifact=file,tuning=tuning,
+                models.append(dict(variant=variant,panel=panel,name=name,artifact=file,artifact_sha256=hashlib.sha256((dest/file).read_bytes()).hexdigest(),tuning=tuning,
                     hyperparameters=json_safe(fitted.estimator_.get_params(deep=False)) if name!='direct_tracker' else {},
                     feature_order=columns,learned_features=fitted.columns_,training_start=matrix.iloc[0].target_month,
                     training_end=matrix.iloc[-1].target_month,training_rows=len(matrix),
