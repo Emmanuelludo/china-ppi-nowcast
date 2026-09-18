@@ -1,20 +1,20 @@
 # Latest China headline PPI MoM nowcast
 
 - Target month: **2026-09**
-- Frozen cutoff: **2026-09-16T16:58:21.013573+08:00**
+- Frozen cutoff: **2026-09-19T04:46:48.549295+08:00**
 - Information set: **early**
 - Comparable products: **50**
-- Model median: **+0.381% MoM**
-- Model range: **-0.026% to +0.794% MoM**
+- Model median: **+0.670% MoM**
+- Model range: **+0.024% to +0.880% MoM**
 
 | Model | Estimate (% MoM) | Provenance |
 |---|---:|---|
-| Category-factor regression | +0.048 | reconstructed |
-| Gradient boosting | +0.489 | reconstructed |
-| Economic + ML hybrid | +0.272 | reconstructed |
-| Product-level ridge | +0.794 | reconstructed |
-| Sector-first aggregation | -0.026 | reconstructed |
-| Random forest | +0.515 | reconstructed |
+| Category-factor regression | +0.024 | reconstructed |
+| Gradient boosting | +0.770 | reconstructed |
+| Economic + ML hybrid | +0.728 | reconstructed |
+| Product-level ridge | +0.880 | reconstructed |
+| Sector-first aggregation | +0.569 | reconstructed |
+| Random forest | +0.611 | reconstructed |
 
 The cross-model range is descriptive dispersion, not a calibrated prediction interval.
 The direct 20th-to-20th index is an uncalibrated circulation-price proxy and is excluded from the model median/range.

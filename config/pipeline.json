@@ -9,5 +9,5 @@
   "first_survey_carry_weight": 0.5,
   "timezone": "Asia/Shanghai",
   "minimum_products_warning": 40,
-  "model_bundle": "models/reconstructed-v2"
+  "model_bundle": "models/reconstructed-v3"
 }

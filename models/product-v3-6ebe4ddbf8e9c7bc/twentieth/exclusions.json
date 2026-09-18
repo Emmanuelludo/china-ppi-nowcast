@@ -1,0 +1,58 @@
+[
+  {
+    "month": "2013-12",
+    "reason": "missing 11-20"
+  },
+  {
+    "month": "2014-01",
+    "reason": "QA: unavailable source release 2013-12:11-20"
+  },
+  {
+    "month": "2015-02",
+    "reason": "missing 11-20"
+  },
+  {
+    "month": "2015-03",
+    "reason": "QA: unavailable source release 2015-02:11-20"
+  },
+  {
+    "month": "2018-02",
+    "reason": "missing 11-20"
+  },
+  {
+    "month": "2018-03",
+    "reason": "QA: unavailable source release 2018-02:11-20"
+  },
+  {
+    "month": "2019-05",
+    "reason": "missing 11-20"
+  },
+  {
+    "month": "2019-06",
+    "reason": "QA: unavailable source release 2019-05:11-20"
+  },
+  {
+    "month": "2021-02",
+    "reason": "missing 11-20"
+  },
+  {
+    "month": "2021-03",
+    "reason": "QA: unavailable source release 2021-02:11-20"
+  },
+  {
+    "month": "2024-02",
+    "reason": "missing 11-20"
+  },
+  {
+    "month": "2024-03",
+    "reason": "QA: unavailable source release 2024-02:11-20"
+  },
+  {
+    "month": "2026-02",
+    "reason": "missing 11-20"
+  },
+  {
+    "month": "2026-03",
+    "reason": "QA: unavailable source release 2026-02:11-20"
+  }
+]

@@ -1,44 +1,44 @@
 # Additional product models
 
-Bundle: `product-v3-f62708ba53ea7b1d`
+Bundle: `product-v3-6ebe4ddbf8e9c7bc`
 
 Existing models and forecasts are preserved. No permanent winner or ensemble promotion.
-Verified history: 2021-09-21–2026-09-10; earlier official history remains outstanding.
+Verified history: 2014-01-01–2026-09-10; see the historical discovery audit for remaining gaps.
 20th-to-20th uses current versus previous 11–20 period prices, not exact day-20 factory-gate prices.
 All models share eligible monthly OOS origins within a timing specification. Results are pseudo-real-time.
 
 |Timing|Panel|Model|OOS n|MAE|RMSE|Bias|
 |---|---|---|---:|---:|---:|---:|
-|twentieth|union|ridge|30|0.360|0.593|0.068|
-|twentieth|union|histgb|30|0.324|0.449|-0.108|
-|twentieth|union|xgboost|30|0.297|0.414|-0.061|
-|twentieth|union|catboost|30|0.297|0.426|-0.058|
-|twentieth|union|lightgbm|30|0.302|0.443|-0.074|
-|twentieth|union|category_factor|30|0.269|0.373|-0.036|
-|twentieth|union|sector_first|30|0.276|0.390|0.033|
-|twentieth|union|random_forest|30|0.308|0.430|-0.013|
-|twentieth|union|economic_ml_hybrid|30|0.287|0.410|-0.000|
-|twentieth|union|direct_tracker|30|1.075|1.252|-0.329|
-|twentieth|stable|ridge|30|0.296|0.422|-0.036|
-|twentieth|stable|histgb|30|0.334|0.436|-0.041|
-|twentieth|stable|xgboost|30|0.304|0.401|-0.049|
-|twentieth|stable|catboost|30|0.293|0.414|-0.072|
-|twentieth|stable|lightgbm|30|0.317|0.425|-0.052|
-|final|union|ridge|26|0.371|0.576|0.117|
-|final|union|histgb|26|0.351|0.493|-0.106|
-|final|union|xgboost|26|0.341|0.491|-0.119|
-|final|union|catboost|26|0.314|0.438|-0.023|
-|final|union|lightgbm|26|0.343|0.492|-0.126|
-|early|union|ridge|30|0.436|1.166|0.252|
-|early|union|histgb|30|0.306|0.438|-0.078|
-|early|union|xgboost|30|0.295|0.406|-0.061|
-|early|union|catboost|30|0.248|0.364|-0.025|
-|early|union|lightgbm|30|0.303|0.427|-0.080|
-|early_carry|union|ridge|28|0.417|0.813|0.199|
-|early_carry|union|histgb|28|0.323|0.459|-0.053|
-|early_carry|union|xgboost|28|0.313|0.431|-0.068|
-|early_carry|union|catboost|28|0.278|0.377|-0.030|
-|early_carry|union|lightgbm|28|0.304|0.439|-0.095|
+|twentieth|union|ridge|115|0.329|0.495|-0.015|
+|twentieth|union|histgb|115|0.349|0.464|-0.067|
+|twentieth|union|xgboost|115|0.348|0.460|-0.085|
+|twentieth|union|catboost|115|0.343|0.462|-0.097|
+|twentieth|union|lightgbm|115|0.339|0.454|-0.066|
+|twentieth|union|category_factor|115|0.245|0.364|-0.041|
+|twentieth|union|sector_first|115|0.255|0.361|-0.001|
+|twentieth|union|random_forest|115|0.357|0.475|-0.070|
+|twentieth|union|economic_ml_hybrid|115|0.268|0.366|-0.024|
+|twentieth|union|direct_tracker|115|2.038|2.805|0.233|
+|twentieth|stable|ridge|115|0.286|0.377|-0.049|
+|twentieth|stable|histgb|115|0.335|0.443|-0.088|
+|twentieth|stable|xgboost|115|0.333|0.446|-0.098|
+|twentieth|stable|catboost|115|0.333|0.447|-0.088|
+|twentieth|stable|lightgbm|115|0.328|0.436|-0.078|
+|final|union|ridge|107|0.322|0.601|-0.001|
+|final|union|histgb|107|0.328|0.431|-0.052|
+|final|union|xgboost|107|0.329|0.437|-0.075|
+|final|union|catboost|107|0.326|0.440|-0.080|
+|final|union|lightgbm|107|0.329|0.433|-0.076|
+|early|union|ridge|119|0.342|0.745|0.013|
+|early|union|histgb|119|0.341|0.449|-0.097|
+|early|union|xgboost|119|0.332|0.441|-0.106|
+|early|union|catboost|119|0.329|0.443|-0.111|
+|early|union|lightgbm|119|0.327|0.437|-0.101|
+|early_carry|union|ridge|116|0.362|0.542|-0.061|
+|early_carry|union|histgb|116|0.348|0.449|-0.098|
+|early_carry|union|xgboost|116|0.340|0.455|-0.118|
+|early_carry|union|catboost|116|0.340|0.458|-0.128|
+|early_carry|union|lightgbm|116|0.334|0.446|-0.112|
 
 Tree SHAP values are saved per product and origin, with numerical reconciliation. They are not causal contributions.
 Category/sector/hybrid models retain their own aggregation. The hybrid has no unverified external economic inputs.

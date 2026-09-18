@@ -1,0 +1,41 @@
+{
+  "forecast_id": "93e460fc7d6295e380b6039065df01114e3f627cb5df80a0959d523a7934aef4",
+  "target_month": "2026-09",
+  "as_of": "2026-09-19T04:58:59.358974+08:00",
+  "variant": "early",
+  "model": "ridge",
+  "panel": "union",
+  "model_version": "product-v3-6ebe4ddbf8e9c7bc",
+  "feature_version": "product-log-v3",
+  "feature_hash": "93ecb9f03fac9dc6d7288e8d7964c30605897607a68f097a9575932130b2f3f4",
+  "basket_versions": [
+    "basket_b9b653963c9d"
+  ],
+  "prediction_mom": 0.9132114845576509,
+  "implied_yoy": null,
+  "implied_yoy_status": "requires verified official index path",
+  "data_cutoff": "2026-09-14 01:30:00+00:00",
+  "hyperparameters": {
+    "memory": null,
+    "steps": [
+      [
+        "simpleimputer",
+        "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')"
+      ],
+      [
+        "standardscaler",
+        "StandardScaler()"
+      ],
+      [
+        "ridge",
+        "Ridge(alpha=25.0)"
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false
+  },
+  "training_end": "2026-08",
+  "git_commit": "d3dc499c5eeb4beb09d44e6100038463f0d4969d",
+  "status": "frozen_pre_release_candidate",
+  "unseen_training_features": []
+}
