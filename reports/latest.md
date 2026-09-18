@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| `observations` | `19100` |
+| `observations` | `22200` |
 | `forecasts` | `24` |
 | `model_bundle_present` | `True` |
 | `model_bundle_validated` | `True` |
