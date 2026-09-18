@@ -68,6 +68,10 @@ def run_pipeline(root: Path, target_month: str | None = None, as_of: str | None 
     )
     cutoff = as_of or datetime.now(CHINA_TZ).isoformat()
     result: dict[str, object] = {**{f"ingest_{k}": v for k, v in ingest_counts.items()}, "target_month": target, "as_of": cutoff}
+    if ingest_counts.get("failed", 0):
+        result["forecast_status"] = "blocked_ingestion_failure"
+        write_status_report(root, repository_status(root), result)
+        raise RuntimeError(f"NBS ingestion failed for {ingest_counts['failed']} source(s); see reports/latest.md")
     bundle_dir = root / str(config["model_bundle"])
     try:
         forecast_result = create_forecast(

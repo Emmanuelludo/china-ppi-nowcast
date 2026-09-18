@@ -1,5 +1,7 @@
 # China PPI Nowcast
 
+[Verified deployment and operating instructions](DEPLOYMENT.md) · [Successful full-history run](https://github.com/Emmanuelludo/china-ppi-nowcast/actions/runs/35393132909)
+
 Vintage-safe, survey-aligned nowcasting of the National Bureau of Statistics of
 China (NBS) headline producer price index month-on-month change.
 

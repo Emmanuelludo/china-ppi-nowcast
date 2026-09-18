@@ -1,5 +1,17 @@
 # China PPI Nowcast — Project Handoff
 
+## Verified operational update — 18 September 2026
+
+The rebuilt pipeline is deployed in GitHub Actions. [The full-history run and clean-checkout verification passed](https://github.com/Emmanuelludo/china-ppi-nowcast/actions/runs/35393132909). It loaded all 30 saved product candidates, checked SHAP reconciliation and repeat-inference immutability, and preserved existing forecast records.
+
+- History: 22,200 product observations, 444 price releases from January 2014, and 153 PPI outcomes; remaining windows are listed in the coverage audit.
+- Active product bundle: `models/product-v3-6ebe4ddbf8e9c7bc`; retained benchmark bundle: `models/reconstructed-v3`.
+- All existing model versions remain stored. Ten model families now have additional 20th-to-20th variants, with 139 eligible training months and 115 rolling validation origins.
+- September's 20th-to-20th/final output waits for the September 11–20 release. Early forecasts are available.
+- [Operating instructions and limitations](DEPLOYMENT.md), [latest product forecasts](reports/product_latest.md), and [model comparison](reports/product_candidates.md).
+
+The historical handoff below remains a record of the earlier state. Its initialization-only deployment status and requirement to recover the old ZIP do not describe the current reconstructed deployment. The missing original v0.4 fitted objects have **not** been recovered; the original August values remain frozen historical imports.
+
 **Handoff date:** 2026-09-14  
 **Repository:** <https://github.com/Emmanuelludo/china-ppi-nowcast>  
 **Repository status at handoff:** public repository exists, but the full project upload, executable pipeline, scheduled workflow, and deployment have **not** been verified. The repository contained only its initialization commit and placeholder README when this handoff was created.
