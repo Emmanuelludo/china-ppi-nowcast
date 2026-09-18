@@ -4,39 +4,14 @@
   "snapshots": 0,
   "observations": 0,
   "actuals": 0,
-  "failed": 3,
-  "errors": [
-    {
-      "url": "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1899421.html",
-      "error": "PPI target month not found"
-    },
-    {
-      "url": "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1898584.html",
-      "error": "PPI target month not found"
-    },
-    {
-      "url": "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1899569.html",
-      "error": "PPI target month not found"
-    }
-  ],
+  "failed": 0,
+  "errors": [],
   "warnings": [],
   "actual_registry_rebuild": {
-    "actuals_rebuilt": 0,
-    "failed": 3,
-    "errors": [
-      {
-        "url": "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1899421.html",
-        "error": "PPI target month not found"
-      },
-      {
-        "url": "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1898584.html",
-        "error": "PPI target month not found"
-      },
-      {
-        "url": "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1899569.html",
-        "error": "PPI target month not found"
-      }
-    ]
+    "actuals_rebuilt": 153,
+    "parser_corrections": 5,
+    "failed": 0,
+    "errors": []
   },
   "parser_version": "headline_v2",
   "discovery": [
