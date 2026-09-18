@@ -107,6 +107,10 @@ def _parse_published_at(document: object) -> datetime:
     return datetime(*parts, tzinfo=CHINA_TZ)
 
 
+def is_challenge(content: bytes) -> bool:
+    return b"Please enable JavaScript and refresh the page" in content
+
+
 def parse_ten_day_page(content: bytes, url: str, retrieved_at: datetime) -> pd.DataFrame:
     document = html.fromstring(content)
     title_nodes = document.xpath("//title | //h1 | //h2")
@@ -258,17 +262,33 @@ def _ingest_links(
     actuals = read_csv_or_empty(actuals_path, ["source_url"])
     known_urls = set(observations.get("source_url", pd.Series(dtype=str)).astype(str))
     known_urls.update(actuals.get("source_url", pd.Series(dtype=str)).astype(str))
+    cached = {}
+    if skip_known_urls:
+        for meta in (root / "data/raw/nbs/objects").glob("*.json"):
+            m = json.loads(meta.read_text())
+            path = meta.with_suffix(".html.gz")
+            if path.exists():
+                body = gzip.decompress(path.read_bytes())
+                if not is_challenge(body):
+                    cached[m["url"]] = (body, datetime.fromisoformat(m["retrieved_at"]))
+    def fetch_source(link):
+        if link.url in cached:
+            return cached[link.url]
+        body = client.fetch(link.url)
+        if is_challenge(body):
+            raise ValueError("NBS returned a JavaScript challenge, not a release; retry later")
+        return body, datetime.now(timezone.utc)
     pending = [link for link in links if not (skip_known_urls and link.url in known_urls)]
     counts: dict[str, object] = {
         "discovered": len(links), "pending": len(pending), "snapshots": 0,
         "observations": 0, "actuals": 0, "failed": 0, "errors": [], "warnings": [],
     }
     with ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
-        futures = {executor.submit(client.fetch, link.url): link for link in pending}
+        futures = {executor.submit(fetch_source, link): link for link in pending}
         for future in as_completed(futures):
             link = futures[future]
             try:
-                content = future.result()
+                content, retrieved_at = future.result()
                 # Process and persist each completed page immediately. This makes
                 # long historical runs genuinely resumable after interruption.
                 _, created = _store_snapshot(root, link, content, retrieved_at)
@@ -353,6 +373,8 @@ def rebuild_actuals_from_snapshots(root: Path) -> dict[str, object]:
                 content = gzip.decompress(gz_path.read_bytes())
             else:
                 content = plain_path.read_bytes()
+            if is_challenge(content):
+                continue  # Keep failed HTTP response immutable, exclude from release registry.
             retrieved_at = datetime.fromisoformat(str(metadata["retrieved_at"]))
             rows.append(parse_ppi_page(content, str(metadata["url"]), retrieved_at))
         except Exception as exc:

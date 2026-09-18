@@ -58,7 +58,6 @@ def write_status_report(root: Path, status: dict[str, object], run: dict[str, ob
 def run_pipeline(root: Path, target_month: str | None = None, as_of: str | None = None) -> dict[str, object]:
     config = load_config(root)
     now = datetime.now(CHINA_TZ)
-    cutoff = as_of or now.isoformat()
     target = target_month or default_target_month(now)
     client = NBSClient(
         timeout=int(config["request_timeout_seconds"]), retries=int(config["request_retries"])
@@ -67,6 +66,7 @@ def run_pipeline(root: Path, target_month: str | None = None, as_of: str | None 
         root, str(config["nbs_index_url"]), pages=int(config["index_pages"]), client=client,
         workers=int(config["download_workers"]),
     )
+    cutoff = as_of or datetime.now(CHINA_TZ).isoformat()
     result: dict[str, object] = {**{f"ingest_{k}": v for k, v in ingest_counts.items()}, "target_month": target, "as_of": cutoff}
     bundle_dir = root / str(config["model_bundle"])
     try:

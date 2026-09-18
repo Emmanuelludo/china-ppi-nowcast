@@ -63,6 +63,17 @@ def create_forecast(
     variant_dir = bundle_dir / str(vintage.manifest["vintage"])
     if not (variant_dir / "manifest.json").exists():
         variant_dir = bundle_dir
+    model_manifest = json.loads((variant_dir / "manifest.json").read_text())
+    if str(model_manifest.get("training_end", "")) >= target_month:
+        raise ValueError("model bundle training overlaps target month")
+    trained_at_cutoff = model_manifest.get("training_actual_cutoff")
+    if trained_at_cutoff and pd.Timestamp(trained_at_cutoff) > pd.Timestamp(as_of):
+        raise ValueError("model bundle includes targets unavailable at as_of")
+    actual_path = root / "data" / "registry" / "actuals.csv"
+    if actual_path.exists():
+        actuals = pd.read_csv(actual_path)
+        if (actuals.target_month.eq(target_month) & pd.to_datetime(actuals.published_at, utc=True).le(pd.Timestamp(as_of))).any():
+            raise ValueError("target actual already public; prospective inference prohibited")
     predictions = predict_bundle(variant_dir, vintage.frame, require_validated=True)
     now = datetime.now(timezone.utc).isoformat()
     rows: list[dict[str, object]] = []

@@ -239,6 +239,7 @@ def train_bundle(
     validate: bool = False,
     vintage: str | None = None,
     training_metadata: dict[str, object] | None = None,
+    bundle_version: str = "reconstructed-v2",
 ) -> dict[str, object]:
     required = {"target_month", target_column}
     missing = required - set(training.columns)
@@ -304,7 +305,7 @@ def train_bundle(
     }
     validated = bool(validate and all(checks.values()))
     manifest: dict[str, object] = {
-        "bundle_version": f"reconstructed-v2-{vintage}" if vintage else "reconstructed-v2",
+        "bundle_version": f"{bundle_version}-{vintage}" if vintage else bundle_version,
         "provenance": "reconstructed",
         "validated": validated,
         "validation_scope": "operational_and_leakage_checks_not_model_superiority",
@@ -313,6 +314,7 @@ def train_bundle(
         "training_rows": len(frame),
         "training_start": str(frame["target_month"].min()),
         "training_end": str(frame["target_month"].max()),
+        "training_actual_cutoff": str(pd.to_datetime(frame["actual_published_at"], utc=True).max()) if "actual_published_at" in frame else None,
         "training_hash": stable_hash(frame.fillna("__NA__").to_dict(orient="records")),
         "target_column": target_column,
         "vintage": vintage,

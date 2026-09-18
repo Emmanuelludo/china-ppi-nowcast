@@ -14,21 +14,23 @@ from .training_data import build_training_matrix, write_training_matrix
 
 
 def train_project_bundles(root: Path, bundle_root: Path, carry_weight: float = 0.5) -> dict[str, object]:
+    version = bundle_root.name
     observations = pd.read_csv(root / "data" / "processed" / "nbs_ten_day_observations.csv.gz")
     actuals = pd.read_csv(root / "data" / "registry" / "actuals.csv")
     variants: dict[str, dict[str, object]] = {}
     for vintage in ("early", "final"):
         matrix, matrix_manifest = build_training_matrix(observations, actuals, vintage, carry_weight)
-        write_training_matrix(root, vintage, matrix, matrix_manifest)
+        write_training_matrix(root, vintage, matrix, matrix_manifest, version=version)
         variants[vintage] = train_bundle(
             matrix,
             bundle_root / vintage,
             validate=True,
             vintage=vintage,
             training_metadata=matrix_manifest,
+            bundle_version=version,
         )
     root_manifest: dict[str, object] = {
-        "bundle_version": "reconstructed-v2",
+        "bundle_version": version,
         "provenance": "reconstructed",
         "validated": all(item["validated"] for item in variants.values()),
         "created_at": datetime.now(timezone.utc).isoformat(),
