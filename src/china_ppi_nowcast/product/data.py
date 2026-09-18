@@ -28,7 +28,7 @@ def canonicalize(observations):
     x['product_id'] = [identity(n,u) for n,u in zip(x.product_name_cn,x.unit_cn)]
     x['product_name'] = x.product_name_cn.map(normalize)
     x['product_specification'] = x.product_name.str.extract(r'\((.*)\)',expand=False).fillna('')
-    x['unit'] = x.unit_cn.map(normalize).map({'吨':'CNY/tonne','千克':'CNY/kg'})
+    x['unit'] = x.unit_cn.map(normalize).map({'吨':'CNY/tonne','千克':'CNY/kg','张':'CNY/sheet'})
     if x.unit.isna().any(): raise ValueError('QA: unreviewed unit')
     x['absolute_price'] = pd.to_numeric(x.price_cny,errors='raise')
     if not (np.isfinite(x.absolute_price) & x.absolute_price.gt(0)).all():

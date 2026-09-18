@@ -108,7 +108,8 @@ def _parse_published_at(document: object) -> datetime:
 
 
 def is_challenge(content: bytes) -> bool:
-    return b"Please enable JavaScript and refresh the page" in content
+    return (b"Please enable JavaScript and refresh the page" in content
+            or "请开启JavaScript并刷新该页".encode() in content)
 
 
 def parse_ten_day_page(content: bytes, url: str, retrieved_at: datetime) -> pd.DataFrame:

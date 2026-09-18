@@ -123,6 +123,19 @@ jobs:
           git commit -m "data: append prospective NBS and nowcast vintages"
           git push
 
+      - name: Verify saved deployment from clean checkout
+        env:
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"
+          LOKY_MAX_CPU_COUNT: "2"
+        run: |
+          verification_dir=$(mktemp -d)
+          git clone --quiet --no-hardlinks "$GITHUB_WORKSPACE" "$verification_dir/repo"
+          cd "$verification_dir/repo"
+          export PYTHONPATH="$verification_dir/repo/src"
+          python -m unittest discover -s tests -v
+          python scripts/verify_saved_deployment.py
+
       - name: Open failure issue
         if: failure()
         env:
