@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import http.client
 import gzip
 import re
 import time
@@ -55,11 +56,11 @@ class NBSClient:
                 request = urllib.request.Request(url, headers=self.headers)
                 with urllib.request.urlopen(request, timeout=self.timeout) as response:
                     return response.read()
-            except (urllib.error.URLError, TimeoutError) as exc:
+            except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException) as exc:
                 last_error = exc
                 if attempt + 1 < self.retries:
                     time.sleep(2**attempt)
-        raise RuntimeError(f"failed to fetch {url}: {last_error}")
+        raise RuntimeError(f"failed to fetch {url} after {self.retries} attempts: {last_error}") from last_error
 
     @staticmethod
     def _index_url(index_url: str, page: int) -> str:
