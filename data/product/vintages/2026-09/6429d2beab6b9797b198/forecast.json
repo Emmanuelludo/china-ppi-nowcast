@@ -1,0 +1,37 @@
+{
+  "forecast_id": "6429d2beab6b9797b198bc9d4bc006c9ff9f5bb1930fc20e2ada4f45f85e97f9",
+  "target_month": "2026-09",
+  "as_of": "2026-09-24T15:48:21.691812+08:00",
+  "variant": "twentieth",
+  "model": "economic_ml_hybrid",
+  "panel": "union",
+  "model_version": "product-v3-6ebe4ddbf8e9c7bc",
+  "feature_version": "product-log-v3",
+  "feature_hash": "84381f332096433035b24eb4abade9044478786d9975897423dba324f41f8483",
+  "basket_versions": [
+    "basket_b9b653963c9d"
+  ],
+  "prediction_mom": 0.9449884391426807,
+  "implied_yoy": null,
+  "implied_yoy_status": "requires verified official index path",
+  "data_cutoff": "2026-09-24 01:30:00+00:00",
+  "hyperparameters": {
+    "estimators": [
+      [
+        "ridge",
+        "Pipeline(steps=[('simpleimputer',\n                 SimpleImputer(add_indicator=True, keep_empty_features=True,\n                               strategy='median')),\n                ('standardscaler', StandardScaler()),\n                ('ridge', Ridge(alpha=25.0))])"
+      ],
+      [
+        "histgb",
+        "HistGradientBoostingRegressor(early_stopping=False, l2_regularization=25.0,\n                              learning_rate=0.04, max_iter=150,\n                              max_leaf_nodes=4, min_samples_leaf=8,\n                              random_state=20260916)"
+      ]
+    ],
+    "n_jobs": null,
+    "verbose": false,
+    "weights": null
+  },
+  "training_end": "2026-08",
+  "git_commit": "20cc5848dcb3ccc8f57ad481192096f8ceef29f2",
+  "status": "frozen_pre_release_candidate",
+  "unseen_training_features": []
+}
