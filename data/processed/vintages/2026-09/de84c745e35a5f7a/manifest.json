@@ -1,0 +1,66 @@
+{
+  "target_month": "2026-09",
+  "as_of": "2026-09-24T15:48:16.589073+08:00",
+  "vintage": "final",
+  "carry_weight": 0.5,
+  "first_survey_formula": "carry_weight*log(M-1:21-end)+(1-carry_weight)*log(M:1-10)",
+  "second_survey_formula": "log(M:11-20)",
+  "twentieth_to_twentieth_formula": "100*(exp(log(M:11-20)-log(M-1:11-20))-1)",
+  "current_21_end_used": false,
+  "feature_hash": "de84c745e35a5f7a1b245979488db352b6b419967b8ea8bd05bc57e4abe78604",
+  "sources": [
+    {
+      "release_month": "2026-07",
+      "window": "21-end",
+      "published_at": "2026-08-04 01:30:00+00:00",
+      "retrieved_at": "2026-09-14 06:30:30.192724+00:00",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260803_1964273.html",
+      "content_sha256": "3024209876b9c41114d1637e93b8b41efaef32160ed767b20c88b8a26a7285ee"
+    },
+    {
+      "release_month": "2026-08",
+      "window": "1-10",
+      "published_at": "2026-08-14 01:30:00+00:00",
+      "retrieved_at": "2026-09-14 06:30:30.192724+00:00",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
+      "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d"
+    },
+    {
+      "release_month": "2026-08",
+      "window": "11-20",
+      "published_at": "2026-08-24 01:30:00+00:00",
+      "retrieved_at": "2026-09-14 06:29:08.521976+00:00",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+      "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3"
+    },
+    {
+      "release_month": "2026-08",
+      "window": "21-end",
+      "published_at": "2026-09-04 01:30:00+00:00",
+      "retrieved_at": "2026-09-14 06:29:08.521976+00:00",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260903_1965182.html",
+      "content_sha256": "caf090f2f83f425ea64daf3174da8d837e89eadef565ec8ef466fe3d7a21cd3f"
+    },
+    {
+      "release_month": "2026-09",
+      "window": "1-10",
+      "published_at": "2026-09-14 01:30:00+00:00",
+      "retrieved_at": "2026-09-14 06:29:08.521976+00:00",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+      "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492"
+    },
+    {
+      "release_month": "2026-09",
+      "window": "11-20",
+      "published_at": "2026-09-24 01:30:00+00:00",
+      "retrieved_at": "2026-09-24 07:47:43.160575+00:00",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+      "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189"
+    }
+  ],
+  "n_products": 50,
+  "n_twentieth_to_twentieth_products": 50,
+  "availability_basis": "strict",
+  "realtime_status": "prospective",
+  "historical_snapshot_caveat": null
+}
