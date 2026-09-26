@@ -1,6 +1,6 @@
 # Additional product PPI forecasts
 
-Target: 2026-09; as of 2026-09-25T16:08:33.042561+08:00
+Target: 2026-09; as of 2026-09-26T15:58:49.559435+08:00
 
 Existing models remain active. These additional candidates do not replace them.
 20th-to-20th waits for the current 11–20 release; it is a period-price proxy.
