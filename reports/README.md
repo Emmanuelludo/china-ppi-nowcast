@@ -1,10 +1,10 @@
 # China PPI nowcast
 
-**Target: 2026-09 · Headline PPI month-on-month change**
+**Target: 2026-10 · Headline PPI month-on-month change**
 
-Report refreshed: 2026-09-26T15:58:49.559435+08:00. Forecast timestamps remain fixed when inputs are unchanged.
+Report refreshed: 2026-10-02T17:21:48.495892+08:00. Forecast timestamps remain fixed when inputs are unchanged.
 
-Current-month price windows incorporated: **1-10, 11-20**.
+Current-month price windows incorporated: **None yet**.
 
 [Model explanations](../docs/METHODOLOGY.md) · [English product glossary](../docs/PRODUCTS.md) · [Attributions](attributions.md) · [Performance](product_candidates.md)
 
@@ -14,14 +14,6 @@ All values are predicted official PPI MoM percentages. A dash means that model/t
 
 | Model | 20th-to-20th | Two-survey period | Early month | Early + carry-in |
 |---|---:|---:|---:|---:|
-| XGBoost | +0.682% | +0.696% | +0.618% | +0.675% |
-| CatBoost | +0.729% | +0.639% | +0.471% | +0.605% |
-| LightGBM | +0.644% | +0.671% | +0.561% | +0.669% |
-| HistGradientBoosting | +0.691% | +0.744% | +0.596% | +0.677% |
-| Product ridge | -0.342% | +1.218% | +0.913% | +1.207% |
-| Random forest | +0.614% | — | — | — |
-| Sector-first regression | +1.261% | — | — | — |
-| Economic / ML hybrid (NBS prices) | +0.945% | — | — | — |
 
 ## Survey-aligned benchmarks
 
@@ -29,12 +21,6 @@ These use the carry-weighted survey-date feature specification. Their estimates 
 
 | Model | Timing | PPI MoM | Frozen at |
 |---|---|---:|---|
-| HistGradientBoosting | Final | +0.879% | 2026-09-24T15:48:16.589073+08:00 |
-| Economic / ML hybrid (NBS prices) | Final | +0.743% | 2026-09-24T15:48:16.589073+08:00 |
-| Product ridge | Final | +1.204% | 2026-09-24T15:48:16.589073+08:00 |
-| Sector-first regression | Final | +0.662% | 2026-09-24T15:48:16.589073+08:00 |
-| Random forest | Final | +0.646% | 2026-09-24T15:48:16.589073+08:00 |
-| 20th-to-20th ridge | Final | +0.780% | 2026-09-24T15:48:16.589073+08:00 |
 
 ## Explore the results
 
