@@ -28,4 +28,4 @@ ppi-nowcast = "china_ppi_nowcast.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-china_ppi_nowcast = ["product_labels.json"]
+china_ppi_nowcast = ["product_labels.json", "dashboard_template.html"]

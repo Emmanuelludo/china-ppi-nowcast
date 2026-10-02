@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400" role="img" aria-label="September 2026 · 20th-to-20th · PPI MoM">
+<rect width="100%" height="100%" rx="16" fill="#f5f7fb"/>
+<text x="28" y="35" font-family="sans-serif" font-size="20" fill="#162b46">September 2026 · 20th-to-20th · PPI MoM</text>
+<line x1="420.86234474270384" x2="420.86234474270384" y1="55" y2="365" stroke="#8796a9"/>
+<text x="28" y="90" font-family="sans-serif" font-size="17" fill="#162b46">XGBoost</text>
+<rect x="420.86" y="70" width="294.24" height="29" rx="4" fill="#176b87"/>
+<text x="825" y="90" font-family="sans-serif" font-size="17" fill="#162b46">+0.682%</text>
+<text x="28" y="150" font-family="sans-serif" font-size="17" fill="#162b46">CatBoost</text>
+<rect x="420.86" y="130" width="314.42" height="29" rx="4" fill="#176b87"/>
+<text x="825" y="150" font-family="sans-serif" font-size="17" fill="#162b46">+0.729%</text>
+<text x="28" y="210" font-family="sans-serif" font-size="17" fill="#162b46">LightGBM</text>
+<rect x="420.86" y="190" width="278.04" height="29" rx="4" fill="#176b87"/>
+<text x="825" y="210" font-family="sans-serif" font-size="17" fill="#162b46">+0.644%</text>
+<text x="28" y="270" font-family="sans-serif" font-size="17" fill="#162b46">HistGradientBoosting</text>
+<rect x="420.86" y="250" width="298.08" height="29" rx="4" fill="#176b87"/>
+<text x="825" y="270" font-family="sans-serif" font-size="17" fill="#162b46">+0.691%</text>
+<text x="28" y="330" font-family="sans-serif" font-size="17" fill="#162b46">Product ridge</text>
+<rect x="273.14" y="310" width="147.72" height="29" rx="4" fill="#a84450"/>
+<text x="825" y="330" font-family="sans-serif" font-size="17" fill="#162b46">-0.342%</text>
+</svg>

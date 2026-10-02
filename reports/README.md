@@ -1,39 +1,46 @@
-# China PPI nowcast
+# China PPI dashboard
 
-**Target: 2026-10 · Headline PPI month-on-month change**
+[Project home](../README.md) · [Model details](../docs/METHODOLOGY.md) · [English product glossary](../docs/PRODUCTS.md)
 
-Report refreshed: 2026-10-02T17:21:48.495892+08:00. Forecast timestamps remain fixed when inputs are unchanged.
+## Current update: October 2026
 
-Current-month price windows incorporated: **None yet**.
+⏳ **Awaiting the current month’s price releases. No current-month projection has been generated.**
 
-[Model explanations](../docs/METHODOLOGY.md) · [English product glossary](../docs/PRODUCTS.md) · [Attributions](attributions.md) · [Performance](product_candidates.md)
+Report refreshed: 2026-10-02. Saved forecast timestamps are preserved.
 
-## Product-price models
+## Latest available forecasts: September 2026
 
-All values are predicted official PPI MoM percentages. A dash means that model/timing combination has no saved output.
+**20th-to-20th · 5 product-price estimators · Median +0.682% MoM**
 
-| Model | 20th-to-20th | Two-survey period | Early month | Early + carry-in |
-|---|---:|---:|---:|---:|
+4 of 5 displayed models project an increase; 1 project a decline. The estimates span **-0.342% to +0.729%**. The median describes this model group; it is not a selected ensemble or a confidence interval.
 
-## Survey-aligned benchmarks
+![Forecast comparison](forecast_comparison.svg)
 
-These use the carry-weighted survey-date feature specification. Their estimates are separate from the product-price models above.
+**How to read this:** +0.7% means prices are projected to be 0.7% higher than the previous month. These forecasts concern headline PPI month-on-month change, not year-on-year inflation.
 
-| Model | Timing | PPI MoM | Frozen at |
-|---|---|---:|---|
+**Price dates:** Current month 11–20 average prices compared with the previous month’s 11–20 averages. These are period averages, not point prices observed exactly on the 20th.
 
-## Explore the results
+## What each model does
 
-| Report | Contents |
+| Active product model | Mechanism |
 |---|---|
-| [All product forecasts](product_latest.md) | Main models, stable-panel sensitivity, direct tracker and exact source releases |
-| [Forecast explanations](attributions.md) | English product and sector SHAP tables |
-| [Historical model comparison](product_candidates.md) | Rolling out-of-sample MAE, RMSE and bias |
-| [Performance over time](product_performance.md) | Prospective results and 6/12/24-month historical summaries |
-| [Survey-aligned benchmarks](latest_nowcast.md) | Benchmark estimates and model dispersion |
-| [Pipeline status](latest.md) | Data and model readiness |
-| [August 2026 forecast archive](august_2026_frozen.md) | Frozen historical forecast record |
+| XGBoost | Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI. |
+| CatBoost | Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices. |
+| LightGBM | A strongly constrained tree booster tests an alternative way of learning product-price interactions. |
+| HistGradientBoosting | Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling. |
+| Product ridge | Regularized linear regression tests whether a weighted combination of individual price changes is sufficient. Imputation and scaling are fitted on training data. |
 
-No weighted ensemble has been adopted. Differences between models are not a calibrated confidence interval.
+## Other retained comparisons
 
-Advanced diagnostics: [source coverage audit](history_search.json), [benchmark validation](backfill_evaluation.md), [in-sample backcast](historical_backcast_2025_2026.md). The backcast is not forecast-accuracy evidence.
+Random forest, sector-first regression and the economic / ML hybrid remain available in the detailed view. Stable-product panels test basket sensitivity. The direct market-price tracker is shown separately as an uncalibrated price index. Category-factor models are retired.
+
+## Explore
+
+- **[Interactive dashboard file](dashboard.html)** — download the file and open it in a browser; choose month, timing, product panel and retained comparison models. It works without a login or external scripts.
+- [All current model estimates and release availability](product_latest.md)
+- [Product and sector attributions in English](attributions.md)
+- [Historical accuracy](product_candidates.md) · [Prospective performance](product_performance.md)
+- [Source and pipeline status](latest.md)
+- [Frozen August forecast archive](august_2026_frozen.md)
+
+Historical accuracy is pseudo-real-time. Keep accumulating prospective outcomes before ranking models. Product attributions explain the model output, not causal economic contributions.

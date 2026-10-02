@@ -10,7 +10,7 @@ and preserves each forecast before the official PPI announcement.
 
 | I want to… | Open |
 |---|---|
-| See the current PPI projections | **[Latest results](reports/README.md)** |
+| See the visual dashboard and projections | **[PPI dashboard](reports/README.md)** |
 | Understand which products drive them | [Forecast explanations](reports/attributions.md) |
 | Find a product in English | [Product glossary](docs/PRODUCTS.md) |
 | Compare model accuracy | [Historical comparison](reports/product_candidates.md) · [Performance over time](reports/product_performance.md) |
@@ -20,7 +20,7 @@ and preserves each forecast before the official PPI announcement.
 ## What the system contains
 
 - **29 active product-model variants**, including XGBoost, CatBoost, LightGBM,
-  HistGradientBoosting, ridge, random forest and economic/category benchmarks.
+  HistGradientBoosting, ridge, random forest and economic and sector benchmarks.
 - **20th-to-20th, two-survey-period, early-month and carry-in specifications**,
   kept separate so forecasts reflect the information available at each date.
 - **Survey-aligned benchmark models**, retained alongside the product models.

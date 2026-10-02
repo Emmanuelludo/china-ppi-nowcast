@@ -131,6 +131,8 @@ def write_product_reports(root,manifest,catalog,month,as_of,outputs,pending):
         '', 'Advanced diagnostics: [source coverage audit](history_search.json), [benchmark validation](backfill_evaluation.md), [in-sample backcast](historical_backcast_2025_2026.md). The backcast is not forecast-accuracy evidence.']
     write(root,'reports/README.md',overview)
     write_product_glossary(root,catalog)
+    from .dashboard import write_dashboard
+    write_dashboard(root,manifest,month,as_of)
 
 
 def write_product_glossary(root,catalog):
