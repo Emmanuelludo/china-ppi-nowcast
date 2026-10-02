@@ -90,7 +90,7 @@ def create_forecast(
                 "code_commit": _commit_sha(root),
                 "status": "frozen_pre_release",
                 "created_at": now,
-                "notes": "Reconstructed candidate; generated from immutable prospective source snapshots.",
+                "notes": "Generated from immutable prospective source snapshots.",
             }
         )
     added = append_forecasts(root / "data" / "registry" / "forecasts.csv", rows)
@@ -110,9 +110,11 @@ def create_forecast(
 
 
 def _write_nowcast_report(root: Path, manifest: dict[str, object], rows: list[dict[str, object]]) -> None:
+    from ..model_policy import is_active
+    rows = [row for row in rows if is_active(row["model_key"])]
     estimates = np.asarray([float(row["estimate_mom_pct"]) for row in rows if row["model_key"] != "twentieth_to_twentieth_direct"])
     lines = [
-        "# Latest China headline PPI MoM nowcast",
+        "# Survey-aligned benchmark forecasts",
         "",
         f"- Target month: **{manifest['target_month']}**",
         f"- Frozen cutoff: **{manifest['as_of']}**",
@@ -121,12 +123,12 @@ def _write_nowcast_report(root: Path, manifest: dict[str, object], rows: list[di
         f"- Model median: **{np.median(estimates):+.3f}% MoM**",
         f"- Model range: **{estimates.min():+.3f}% to {estimates.max():+.3f}% MoM**",
         "",
-        "| Model | Estimate (% MoM) | Provenance |",
-        "|---|---:|---|",
+        "| Model | Estimate (% MoM) |",
+        "|---|---:|",
     ]
     for row in rows:
         lines.append(
-            f"| {row['model_label']} | {float(row['estimate_mom_pct']):+.3f} | {row['model_provenance']} |"
+            f"| {row['model_label']} | {float(row['estimate_mom_pct']):+.3f} |"
         )
     lines.extend(
         [
@@ -134,7 +136,6 @@ def _write_nowcast_report(root: Path, manifest: dict[str, object], rows: list[di
             "The cross-model range is descriptive dispersion, not a calibrated prediction interval.",
             "The direct 20th-to-20th index is an uncalibrated circulation-price proxy and is excluded from the model median/range.",
             "Both 20th-to-20th benchmarks require the current and prior months’ 11–20 releases; unavailable early in the month.",
-            "All candidates are reconstructed because the original v0.4 fitted objects were not recovered.",
             "No permanent model winner is selected from this backfill.",
             "",
         ]

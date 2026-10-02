@@ -16,9 +16,10 @@ class ModelTests(unittest.TestCase):
         for vintage in ("early", "final"):
             manifest, models = load_bundle(root / vintage, require_validated=True)
             self.assertTrue(manifest["validated"])
-            self.assertEqual(set(models), {spec.key for spec in model_specs_for_vintage(vintage)})
+            self.assertEqual(set(models), {entry["key"] for entry in manifest["models"]})
+            self.assertIn("category_factor_regression", models)  # archived model remains loadable
 
-    def test_all_six_reconstructed_models_train_and_predict(self) -> None:
+    def test_all_active_models_train_and_predict(self) -> None:
         rng = np.random.default_rng(20260914)
         n = 30
         signal = rng.normal(0, 0.5, n)
@@ -42,7 +43,7 @@ class ModelTests(unittest.TestCase):
             self.assertIn("missing_panel_stress", manifest["models"][0]["metrics"])
             feature_row = frame.drop(columns=["target_mom_pct"]).tail(1)
             predictions = predict_bundle(output, feature_row, require_validated=False)
-            self.assertEqual(len(predictions), 6)
+            self.assertEqual(len(predictions), 5)
             self.assertTrue(all(np.isfinite(item["estimate_mom_pct"]) for item in predictions))
 
     def test_operational_validation_requires_chronology_metadata(self) -> None:

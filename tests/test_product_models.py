@@ -92,7 +92,7 @@ class ProductTests(unittest.TestCase):
 
     def test_retains_all_families(self):
         self.assertEqual(set(ALL_MODELS),{'ridge','histgb','xgboost','catboost','lightgbm',
-            'category_factor','sector_first','random_forest','economic_ml_hybrid','direct_tracker'})
+            'sector_first','random_forest','economic_ml_hybrid','direct_tracker'})
 
 
 if __name__=='__main__':unittest.main()

@@ -5,6 +5,7 @@ from datetime import datetime
 from pathlib import Path
 from .project import train_project_bundles
 from ..forecast import create_forecast
+from ..features.survey_alignment import AwaitingSourceRelease
 from ..pipeline import load_config,repository_status,write_status_report
 from ..storage import atomic_write_text
 from ..time import CHINA_TZ
@@ -24,8 +25,12 @@ def main():
     config['model_bundle']='models/reconstructed-v3'
     atomic_write_text(root/'config/pipeline.json',json.dumps(config,indent=2)+'\n')
     now=datetime.now(CHINA_TZ)
-    result=create_forecast(root,args.target_month or now.strftime('%Y-%m'),args.as_of or now.isoformat(),
-        bundle,float(config['first_survey_carry_weight']))
+    month=args.target_month or now.strftime('%Y-%m')
+    try:
+        result=create_forecast(root,month,args.as_of or now.isoformat(),
+            bundle,float(config['first_survey_carry_weight']))
+    except AwaitingSourceRelease as exc:
+        result=dict(target_month=month,forecast_status='pending',forecast_reason=str(exc),forecasts_added=0)
     write_status_report(root,repository_status(root),result)
     print(json.dumps(result))
 

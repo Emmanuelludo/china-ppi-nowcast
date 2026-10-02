@@ -1,13 +1,12 @@
-# Additive product-price models
+# Product-price model contract
 
-Existing reconstructed-v1/v2 objects, model identities and frozen forecasts remain unchanged.
-The product-v3 family is additional; none of the existing models is removed or promoted away.
+Product models and survey-aligned benchmarks run alongside one another. All versions and frozen forecasts remain identifiable.
 
 ## Timing and model coverage
 
 | Specification | Absolute-price comparison | Models |
 |---|---|---|
-| 20th-to-20th proxy | Current 11–20 / previous 11–20 | XGBoost, CatBoost, LightGBM, HistGB, ridge, random forest, category-factor, sector-first, economic/ML hybrid, direct tracker |
+| 20th-to-20th proxy | Current 11–20 / previous 11–20 | XGBoost, CatBoost, LightGBM, HistGB, ridge, random forest, sector-first, economic/ML hybrid, direct tracker |
 | Final two-survey proxy | Mean(current 1–10, 11–20) / mean(previous 1–10, 11–20) | Five product-level candidates |
 | Early | Current 1–10 / previous 1–10 | Five product-level candidates |
 | Early plus carry | Early changes plus current 1–10 / previous 21–end | Five product-level candidates |
@@ -16,7 +15,7 @@ Predictors are 100 × natural log of these ratios. Final level means are arithme
 missing either required product observation leaves the feature missing. Current 21–end
 never enters the current final or 20th-to-20th specification.
 
-All-price models use individual product changes. Category/sector benchmarks retain their
+All-price models use individual product changes. Sector benchmarks retain their
 aggregation, using all comparable prices within groups. The hybrid combines group ridge
 and HistGB; no unverified external macro series is added. The direct tracker is an
 uncalibrated geometric circulation-price proxy, not an estimate with official PPI weights.
@@ -56,8 +55,7 @@ Install `python -m pip install -e '.[product]'`.
 Train: `python -m china_ppi_nowcast.product train --root .`.
 Run: `python -m china_ppi_nowcast.product run --root .`.
 Optional `--target-month YYYY-MM --as-of ISO_TIMESTAMP` freezes the information cutoff.
-The scheduled workflow calls `ensure`, training only if no product bundle has been configured.
-CatBoost requires a normal Linux runtime; it cannot train in a sandbox without `/proc/self/statm`.
+The scheduled workflow calls `ensure`, training if no bundle is configured or source history extends earlier than the saved bundle.
 
 Versioned `models/product-v3-*/` contains estimators, canonical prices, catalog, exact training
 matrices, package versions, hyperparameters, monthly OOS errors and historical SHAP.
@@ -65,7 +63,7 @@ matrices, package versions, hyperparameters, monthly OOS errors and historical S
 Reports are `reports/product_candidates.md` and `reports/product_latest.md`.
 No 20th-to-20th forecast is published before the current 11–20 release.
 
-## Remaining work — not claimed complete
+## Coverage and scope
 
 Historical discovery uses the official NBS search API, partitioning date ranges to respect its
 25-page result limit. See `reports/history_search.json` and the current model manifest for the

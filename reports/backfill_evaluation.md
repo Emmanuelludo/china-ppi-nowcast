@@ -1,4 +1,4 @@
-# Reconstructed-model backfill evaluation
+# Survey-aligned benchmark validation
 
 All results below are **pseudo-real-time**. Publication timestamps were used as cutoffs,
 but the NBS pages were retrieved later and revision-vintage correctness is not claimed.

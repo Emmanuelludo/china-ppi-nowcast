@@ -129,16 +129,6 @@ def train(root,variants=VARIANTS,min_train=24,stable=True):
         missingness='Native tree NaN; fold-local median+indicators+scaling for ridge/factors; all-missing training columns excluded from fitting',
         external_covariates=[],proxy_backfill=False,history_complete_from_2014=False)
     write_json(dest/'manifest.json',manifest)
-    report=['# Additional product models','',f'Bundle: `{version}`','',
-        'Existing models and forecasts are preserved. No permanent winner or ensemble promotion.',
-        f"Verified history: {catalog['first_observation']}–{catalog['last_observation']}; see the historical discovery audit for remaining gaps.",
-        '20th-to-20th uses current versus previous 11–20 period prices, not exact day-20 factory-gate prices.',
-        'All models share eligible monthly OOS origins within a timing specification. Results are pseudo-real-time.',
-        '', '|Timing|Panel|Model|OOS n|MAE|RMSE|Bias|','|---|---|---|---:|---:|---:|---:|']
-    for model in models:
-        m=model['metrics'];report.append(f"|{model['variant']}|{model['panel']}|{model['name']}|{m['n']}|{m['mae']:.3f}|{m['rmse']:.3f}|{m['bias']:.3f}|")
-    report.extend(['','Tree SHAP values are saved per product and origin, with numerical reconciliation. They are not causal contributions.',
-        'Category/sector/hybrid models retain their own aggregation. The hybrid has no unverified external economic inputs.',
-        'The direct tracker is an uncalibrated circulation-price index. Stable panels are selected within each training fold.'])
-    (root/'reports/product_candidates.md').write_text('\n'.join(report)+'\n')
+    from ..reporting import write_candidate_report
+    write_candidate_report(root,manifest)
     return manifest

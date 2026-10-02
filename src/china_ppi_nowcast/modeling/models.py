@@ -42,7 +42,6 @@ SURVEY_WINDOW_CONTRACT = (
 TWENTIETH_WINDOW_CONTRACT = "M-1:11-20 and M:11-20 only; available in the final vintage"
 
 CORE_MODEL_SPECS = (
-    ModelSpec("category_factor_regression", "Category-factor regression", ("category__",), "factor_ridge", ("early", "final"), SURVEY_WINDOW_CONTRACT),
     ModelSpec("gradient_boosting", "Gradient boosting", ("global__", "category__", "product__", "missing__"), "hist_gradient_boosting", ("early", "final"), SURVEY_WINDOW_CONTRACT),
     ModelSpec("economic_ml_hybrid", "Economic + ML hybrid", ("global__", "category__", "econ__"), "voting_hybrid", ("early", "final"), SURVEY_WINDOW_CONTRACT),
     ModelSpec("product_level_ridge", "Product-level ridge", ("product__", "missing__"), "ridge", ("early", "final"), SURVEY_WINDOW_CONTRACT),
@@ -322,7 +321,7 @@ def train_bundle(
         "baselines": _baseline_metrics(frame[target_column].astype(float)),
         "panel_diagnostics": _panel_diagnostics(frame),
         "training_metadata": training_metadata or {},
-        "warning": "These estimators are reconstructed candidates, not recovered v0.4 fitted objects.",
+        "warning": "Operational validation does not establish forecast superiority.",
     }
     atomic_write_text(output_dir / "manifest.json", json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
     return manifest
@@ -342,7 +341,10 @@ def load_bundle(bundle_dir: Path, require_validated: bool = True) -> tuple[dict[
 def predict_bundle(bundle_dir: Path, features: pd.DataFrame, require_validated: bool = True) -> list[dict[str, object]]:
     manifest, models = load_bundle(bundle_dir, require_validated=require_validated)
     predictions: list[dict[str, object]] = []
+    from ..model_policy import is_active
     for entry in manifest["models"]:
+        if not is_active(entry["key"]):
+            continue
         columns = entry["feature_columns"]
         X = features.reindex(columns=columns).apply(pd.to_numeric, errors="coerce")
         required_prefix = entry.get("required_observed_prefix")

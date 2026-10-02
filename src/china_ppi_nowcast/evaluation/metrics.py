@@ -7,6 +7,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from ..reporting import model_name
 from ..storage import atomic_write_csv, atomic_write_text
 
 
@@ -47,7 +48,7 @@ def write_registry_evaluation(root: Path) -> dict[str, int]:
     atomic_write_csv(directory / "forecast_errors.csv", errors)
     atomic_write_csv(directory / "model_summary.csv", summary)
     lines = [
-        "# Prospective forecast evaluation",
+        "# Forecast archive evaluation",
         "",
         "Forecast rows are joined to official results without altering the frozen registry.",
         "With fewer than six prospective target months, individual errors should be read directly",
@@ -58,7 +59,7 @@ def write_registry_evaluation(root: Path) -> dict[str, int]:
     ]
     for _, row in summary.iterrows():
         lines.append(
-            f"| {row['model_key']} | {row['vintage']} | {int(row['n'])} | {row['mae']:.3f} | "
+            f"| {model_name(row['model_key'])} | {row['vintage']} | {int(row['n'])} | {row['mae']:.3f} | "
             f"{row['rmse']:.3f} | {row['bias']:.3f} | {row['directional_accuracy']:.3f} |"
         )
     atomic_write_text(root / "reports" / "forecast_evaluation.md", "\n".join(lines) + "\n")

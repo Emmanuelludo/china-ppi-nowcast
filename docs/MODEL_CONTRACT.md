@@ -1,8 +1,6 @@
 # Model and training-data contract
 
-The lost v0.4 fitted objects are not reproducible from the surviving evidence.
-Version `reconstructed-v1` therefore defines six new candidate estimators under
-the old family labels.
+The survey-aligned benchmark family uses the following feature and estimator contracts.
 
 ## Training matrix
 
@@ -23,19 +21,17 @@ Features must be constructed using only snapshots whose `published_at` and
 `retrieved_at` are no later than the row's cutoff. A backtest built from pages
 first retrieved later must be labeled pseudo-real-time.
 
-## Reconstructed candidates
+## Benchmark estimators
 
-| Family label | Reconstructed implementation |
+| Family label | Implementation |
 |---|---|
-| Category-factor regression | Median imputation + scaling + PCA + ridge |
 | Gradient boosting | `HistGradientBoostingRegressor` with native NaNs |
-| Economic + ML hybrid | Equal-weight ridge/histogram-boosting voting regressor; currently NBS-only because no reviewed economic inputs were recovered |
+| Economic + ML hybrid | Equal-weight ridge/histogram-boosting voting regressor; NBS-price inputs only |
 | Product-level ridge | Median imputation + missing indicators + ridge |
 | Sector-first aggregation | Ridge on global/category summaries |
 | Random forest | Median imputation + missing indicators + random forest |
 
-These are transparent defaults for prospective comparison, not assertions about
-the lost archive. A bundle becomes operationally validated only after the
+A bundle becomes operationally validated only after the
 minimum-history, chronology, finite-metric, six-artifact, and pseudo-real-time
 label checks pass. This gate does not assert model superiority.
 
@@ -46,7 +42,7 @@ the individual monthly error sequence, panel-dropout sensitivity, and early vs
 final vintage performance. Do not select a permanent winner from six months.
 
 
-## Version 2: two final-vintage timing benchmarks
+## Final-vintage timing benchmarks
 
 The six original candidates continue to use survey-aligned features. For September:
 

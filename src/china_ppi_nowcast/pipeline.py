@@ -48,7 +48,7 @@ def write_status_report(root: Path, status: dict[str, object], run: dict[str, ob
         [
             "",
             "Frozen August 2026 forecasts remain historical imports. Current inference is",
-            "permitted only from a validated reconstructed model bundle.",
+            "permitted only from a validated model bundle.",
             "",
         ]
     )

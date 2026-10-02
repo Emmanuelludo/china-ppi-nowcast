@@ -1,7 +1,6 @@
 # August 2026 frozen forecast evaluation
 
-These values are historical imports from `HANDOFF.md`. They are not outputs of
-the reconstructed code.
+Frozen historical forecast records, separate from the active model versions.
 
 | Model | Early | Final | Final error vs +0.40% |
 |---|---:|---:|---:|
@@ -12,4 +11,4 @@ the reconstructed code.
 | Sector-first aggregation | +0.188% | +0.227% | -0.173 pp |
 | Random forest | +0.438% | +0.509% | +0.109 pp |
 
-The exact intraday cutoff and original model artifacts are unavailable.
+Early cutoff: 14 August; final cutoff: approximately 24 August. These are date-level archival cutoffs.

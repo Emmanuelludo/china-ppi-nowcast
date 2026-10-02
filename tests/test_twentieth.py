@@ -20,8 +20,8 @@ class TwentiethTests(unittest.TestCase):
     def test_early_cutoff_has_no_twentieth_signal(self):
         built = build_feature_vintage(pd.DataFrame(test_features.FeatureTests().base_rows()), '2026-08', '2026-08-14T23:00:00+08:00')
         self.assertTrue(pd.isna(built.frame['twentieth_product__测试产品'].iloc[0]))
-        self.assertEqual(len(model_specs_for_vintage('early')), 6)
-        self.assertEqual(len(model_specs_for_vintage('final')), 8)
+        self.assertEqual(len(model_specs_for_vintage('early')), 5)
+        self.assertEqual(len(model_specs_for_vintage('final')), 7)
 
     def test_direct_index_has_no_target_fitted_weights(self):
         x = pd.DataFrame([[*range(9), 1000, np.nan]])

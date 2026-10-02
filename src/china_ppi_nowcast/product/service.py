@@ -23,13 +23,14 @@ def run(root,bundle,month,as_of):
     x=canonicalize(pd.read_csv(root/'data/processed/nbs_ten_day_observations.csv.gz'))
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
     outputs=[];pending=[]
+    from ..model_policy import is_active
     for variant in VARIANTS:
         try:features,meta=feature_row(x,catalog,month,variant,cutoff,True)
         except ValueError as e:
             if 'unavailable source release' not in str(e): raise
             pending.append(dict(variant=variant,reason=str(e)));continue
         for candidate in manifest['models']:
-            if candidate['variant']!=variant:continue
+            if candidate['variant']!=variant or not is_active(candidate['name']):continue
             if candidate['training_end']>=month:raise ValueError('model target-month leakage')
             artifact=bundle/candidate['artifact']
             if candidate.get('artifact_sha256') and hashlib.sha256(artifact.read_bytes()).hexdigest()!=candidate['artifact_sha256']:
@@ -61,26 +62,8 @@ def run(root,bundle,month,as_of):
                 write_json(directory/'shap.json',dict(baseline=float(baseline[0]),product=contributions,grouped=grouped,
                     prediction=prediction,method='tree_path_dependent',causal=False,tolerance=2e-5))
             write_json(directory/'features.json',meta);write_json(directory/'forecast.json',row);outputs.append(row)
-    lines=['# Additional product PPI forecasts','',f'Target: {month}; as of {as_of}','',
-        'Existing models remain active. These additional candidates do not replace them.',
-        '20th-to-20th waits for the current 11–20 release; it is a period-price proxy.',
-        '', '|Timing|Panel|Model|MoM (%)|','|---|---|---|---:|']
-    for r in outputs:lines.append(f"|{r['variant']}|{r['panel']}|{r['model']}|{r['prediction_mom']:+.3f}|")
-    for r in pending:lines.append(f"\nPending {r['variant']}: {r['reason']}")
-    lines.extend(['','Direct tracker is uncalibrated. No ensemble weights or model winner have been promoted.',
-        'Individual and grouped SHAP files are stored beside each tree forecast. They are model attributions, not causal contributions.',
-        f"Verified historical source range: {manifest['source_start']}–{manifest['source_end']}. See the historical discovery audit for gaps."])
-    for r in outputs:
-        if r['panel']!='union':continue
-        sp=root/'data/product/vintages'/month/r['forecast_id'][:20]/'shap.json'
-        if not sp.exists():continue
-        attr=json.loads(sp.read_text());lines.extend(['',f"## {r['variant']} / {r['model']} attribution",'',f"Baseline: {attr['baseline']:+.4f} pp; prediction: {attr['prediction']:+.4f}%.",'','|Product feature|SHAP (pp)|','|---|---:|'])
-        for c,v in sorted(attr['product'].items(),key=lambda item:abs(item[1]),reverse=True)[:8]:
-            label=catalog['products'][c.split('__',1)[1]]['canonical_name']
-            lines.append(f'|{c.split("__",1)[0]}: {label}|{v:+.4f}|')
-        lines.extend(['','|Group|SHAP (pp)|','|---|---:|'])
-        for g,v in sorted(attr['grouped'].items(),key=lambda item:abs(item[1]),reverse=True):lines.append(f'|{g}|{v:+.4f}|')
-    (root/'reports/product_latest.md').write_text('\n'.join(lines)+'\n')
+    from ..reporting import write_product_reports
+    write_product_reports(root,manifest,catalog,month,as_of,outputs,pending)
     from .evaluation import evaluate
     evaluation=evaluate(root,bundle,as_of)
     return dict(forecasts=len(outputs),pending=pending,bundle=manifest['version'],evaluation=evaluation)

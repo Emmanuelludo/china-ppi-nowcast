@@ -13,6 +13,10 @@ from ..storage import stable_hash
 from ..time import Window, parse_as_of, parse_target_month, target_vintage
 
 
+class AwaitingSourceRelease(ValueError):
+    """Expected pending state before required source prices are public."""
+
+
 @dataclass(frozen=True)
 class FeatureVintage:
     frame: pd.DataFrame
@@ -124,7 +128,7 @@ def build_feature_vintage(
     windows = set(zip(available.get("release_month", []), available.get("window", [])))
     vintage = target_vintage(target_month, windows)
     if vintage == "not_ready":
-        raise ValueError("target month lacks prior 21-end carry and current 1-10 release")
+        raise AwaitingSourceRelease("target month lacks prior 21-end carry and current 1-10 release")
     relevant_windows = {
         (str(month - 2), Window.THIRD.value),
         (str(month - 1), Window.FIRST.value),

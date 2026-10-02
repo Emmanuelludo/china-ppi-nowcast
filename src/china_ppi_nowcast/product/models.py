@@ -11,7 +11,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
 PRODUCT_MODELS=('ridge','histgb','xgboost','catboost','lightgbm')
-ALL_MODELS=PRODUCT_MODELS+('category_factor','sector_first','random_forest','economic_ml_hybrid','direct_tracker')
+ALL_MODELS=PRODUCT_MODELS+('sector_first','random_forest','economic_ml_hybrid','direct_tracker')
 TREE_MODELS=('histgb','xgboost','catboost','lightgbm','random_forest')
 SEED=20260916
 

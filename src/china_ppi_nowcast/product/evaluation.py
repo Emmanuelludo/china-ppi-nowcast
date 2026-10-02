@@ -3,6 +3,8 @@ import json
 import numpy as np
 import pandas as pd
 from .data import digest
+from ..model_policy import is_active
+from ..reporting import model_name, TIMINGS, PANELS
 from .train import metrics,write_json
 
 
@@ -41,13 +43,14 @@ def evaluate(root,bundle,as_of):
         grouping=['variant','panel','model']+(['model_version'] if evidence=='prospective' else [])
         for key,g in frame.groupby(grouping):
             variant,panel,model=key[:3]
+            if not is_active(model):continue
             g=g.sort_values('target_month');latest_month=pd.Period(g.target_month.max(),freq='M')
             for n in [6,12,24,None]:
                 selected=g if n is None else g[g.target_month>str(latest_month-n)]
                 if selected.empty:continue
                 m=metrics(selected.actual,selected.prediction)
-                label=evidence if len(key)==3 else evidence+':'+key[3]
-                lines.append(f"|{label}|{variant}|{panel}|{model}|{n or 'full'}|{m['n']}|{m['mae']:.3f}|{m['rmse']:.3f}|{m['bias']:.3f}|{m['directional_accuracy']:.2f}|")
+                label=('Historical (pseudo-real-time)' if evidence=='pseudo_real_time' else 'Prospective') + ('' if len(key)==3 else ': '+key[3])
+                lines.append(f"|{label}|{TIMINGS[variant]}|{PANELS[panel]}|{model_name(model)}|{n or 'full'}|{m['n']}|{m['mae']:.3f}|{m['rmse']:.3f}|{m['bias']:.3f}|{m['directional_accuracy']:.2f}|")
     (root/'reports/product_performance.md').write_text('\n'.join(lines)+'\n')
     regimes=[]
     historical=sources[0][1].copy()

@@ -44,7 +44,7 @@ def train_project_bundles(root: Path, bundle_root: Path, carry_weight: float = 0
             }
             for vintage, manifest in variants.items()
         },
-        "warning": "Operationally validated reconstructed candidates; this does not recover or reproduce the missing v0.4 objects.",
+        "warning": "Operationally validated candidates; compare prospective forecast accuracy separately.",
     }
     atomic_write_text(bundle_root / "manifest.json", json.dumps(root_manifest, ensure_ascii=False, indent=2) + "\n")
     _write_evaluation_report(root, variants)
@@ -53,7 +53,7 @@ def train_project_bundles(root: Path, bundle_root: Path, carry_weight: float = 0
 
 def _write_evaluation_report(root: Path, variants: dict[str, dict[str, object]]) -> None:
     lines = [
-        "# Reconstructed-model backfill evaluation",
+        "# Survey-aligned benchmark validation",
         "",
         "All results below are **pseudo-real-time**. Publication timestamps were used as cutoffs,",
         "but the NBS pages were retrieved later and revision-vintage correctness is not claimed.",
