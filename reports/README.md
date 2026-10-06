@@ -28,6 +28,12 @@ Ridge changes by **0.198 percentage points** between the all-product and stable-
 
 Booster agreement is narrower than historical forecast errors; it is not a prediction interval. Sector-first and hybrid comparisons remain visible in the quality report.
 
+## Adaptive monitoring
+
+**28 model specifications monitored · 0 active challenger trials · 0 queued refits.** Four released outcomes trigger monitoring; six future matched outcomes determine a provisional promotion.
+
+[Open monitoring, diagnostics and champion–challenger decisions](adaptive.md)
+
 ## What each model does
 
 | Active product model | Mechanism |
