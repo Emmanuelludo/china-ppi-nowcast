@@ -14,7 +14,7 @@ EXPLANATIONS = {
  'catboost':'Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.',
  'lightgbm':'A strongly constrained tree booster tests an alternative way of learning product-price interactions.',
  'histgb':'Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.',
- 'ridge':'Regularized linear regression tests whether a weighted combination of individual price changes is sufficient. Imputation and scaling are fitted on training data.',
+ 'ridge':'Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.',
  'random_forest':'Averages many decision trees to test a different nonlinear modelling assumption.',
  'sector_first':'Groups product changes into sector signals before fitting a regularized regression.',
  'economic_ml_hybrid':'Combines linear and boosting estimates built from NBS price signals.',
@@ -98,7 +98,7 @@ def write_dashboard(root,manifest,requested_month,as_of):
    '**How to read this:** +0.7% means prices are projected to be 0.7% higher than the previous month. These forecasts concern headline PPI month-on-month change, not year-on-year inflation.','',
    f'**Price dates:** {TIMING_HELP[timing]}','']
  if quality['ridge_panel_gap_pp'] is not None:
-  lines += ['## Robustness check','',f"Ridge changes by **{quality['ridge_panel_gap_pp']:.3f} percentage points** between the all-product and stable-product 20th-to-20th panels. Do not treat its sign as robust. Several live product changes exceed their fitted historical ranges.",'', '[Read the forecast sense check, recent errors and all retained model estimates](forecast_quality.md)', '', 'Booster agreement is narrower than historical forecast errors; it is not a prediction interval. Sector-first and hybrid comparisons remain visible in the quality report.','']
+  lines += ['## Robustness check','',f"Ridge changes by **{quality['ridge_panel_gap_pp']:.3f} percentage points** between the all-product and stable-product 20th-to-20th panels. This measures sensitivity to product coverage; read it alongside rolling forecast errors. Several live product changes exceed their fitted historical ranges.",'', '[Read the forecast sense check, recent errors and all retained model estimates](forecast_quality.md)', '', 'Booster agreement is narrower than historical forecast errors; it is not a prediction interval. Sector-first and hybrid comparisons remain visible in the quality report.','']
  lines += ['## What each model does','', '| Active product model | Mechanism |','|---|---|']
  for m in CORE:lines.append(f'| {model_name(m)} | {EXPLANATIONS[m]} |')
  lines += ['','## Other retained comparisons','',
@@ -107,6 +107,7 @@ def write_dashboard(root,manifest,requested_month,as_of):
   '- **[Interactive dashboard file](dashboard.html)** — download the file and open it in a browser; choose month, timing, product panel and retained comparison models. It works without a login or external scripts.',
   '- [All current model estimates and release availability](product_latest.md)',
   '- [Product and sector attributions in English](attributions.md)',
+  '- [Ridge revision: specifications, validation and August comparison](ridge_revision.md)',
   '- [Historical accuracy](product_candidates.md) · [Prospective performance](product_performance.md)',
   '- [Source and pipeline status](latest.md)',
   '- [Frozen August forecast archive](august_2026_frozen.md)','',

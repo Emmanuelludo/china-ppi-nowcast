@@ -82,7 +82,7 @@ def write_quality_report(root,bundle,manifest,as_of):
  for s in d['booster_summaries']:
   lines.append(f"- {TIMINGS[s['variant']]}: {s['n']} product boosters span **{s['minimum']:+.3f}% to {s['maximum']:+.3f}%**; median **{s['median']:+.3f}%**. This is descriptive agreement, not an ensemble or confidence interval.")
  if d['ridge_panel_gap_pp'] is not None:
-  lines.append(f"- Ridge 20th-to-20th panel sensitivity: **{d['ridge_panel_gap_pp']:.3f} pp** between all-product and stable-product versions. Treat the all-product estimate as sensitivity evidence; a sign reversal warrants investigation.")
+  lines.append(f"- Ridge 20th-to-20th panel sensitivity: **{d['ridge_panel_gap_pp']:.3f} pp** between all-product and stable-product versions. Compare both panels alongside their rolling errors; a sign reversal warrants investigation.")
  lines+=['- Several product changes can lie outside the fitted training range. Linear models extrapolate; trees often saturate. Both require monitoring.',
   '- Short-history product series and missingness indicators can encode basket/regime changes. Tight agreement among correlated boosters does not establish independent confirmation.',
   '- Sector-first and hybrid models remain useful comparisons: judge their full and recent validation alongside the pure product models.',

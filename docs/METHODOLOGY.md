@@ -48,8 +48,7 @@ variants** in total, alongside the survey-aligned benchmark family.
 
 Product identities include name, specification and unit. Structural absence
 before introduction or after retirement remains missing. Trees use native missing
-handling; linear/factor pipelines fit imputation, missingness indicators and
-scaling inside the training fold. Stable panels use training-fold coverage only.
+handling. Revised product ridge uses the observed-value scaling described below; sector/hybrid linear components retain their original fold-local median imputation, indicators and scaling. Stable panels use training-fold coverage only.
 A newly introduced series cannot influence a saved model that has never learned
 from it; the forecast metadata records these features.
 
@@ -79,3 +78,11 @@ is not a calibrated prediction interval. Exact implied YoY and external price
 proxies are not part of the current production forecast.
 
 Category-factor models are retired from active inference and comparison tables. Their saved objects and immutable historical forecasts remain in the archive.
+
+## Ridge v2
+
+Product ridge uses means and standard deviations calculated only from observed training values. Its scale has a fixed floor of one log percentage point. Missing inputs map to the observed training mean (zero after transformation); missingness indicators are omitted. This avoids assigning unit variance to sparse series by scaling after imputation.
+
+Three inner chronological folds select alpha (10, 25, 100, 400, 1600) and minimum product history (2, 12, 24 months) within each outer training window. Candidates without sufficient history in an inner fold are ineligible. Stable ridge requires complete training coverage. No forecast clipping is used.
+
+[Revision validation and August/September comparisons](../reports/ridge_revision.md). The revision was motivated by inspected forecast instability; historical results are exploratory, and genuinely prospective evaluation remains necessary. Earlier fitted bundles and forecasts are preserved.

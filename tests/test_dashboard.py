@@ -7,7 +7,7 @@ from china_ppi_nowcast.dashboard import build_data, CORE
 class DashboardTests(unittest.TestCase):
     def setUp(self):
         self.root=Path(__file__).parents[1]
-        bundle=self.root/json.loads((self.root/'config/product_pipeline.json').read_text())['bundle']
+        bundle=self.root/'models/product-v3-6ebe4ddbf8e9c7bc'
         self.manifest=json.loads((bundle/'manifest.json').read_text())
     def test_pending_month_keeps_latest_available_and_retired_models_hidden(self):
         d=build_data(self.root,self.manifest,'2026-10','2026-10-02T10:00:00Z')

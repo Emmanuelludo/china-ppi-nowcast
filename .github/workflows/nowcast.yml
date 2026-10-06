@@ -98,6 +98,12 @@ jobs:
           if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
           python -m china_ppi_nowcast.modeling.refresh --root . "${args[@]}"
 
+      - name: Fit revised ridge specifications and issue replacement September vintage
+        env:
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"
+        run: python -m china_ppi_nowcast.product.ridge_revision --root .
+
       - name: Run additive product candidates
         env:
           OMP_NUM_THREADS: "1"

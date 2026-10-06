@@ -7,7 +7,7 @@ from china_ppi_nowcast.quality import diagnostics,latest_saved
 class QualityTests(unittest.TestCase):
     def setUp(self):
         self.root=Path(__file__).parents[1]
-        self.bundle=self.root/json.loads((self.root/'config/product_pipeline.json').read_text())['bundle']
+        self.bundle=self.root/'models/product-v3-6ebe4ddbf8e9c7bc'
         self.manifest=json.loads((self.bundle/'manifest.json').read_text())
         self.cutoff='2026-10-06T20:10:00Z'
     def test_regression_detects_ridge_sensitivity_and_sparse_extrapolation(self):
