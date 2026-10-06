@@ -32,7 +32,8 @@ permissions:
 
 concurrency:
   group: china-ppi-nowcast
-  cancel-in-progress: false
+  # New code supersedes an obsolete push run; scheduled/manual runs queue.
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   nowcast:
