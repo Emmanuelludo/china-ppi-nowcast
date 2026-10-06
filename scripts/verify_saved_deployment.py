@@ -20,7 +20,7 @@ for candidate in manifest['models']:
     if candidate.get('artifact_sha256'):
         assert hashlib.sha256(artifact.read_bytes()).hexdigest()==candidate['artifact_sha256']
     fitted=joblib.load(artifact)
-    matrix=pd.read_csv(bundle/candidate['variant']/'matrix.csv')
+    matrix=pd.read_csv(bundle/candidate.get('training_matrix',candidate['variant']+'/matrix.csv'))
     X=matrix.tail(1).reindex(columns=candidate['feature_order'])
     prediction=fitted.predict(X)
     assert np.isfinite(prediction).all()

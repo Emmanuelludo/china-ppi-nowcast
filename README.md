@@ -13,6 +13,7 @@ and preserves each forecast before the official PPI announcement.
 | See the visual dashboard and projections | **[PPI dashboard](reports/README.md)** |
 | Understand which products drive them | [Forecast explanations](reports/attributions.md) |
 | Find a product in English | [Product glossary](docs/PRODUCTS.md) |
+| Follow adaptive refits and champion–challenger trials | [Adaptive monitoring](reports/adaptive.md) |
 | Compare model accuracy | [Historical comparison](reports/product_candidates.md) · [Performance over time](reports/product_performance.md) |
 | Understand the price dates and models | [Methodology](docs/METHODOLOGY.md) |
 | Run or maintain the pipeline | [Operations guide](OPERATIONS.md) |
@@ -30,7 +31,7 @@ and preserves each forecast before the official PPI announcement.
 
 All reported PPI predictions are **MoM percentages**: `+0.7` means `+0.7% MoM`.
 The direct market-price tracker is an uncalibrated index and is displayed separately.
-No permanent winning model or weighted ensemble has been selected.
+Each calibrated product-model specification is monitored independently. Challenger promotions are provisional decisions based on matched prospective outcomes; no permanent winning model family or weighted ensemble has been selected.
 
 ## Run an update
 

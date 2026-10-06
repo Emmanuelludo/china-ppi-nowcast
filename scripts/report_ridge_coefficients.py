@@ -15,14 +15,18 @@ candidates={(c['variant'],c['panel'],c['name']):c for c in manifest['models']}
 records=[]
 for r in latest_saved(root,manifest,datetime.now(timezone.utc).isoformat()):
  if r['model']!='ridge':continue
- c=candidates[(r['variant'],r['panel'],r['model'])];model=joblib.load(bundle/c['artifact'])
+ forecast_bundle=bundle if r['model_version']==manifest['version'] else root/'models'/r['model_version']
+ actual_manifest=manifest if forecast_bundle==bundle else json.loads((forecast_bundle/'manifest.json').read_text())
+ c=next(c for c in actual_manifest['models'] if (c['variant'],c['panel'],c['name'])==(r['variant'],r['panel'],r['model']))
+ model=joblib.load(forecast_bundle/c['artifact'])
+ if not hasattr(model,'scales_'):continue
  directory=root/'data/product/vintages'/r['target_month']/r['forecast_id'][:20]
  frozen=json.loads((directory/'features.json').read_text())
  x=pd.DataFrame([frozen['values']],dtype=float);z=model.transform(x)
  contribution=z.to_numpy()[0]*model.estimator_.coef_
  assert np.isclose(model.estimator_.intercept_+contribution.sum(),r['prediction_mom'],rtol=0,atol=1e-12)
  for i,k in enumerate(model.columns_):
-  records.append(dict(model_version=manifest['version'],forecast_month=r['target_month'],as_of=r['as_of'],timing=r['variant'],panel=r['panel'],
+  records.append(dict(model_version=r['model_version'],forecast_month=r['target_month'],as_of=r['as_of'],timing=r['variant'],panel=r['panel'],
    product=product_name(k.split('__',1)[1]),feature=k,observed_training_months=int(model.counts_[k]),
    observed_training_mean=float(model.means_[k]),observed_training_sd_with_floor=float(model.scales_[k]),
    live_log_change=x[k].iloc[0],standardized_value=float(z[k].iloc[0]),

@@ -22,6 +22,7 @@ Use Python 3.12:
 python -m pip install -e '.[product]'
 python -m unittest discover -s tests -v
 python -m china_ppi_nowcast.cli --root . run
+python -m china_ppi_nowcast.adaptive --root .
 python -m china_ppi_nowcast.product ensure --root .
 python scripts/verify_saved_deployment.py
 ```
@@ -76,3 +77,11 @@ rewritten when documentation, labels or reports change.
 Historical validation is pseudo-real-time because the source pages were retrieved
 later. Imported historical forecast records are distinguished from forecasts
 produced by the active model versions. See [data provenance](docs/DATA.md).
+
+## Adaptive model lifecycle
+
+The daily workflow monitors all 28 calibrated product specifications before product inference. `config/adaptive.json` controls the four-outcome monitoring window, six-outcome comparison period and operational promotion thresholds. The direct circulation-price tracker remains outside PPI-error monitoring.
+
+`python -m china_ppi_nowcast.adaptive --root .` evaluates newly available official results, registers diagnostic evidence, fits at most two queued challengers per run, freezes matched forecasts and applies eligible promotions. Repeat runs reuse fitted artifacts and frozen pairs. Incomplete training transactions are retried; QA failures fail the workflow.
+
+Read [Adaptive monitoring](reports/adaptive.md) and [Technical method](docs/ADAPTIVE.md). The event journal is authoritative; `data/adaptive/state.json` is a rebuildable cache. Set `enabled` to false to pause new adaptive lifecycle changes without deleting history. Rule changes affect new trials; each existing trial keeps its registered rules.

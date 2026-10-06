@@ -50,7 +50,9 @@ class RidgeRevisionTests(unittest.TestCase):
             self.assertAlmostEqual(model.predict(august)[0],row['prediction'],places=12)
             pd.testing.assert_series_equal(model.means_,train[model.columns_].mean())
         parent=root/'models'/manifest['ridge_revision']['parent_bundle']
+        promoted={r['key'] for r in manifest.get('adaptive_promotions',[])}
         for c in manifest['models']:
-            if c['name']!='ridge':
+            identity='/'.join((c['variant'],c['panel'],c['name']))
+            if c['name']!='ridge' and identity not in promoted:
                 self.assertEqual(hashlib.sha256((bundle/c['artifact']).read_bytes()).hexdigest(),
                                  hashlib.sha256((parent/c['artifact']).read_bytes()).hexdigest())

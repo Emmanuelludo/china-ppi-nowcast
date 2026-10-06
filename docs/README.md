@@ -10,3 +10,5 @@
 | [Product-model contract](PRODUCT_MODELS.md) | Detailed feature and model behavior |
 | [Benchmark contract](MODEL_CONTRACT.md) | Survey-aligned benchmark features and estimators |
 | [Operations](../OPERATIONS.md) | Run, test, train and troubleshoot |
+
+- [Adaptive monitoring and champion–challenger lifecycle](ADAPTIVE.md)

@@ -18,7 +18,9 @@ observations=pd.read_csv(root/'data/processed/nbs_ten_day_observations.csv.gz')
 x=canonicalize(observations)
 verified_sources=set()
 for r in rows:
- candidate=candidates[(r['variant'],r['panel'],r['model'])]
+ forecast_bundle=bundle if r['model_version']==manifest['version'] else root/'models'/r['model_version']
+ forecast_manifest=manifest if forecast_bundle==bundle else json.loads((forecast_bundle/'manifest.json').read_text())
+ candidate=next(c for c in forecast_manifest['models'] if (c['variant'],c['panel'],c['name'])==(r['variant'],r['panel'],r['model']))
  directory=root/'data/product/vintages'/r['target_month']/r['forecast_id'][:20]
  frozen=json.loads((directory/'features.json').read_text())
  for sources in frozen['sources'].values():
@@ -33,7 +35,7 @@ for r in rows:
    assert len(stored)==50 and len(fresh)==50,'Source product panel mismatch'
    assert np.allclose(fresh.price_cny,stored.price_cny,rtol=0,atol=1e-9),'Raw source absolute prices differ'
    verified_sources.add(sha)
- values,rebuilt=feature_row(x,json.loads((bundle/'catalog.json').read_text()),r['target_month'],r['variant'],r['as_of'],True)
+ values,rebuilt=feature_row(x,json.loads((forecast_bundle/'catalog.json').read_text()),r['target_month'],r['variant'],r['as_of'],True)
  assert digest({k:v for k,v in frozen.items() if k not in ('feature_hash','as_of')})==frozen['feature_hash'],'Frozen feature content hash differs'
  for key in frozen:
   if key not in ('values','feature_hash','as_of'):assert rebuilt[key]==frozen[key],'Frozen source/feature metadata differs: '+key
@@ -43,7 +45,7 @@ for r in rows:
   assert (fresh is None) if value is None else (fresh is not None and np.isclose(fresh,value,rtol=0,atol=1e-12)), 'Frozen feature values differ'
  # Logarithms may differ in their final binary bit across NumPy/platform builds.
  # Metadata and missingness remain exact; numeric reconstruction uses 1e-12 pp tolerance.
- fitted=joblib.load(bundle/candidate['artifact']);X=pd.DataFrame([frozen['values']],dtype=float).reindex(columns=candidate['feature_order'])
+ fitted=joblib.load(forecast_bundle/candidate['artifact']);X=pd.DataFrame([frozen['values']],dtype=float).reindex(columns=candidate['feature_order'])
  prediction=float(fitted.predict(X)[0]);assert np.isclose(prediction,r['prediction_mom'],rtol=0,atol=1e-10),'Saved forecast reproduction differs'
  p=directory/'shap.json'
  if p.exists():

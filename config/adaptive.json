@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "monitor_months": 4,
+  "comparison_months": 6,
+  "mae_ratio_trigger": 1.5,
+  "mae_increase_trigger_pp": 0.15,
+  "absolute_bias_trigger_pp": 0.25,
+  "max_months_without_trial": 12,
+  "minimum_relative_mae_gain": 0.05,
+  "minimum_absolute_mae_gain_pp": 0.02,
+  "maximum_rmse_ratio": 1.05,
+  "maximum_bias_deterioration_pp": 0.05,
+  "minimum_win_fraction": 0.5,
+  "max_refits_per_run": 2,
+  "validation_months": 24,
+  "training_windows": [null, 60, 120],
+  "minimum_training_months": 24
+}

@@ -32,7 +32,8 @@ def build_data(root,manifest,requested_month,as_of):
  rows=[]
  for p in (root/'data/product/vintages').glob('*/*/forecast.json'):
   r=json.loads(p.read_text())
-  if r['model_version']!=manifest['version'] or not is_active(r['model']):continue
+  if not is_active(r['model']):continue
+  if r['model_version']!=manifest['version'] and not manifest.get('adaptive_promotions'):continue
   if datetime.fromisoformat(r['as_of'])>datetime.fromisoformat(as_of):continue
   rows.append(r)
  chosen={}
@@ -40,6 +41,10 @@ def build_data(root,manifest,requested_month,as_of):
  result=[]
  metrics={(r['variant'],r['panel'],r['name']):r['metrics'] for r in manifest['models']}
  for r in chosen.values():
+  forecast_metrics=metrics
+  if r['model_version']!=manifest['version']:
+   old=json.loads((root/'models'/r['model_version']/'manifest.json').read_text())
+   forecast_metrics={(c['variant'],c['panel'],c['name']):c['metrics'] for c in old['models']}
   directory=root/'data/product/vintages'/r['target_month']/r['forecast_id'][:20]
   attr=[];groups=[]
   p=directory/'shap.json'
@@ -49,7 +54,7 @@ def build_data(root,manifest,requested_month,as_of):
    groups=[dict(label=group_name(k),value=v) for k,v in sorted(a['grouped'].items(),key=lambda kv:abs(kv[1]),reverse=True)]
   result.append(dict(month=r['target_month'],month_label=month_name(r['target_month']),timing=r['variant'],panel=r['panel'],
    model=r['model'],label=model_name(r['model']),prediction=r['prediction_mom'],frozen_at=r['as_of'],
-   explanation=EXPLANATIONS[r['model']],products=attr,groups=groups,metrics=metrics[(r['variant'],r['panel'],r['model'])]))
+   model_version=r['model_version'],explanation=EXPLANATIONS[r['model']],products=attr,groups=groups,metrics=forecast_metrics[(r['variant'],r['panel'],r['model'])]))
  months=sorted(set(r['month'] for r in result),reverse=True)
  return dict(requested_month=requested_month,requested_label=month_name(requested_month),refreshed=as_of,
   latest_month=months[0] if months else None,months=[dict(value=m,label=month_name(m)) for m in months],
@@ -76,6 +81,9 @@ def write_dashboard(root,manifest,requested_month,as_of):
  bundle=root/json.loads((root/"config/product_pipeline.json").read_text())["bundle"]
  quality=write_quality_report(root,bundle,manifest,as_of)
  data["quality"]=quality
+ state_path=root/'data/adaptive/state.json'
+ state=json.loads(state_path.read_text()) if state_path.exists() else None
+ data['adaptive']=dict(monitored_models=len(state['champions']),active_trials=sum(c['status']=='testing' for c in state['cycles'].values()),queued_refits=sum(c['status']=='requested' for c in state['cycles'].values())) if state else None
  latest=data['latest_month'];selected=[r for r in data['forecasts'] if r['month']==latest and r['timing']=='twentieth' and r['panel']=='union' and r['model'] in CORE]
  selected.sort(key=lambda r:CORE.index(r['model']))
  if not selected:
@@ -99,6 +107,9 @@ def write_dashboard(root,manifest,requested_month,as_of):
    f'**Price dates:** {TIMING_HELP[timing]}','']
  if quality['ridge_panel_gap_pp'] is not None:
   lines += ['## Robustness check','',f"Ridge changes by **{quality['ridge_panel_gap_pp']:.3f} percentage points** between the all-product and stable-product 20th-to-20th panels. This measures sensitivity to product coverage; read it alongside rolling forecast errors. Several live product changes exceed their fitted historical ranges.",'', '[Read the forecast sense check, recent errors and all retained model estimates](forecast_quality.md)', '', 'Booster agreement is narrower than historical forecast errors; it is not a prediction interval. Sector-first and hybrid comparisons remain visible in the quality report.','']
+ if data['adaptive']:
+  a=data['adaptive']
+  lines += ['## Adaptive monitoring','',f"**{a['monitored_models']} model specifications monitored · {a['active_trials']} active challenger trials · {a['queued_refits']} queued refits.** Four released outcomes trigger monitoring; six future matched outcomes determine a provisional promotion.",'', '[Open monitoring, diagnostics and champion–challenger decisions](adaptive.md)','']
  lines += ['## What each model does','', '| Active product model | Mechanism |','|---|---|']
  for m in CORE:lines.append(f'| {model_name(m)} | {EXPLANATIONS[m]} |')
  lines += ['','## Other retained comparisons','',

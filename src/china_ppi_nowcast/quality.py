@@ -19,7 +19,8 @@ def latest_saved(root,manifest,as_of):
  selected={}
  for p in sorted((Path(root)/'data/product/vintages').glob('*/*/forecast.json')):
   r=json.loads(p.read_text())
-  if r['model_version']!=manifest['version'] or not is_active(r['model']) or stamp(r['as_of'])>stamp(as_of):continue
+  if not is_active(r['model']) or stamp(r['as_of'])>stamp(as_of):continue
+  if r['model_version']!=manifest['version'] and not manifest.get('adaptive_promotions'):continue
   key=(r['target_month'],r['variant'],r['panel'],r['model'])
   if key not in selected or stamp(r['as_of'])>stamp(selected[key]['as_of']):selected[key]=r
  if not selected:return []
@@ -30,18 +31,24 @@ def diagnostics(root,bundle,manifest,as_of):
  root=Path(root);bundle=Path(bundle);saved=latest_saved(root,manifest,as_of);models={(c['variant'],c['panel'],c['name']):c for c in manifest['models']};matrices={};records=[]
  oos=read_csv(bundle/'rolling_predictions.csv')
  for r in saved:
-  c=models[(r['variant'],r['panel'],r['model'])];directory=root/'data/product/vintages'/r['target_month']/r['forecast_id'][:20]
+  forecast_bundle=bundle
+  forecast_manifest=manifest
+  if r['model_version']!=manifest['version']:
+   forecast_bundle=root/'models'/r['model_version']
+   forecast_manifest=json.loads((forecast_bundle/'manifest.json').read_text())
+  c=next(c for c in forecast_manifest['models'] if (c['variant'],c['panel'],c['name'])==(r['variant'],r['panel'],r['model']));directory=root/'data/product/vintages'/r['target_month']/r['forecast_id'][:20]
   meta=json.loads((directory/'features.json').read_text());cutoff=stamp(r['as_of'])
   assert c['training_end']<r['target_month'],'Training overlaps forecast month'
-  assert stamp(manifest['training_actual_cutoff'])<=cutoff,'Later targets used in training'
+  assert stamp(forecast_manifest['training_actual_cutoff'])<=cutoff,'Later targets used in training'
   assert meta['feature_hash']==r['feature_hash'],'Frozen feature hash mismatch'
   for sources in meta['sources'].values():
    for source in sources:
     assert stamp(source['published_at'])<=cutoff and stamp(source['retrieved_at'])<=cutoff,'Unavailable source in frozen forecast'
-  artifact=bundle/c['artifact']
+  artifact=forecast_bundle/c['artifact']
   assert hashlib.sha256(artifact.read_bytes()).hexdigest()==c['artifact_sha256'],'Saved model hash mismatch'
-  if r['variant'] not in matrices:matrices[r['variant']]=read_csv(bundle/r['variant']/'matrix.csv')
-  matrix=matrices[r['variant']];learned=c['learned_features'];present=[k for k in learned if meta['values'].get(k) is not None];outside=[];short=[];counts={}
+  matrix_path=forecast_bundle/c.get('training_matrix',r['variant']+'/matrix.csv')
+  if matrix_path not in matrices:matrices[matrix_path]=read_csv(matrix_path)
+  matrix=matrices[matrix_path];learned=c['learned_features'];present=[k for k in learned if meta['values'].get(k) is not None];outside=[];short=[];counts={}
   for k in present:
    values=[float(row[k]) for row in matrix if row.get(k) and math.isfinite(float(row[k]))]
    if len(values)<12:short.append(k);counts[k]=len(values)
