@@ -72,6 +72,10 @@ def svg_chart(rows,title):
 
 def write_dashboard(root,manifest,requested_month,as_of):
  root=Path(root);data=build_data(root,manifest,requested_month,as_of)
+ from .quality import write_quality_report
+ bundle=root/json.loads((root/"config/product_pipeline.json").read_text())["bundle"]
+ quality=write_quality_report(root,bundle,manifest,as_of)
+ data["quality"]=quality
  latest=data['latest_month'];selected=[r for r in data['forecasts'] if r['month']==latest and r['timing']=='twentieth' and r['panel']=='union' and r['model'] in CORE]
  selected.sort(key=lambda r:CORE.index(r['model']))
  if not selected:
@@ -93,6 +97,8 @@ def write_dashboard(root,manifest,requested_month,as_of):
    '![Forecast comparison](forecast_comparison.svg)','',
    '**How to read this:** +0.7% means prices are projected to be 0.7% higher than the previous month. These forecasts concern headline PPI month-on-month change, not year-on-year inflation.','',
    f'**Price dates:** {TIMING_HELP[timing]}','']
+ if quality['ridge_panel_gap_pp'] is not None:
+  lines += ['## Robustness check','',f"Ridge changes by **{quality['ridge_panel_gap_pp']:.3f} percentage points** between the all-product and stable-product 20th-to-20th panels. Do not treat its sign as robust. Several live product changes exceed their fitted historical ranges.",'', '[Read the forecast sense check, recent errors and all retained model estimates](forecast_quality.md)', '', 'Booster agreement is narrower than historical forecast errors; it is not a prediction interval. Sector-first and hybrid comparisons remain visible in the quality report.','']
  lines += ['## What each model does','', '| Active product model | Mechanism |','|---|---|']
  for m in CORE:lines.append(f'| {model_name(m)} | {EXPLANATIONS[m]} |')
  lines += ['','## Other retained comparisons','',

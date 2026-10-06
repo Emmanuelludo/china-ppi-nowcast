@@ -135,6 +135,7 @@ jobs:
           export PYTHONPATH="$verification_dir/repo/src"
           python -m unittest discover -s tests -v
           python scripts/verify_saved_deployment.py
+          python scripts/audit_saved_forecasts.py
 
       - name: Open failure issue
         if: failure()

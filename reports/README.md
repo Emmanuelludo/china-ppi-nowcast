@@ -20,6 +20,14 @@ Report refreshed: 2026-10-06. Saved forecast timestamps are preserved.
 
 **Price dates:** Current month 11–20 average prices compared with the previous month’s 11–20 averages. These are period averages, not point prices observed exactly on the 20th.
 
+## Robustness check
+
+Ridge changes by **1.156 percentage points** between the all-product and stable-product 20th-to-20th panels. Do not treat its sign as robust. Several live product changes exceed their fitted historical ranges.
+
+[Read the forecast sense check, recent errors and all retained model estimates](forecast_quality.md)
+
+Booster agreement is narrower than historical forecast errors; it is not a prediction interval. Sector-first and hybrid comparisons remain visible in the quality report.
+
 ## What each model does
 
 | Active product model | Mechanism |

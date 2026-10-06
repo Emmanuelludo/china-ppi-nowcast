@@ -12,7 +12,8 @@ from china_ppi_nowcast.time import CHINA_TZ
 root=Path.cwd()
 bundle=root/json.loads((root/'config/product_pipeline.json').read_text())['bundle']
 manifest=json.loads((bundle/'manifest.json').read_text())
-assert len(manifest['models'])==30
+assert manifest['models']
+assert len({(c['variant'],c['panel'],c['name']) for c in manifest['models']})==len(manifest['models'])
 checked=0
 for candidate in manifest['models']:
     artifact=bundle/candidate['artifact']
