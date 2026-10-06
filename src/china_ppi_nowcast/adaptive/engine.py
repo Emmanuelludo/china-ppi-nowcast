@@ -42,10 +42,15 @@ def replay(events):
         p=e['payload'];kind=e['type']
         if kind=='initialized':s['champions']=p['champions'];s['activation']=e['as_of']
         elif kind=='trial_requested':s['cycles'][p['cycle_id']]=dict(p,status='requested',requested_at=e['as_of'])
+        elif kind=='refit_failed':s['cycles'][p['cycle_id']]['last_fit_failure']=dict(p,as_of=e['as_of'])
         elif kind=='challenger_fitted':s['cycles'][p['cycle_id']].update(status='testing',challenger=p['challenger'])
         elif kind=='trial_decided':
             c=s['cycles'][p['cycle_id']];c.update(status='decided',decision=p)
             s['completed'][c['key']]=max(p['comparison']['months'])
+        elif kind=='adopted':
+            s['champions'][p['champion']['key']]=p['champion']
+            s['completed'][p['champion']['key']]=p['baseline_month']
+        elif kind=='trial_cancelled':s['cycles'][p['cycle_id']]['status']='cancelled'
         elif kind=='promoted':
             c=s['cycles'][p['cycle_id']];s['champions'][c['key']]=p['champion'];c['status']='promoted'
         else:raise ValueError('Unknown adaptive lifecycle event')
@@ -54,6 +59,8 @@ def replay(events):
 
 def known_actuals(root,as_of):
     a=pd.read_csv(root/'data/registry/actuals.csv');cutoff=pd.Timestamp(as_of)
+    a['actual_mom_pct']=pd.to_numeric(a.actual_mom_pct,errors='raise')
+    if not np.isfinite(a.actual_mom_pct).all():raise ValueError('QA: invalid official PPI outcome')
     a=a[(pd.to_datetime(a.published_at,utc=True)<=cutoff)&(pd.to_datetime(a.retrieved_at,utc=True)<=cutoff)]
     # Freeze the first observed official result; revisions remain separate sensitivity evidence.
     return a.sort_values(['published_at','retrieved_at']).drop_duplicates('target_month',keep='first').set_index('target_month').to_dict('index')
@@ -190,6 +197,8 @@ def promote(root,cycle,as_of):
     dest=root/'models'/version
     if not (dest/'manifest.json').exists():
         if dest.exists():raise ValueError('Incomplete promotion bundle; inspect before retry')
+        final_dest=dest;dest=dest.with_name(dest.name+'.tmp')
+        if dest.exists():shutil.rmtree(dest)
         shutil.copytree(base,dest);(dest/'manifest.json').unlink()
         directory=dest/'adaptive'/cycle['cycle_id'];shutil.copytree(source,directory)
         candidate['artifact']=str((directory/'model.joblib').relative_to(dest))
@@ -208,6 +217,7 @@ def promote(root,cycle,as_of):
         oof=pd.read_csv(base/'rolling_predictions.csv');keep=~((oof.variant==candidate['variant'])&(oof.panel==candidate['panel'])&(oof.model==candidate['name']))
         pd.concat([oof[keep],pd.read_csv(source/'rolling_predictions.csv')],ignore_index=True).to_csv(dest/'rolling_predictions.csv',index=False)
         write_json(dest/'manifest.json',manifest)
+        dest.rename(final_dest);dest=final_dest
     else:manifest=json.loads((dest/'manifest.json').read_text());candidate=next(c for c in manifest['models'] if key(c)==cycle['key'])
     atomic_write_text(pointer,json.dumps(dict(bundle='models/'+version),indent=2)+'\n')
     return dict(key=cycle['key'],bundle='models/'+version,candidate=candidate,model_id=candidate['artifact_sha256'])
@@ -228,6 +238,22 @@ def run(root,as_of,month=None,fit_callback=None):
         champions={key(c):dict(key=key(c),bundle=bundle,candidate=c,model_id=c['artifact_sha256']) for c in m['models'] if is_active(c['name']) and c['name']!='direct_tracker'}
         append(root,'initialized',dict(champions=champions,config=config),as_of)
     state=replay(read_events(root));actuals=known_actuals(root,as_of);monitors={}
+    # Explicit/manual retraining or expanded-history bundles cannot silently strand monitoring.
+    active_bundle=json.loads((root/'config/product_pipeline.json').read_text())['bundle']
+    active_manifest=json.loads((root/active_bundle/'manifest.json').read_text())
+    for candidate in active_manifest['models']:
+        k=key(candidate)
+        if k not in state['champions'] or candidate['artifact_sha256']==state['champions'][k]['model_id']:continue
+        ref=dict(key=k,bundle=active_bundle,candidate=candidate,model_id=candidate['artifact_sha256'])
+        unfinished=[c for c in state['cycles'].values() if c['key']==k and (c['status'] in ('requested','testing') or (c['status']=='decided' and c['decision']['comparison']['promote']))]
+        recovered=next((c for c in unfinished if c['status']=='decided' and c['decision']['comparison']['promote'] and c['challenger']['model_id']==ref['model_id']),None)
+        if recovered:
+            append(root,'promoted',dict(cycle_id=recovered['cycle_id'],champion=ref),as_of)
+        else:
+            for c in unfinished:
+                append(root,'trial_cancelled',dict(cycle_id=c['cycle_id'],reason='active specification changed outside this trial'),as_of)
+            append(root,'adopted',dict(champion=ref,baseline_month=max(actuals,default='0000-00'),reason='explicit retraining or expanded-history active bundle'),as_of)
+    state=replay(read_events(root))
     for k,champion in state['champions'].items():
         rows=forecast_scores(root,champion,actuals)
         fresh=[r for r in rows if r['target_month']>state['completed'].get(k,'0000-00')]
@@ -245,7 +271,15 @@ def run(root,as_of,month=None,fit_callback=None):
     state=replay(read_events(root));refits=0
     for cycle in sorted(state['cycles'].values(),key=lambda c:c['requested_at']):
         if cycle['status']!='requested' or refits>=config['max_refits_per_run']:continue
-        m=(fit_callback or fit)(root,cycle,as_of);c=m['candidate']
+        try:
+            m=(fit_callback or fit)(root,cycle,as_of)
+        except Exception as exc:
+            append(root,'refit_failed',dict(cycle_id=cycle['cycle_id'],error_type=type(exc).__name__,message=str(exc)),as_of)
+            failed_state=replay(read_events(root))
+            atomic_write_text(root/'data/adaptive/state.json',json.dumps(failed_state,indent=2,ensure_ascii=False)+'\n')
+            write_report(root,failed_state,monitors,as_of)
+            raise
+        c=m['candidate']
         if c['training_end']>=cycle['start_month'] or pd.Timestamp(m['training_actual_cutoff'])>cutoff:raise ValueError('Challenger fitting used future outcomes')
         append(root,'challenger_fitted',dict(cycle_id=cycle['cycle_id'],challenger=dict(key=cycle['key'],bundle='models/adaptive/'+cycle['cycle_id'],candidate=c,model_id=c['artifact_sha256'])),as_of)
         refits+=1
@@ -287,7 +321,7 @@ def write_report(root,state,monitors,as_of):
         scores=list((root/'data/adaptive/evaluations'/c['cycle_id']).glob('*.json'))
         comparison=c.get('decision',{}).get('comparison',{})
         ma=comparison.get('champion',{}).get('mae');mb=comparison.get('challenger',{}).get('mae')
-        decision=('Promote challenger' if comparison.get('promote') else 'Keep incumbent') if comparison else 'Awaiting matched future outcomes'
+        decision=(('Promote challenger from '+c['decision']['effective_month']) if comparison.get('promote') else 'Keep incumbent') if comparison else 'Awaiting matched future outcomes'
         lines.append(f"| {c['key']} | {c['status']} | {len(scores)} / {c['config']['comparison_months']} | {ma if ma is not None else '—'} | {mb if mb is not None else '—'} | {decision} |")
     if not state['cycles']:lines.append('| No trials yet | Armed | 0 | — | — | Awaiting genuinely prospective outcomes |')
     lines+=['','## Latest matched trial forecasts','', '| Model / specification | Target month | Incumbent | Refit challenger | Frozen |','|---|---|---:|---:|---|']
@@ -309,6 +343,9 @@ def write_report(root,state,monitors,as_of):
             drivers='; '.join(f"{a['product']}: {a['value']:+.3f} pp" for a in r['top_model_attributions'][:4]) or 'Not available'
             lines.append(f"| {r['month']} | {r['error_pp']:+.3f} | {outside} | {short} | {drivers} |")
         lines+=['',c['diagnostic']['interpretation'],'']
+        if c.get('last_fit_failure'):
+            f=c['last_fit_failure']
+            lines += [f"Last recorded fitting failure: {f['error_type']}: {f['message']}. The request is retained for retry; a later successful fit remains in the journal.",'']
     lines+=['','A challenger must improve MAE by at least 5% and 0.02 pp, avoid more than 5% RMSE deterioration or 0.05 pp bias deterioration, and win at least half the paired months. These thresholds are operational defaults; six outcomes do not prove permanent superiority.', '',
         'After a trial, four fresh incumbent outcomes are needed for a new deviation-triggered cycle. A 12-outcome periodic refresh also prevents indefinite staleness. Training and comparison rules are frozen when each trial is registered.', '',
         '[Monitoring configuration](../config/adaptive.json) · [Append-only decision journal](../data/adaptive/events) · [Matched forecast archive](../data/adaptive/forecasts) · [Technical method](../docs/ADAPTIVE.md)']

@@ -37,7 +37,7 @@ A paired circular block bootstrap is reported descriptively. Six observations do
 
 A successful challenger replaces only its own family/timing/panel artifact in a new composite active bundle. Other fitted artifacts retain their exact hashes. If that specification has already issued a forecast for the current month, promotion becomes effective next month; earlier forecasts are never replaced in place. The daily product inference step then uses the new active pointer.
 
-The journal records requests, fitted challengers, decisions and promotions with chained hashes and sequence numbers. Replaying it rebuilds state. Models, source matrices, paired features, forecasts and outcome evaluations remain available for audit. Later source/official revisions do not silently alter prior trial decisions. The process repeats without a fixed end date.
+The journal records requests, fitted challengers, decisions and promotions with chained hashes and sequence numbers. Replaying it rebuilds state. Models, source matrices, paired features, forecasts and outcome evaluations remain available for audit. Later source/official revisions do not silently alter prior trial decisions. The process repeats without a fixed end date. Explicit retraining or a new expanded-history bundle is recorded as an adoption, resets the fresh-outcome window, and cancels incompatible unfinished trials. A completed promotion interrupted before journaling is recovered from the active artifact identity. Requests and completed artifacts are checkpointed even when fitting fails; private unfinished transaction directories are excluded from Git.
 
 ## Controls and outputs
 

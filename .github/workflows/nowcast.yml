@@ -133,6 +133,7 @@ jobs:
           python scripts/report_ridge_coefficients.py
 
       - name: Commit new immutable vintages
+        if: ${{ always() && !cancelled() }}
         run: |
           if [[ -z "$(git status --porcelain -- data models reports config docs/PRODUCTS.md)" ]]; then
             echo "No new source or forecast vintage."
@@ -140,7 +141,8 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data models reports config docs/PRODUCTS.md
+          git add data reports config docs/PRODUCTS.md
+          git add models ':(glob,exclude)models/**/*.tmp/**'
           git commit -m "data: append prospective NBS and nowcast vintages"
           git push
 

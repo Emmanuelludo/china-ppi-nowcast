@@ -159,3 +159,62 @@ class LifecycleTests(unittest.TestCase):
         result=run(self.root,'2026-10-06T20:00:00Z',fit_callback=self.fit)
         self.assertEqual(result['refits'],0)
         self.assertEqual(self.fits,0)
+
+    def test_failed_refit_preserves_a_replayable_queue_and_retries(self):
+        def fail(root,cycle,asof):raise ValueError('fixture fitting failure')
+        with self.assertRaisesRegex(ValueError,'fixture fitting failure'):
+            run(self.root,'2026-10-06T20:00:00Z',fit_callback=fail)
+        state=replay(read_events(self.root))
+        self.assertEqual(state,json.loads((self.root/'data/adaptive/state.json').read_text()))
+        self.assertEqual(next(iter(state['cycles'].values()))['status'],'requested')
+        result=run(self.root,'2026-10-07T20:00:00Z',fit_callback=self.fit)
+        self.assertEqual(result['refits'],1)
+        self.assertEqual(len(replay(read_events(self.root))['cycles']),1)
+
+    def test_explicit_new_bundle_adoption_does_not_strand_an_old_trial(self):
+        import shutil
+        run(self.root,'2026-10-06T20:00:00Z',fit_callback=self.fit)
+        manual=self.root/'models/manual';shutil.copytree(self.root/'models/base',manual)
+        m=json.loads((manual/'manifest.json').read_text());m['version']='manual'
+        matrix=self.matrix('2026-08');candidate=m['models'][0]
+        model=ObservedScaleRidge().fit(matrix[candidate['feature_order']],np.full(len(matrix),.25))
+        joblib.dump(model,manual/candidate['artifact'])
+        candidate['artifact_sha256']=hashlib.sha256((manual/candidate['artifact']).read_bytes()).hexdigest()
+        candidate['training_end']='2026-08';m['training_actual_cutoff']='2026-09-09T01:00:00Z'
+        (manual/'manifest.json').write_text(json.dumps(m))
+        (self.root/'config/product_pipeline.json').write_text('{"bundle":"models/manual"}')
+        run(self.root,'2026-10-10T20:00:00Z',fit_callback=self.fit)
+        state=replay(read_events(self.root))
+        self.assertEqual(next(iter(state['cycles'].values()))['status'],'cancelled')
+        self.assertEqual(state['champions']['twentieth/union/ridge']['bundle'],'models/manual')
+        self.assertEqual(state['completed']['twentieth/union/ridge'],'2026-09')
+
+class StoredSourceRefitTests(unittest.TestCase):
+    def test_real_ridge_refit_saved_contract_and_idempotency(self):
+        import shutil
+        import importlib.metadata
+        from unittest.mock import patch
+        from china_ppi_nowcast.adaptive.fitting import fit
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            root=Path(directory)
+            for p in ['data/processed','data/registry','models']:(root/p).mkdir(parents=True)
+            for p in ['data/processed/nbs_ten_day_observations.csv.gz','data/registry/actuals.csv']:
+                shutil.copyfile(ROOT/p,root/p)
+            cycle=dict(cycle_id='stored-source-ridge-test',variant='twentieth',panel='union',model='ridge',
+                start_month='2026-09',config=dict(CONFIG,validation_months=2,training_windows=[None]))
+            actual_version=importlib.metadata.version
+            def versions(name):
+                try:return actual_version(name)
+                except importlib.metadata.PackageNotFoundError:return 'not-installed-in-ridge-only-test'
+            with patch('china_ppi_nowcast.adaptive.fitting.subprocess.check_output',return_value='fixture-commit\n'),patch('china_ppi_nowcast.adaptive.fitting.importlib.metadata.version',side_effect=versions):
+                manifest=fit(root,cycle,'2026-10-06T20:48:00Z')
+                again=fit(root,cycle,'2026-10-06T20:49:00Z')
+            self.assertEqual(manifest,again)
+            self.assertEqual(manifest['candidate']['training_end'],'2026-08')
+            self.assertLess(pd.Timestamp(manifest['training_actual_cutoff']),pd.Timestamp('2026-10-06T20:48:00Z'))
+            dest=root/'models/adaptive'/cycle['cycle_id'];candidate=manifest['candidate']
+            model=joblib.load(dest/candidate['artifact']);matrix=pd.read_csv(dest/'matrix.csv')
+            self.assertTrue(np.isfinite(model.predict(matrix.tail(1).reindex(columns=candidate['feature_order']))).all())
+            oof=pd.read_csv(dest/'rolling_predictions.csv')
+            self.assertTrue((oof.training_end<oof.target_month).all())
+            self.assertEqual(len(oof),2)
