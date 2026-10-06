@@ -28,3 +28,29 @@ class RidgeRevisionTests(unittest.TestCase):
         z=fitted.transform(x.iloc[[-1]])
         expected=fitted.estimator_.intercept_+z.to_numpy()[0]@fitted.estimator_.coef_
         self.assertAlmostEqual(fitted.predict(x.iloc[[-1]])[0],expected)
+
+    def test_saved_revision_august_models_reproduce_without_august_training(self):
+        import json
+        import hashlib
+        import joblib
+        from pathlib import Path
+        root=Path(__file__).parents[1]
+        bundle=root/json.loads((root/'config/product_pipeline.json').read_text())['bundle']
+        manifest=json.loads((bundle/'manifest.json').read_text())
+        if 'ridge_revision' not in manifest:
+            self.skipTest('Revision not activated yet; checked again from clean deployment')
+        validation=json.loads((bundle/'ridge_validation.json').read_text())
+        self.assertEqual(len(validation['august']),5)
+        for row in validation['august']:
+            self.assertEqual(row['training_end'],'2026-07')
+            matrix=pd.read_csv(bundle/row['variant']/'matrix.csv')
+            train=matrix[matrix.target_month.le('2026-07')]
+            august=matrix[matrix.target_month.eq('2026-08')]
+            model=joblib.load(bundle/row['variant']/f"{row['panel']}_ridge_august_oos.joblib")
+            self.assertAlmostEqual(model.predict(august)[0],row['prediction'],places=12)
+            pd.testing.assert_series_equal(model.means_,train[model.columns_].mean())
+        parent=root/'models'/manifest['ridge_revision']['parent_bundle']
+        for c in manifest['models']:
+            if c['name']!='ridge':
+                self.assertEqual(hashlib.sha256((bundle/c['artifact']).read_bytes()).hexdigest(),
+                                 hashlib.sha256((parent/c['artifact']).read_bytes()).hexdigest())

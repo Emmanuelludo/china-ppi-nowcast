@@ -10,7 +10,7 @@ All non-ridge artifacts are unchanged. Earlier September forecasts and the origi
 
 ## Matched rolling validation
 
-| Timing | Panel | N | Old MAE | Revised MAE | Old RMSE | Revised RMSE | Old recent MAE | Revised recent MAE | Final alpha | Minimum history | Learned products |
+| Timing | Panel | N | Old MAE | Revised MAE | Old RMSE | Revised RMSE | Old recent MAE | Revised recent MAE | Final alpha | Minimum history | Learned features |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 20th-to-20th | All historical products | 115 | 0.329 | 0.276 | 0.495 | 0.366 | 0.703 | 0.334 | 25 | 12 | 78 |
 | 20th-to-20th | Stable products | 115 | 0.286 | 0.282 | 0.377 | 0.371 | 0.317 | 0.317 | 100 | 2 | 25 |
@@ -39,3 +39,7 @@ Recent means the last 12 calendar months with eligible observations, not necessa
 | Early + carry-in | All historical products | +1.196% | 2026-10-07T04:35:54.229179+08:00 |
 | 20th-to-20th | All historical products | +0.979% | 2026-10-07T04:35:54.229179+08:00 |
 | 20th-to-20th | Stable products | +0.781% | 2026-10-07T04:35:54.229179+08:00 |
+
+The stable panel requires complete coverage in its training window; its minimum-history parameter does not relax that rule. Carry specifications can contain two features per product.
+
+[Download all revised ridge coefficients and forecast contributions](ridge_coefficients.csv). Contributions are a linear model decomposition, not causal PPI weights.

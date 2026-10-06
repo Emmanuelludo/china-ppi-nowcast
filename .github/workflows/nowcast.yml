@@ -117,6 +117,7 @@ jobs:
           if [[ -n "$TARGET_MONTH" ]]; then args+=(--target-month "$TARGET_MONTH"); fi
           if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
           python -m china_ppi_nowcast.product ensure --root . "${args[@]}"
+          python scripts/report_ridge_coefficients.py
 
       - name: Commit new immutable vintages
         run: |
