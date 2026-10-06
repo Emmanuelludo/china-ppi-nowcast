@@ -33,10 +33,10 @@ No prospective product-model outcomes have been released yet.
 |Historical (pseudo-real-time)|Early month|All historical products|No-change baseline|12|10|0.560|0.724|-0.360|0.10|
 |Historical (pseudo-real-time)|Early month|All historical products|No-change baseline|24|22|0.391|0.538|-0.027|0.09|
 |Historical (pseudo-real-time)|Early month|All historical products|No-change baseline|full|119|0.471|0.645|-0.122|0.08|
-|Historical (pseudo-real-time)|Early month|All historical products|Product ridge|6|6|1.630|2.862|1.389|0.50|
-|Historical (pseudo-real-time)|Early month|All historical products|Product ridge|12|10|1.111|2.234|0.719|0.50|
-|Historical (pseudo-real-time)|Early month|All historical products|Product ridge|24|22|0.648|1.558|0.393|0.64|
-|Historical (pseudo-real-time)|Early month|All historical products|Product ridge|full|119|0.342|0.745|0.013|0.73|
+|Historical (pseudo-real-time)|Early month|All historical products|Product ridge|6|6|0.329|0.418|-0.245|0.83|
+|Historical (pseudo-real-time)|Early month|All historical products|Product ridge|12|10|0.301|0.390|-0.250|0.60|
+|Historical (pseudo-real-time)|Early month|All historical products|Product ridge|24|22|0.287|0.361|0.021|0.55|
+|Historical (pseudo-real-time)|Early month|All historical products|Product ridge|full|119|0.253|0.336|-0.083|0.74|
 |Historical (pseudo-real-time)|Early month|All historical products|XGBoost|6|6|0.501|0.617|-0.202|0.83|
 |Historical (pseudo-real-time)|Early month|All historical products|XGBoost|12|10|0.442|0.532|-0.262|0.60|
 |Historical (pseudo-real-time)|Early month|All historical products|XGBoost|24|22|0.305|0.396|-0.101|0.64|
@@ -65,10 +65,10 @@ No prospective product-model outcomes have been released yet.
 |Historical (pseudo-real-time)|Early + carry-in|All historical products|No-change baseline|12|10|0.560|0.724|-0.360|0.10|
 |Historical (pseudo-real-time)|Early + carry-in|All historical products|No-change baseline|24|21|0.405|0.550|-0.033|0.10|
 |Historical (pseudo-real-time)|Early + carry-in|All historical products|No-change baseline|full|116|0.478|0.651|-0.121|0.08|
-|Historical (pseudo-real-time)|Early + carry-in|All historical products|Product ridge|6|6|0.783|0.946|0.472|0.50|
-|Historical (pseudo-real-time)|Early + carry-in|All historical products|Product ridge|12|10|0.572|0.769|0.196|0.50|
-|Historical (pseudo-real-time)|Early + carry-in|All historical products|Product ridge|24|21|0.432|0.643|0.134|0.62|
-|Historical (pseudo-real-time)|Early + carry-in|All historical products|Product ridge|full|116|0.362|0.542|-0.061|0.71|
+|Historical (pseudo-real-time)|Early + carry-in|All historical products|Product ridge|6|6|0.387|0.475|-0.242|0.83|
+|Historical (pseudo-real-time)|Early + carry-in|All historical products|Product ridge|12|10|0.361|0.444|-0.251|0.60|
+|Historical (pseudo-real-time)|Early + carry-in|All historical products|Product ridge|24|21|0.303|0.399|-0.026|0.57|
+|Historical (pseudo-real-time)|Early + carry-in|All historical products|Product ridge|full|116|0.280|0.380|-0.112|0.73|
 |Historical (pseudo-real-time)|Early + carry-in|All historical products|XGBoost|6|6|0.484|0.586|-0.217|1.00|
 |Historical (pseudo-real-time)|Early + carry-in|All historical products|XGBoost|12|10|0.439|0.516|-0.279|0.60|
 |Historical (pseudo-real-time)|Early + carry-in|All historical products|XGBoost|24|21|0.313|0.394|-0.114|0.67|
@@ -97,10 +97,10 @@ No prospective product-model outcomes have been released yet.
 |Historical (pseudo-real-time)|Two-survey period|All historical products|No-change baseline|12|8|0.525|0.714|-0.275|0.12|
 |Historical (pseudo-real-time)|Two-survey period|All historical products|No-change baseline|24|20|0.360|0.510|0.040|0.10|
 |Historical (pseudo-real-time)|Two-survey period|All historical products|No-change baseline|full|107|0.467|0.643|-0.095|0.09|
-|Historical (pseudo-real-time)|Two-survey period|All historical products|Product ridge|6|5|1.648|2.273|1.465|0.60|
-|Historical (pseudo-real-time)|Two-survey period|All historical products|Product ridge|12|8|1.169|1.822|0.777|0.50|
-|Historical (pseudo-real-time)|Two-survey period|All historical products|Product ridge|24|20|0.579|1.166|0.334|0.65|
-|Historical (pseudo-real-time)|Two-survey period|All historical products|Product ridge|full|107|0.322|0.601|-0.001|0.76|
+|Historical (pseudo-real-time)|Two-survey period|All historical products|Product ridge|6|5|0.405|0.536|-0.247|0.80|
+|Historical (pseudo-real-time)|Two-survey period|All historical products|Product ridge|12|8|0.337|0.469|-0.226|0.62|
+|Historical (pseudo-real-time)|Two-survey period|All historical products|Product ridge|24|20|0.299|0.395|0.060|0.55|
+|Historical (pseudo-real-time)|Two-survey period|All historical products|Product ridge|full|107|0.246|0.328|-0.038|0.75|
 |Historical (pseudo-real-time)|Two-survey period|All historical products|XGBoost|6|5|0.566|0.679|-0.154|0.60|
 |Historical (pseudo-real-time)|Two-survey period|All historical products|XGBoost|12|8|0.469|0.572|-0.211|0.38|
 |Historical (pseudo-real-time)|Two-survey period|All historical products|XGBoost|24|20|0.276|0.390|-0.050|0.60|
@@ -117,10 +117,10 @@ No prospective product-model outcomes have been released yet.
 |Historical (pseudo-real-time)|20th-to-20th|Stable products|LightGBM|12|10|0.399|0.541|-0.264|0.60|
 |Historical (pseudo-real-time)|20th-to-20th|Stable products|LightGBM|24|22|0.302|0.415|-0.060|0.68|
 |Historical (pseudo-real-time)|20th-to-20th|Stable products|LightGBM|full|115|0.328|0.436|-0.078|0.70|
-|Historical (pseudo-real-time)|20th-to-20th|Stable products|Product ridge|6|5|0.442|0.505|-0.297|0.80|
-|Historical (pseudo-real-time)|20th-to-20th|Stable products|Product ridge|12|10|0.317|0.391|-0.224|0.60|
-|Historical (pseudo-real-time)|20th-to-20th|Stable products|Product ridge|24|22|0.284|0.368|0.020|0.55|
-|Historical (pseudo-real-time)|20th-to-20th|Stable products|Product ridge|full|115|0.286|0.377|-0.049|0.74|
+|Historical (pseudo-real-time)|20th-to-20th|Stable products|Product ridge|6|5|0.443|0.526|-0.296|0.80|
+|Historical (pseudo-real-time)|20th-to-20th|Stable products|Product ridge|12|10|0.317|0.404|-0.222|0.60|
+|Historical (pseudo-real-time)|20th-to-20th|Stable products|Product ridge|24|22|0.283|0.371|0.019|0.55|
+|Historical (pseudo-real-time)|20th-to-20th|Stable products|Product ridge|full|115|0.282|0.371|-0.053|0.74|
 |Historical (pseudo-real-time)|20th-to-20th|Stable products|XGBoost|6|5|0.556|0.691|-0.301|0.80|
 |Historical (pseudo-real-time)|20th-to-20th|Stable products|XGBoost|12|10|0.422|0.537|-0.295|0.50|
 |Historical (pseudo-real-time)|20th-to-20th|Stable products|XGBoost|24|22|0.318|0.415|-0.066|0.64|
@@ -161,10 +161,10 @@ No prospective product-model outcomes have been released yet.
 |Historical (pseudo-real-time)|20th-to-20th|All historical products|Random forest|12|10|0.469|0.602|-0.287|0.40|
 |Historical (pseudo-real-time)|20th-to-20th|All historical products|Random forest|24|22|0.315|0.448|-0.067|0.64|
 |Historical (pseudo-real-time)|20th-to-20th|All historical products|Random forest|full|115|0.357|0.475|-0.070|0.66|
-|Historical (pseudo-real-time)|20th-to-20th|All historical products|Product ridge|6|5|1.054|1.271|0.596|0.40|
-|Historical (pseudo-real-time)|20th-to-20th|All historical products|Product ridge|12|10|0.703|0.958|0.191|0.50|
-|Historical (pseudo-real-time)|20th-to-20th|All historical products|Product ridge|24|22|0.419|0.672|0.084|0.59|
-|Historical (pseudo-real-time)|20th-to-20th|All historical products|Product ridge|full|115|0.329|0.495|-0.015|0.72|
+|Historical (pseudo-real-time)|20th-to-20th|All historical products|Product ridge|6|5|0.428|0.556|-0.270|0.80|
+|Historical (pseudo-real-time)|20th-to-20th|All historical products|Product ridge|12|10|0.334|0.450|-0.171|0.70|
+|Historical (pseudo-real-time)|20th-to-20th|All historical products|Product ridge|24|22|0.313|0.413|0.065|0.55|
+|Historical (pseudo-real-time)|20th-to-20th|All historical products|Product ridge|full|115|0.276|0.366|-0.050|0.73|
 |Historical (pseudo-real-time)|20th-to-20th|All historical products|Sector-first regression|6|5|0.499|0.570|0.254|0.60|
 |Historical (pseudo-real-time)|20th-to-20th|All historical products|Sector-first regression|12|10|0.379|0.453|0.028|0.50|
 |Historical (pseudo-real-time)|20th-to-20th|All historical products|Sector-first regression|24|22|0.271|0.350|0.107|0.59|

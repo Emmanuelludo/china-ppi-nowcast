@@ -10,9 +10,9 @@ Report refreshed: 2026-10-07. Saved forecast timestamps are preserved.
 
 ## Latest available forecasts: September 2026
 
-**20th-to-20th · 5 product-price estimators · Median +0.682% MoM**
+**20th-to-20th · 5 product-price estimators · Median +0.691% MoM**
 
-4 of 5 displayed models project an increase; 1 project a decline. The estimates span **-0.342% to +0.729%**. The median describes this model group; it is not a selected ensemble or a confidence interval.
+5 of 5 displayed models project an increase; 0 project a decline. The estimates span **+0.644% to +0.979%**. The median describes this model group; it is not a selected ensemble or a confidence interval.
 
 ![Forecast comparison](forecast_comparison.svg)
 
@@ -22,7 +22,7 @@ Report refreshed: 2026-10-07. Saved forecast timestamps are preserved.
 
 ## Robustness check
 
-Ridge changes by **1.156 percentage points** between the all-product and stable-product 20th-to-20th panels. Do not treat its sign as robust. Several live product changes exceed their fitted historical ranges.
+Ridge changes by **0.198 percentage points** between the all-product and stable-product 20th-to-20th panels. This measures sensitivity to product coverage; read it alongside rolling forecast errors. Several live product changes exceed their fitted historical ranges.
 
 [Read the forecast sense check, recent errors and all retained model estimates](forecast_quality.md)
 
@@ -36,7 +36,7 @@ Booster agreement is narrower than historical forecast errors; it is not a predi
 | CatBoost | Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices. |
 | LightGBM | A strongly constrained tree booster tests an alternative way of learning product-price interactions. |
 | HistGradientBoosting | Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling. |
-| Product ridge | Regularized linear regression tests whether a weighted combination of individual price changes is sufficient. Imputation and scaling are fitted on training data. |
+| Product ridge | Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean. |
 
 ## Other retained comparisons
 
@@ -47,6 +47,7 @@ Random forest, sector-first regression and the economic / ML hybrid remain avail
 - **[Interactive dashboard file](dashboard.html)** — download the file and open it in a browser; choose month, timing, product panel and retained comparison models. It works without a login or external scripts.
 - [All current model estimates and release availability](product_latest.md)
 - [Product and sector attributions in English](attributions.md)
+- [Ridge revision: specifications, validation and August comparison](ridge_revision.md)
 - [Historical accuracy](product_candidates.md) · [Prospective performance](product_performance.md)
 - [Source and pipeline status](latest.md)
 - [Frozen August forecast archive](august_2026_frozen.md)
