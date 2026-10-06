@@ -6,7 +6,7 @@
 
 ⏳ **Awaiting the current month’s price releases. No current-month projection has been generated.**
 
-Report refreshed: 2026-10-06. Saved forecast timestamps are preserved.
+Report refreshed: 2026-10-07. Saved forecast timestamps are preserved.
 
 ## Latest available forecasts: September 2026
 
