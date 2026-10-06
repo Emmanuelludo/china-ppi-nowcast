@@ -160,6 +160,7 @@ def refit(root, issue_forecast=True):
             final_learned_features=len(fitted.columns_)))
     pd.concat([old_oof[old_oof.model!='ridge'],pd.DataFrame(new_records)],ignore_index=True).to_csv(dest/'rolling_predictions.csv',index=False)
     from .train import paired_comparisons
+    (dest/'paired_comparisons.json').unlink()
     write_json(dest/'paired_comparisons.json',paired_comparisons(pd.read_csv(dest/'rolling_predictions.csv')))
     write_json(dest/'ridge_validation.json',dict(comparisons=comparisons,august=august))
     write_json(dest/'manifest.json',manifest)
