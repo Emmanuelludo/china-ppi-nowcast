@@ -1,7 +1,7 @@
 {
   "requested_month": "2026-10",
   "requested_label": "October 2026",
-  "refreshed": "2026-10-07T17:33:22.940298+02:00",
+  "refreshed": "2026-10-07T23:35:53.937724+08:00",
   "latest_month": "2026-09",
   "months": [
     {
@@ -135,6 +135,1170 @@
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 143
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "final",
+      "panel": "union",
+      "model": "catboost",
+      "label": "CatBoost",
+      "prediction": 0.6389016083091132,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.28835567707074755
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.11480911816184788
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": 0.10047730917756367
+        },
+        {
+          "label": "Gasoline (95#China VI)",
+          "value": 0.0641218900660985
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.04542630229536743
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.03455760417545858
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": 0.32661644172954024
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.23570846890644423
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.06532486054025624
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": -0.041124285115370585
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.022902711376638376
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.01813579864379305
+        },
+        {
+          "label": "Forest products",
+          "value": -0.00827691938995214
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.003934295424258823
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.000831439036492587
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0005663504204649276
+        }
+      ],
+      "metrics": {
+        "n": 107,
+        "mae": 0.3262289843263096,
+        "rmse": 0.43952919432038334,
+        "median_absolute_error": 0.25586661849659487,
+        "bias": -0.07952058751772806,
+        "maximum_absolute_error": 1.5608956329402708,
+        "directional_accuracy": 0.719626168224299
+      },
+      "forecast_id": "a5cae2d914a336d84ee96f4cf15c82f9c7ed5893f80d1b63252208cba95558eb",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
+            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
+            "published_at": "2026-08-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 131
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "ridge",
+      "label": "Product ridge",
+      "prediction": 0.9790618376449911,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 115,
+        "mae": 0.2762470982336666,
+        "rmse": 0.36644558992577797,
+        "median_absolute_error": 0.20195647540116368,
+        "bias": -0.05030056976589508,
+        "maximum_absolute_error": 1.320796213671445,
+        "directional_accuracy": 0.7304347826086957
+      },
+      "forecast_id": "36fe0ed839eb2f5ab5d069967d206a8ee1a3026c3a25c094324d6922b33c0c04",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "economic_ml_hybrid",
+      "label": "Economic / ML hybrid (NBS prices)",
+      "prediction": 0.9449884391426807,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Combines linear and boosting estimates built from NBS price signals.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 115,
+        "mae": 0.26768055434063154,
+        "rmse": 0.3656215064523467,
+        "median_absolute_error": 0.1849611159965221,
+        "bias": -0.023774312216544097,
+        "maximum_absolute_error": 1.2088049974085273,
+        "directional_accuracy": 0.7739130434782608
+      },
+      "forecast_id": "63700e6dfdaf63b7ace4d5b89221aa50d2d25fa6638688b8dcb48fd7ee80c698",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "direct_tracker",
+      "label": "Direct price tracker",
+      "prediction": 6.123431983557728,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Tracks circulation-market price movements without calibration to headline PPI. This is a price index, not a PPI forecast.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 115,
+        "mae": 2.0382733011114555,
+        "rmse": 2.8049126246551817,
+        "median_absolute_error": 1.4728213367798726,
+        "bias": 0.23252238236863304,
+        "maximum_absolute_error": 11.562377570929588,
+        "directional_accuracy": 0.782608695652174
+      },
+      "forecast_id": "c824f29fdd13e1e7b9c33035c2ef3d987473055335397c418410c34cc3610642",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "xgboost",
+      "label": "XGBoost",
+      "prediction": 0.6820182204246521,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
+      "products": [
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.24682258069515228
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.13711151480674744
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.08104430139064789
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.07624395936727524
+        },
+        {
+          "label": "Shanxi blended coal (5000 kcal/kg)",
+          "value": 0.06865676492452621
+        },
+        {
+          "label": "Polybutadiene rubber (BR9000)",
+          "value": 0.05717543140053749
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.3148424053215422
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.20478023146279156
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.14746940042823553
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": -0.06138197972904891
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.04692068975418806
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.033815089613199234
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.029383207845967263
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.005616557435132563
+        },
+        {
+          "label": "Building materials",
+          "value": 0.003987635835073888
+        },
+        {
+          "label": "Forest products",
+          "value": 0.002470435341820121
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.347994445802077,
+        "rmse": 0.4595643978100531,
+        "median_absolute_error": 0.25857651233673096,
+        "bias": -0.08457826243794482,
+        "maximum_absolute_error": 1.4880599975585938,
+        "directional_accuracy": 0.7043478260869566
+      },
+      "forecast_id": "a02d4f5983ad475a8ec5525322efc168c87e6ad3b3de8d303c71f92b593051b0",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "early_carry",
+      "panel": "union",
+      "model": "catboost",
+      "label": "CatBoost",
+      "prediction": 0.6052294461394703,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.19423359404681412
+        },
+        {
+          "label": "Gasoline (95#China VI)",
+          "value": 0.15090130465921703
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": 0.06009434477751334
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.05837118552623759
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.04699151003338246
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.036954770325769375
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.2819082976420505
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.25093414746213216
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": -0.06099890324757261
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.051169682481794945
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.019205460125131992
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.015855454497937717
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.009404149969021957
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.008889450314100971
+        },
+        {
+          "label": "Building materials",
+          "value": 0.00309762695927806
+        },
+        {
+          "label": "Forest products",
+          "value": -0.0007656224633282082
+        }
+      ],
+      "metrics": {
+        "n": 116,
+        "mae": 0.3395535065142495,
+        "rmse": 0.45839870566114727,
+        "median_absolute_error": 0.24371720465588775,
+        "bias": -0.12767215367565185,
+        "maximum_absolute_error": 1.519976134104784,
+        "directional_accuracy": 0.7327586206896551
+      },
+      "forecast_id": "07ab464180462c7616be95b087d456257f0406d862b48684927f9418c1e17601",
+      "data_cutoff": "2026-09-14 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-08:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
+            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
+            "published_at": "2026-08-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
+          }
+        ],
+        "2026-08:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260903_1965182.html",
+            "content_sha256": "caf090f2f83f425ea64daf3174da8d837e89eadef565ec8ef466fe3d7a21cd3f",
+            "published_at": "2026-09-04 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 140
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "final",
+      "panel": "union",
+      "model": "xgboost",
+      "label": "XGBoost",
+      "prediction": 0.69620281457901,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
+      "products": [
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.16074037551879883
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.15371692180633545
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": 0.12503960728645325
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.07898855954408646
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": -0.057169463485479355
+        },
+        {
+          "label": "Shanxi blended coal (5000 kcal/kg)",
+          "value": 0.056084539741277695
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.2650509817758575
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.1724073929945007
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.1598374689638149
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.12756555154919624
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": -0.08180867778719403
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.025251746585126966
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.019614679738879204
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.012315446918364614
+        },
+        {
+          "label": "Building materials",
+          "value": 0.00624889915343374
+        },
+        {
+          "label": "Forest products",
+          "value": -0.0011785689275711775
+        }
+      ],
+      "metrics": {
+        "n": 107,
+        "mae": 0.32852687620575255,
+        "rmse": 0.43650234365137364,
+        "median_absolute_error": 0.27718148231506345,
+        "bias": -0.07480473378629675,
+        "maximum_absolute_error": 1.598769187927246,
+        "directional_accuracy": 0.6635514018691588
+      },
+      "forecast_id": "5da64e73870da131f8d76f3bfbccec96976ed96cd8eec1a1f3aac0130935d654",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
+            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
+            "published_at": "2026-08-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 131
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "catboost",
+      "label": "CatBoost",
+      "prediction": 0.7287925754890555,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.385772218349992
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.19429872795683834
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.07266444492558763
+        },
+        {
+          "label": "Polypropylene (raffia grade)",
+          "value": 0.05986705015795801
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.04584263751002535
+        },
+        {
+          "label": "Polybutadiene rubber (BR9000)",
+          "value": 0.038281961711489086
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": 0.4269144120717962
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.25425002417617437
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": -0.0356556945749704
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.01916909601567966
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.01404564983225005
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.011372188667560658
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.010917427435972276
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.0025003370570844943
+        },
+        {
+          "label": "Building materials",
+          "value": 1.0400069130308488e-05
+        },
+        {
+          "label": "Forest products",
+          "value": -1.0330044910363857e-05
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.34291850619448727,
+        "rmse": 0.4617653045409446,
+        "median_absolute_error": 0.26449915052393425,
+        "bias": -0.09652551941382286,
+        "maximum_absolute_error": 1.688142206511304,
+        "directional_accuracy": 0.6956521739130435
+      },
+      "forecast_id": "1452140546c25b42459a561fe98670eda05aee7b7934016e5d352ddf59f6f1aa",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "final",
+      "panel": "union",
+      "model": "lightgbm",
+      "label": "LightGBM",
+      "prediction": 0.6706342172791001,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
+      "products": [
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.13953747984346346
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.13172934179772267
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": 0.11267195298697619
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.09602711318299303
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.054795340894820944
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": -0.05008396232557761
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.25915271100769066
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.1809653922170718
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.14498836370518497
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.12282366577467142
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": -0.08541730687815424
+        },
+        {
+          "label": "Building materials",
+          "value": 0.015541974403731333
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.012856180363635943
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.010785909659235536
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.003584794718063733
+        },
+        {
+          "label": "Forest products",
+          "value": -0.003343715796163191
+        }
+      ],
+      "metrics": {
+        "n": 107,
+        "mae": 0.3293763267515431,
+        "rmse": 0.4334372502779209,
+        "median_absolute_error": 0.2542499606709907,
+        "bias": -0.07606044238422593,
+        "maximum_absolute_error": 1.6585787755567214,
+        "directional_accuracy": 0.6728971962616822
+      },
+      "forecast_id": "b480c01b67388ff835738eb9a70426a6053729786f02c7825d51c94e1c47ec51",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
+            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
+            "published_at": "2026-08-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 131
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "twentieth",
+      "panel": "stable",
+      "model": "catboost",
+      "label": "CatBoost",
+      "prediction": 0.8018520446062121,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.2805602180912809
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.23277792768587144
+        },
+        {
+          "label": "Polybutadiene rubber (BR9000)",
+          "value": 0.08513296393739522
+        },
+        {
+          "label": "Shanxi premium blended coal (5500 kcal/kg)",
+          "value": 0.07585222379587486
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.04455777328803619
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.039504277909418725
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": 0.35156791813922883
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.28159798974244926
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.07585222379587486
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.028248782416807304
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.023113794648158915
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.013045804708394532
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.012698738764502287
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.011762032175322575
+        },
+        {
+          "label": "Forest products",
+          "value": 0.0
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.33314869295486277,
+        "rmse": 0.4469717619551783,
+        "median_absolute_error": 0.26035600568816597,
+        "bias": -0.08849994661477811,
+        "maximum_absolute_error": 1.5514894095872644,
+        "directional_accuracy": 0.7130434782608696
+      },
+      "forecast_id": "339ab4b920445517e450c4581b44d0d5bcadab7c6a74eedf49bdc86dfc854462",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "early_carry",
+      "panel": "union",
+      "model": "histgb",
+      "label": "HistGradientBoosting",
+      "prediction": 0.6768973307696738,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.1672844293612761
+        },
+        {
+          "label": "Gasoline (95#China VI)",
+          "value": 0.1650735775134728
+        },
+        {
+          "label": "Steel angle (5#)",
+          "value": 0.06524940682019012
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": 0.05896380974873577
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.054482710198893565
+        },
+        {
+          "label": "Standard blended coal (4500 kcal/kg)",
+          "value": 0.05286831892190318
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.2622768404624348
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.22678555419822238
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.09104898484874482
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": -0.08926261145631431
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.08861881915427229
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.036039674726629015
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.012833268012036277
+        },
+        {
+          "label": "Forest products",
+          "value": 0.012826602977087534
+        },
+        {
+          "label": "Building materials",
+          "value": 0.00983583824593317
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.0021340845741959977
+        }
+      ],
+      "metrics": {
+        "n": 116,
+        "mae": 0.34822204797637657,
+        "rmse": 0.4488173481355114,
+        "median_absolute_error": 0.28825768900744053,
+        "bias": -0.09828824386376657,
+        "maximum_absolute_error": 1.5559234618534679,
+        "directional_accuracy": 0.6896551724137931
+      },
+      "forecast_id": "265fb2b04f5cd64db43f9ff8c03b4bef8d6c9b347a625d8ac511cedcf7c4de78",
+      "data_cutoff": "2026-09-14 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-08:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
+            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
+            "published_at": "2026-08-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
+          }
+        ],
+        "2026-08:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260903_1965182.html",
+            "content_sha256": "caf090f2f83f425ea64daf3174da8d837e89eadef565ec8ef466fe3d7a21cd3f",
+            "published_at": "2026-09-04 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 140
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "early_carry",
+      "panel": "union",
+      "model": "ridge",
+      "label": "Product ridge",
+      "prediction": 1.1959988512839717,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 116,
+        "mae": 0.27987246901274865,
+        "rmse": 0.37953031074182936,
+        "median_absolute_error": 0.19429326272959194,
+        "bias": -0.1123425543000137,
+        "maximum_absolute_error": 1.2403090807956036,
+        "directional_accuracy": 0.7327586206896551
+      },
+      "forecast_id": "2cf318e342b42249eb1be3f60602990a111b819ec1ddaf17137d53251c80f23c",
+      "data_cutoff": "2026-09-14 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-08:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
+            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
+            "published_at": "2026-08-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
+          }
+        ],
+        "2026-08:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260903_1965182.html",
+            "content_sha256": "caf090f2f83f425ea64daf3174da8d837e89eadef565ec8ef466fe3d7a21cd3f",
+            "published_at": "2026-09-04 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 140
     },
     {
       "month": "2026-09",
@@ -373,393 +1537,92 @@
     {
       "month": "2026-09",
       "month_label": "September 2026",
-      "timing": "twentieth",
+      "timing": "early",
       "panel": "union",
-      "model": "economic_ml_hybrid",
-      "label": "Economic / ML hybrid (NBS prices)",
-      "prediction": 0.9449884391426807,
+      "model": "histgb",
+      "label": "HistGradientBoosting",
+      "prediction": 0.5958639183564507,
       "frozen_at": "2026-10-07T04:35:54.229179+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Combines linear and boosting estimates built from NBS price signals.",
-      "products": [],
-      "groups": [],
-      "metrics": {
-        "n": 115,
-        "mae": 0.26768055434063154,
-        "rmse": 0.3656215064523467,
-        "median_absolute_error": 0.1849611159965221,
-        "bias": -0.023774312216544097,
-        "maximum_absolute_error": 1.2088049974085273,
-        "directional_accuracy": 0.7739130434782608
-      },
-      "forecast_id": "63700e6dfdaf63b7ace4d5b89221aa50d2d25fa6638688b8dcb48fd7ee80c698",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 139
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "twentieth",
-      "panel": "union",
-      "model": "lightgbm",
-      "label": "LightGBM",
-      "prediction": 0.6444638946511321,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
-      "products": [
-        {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.18426656475400566
-        },
-        {
-          "label": "Methanol (premium grade)",
-          "value": 0.0942255832788812
-        },
-        {
-          "label": "Datong blended coal (5800 kcal/kg)",
-          "value": 0.08458255219947171
-        },
-        {
-          "label": "Sulfuric acid (98%)",
-          "value": -0.06861405774291024
-        },
-        {
-          "label": "Standard blended coal (4500 kcal/kg)",
-          "value": 0.056435144652667545
-        },
-        {
-          "label": "Polybutadiene rubber (BR9000)",
-          "value": 0.0556537543024053
-        }
-      ],
-      "groups": [
-        {
-          "label": "Petroleum and natural gas",
-          "value": 0.26401738893516624
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.17888383502485136
-        },
-        {
-          "label": "Chemicals",
-          "value": 0.13450008795375018
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.04182780609242118
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.028575714536846316
-        },
-        {
-          "label": "Agricultural products",
-          "value": -0.025142807821648266
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": -0.01306236906697243
-        },
-        {
-          "label": "Building materials",
-          "value": 0.004373742407777402
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.003283261218377777
-        },
-        {
-          "label": "Forest products",
-          "value": 0.00321055468048232
-        }
-      ],
-      "metrics": {
-        "n": 115,
-        "mae": 0.3390857858759585,
-        "rmse": 0.45373333316096076,
-        "median_absolute_error": 0.268143687220295,
-        "bias": -0.06565802679640163,
-        "maximum_absolute_error": 1.5529497279150655,
-        "directional_accuracy": 0.6869565217391305
-      },
-      "forecast_id": "c9dd662e17026e4e6ae1a2278e22424cbeb2a6a997debc35d2e2010a0ab133e0",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 139
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "twentieth",
-      "panel": "stable",
-      "model": "ridge",
-      "label": "Product ridge",
-      "prediction": 0.7811748500503188,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
-      "products": [],
-      "groups": [],
-      "metrics": {
-        "n": 115,
-        "mae": 0.28203630139208125,
-        "rmse": 0.37108679755460106,
-        "median_absolute_error": 0.20603955428760717,
-        "bias": -0.05329203684315111,
-        "maximum_absolute_error": 1.410076658973471,
-        "directional_accuracy": 0.7391304347826086
-      },
-      "forecast_id": "aff46aa505c0153e03b141be59313c3ab7ec98bdf9b5703bb4083dcd534f619e",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 139
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "twentieth",
-      "panel": "stable",
-      "model": "catboost",
-      "label": "CatBoost",
-      "prediction": 0.8018520446062121,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
       "products": [
         {
           "label": "Methanol (premium grade)",
-          "value": 0.2805602180912809
+          "value": 0.17186567834086952
         },
         {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.23277792768587144
+          "label": "PVC (SG5)",
+          "value": 0.12686521899785916
         },
         {
-          "label": "Polybutadiene rubber (BR9000)",
-          "value": 0.08513296393739522
+          "label": "Gasoline (95#China VI)",
+          "value": 0.07034362715091227
         },
         {
-          "label": "Shanxi premium blended coal (5500 kcal/kg)",
-          "value": 0.07585222379587486
+          "label": "Diesel (0#China VI)",
+          "value": 0.057282182817134326
         },
         {
-          "label": "Sulfuric acid (98%)",
-          "value": -0.04455777328803619
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": -0.05581162200103645
         },
         {
           "label": "Benzene (petroleum-derived,industrial grade)",
-          "value": 0.039504277909418725
+          "value": 0.042811743203120076
         }
       ],
       "groups": [
         {
           "label": "Chemicals",
-          "value": 0.35156791813922883
+          "value": 0.3450817155441852
         },
         {
           "label": "Petroleum and natural gas",
-          "value": 0.28159798974244926
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.07585222379587486
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.028248782416807304
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.023113794648158915
+          "value": 0.18623035707105676
         },
         {
           "label": "Agricultural inputs",
-          "value": 0.013045804708394532
+          "value": -0.09064651280757226
         },
         {
-          "label": "Non-ferrous metals",
-          "value": 0.012698738764502287
+          "label": "Coal and coke",
+          "value": 0.04178227125683861
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.031359506381814665
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.017288027133623995
         },
         {
           "label": "Agricultural products",
-          "value": -0.011762032175322575
-        },
-        {
-          "label": "Forest products",
-          "value": 0.0
+          "value": 0.01579061628199515
         },
         {
           "label": "Building materials",
-          "value": 0.0
+          "value": 0.010881534758830677
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.008523336250071246
+        },
+        {
+          "label": "Forest products",
+          "value": -0.0007182188724643905
         }
       ],
       "metrics": {
-        "n": 115,
-        "mae": 0.33314869295486277,
-        "rmse": 0.4469717619551783,
-        "median_absolute_error": 0.26035600568816597,
-        "bias": -0.08849994661477811,
-        "maximum_absolute_error": 1.5514894095872644,
-        "directional_accuracy": 0.7130434782608696
+        "n": 119,
+        "mae": 0.3408795876862391,
+        "rmse": 0.44889700512440694,
+        "median_absolute_error": 0.2771269879003364,
+        "bias": -0.0973408879192289,
+        "maximum_absolute_error": 1.7289349337505722,
+        "directional_accuracy": 0.680672268907563
       },
-      "forecast_id": "339ab4b920445517e450c4581b44d0d5bcadab7c6a74eedf49bdc86dfc854462",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 139
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "twentieth",
-      "panel": "union",
-      "model": "ridge",
-      "label": "Product ridge",
-      "prediction": 0.9790618376449911,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
-      "products": [],
-      "groups": [],
-      "metrics": {
-        "n": 115,
-        "mae": 0.2762470982336666,
-        "rmse": 0.36644558992577797,
-        "median_absolute_error": 0.20195647540116368,
-        "bias": -0.05030056976589508,
-        "maximum_absolute_error": 1.320796213671445,
-        "directional_accuracy": 0.7304347826086957
-      },
-      "forecast_id": "36fe0ed839eb2f5ab5d069967d206a8ee1a3026c3a25c094324d6922b33c0c04",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 139
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "early_carry",
-      "panel": "union",
-      "model": "ridge",
-      "label": "Product ridge",
-      "prediction": 1.1959988512839717,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
-      "products": [],
-      "groups": [],
-      "metrics": {
-        "n": 116,
-        "mae": 0.27987246901274865,
-        "rmse": 0.37953031074182936,
-        "median_absolute_error": 0.19429326272959194,
-        "bias": -0.1123425543000137,
-        "maximum_absolute_error": 1.2403090807956036,
-        "directional_accuracy": 0.7327586206896551
-      },
-      "forecast_id": "2cf318e342b42249eb1be3f60602990a111b819ec1ddaf17137d53251c80f23c",
+      "forecast_id": "0e2ca3ff8b2c63f814705950b4649c840f1226282fb2e1e64a5cb8d381596e13",
       "data_cutoff": "2026-09-14 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -778,132 +1641,58 @@
             "published_at": "2026-08-14 01:30:00+00:00",
             "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
           }
-        ],
-        "2026-08:21-end": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260903_1965182.html",
-            "content_sha256": "caf090f2f83f425ea64daf3174da8d837e89eadef565ec8ef466fe3d7a21cd3f",
-            "published_at": "2026-09-04 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
         ]
       },
       "training_start": "2014-02",
       "training_end": "2026-08",
-      "training_rows": 140
+      "training_rows": 143
     },
     {
       "month": "2026-09",
       "month_label": "September 2026",
-      "timing": "twentieth",
+      "timing": "early",
       "panel": "union",
-      "model": "xgboost",
-      "label": "XGBoost",
-      "prediction": 0.6820182204246521,
+      "model": "ridge",
+      "label": "Product ridge",
+      "prediction": 0.9126166328137125,
       "frozen_at": "2026-10-07T04:35:54.229179+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
-      "products": [
-        {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.24682258069515228
-        },
-        {
-          "label": "Methanol (premium grade)",
-          "value": 0.13711151480674744
-        },
-        {
-          "label": "Datong blended coal (5800 kcal/kg)",
-          "value": 0.08104430139064789
-        },
-        {
-          "label": "Sulfuric acid (98%)",
-          "value": -0.07624395936727524
-        },
-        {
-          "label": "Shanxi blended coal (5000 kcal/kg)",
-          "value": 0.06865676492452621
-        },
-        {
-          "label": "Polybutadiene rubber (BR9000)",
-          "value": 0.05717543140053749
-        }
-      ],
-      "groups": [
-        {
-          "label": "Petroleum and natural gas",
-          "value": 0.3148424053215422
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.20478023146279156
-        },
-        {
-          "label": "Chemicals",
-          "value": 0.14746940042823553
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.06138197972904891
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.04692068975418806
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.033815089613199234
-        },
-        {
-          "label": "Agricultural products",
-          "value": -0.029383207845967263
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": -0.005616557435132563
-        },
-        {
-          "label": "Building materials",
-          "value": 0.003987635835073888
-        },
-        {
-          "label": "Forest products",
-          "value": 0.002470435341820121
-        }
-      ],
+      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
+      "products": [],
+      "groups": [],
       "metrics": {
-        "n": 115,
-        "mae": 0.347994445802077,
-        "rmse": 0.4595643978100531,
-        "median_absolute_error": 0.25857651233673096,
-        "bias": -0.08457826243794482,
-        "maximum_absolute_error": 1.4880599975585938,
-        "directional_accuracy": 0.7043478260869566
+        "n": 119,
+        "mae": 0.2534204647305919,
+        "rmse": 0.3362702350161319,
+        "median_absolute_error": 0.1860176646212477,
+        "bias": -0.08290875692373857,
+        "maximum_absolute_error": 0.9869218925410199,
+        "directional_accuracy": 0.7394957983193278
       },
-      "forecast_id": "a02d4f5983ad475a8ec5525322efc168c87e6ad3b3de8d303c71f92b593051b0",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "forecast_id": "0ef4ac28800cedb51f0c09e7ba6e32844184d2a160dd49c81c26eea78fd2719d",
+      "data_cutoff": "2026-09-14 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
-        "2026-09:11-20": [
+        "2026-09:1-10": [
           {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
           }
         ],
-        "2026-08:11-20": [
+        "2026-08:1-10": [
           {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
+            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
+            "published_at": "2026-08-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
           }
         ]
       },
       "training_start": "2014-02",
       "training_end": "2026-08",
-      "training_rows": 139
+      "training_rows": 143
     },
     {
       "month": "2026-09",
@@ -1023,90 +1812,90 @@
       "month_label": "September 2026",
       "timing": "early",
       "panel": "union",
-      "model": "histgb",
-      "label": "HistGradientBoosting",
-      "prediction": 0.5958639183564507,
+      "model": "lightgbm",
+      "label": "LightGBM",
+      "prediction": 0.5612003204400942,
       "frozen_at": "2026-10-07T04:35:54.229179+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
+      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
       "products": [
         {
           "label": "Methanol (premium grade)",
-          "value": 0.17186567834086952
+          "value": 0.1573321415127624
         },
         {
           "label": "PVC (SG5)",
-          "value": 0.12686521899785916
-        },
-        {
-          "label": "Gasoline (95#China VI)",
-          "value": 0.07034362715091227
-        },
-        {
-          "label": "Diesel (0#China VI)",
-          "value": 0.057282182817134326
-        },
-        {
-          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
-          "value": -0.05581162200103645
+          "value": 0.07855544484128796
         },
         {
           "label": "Benzene (petroleum-derived,industrial grade)",
-          "value": 0.042811743203120076
+          "value": 0.0722748102423837
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": -0.06935851972256832
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.053640006190586856
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": 0.0511616873601775
         }
       ],
       "groups": [
         {
           "label": "Chemicals",
-          "value": 0.3450817155441852
+          "value": 0.2963775148386202
         },
         {
           "label": "Petroleum and natural gas",
-          "value": 0.18623035707105676
+          "value": 0.15374005095178792
         },
         {
           "label": "Agricultural inputs",
-          "value": -0.09064651280757226
+          "value": -0.1103263496672294
         },
         {
           "label": "Coal and coke",
-          "value": 0.04178227125683861
+          "value": 0.06855177024721532
         },
         {
           "label": "Ferrous metals",
-          "value": 0.031359506381814665
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.017288027133623995
+          "value": 0.06485204786062836
         },
         {
           "label": "Agricultural products",
-          "value": 0.01579061628199515
+          "value": 0.022636113801909667
         },
         {
-          "label": "Building materials",
-          "value": 0.010881534758830677
+          "label": "Non-metallic mineral products",
+          "value": 0.019111002416776292
         },
         {
           "label": "Non-ferrous metals",
-          "value": 0.008523336250071246
+          "value": 0.01564515054846311
+        },
+        {
+          "label": "Building materials",
+          "value": 0.004853039962250994
         },
         {
           "label": "Forest products",
-          "value": -0.0007182188724643905
+          "value": -0.003454194733085377
         }
       ],
       "metrics": {
         "n": 119,
-        "mae": 0.3408795876862391,
-        "rmse": 0.44889700512440694,
-        "median_absolute_error": 0.2771269879003364,
-        "bias": -0.0973408879192289,
-        "maximum_absolute_error": 1.7289349337505722,
-        "directional_accuracy": 0.680672268907563
+        "mae": 0.32708430467036775,
+        "rmse": 0.43743901291601794,
+        "median_absolute_error": 0.25132045115065094,
+        "bias": -0.10051801427839767,
+        "maximum_absolute_error": 1.6317638425220164,
+        "directional_accuracy": 0.7142857142857143
       },
-      "forecast_id": "0e2ca3ff8b2c63f814705950b4649c840f1226282fb2e1e64a5cb8d381596e13",
+      "forecast_id": "feb6f8b8f86950d6fa8f3e479b954f568483cd1ebe8ac9d1d2900a60b8d5e11a",
       "data_cutoff": "2026-09-14 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -1134,93 +1923,206 @@
     {
       "month": "2026-09",
       "month_label": "September 2026",
-      "timing": "early_carry",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "random_forest",
+      "label": "Random forest",
+      "prediction": 0.6144672096304332,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Averages many decision trees to test a different nonlinear modelling assumption.",
+      "products": [
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.1861903488226071
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.18161143480567488
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.055182669997236596
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": -0.03553709185269622
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.034078701112639886
+        },
+        {
+          "label": "Liquefied natural gas (LNG)",
+          "value": 0.022970752354512607
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": 0.2716396476297201
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.22823076030838185
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.07207817862268827
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.025078457421226392
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.016335526196904062
+        },
+        {
+          "label": "Building materials",
+          "value": 0.013005214363440916
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.005781882725126128
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.003913992264656175
+        },
+        {
+          "label": "Forest products",
+          "value": 0.002493769314874655
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": -0.0006141432404275053
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.356512995716237,
+        "rmse": 0.4748860252084498,
+        "median_absolute_error": 0.2747493370860362,
+        "bias": -0.07004000666508374,
+        "maximum_absolute_error": 1.503882506699328,
+        "directional_accuracy": 0.6608695652173913
+      },
+      "forecast_id": "f4383407278bab3b265761649c04ba13ed01c06642358c129382d906013283ea",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "final",
       "panel": "union",
       "model": "histgb",
       "label": "HistGradientBoosting",
-      "prediction": 0.6768973307696738,
+      "prediction": 0.7439329918547474,
       "frozen_at": "2026-10-07T04:35:54.229179+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
       "products": [
         {
           "label": "Methanol (premium grade)",
-          "value": 0.1672844293612761
-        },
-        {
-          "label": "Gasoline (95#China VI)",
-          "value": 0.1650735775134728
-        },
-        {
-          "label": "Steel angle (5#)",
-          "value": 0.06524940682019012
+          "value": 0.19603480945431054
         },
         {
           "label": "Seamless steel pipe (219*6,20#)",
-          "value": 0.05896380974873577
+          "value": 0.13440341881793083
         },
         {
-          "label": "Benzene (petroleum-derived,industrial grade)",
-          "value": 0.054482710198893565
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.12945762094790741
         },
         {
-          "label": "Standard blended coal (4500 kcal/kg)",
-          "value": 0.05286831892190318
+          "label": "Gasoline (95#China VI)",
+          "value": 0.07310523445734333
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": -0.0722998123770042
+        },
+        {
+          "label": "PVC (SG5)",
+          "value": 0.07218977388313978
         }
       ],
       "groups": [
         {
-          "label": "Petroleum and natural gas",
-          "value": 0.2622768404624348
-        },
-        {
           "label": "Chemicals",
-          "value": 0.22678555419822238
+          "value": 0.31219329113152405
         },
         {
-          "label": "Coal and coke",
-          "value": 0.09104898484874482
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.08926261145631431
+          "label": "Petroleum and natural gas",
+          "value": 0.2631898426639905
         },
         {
           "label": "Ferrous metals",
-          "value": 0.08861881915427229
+          "value": 0.13594866395122615
         },
         {
-          "label": "Agricultural products",
-          "value": 0.036039674726629015
+          "label": "Coal and coke",
+          "value": 0.1007008731578199
         },
         {
-          "label": "Non-metallic mineral products",
-          "value": 0.012833268012036277
-        },
-        {
-          "label": "Forest products",
-          "value": 0.012826602977087534
+          "label": "Agricultural inputs",
+          "value": -0.09629354305702911
         },
         {
           "label": "Building materials",
-          "value": 0.00983583824593317
+          "value": 0.01396644864851656
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.01279250553229528
+        },
+        {
+          "label": "Forest products",
+          "value": 0.004868758480989593
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.004652833843094202
         },
         {
           "label": "Non-ferrous metals",
-          "value": -0.0021340845741959977
+          "value": 0.002170400465488988
         }
       ],
       "metrics": {
-        "n": 116,
-        "mae": 0.34822204797637657,
-        "rmse": 0.4488173481355114,
-        "median_absolute_error": 0.28825768900744053,
-        "bias": -0.09828824386376657,
-        "maximum_absolute_error": 1.5559234618534679,
-        "directional_accuracy": 0.6896551724137931
+        "n": 107,
+        "mae": 0.3276569521866327,
+        "rmse": 0.43122379501203795,
+        "median_absolute_error": 0.2517578804528285,
+        "bias": -0.051837370047124944,
+        "maximum_absolute_error": 1.5029886928801641,
+        "directional_accuracy": 0.6261682242990654
       },
-      "forecast_id": "265fb2b04f5cd64db43f9ff8c03b4bef8d6c9b347a625d8ac511cedcf7c4de78",
-      "data_cutoff": "2026-09-14 01:30:00+00:00",
+      "forecast_id": "e93d2b5cf8bc228375f8c4fd30ac25e61a26d263770d6cc432c3ad91e3876501",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
         "2026-09:1-10": [
@@ -1231,6 +2133,14 @@
             "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
           }
         ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
         "2026-08:1-10": [
           {
             "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
@@ -1239,18 +2149,65 @@
             "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
           }
         ],
-        "2026-08:21-end": [
+        "2026-08:11-20": [
           {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260903_1965182.html",
-            "content_sha256": "caf090f2f83f425ea64daf3174da8d837e89eadef565ec8ef466fe3d7a21cd3f",
-            "published_at": "2026-09-04 01:30:00+00:00",
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
             "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
           }
         ]
       },
       "training_start": "2014-02",
       "training_end": "2026-08",
-      "training_rows": 140
+      "training_rows": 131
+    },
+    {
+      "month": "2026-09",
+      "month_label": "September 2026",
+      "timing": "twentieth",
+      "panel": "stable",
+      "model": "ridge",
+      "label": "Product ridge",
+      "prediction": 0.7811748500503188,
+      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 115,
+        "mae": 0.28203630139208125,
+        "rmse": 0.37108679755460106,
+        "median_absolute_error": 0.20603955428760717,
+        "bias": -0.05329203684315111,
+        "maximum_absolute_error": 1.410076658973471,
+        "directional_accuracy": 0.7391304347826086
+      },
+      "forecast_id": "aff46aa505c0153e03b141be59313c3ab7ec98bdf9b5703bb4083dcd534f619e",
+      "data_cutoff": "2026-09-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ],
+        "2026-08:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
+            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
+            "published_at": "2026-08-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
     },
     {
       "month": "2026-09",
@@ -1594,397 +2551,6 @@
     {
       "month": "2026-09",
       "month_label": "September 2026",
-      "timing": "twentieth",
-      "panel": "union",
-      "model": "sector_first",
-      "label": "Sector-first regression",
-      "prediction": 1.2606370855702207,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Groups product changes into sector signals before fitting a regularized regression.",
-      "products": [],
-      "groups": [],
-      "metrics": {
-        "n": 115,
-        "mae": 0.2548364015977604,
-        "rmse": 0.3606176822575169,
-        "median_absolute_error": 0.16712125992574828,
-        "bias": -0.0005046663638630841,
-        "maximum_absolute_error": 1.7993793085407452,
-        "directional_accuracy": 0.7652173913043478
-      },
-      "forecast_id": "83f983deab82e9a33768847b7580079a09950576c61ec698bc147c6cd74be26e",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 139
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "early_carry",
-      "panel": "union",
-      "model": "catboost",
-      "label": "CatBoost",
-      "prediction": 0.6052294461394703,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
-      "products": [
-        {
-          "label": "Methanol (premium grade)",
-          "value": 0.19423359404681412
-        },
-        {
-          "label": "Gasoline (95#China VI)",
-          "value": 0.15090130465921703
-        },
-        {
-          "label": "Seamless steel pipe (219*6,20#)",
-          "value": 0.06009434477751334
-        },
-        {
-          "label": "Benzene (petroleum-derived,industrial grade)",
-          "value": 0.05837118552623759
-        },
-        {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.04699151003338246
-        },
-        {
-          "label": "Diesel (0#China VI)",
-          "value": 0.036954770325769375
-        }
-      ],
-      "groups": [
-        {
-          "label": "Petroleum and natural gas",
-          "value": 0.2819082976420505
-        },
-        {
-          "label": "Chemicals",
-          "value": 0.25093414746213216
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.06099890324757261
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.051169682481794945
-        },
-        {
-          "label": "Agricultural products",
-          "value": 0.019205460125131992
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": 0.015855454497937717
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.009404149969021957
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.008889450314100971
-        },
-        {
-          "label": "Building materials",
-          "value": 0.00309762695927806
-        },
-        {
-          "label": "Forest products",
-          "value": -0.0007656224633282082
-        }
-      ],
-      "metrics": {
-        "n": 116,
-        "mae": 0.3395535065142495,
-        "rmse": 0.45839870566114727,
-        "median_absolute_error": 0.24371720465588775,
-        "bias": -0.12767215367565185,
-        "maximum_absolute_error": 1.519976134104784,
-        "directional_accuracy": 0.7327586206896551
-      },
-      "forecast_id": "07ab464180462c7616be95b087d456257f0406d862b48684927f9418c1e17601",
-      "data_cutoff": "2026-09-14 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
-            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
-            "published_at": "2026-09-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ],
-        "2026-08:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
-            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
-            "published_at": "2026-08-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
-          }
-        ],
-        "2026-08:21-end": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260903_1965182.html",
-            "content_sha256": "caf090f2f83f425ea64daf3174da8d837e89eadef565ec8ef466fe3d7a21cd3f",
-            "published_at": "2026-09-04 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 140
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "twentieth",
-      "panel": "union",
-      "model": "direct_tracker",
-      "label": "Direct price tracker",
-      "prediction": 6.123431983557728,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Tracks circulation-market price movements without calibration to headline PPI. This is a price index, not a PPI forecast.",
-      "products": [],
-      "groups": [],
-      "metrics": {
-        "n": 115,
-        "mae": 2.0382733011114555,
-        "rmse": 2.8049126246551817,
-        "median_absolute_error": 1.4728213367798726,
-        "bias": 0.23252238236863304,
-        "maximum_absolute_error": 11.562377570929588,
-        "directional_accuracy": 0.782608695652174
-      },
-      "forecast_id": "c824f29fdd13e1e7b9c33035c2ef3d987473055335397c418410c34cc3610642",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 139
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "early",
-      "panel": "union",
-      "model": "ridge",
-      "label": "Product ridge",
-      "prediction": 0.9126166328137125,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
-      "products": [],
-      "groups": [],
-      "metrics": {
-        "n": 119,
-        "mae": 0.2534204647305919,
-        "rmse": 0.3362702350161319,
-        "median_absolute_error": 0.1860176646212477,
-        "bias": -0.08290875692373857,
-        "maximum_absolute_error": 0.9869218925410199,
-        "directional_accuracy": 0.7394957983193278
-      },
-      "forecast_id": "0ef4ac28800cedb51f0c09e7ba6e32844184d2a160dd49c81c26eea78fd2719d",
-      "data_cutoff": "2026-09-14 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
-            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
-            "published_at": "2026-09-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ],
-        "2026-08:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
-            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
-            "published_at": "2026-08-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 143
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "final",
-      "panel": "union",
-      "model": "histgb",
-      "label": "HistGradientBoosting",
-      "prediction": 0.7439329918547474,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
-      "products": [
-        {
-          "label": "Methanol (premium grade)",
-          "value": 0.19603480945431054
-        },
-        {
-          "label": "Seamless steel pipe (219*6,20#)",
-          "value": 0.13440341881793083
-        },
-        {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.12945762094790741
-        },
-        {
-          "label": "Gasoline (95#China VI)",
-          "value": 0.07310523445734333
-        },
-        {
-          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
-          "value": -0.0722998123770042
-        },
-        {
-          "label": "PVC (SG5)",
-          "value": 0.07218977388313978
-        }
-      ],
-      "groups": [
-        {
-          "label": "Chemicals",
-          "value": 0.31219329113152405
-        },
-        {
-          "label": "Petroleum and natural gas",
-          "value": 0.2631898426639905
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.13594866395122615
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.1007008731578199
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.09629354305702911
-        },
-        {
-          "label": "Building materials",
-          "value": 0.01396644864851656
-        },
-        {
-          "label": "Agricultural products",
-          "value": -0.01279250553229528
-        },
-        {
-          "label": "Forest products",
-          "value": 0.004868758480989593
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.004652833843094202
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": 0.002170400465488988
-        }
-      ],
-      "metrics": {
-        "n": 107,
-        "mae": 0.3276569521866327,
-        "rmse": 0.43122379501203795,
-        "median_absolute_error": 0.2517578804528285,
-        "bias": -0.051837370047124944,
-        "maximum_absolute_error": 1.5029886928801641,
-        "directional_accuracy": 0.6261682242990654
-      },
-      "forecast_id": "e93d2b5cf8bc228375f8c4fd30ac25e61a26d263770d6cc432c3ad91e3876501",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
-            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
-            "published_at": "2026-09-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ],
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
-            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
-            "published_at": "2026-08-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 131
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
       "timing": "early_carry",
       "panel": "union",
       "model": "lightgbm",
@@ -2106,221 +2672,26 @@
     {
       "month": "2026-09",
       "month_label": "September 2026",
-      "timing": "final",
-      "panel": "union",
-      "model": "lightgbm",
-      "label": "LightGBM",
-      "prediction": 0.6706342172791001,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
-      "products": [
-        {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.13953747984346346
-        },
-        {
-          "label": "Methanol (premium grade)",
-          "value": 0.13172934179772267
-        },
-        {
-          "label": "Seamless steel pipe (219*6,20#)",
-          "value": 0.11267195298697619
-        },
-        {
-          "label": "Diesel (0#China VI)",
-          "value": 0.09602711318299303
-        },
-        {
-          "label": "Datong blended coal (5800 kcal/kg)",
-          "value": 0.054795340894820944
-        },
-        {
-          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
-          "value": -0.05008396232557761
-        }
-      ],
-      "groups": [
-        {
-          "label": "Petroleum and natural gas",
-          "value": 0.25915271100769066
-        },
-        {
-          "label": "Chemicals",
-          "value": 0.1809653922170718
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.14498836370518497
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.12282366577467142
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.08541730687815424
-        },
-        {
-          "label": "Building materials",
-          "value": 0.015541974403731333
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": 0.012856180363635943
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.010785909659235536
-        },
-        {
-          "label": "Agricultural products",
-          "value": -0.003584794718063733
-        },
-        {
-          "label": "Forest products",
-          "value": -0.003343715796163191
-        }
-      ],
-      "metrics": {
-        "n": 107,
-        "mae": 0.3293763267515431,
-        "rmse": 0.4334372502779209,
-        "median_absolute_error": 0.2542499606709907,
-        "bias": -0.07606044238422593,
-        "maximum_absolute_error": 1.6585787755567214,
-        "directional_accuracy": 0.6728971962616822
-      },
-      "forecast_id": "b480c01b67388ff835738eb9a70426a6053729786f02c7825d51c94e1c47ec51",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
-            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
-            "published_at": "2026-09-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ],
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
-            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
-            "published_at": "2026-08-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 131
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
       "timing": "twentieth",
       "panel": "union",
-      "model": "random_forest",
-      "label": "Random forest",
-      "prediction": 0.6144672096304332,
+      "model": "sector_first",
+      "label": "Sector-first regression",
+      "prediction": 1.2606370855702207,
       "frozen_at": "2026-10-07T04:35:54.229179+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Averages many decision trees to test a different nonlinear modelling assumption.",
-      "products": [
-        {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.1861903488226071
-        },
-        {
-          "label": "Methanol (premium grade)",
-          "value": 0.18161143480567488
-        },
-        {
-          "label": "Benzene (petroleum-derived,industrial grade)",
-          "value": 0.055182669997236596
-        },
-        {
-          "label": "Seamless steel pipe (219*6,20#)",
-          "value": -0.03553709185269622
-        },
-        {
-          "label": "Datong blended coal (5800 kcal/kg)",
-          "value": 0.034078701112639886
-        },
-        {
-          "label": "Liquefied natural gas (LNG)",
-          "value": 0.022970752354512607
-        }
-      ],
-      "groups": [
-        {
-          "label": "Chemicals",
-          "value": 0.2716396476297201
-        },
-        {
-          "label": "Petroleum and natural gas",
-          "value": 0.22823076030838185
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.07207817862268827
-        },
-        {
-          "label": "Ferrous metals",
-          "value": -0.025078457421226392
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": 0.016335526196904062
-        },
-        {
-          "label": "Building materials",
-          "value": 0.013005214363440916
-        },
-        {
-          "label": "Agricultural products",
-          "value": -0.005781882725126128
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.003913992264656175
-        },
-        {
-          "label": "Forest products",
-          "value": 0.002493769314874655
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.0006141432404275053
-        }
-      ],
+      "explanation": "Groups product changes into sector signals before fitting a regularized regression.",
+      "products": [],
+      "groups": [],
       "metrics": {
         "n": 115,
-        "mae": 0.356512995716237,
-        "rmse": 0.4748860252084498,
-        "median_absolute_error": 0.2747493370860362,
-        "bias": -0.07004000666508374,
-        "maximum_absolute_error": 1.503882506699328,
-        "directional_accuracy": 0.6608695652173913
+        "mae": 0.2548364015977604,
+        "rmse": 0.3606176822575169,
+        "median_absolute_error": 0.16712125992574828,
+        "bias": -0.0005046663638630841,
+        "maximum_absolute_error": 1.7993793085407452,
+        "directional_accuracy": 0.7652173913043478
       },
-      "forecast_id": "f4383407278bab3b265761649c04ba13ed01c06642358c129382d906013283ea",
+      "forecast_id": "83f983deab82e9a33768847b7580079a09950576c61ec698bc147c6cd74be26e",
       "data_cutoff": "2026-09-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -2350,90 +2721,90 @@
       "month_label": "September 2026",
       "timing": "twentieth",
       "panel": "union",
-      "model": "catboost",
-      "label": "CatBoost",
-      "prediction": 0.7287925754890555,
+      "model": "lightgbm",
+      "label": "LightGBM",
+      "prediction": 0.6444638946511321,
       "frozen_at": "2026-10-07T04:35:54.229179+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
       "products": [
         {
-          "label": "Methanol (premium grade)",
-          "value": 0.385772218349992
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.18426656475400566
         },
         {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.19429872795683834
+          "label": "Methanol (premium grade)",
+          "value": 0.0942255832788812
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.08458255219947171
         },
         {
           "label": "Sulfuric acid (98%)",
-          "value": -0.07266444492558763
+          "value": -0.06861405774291024
         },
         {
-          "label": "Polypropylene (raffia grade)",
-          "value": 0.05986705015795801
-        },
-        {
-          "label": "Diesel (0#China VI)",
-          "value": 0.04584263751002535
+          "label": "Standard blended coal (4500 kcal/kg)",
+          "value": 0.056435144652667545
         },
         {
           "label": "Polybutadiene rubber (BR9000)",
-          "value": 0.038281961711489086
+          "value": 0.0556537543024053
         }
       ],
       "groups": [
         {
-          "label": "Chemicals",
-          "value": 0.4269144120717962
-        },
-        {
           "label": "Petroleum and natural gas",
-          "value": 0.25425002417617437
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.0356556945749704
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.01916909601567966
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": 0.01404564983225005
-        },
-        {
-          "label": "Agricultural products",
-          "value": 0.011372188667560658
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.010917427435972276
+          "value": 0.26401738893516624
         },
         {
           "label": "Coal and coke",
-          "value": 0.0025003370570844943
+          "value": 0.17888383502485136
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.13450008795375018
+        },
+        {
+          "label": "Ferrous metals",
+          "value": 0.04182780609242118
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.028575714536846316
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.025142807821648266
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.01306236906697243
         },
         {
           "label": "Building materials",
-          "value": 1.0400069130308488e-05
+          "value": 0.004373742407777402
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": -0.003283261218377777
         },
         {
           "label": "Forest products",
-          "value": -1.0330044910363857e-05
+          "value": 0.00321055468048232
         }
       ],
       "metrics": {
         "n": 115,
-        "mae": 0.34291850619448727,
-        "rmse": 0.4617653045409446,
-        "median_absolute_error": 0.26449915052393425,
-        "bias": -0.09652551941382286,
-        "maximum_absolute_error": 1.688142206511304,
-        "directional_accuracy": 0.6956521739130435
+        "mae": 0.3390857858759585,
+        "rmse": 0.45373333316096076,
+        "median_absolute_error": 0.268143687220295,
+        "bias": -0.06565802679640163,
+        "maximum_absolute_error": 1.5529497279150655,
+        "directional_accuracy": 0.6869565217391305
       },
-      "forecast_id": "1452140546c25b42459a561fe98670eda05aee7b7934016e5d352ddf59f6f1aa",
+      "forecast_id": "c9dd662e17026e4e6ae1a2278e22424cbeb2a6a997debc35d2e2010a0ab133e0",
       "data_cutoff": "2026-09-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -2481,377 +2852,6 @@
         "directional_accuracy": 0.7476635514018691
       },
       "forecast_id": "25e165996a328aba261ad4c60eddd6682c0d5c5099ade6373a180c15f51d7008",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
-            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
-            "published_at": "2026-09-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ],
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
-            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
-            "published_at": "2026-08-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 131
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "final",
-      "panel": "union",
-      "model": "xgboost",
-      "label": "XGBoost",
-      "prediction": 0.69620281457901,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
-      "products": [
-        {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.16074037551879883
-        },
-        {
-          "label": "Methanol (premium grade)",
-          "value": 0.15371692180633545
-        },
-        {
-          "label": "Seamless steel pipe (219*6,20#)",
-          "value": 0.12503960728645325
-        },
-        {
-          "label": "Diesel (0#China VI)",
-          "value": 0.07898855954408646
-        },
-        {
-          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
-          "value": -0.057169463485479355
-        },
-        {
-          "label": "Shanxi blended coal (5000 kcal/kg)",
-          "value": 0.056084539741277695
-        }
-      ],
-      "groups": [
-        {
-          "label": "Petroleum and natural gas",
-          "value": 0.2650509817758575
-        },
-        {
-          "label": "Chemicals",
-          "value": 0.1724073929945007
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.1598374689638149
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.12756555154919624
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.08180867778719403
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": 0.025251746585126966
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.019614679738879204
-        },
-        {
-          "label": "Agricultural products",
-          "value": -0.012315446918364614
-        },
-        {
-          "label": "Building materials",
-          "value": 0.00624889915343374
-        },
-        {
-          "label": "Forest products",
-          "value": -0.0011785689275711775
-        }
-      ],
-      "metrics": {
-        "n": 107,
-        "mae": 0.32852687620575255,
-        "rmse": 0.43650234365137364,
-        "median_absolute_error": 0.27718148231506345,
-        "bias": -0.07480473378629675,
-        "maximum_absolute_error": 1.598769187927246,
-        "directional_accuracy": 0.6635514018691588
-      },
-      "forecast_id": "5da64e73870da131f8d76f3bfbccec96976ed96cd8eec1a1f3aac0130935d654",
-      "data_cutoff": "2026-09-24 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
-            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
-            "published_at": "2026-09-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ],
-        "2026-09:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
-            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
-            "published_at": "2026-09-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
-          }
-        ],
-        "2026-08:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
-            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
-            "published_at": "2026-08-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
-          }
-        ],
-        "2026-08:11-20": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260821_1965093.html",
-            "content_sha256": "0b85212f70055c380a26cd25e8c78f8ef3bae9a85d1c66498d682292ee71fba3",
-            "published_at": "2026-08-24 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 131
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "early",
-      "panel": "union",
-      "model": "lightgbm",
-      "label": "LightGBM",
-      "prediction": 0.5612003204400942,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
-      "products": [
-        {
-          "label": "Methanol (premium grade)",
-          "value": 0.1573321415127624
-        },
-        {
-          "label": "PVC (SG5)",
-          "value": 0.07855544484128796
-        },
-        {
-          "label": "Benzene (petroleum-derived,industrial grade)",
-          "value": 0.0722748102423837
-        },
-        {
-          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
-          "value": -0.06935851972256832
-        },
-        {
-          "label": "Diesel (0#China VI)",
-          "value": 0.053640006190586856
-        },
-        {
-          "label": "Seamless steel pipe (219*6,20#)",
-          "value": 0.0511616873601775
-        }
-      ],
-      "groups": [
-        {
-          "label": "Chemicals",
-          "value": 0.2963775148386202
-        },
-        {
-          "label": "Petroleum and natural gas",
-          "value": 0.15374005095178792
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.1103263496672294
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.06855177024721532
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.06485204786062836
-        },
-        {
-          "label": "Agricultural products",
-          "value": 0.022636113801909667
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.019111002416776292
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": 0.01564515054846311
-        },
-        {
-          "label": "Building materials",
-          "value": 0.004853039962250994
-        },
-        {
-          "label": "Forest products",
-          "value": -0.003454194733085377
-        }
-      ],
-      "metrics": {
-        "n": 119,
-        "mae": 0.32708430467036775,
-        "rmse": 0.43743901291601794,
-        "median_absolute_error": 0.25132045115065094,
-        "bias": -0.10051801427839767,
-        "maximum_absolute_error": 1.6317638425220164,
-        "directional_accuracy": 0.7142857142857143
-      },
-      "forecast_id": "feb6f8b8f86950d6fa8f3e479b954f568483cd1ebe8ac9d1d2900a60b8d5e11a",
-      "data_cutoff": "2026-09-14 01:30:00+00:00",
-      "status": "frozen_pre_release_candidate",
-      "sources": {
-        "2026-09:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
-            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
-            "published_at": "2026-09-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
-          }
-        ],
-        "2026-08:1-10": [
-          {
-            "source_url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260813_1965025.html",
-            "content_sha256": "53ac8c8d571e22e48f2314defc9fa9cbc0f6c8682290cbb136f7db080353910d",
-            "published_at": "2026-08-14 01:30:00+00:00",
-            "retrieved_at": "2026-09-14 06:30:30.192724+00:00"
-          }
-        ]
-      },
-      "training_start": "2014-02",
-      "training_end": "2026-08",
-      "training_rows": 143
-    },
-    {
-      "month": "2026-09",
-      "month_label": "September 2026",
-      "timing": "final",
-      "panel": "union",
-      "model": "catboost",
-      "label": "CatBoost",
-      "prediction": 0.6389016083091132,
-      "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
-      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
-      "products": [
-        {
-          "label": "Methanol (premium grade)",
-          "value": 0.28835567707074755
-        },
-        {
-          "label": "Liquefied petroleum gas (LPG)",
-          "value": 0.11480911816184788
-        },
-        {
-          "label": "Seamless steel pipe (219*6,20#)",
-          "value": 0.10047730917756367
-        },
-        {
-          "label": "Gasoline (95#China VI)",
-          "value": 0.0641218900660985
-        },
-        {
-          "label": "Diesel (0#China VI)",
-          "value": 0.04542630229536743
-        },
-        {
-          "label": "Benzene (petroleum-derived,industrial grade)",
-          "value": 0.03455760417545858
-        }
-      ],
-      "groups": [
-        {
-          "label": "Chemicals",
-          "value": 0.32661644172954024
-        },
-        {
-          "label": "Petroleum and natural gas",
-          "value": 0.23570846890644423
-        },
-        {
-          "label": "Ferrous metals",
-          "value": 0.06532486054025624
-        },
-        {
-          "label": "Agricultural inputs",
-          "value": -0.041124285115370585
-        },
-        {
-          "label": "Agricultural products",
-          "value": 0.022902711376638376
-        },
-        {
-          "label": "Non-ferrous metals",
-          "value": 0.01813579864379305
-        },
-        {
-          "label": "Forest products",
-          "value": -0.00827691938995214
-        },
-        {
-          "label": "Coal and coke",
-          "value": 0.003934295424258823
-        },
-        {
-          "label": "Non-metallic mineral products",
-          "value": 0.000831439036492587
-        },
-        {
-          "label": "Building materials",
-          "value": 0.0005663504204649276
-        }
-      ],
-      "metrics": {
-        "n": 107,
-        "mae": 0.3262289843263096,
-        "rmse": 0.43952919432038334,
-        "median_absolute_error": 0.25586661849659487,
-        "bias": -0.07952058751772806,
-        "maximum_absolute_error": 1.5608956329402708,
-        "directional_accuracy": 0.719626168224299
-      },
-      "forecast_id": "a5cae2d914a336d84ee96f4cf15c82f9c7ed5893f80d1b63252208cba95558eb",
       "data_cutoff": "2026-09-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -3969,7 +3969,7 @@
   "schema_version": 1,
   "quality": {
     "forecast_month": "2026-09",
-    "checked_as_of": "2026-10-07T17:33:22.940298+02:00",
+    "checked_as_of": "2026-10-07T23:35:53.937724+08:00",
     "models": [
       {
         "model": "catboost",
