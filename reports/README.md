@@ -1,5 +1,7 @@
 # China PPI dashboard
 
+**[Open the live PPI dashboard](https://china-ppi-nowcast-live.clumsy-cyclic-aqua.chatgpt.site)** — model forecasts, accuracy and source dates.
+
 [Project home](../README.md) · [Model details](../docs/METHODOLOGY.md) · [English product glossary](../docs/PRODUCTS.md)
 
 ## Current update: October 2026
@@ -50,7 +52,7 @@ Random forest, sector-first regression and the economic / ML hybrid remain avail
 
 ## Explore
 
-- **[Interactive dashboard file](dashboard.html)** — download the file and open it in a browser; choose month, timing, product panel and retained comparison models. It works without a login or external scripts.
+- **[Live dashboard](https://china-ppi-nowcast-live.clumsy-cyclic-aqua.chatgpt.site)** — loads the latest frozen forecasts directly from this repository.
 - [All current model estimates and release availability](product_latest.md)
 - [Product and sector attributions in English](attributions.md)
 - [Ridge revision: specifications, validation and August comparison](ridge_revision.md)

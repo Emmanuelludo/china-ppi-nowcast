@@ -1,5 +1,6 @@
 """English dashboard derived only from frozen forecasts; no model fitting."""
 import argparse
+import csv
 import json
 from datetime import datetime
 from html import escape
@@ -46,6 +47,8 @@ def build_data(root,manifest,requested_month,as_of):
    old=json.loads((root/'models'/r['model_version']/'manifest.json').read_text())
    forecast_metrics={(c['variant'],c['panel'],c['name']):c['metrics'] for c in old['models']}
   directory=root/'data/product/vintages'/r['target_month']/r['forecast_id'][:20]
+  contract=json.loads((directory/'features.json').read_text())
+  fitted=next(c for c in (manifest if r['model_version']==manifest['version'] else old)['models'] if (c['variant'],c['panel'],c['name'])==(r['variant'],r['panel'],r['model']))
   attr=[];groups=[]
   p=directory/'shap.json'
   if p.exists():
@@ -54,11 +57,21 @@ def build_data(root,manifest,requested_month,as_of):
    groups=[dict(label=group_name(k),value=v) for k,v in sorted(a['grouped'].items(),key=lambda kv:abs(kv[1]),reverse=True)]
   result.append(dict(month=r['target_month'],month_label=month_name(r['target_month']),timing=r['variant'],panel=r['panel'],
    model=r['model'],label=model_name(r['model']),prediction=r['prediction_mom'],frozen_at=r['as_of'],
-   model_version=r['model_version'],explanation=EXPLANATIONS[r['model']],products=attr,groups=groups,metrics=forecast_metrics[(r['variant'],r['panel'],r['model'])]))
+   model_version=r['model_version'],explanation=EXPLANATIONS[r['model']],products=attr,groups=groups,metrics=forecast_metrics[(r['variant'],r['panel'],r['model'])],
+   forecast_id=r['forecast_id'],data_cutoff=r['data_cutoff'],status=r['status'],sources=contract['sources'],
+   training_start=fitted['training_start'],training_end=fitted['training_end'],training_rows=fitted['training_rows']))
  months=sorted(set(r['month'] for r in result),reverse=True)
+ actuals=[]
+ actual_path=root/'data/registry/actuals.csv'
+ if actual_path.exists():
+  with actual_path.open() as f:
+   for a in csv.DictReader(f):
+    if datetime.fromisoformat(a['published_at'])<=datetime.fromisoformat(as_of) and datetime.fromisoformat(a['retrieved_at'])<=datetime.fromisoformat(as_of):
+     actuals.append(dict(month=a['target_month'],label=month_name(a['target_month']),value=float(a['actual_mom_pct']),published_at=a['published_at'],source_url=a['source_url']))
  return dict(requested_month=requested_month,requested_label=month_name(requested_month),refreshed=as_of,
   latest_month=months[0] if months else None,months=[dict(value=m,label=month_name(m)) for m in months],
-  current_available=any(r['month']==requested_month for r in result),timings=TIMINGS,timing_help=TIMING_HELP,forecasts=result)
+  current_available=any(r['month']==requested_month for r in result),timings=TIMINGS,timing_help=TIMING_HELP,forecasts=result,
+  actuals=sorted(actuals,key=lambda a:(a['month'],a['published_at'])),schema_version=1)
 
 def svg_chart(rows,title):
  width=960; height=100+len(rows)*60;left=230;right=800
@@ -77,6 +90,8 @@ def svg_chart(rows,title):
 
 def write_dashboard(root,manifest,requested_month,as_of):
  root=Path(root);data=build_data(root,manifest,requested_month,as_of)
+ dashboard_config=root/'config/dashboard.json'
+ live_url=json.loads(dashboard_config.read_text())['url'] if dashboard_config.exists() else None
  from .quality import write_quality_report
  bundle=root/json.loads((root/"config/product_pipeline.json").read_text())["bundle"]
  quality=write_quality_report(root,bundle,manifest,as_of)
@@ -97,6 +112,7 @@ def write_dashboard(root,manifest,requested_month,as_of):
   f"## Current update: {data['requested_label']}",'',
   'Current-month forecasts are available below.' if data['current_available'] else '⏳ **Awaiting the current month’s price releases. No current-month projection has been generated.**', '',
   f"Report refreshed: {as_of.split('T')[0]}. Saved forecast timestamps are preserved.",'']
+ if live_url:lines[2:2]=[f'**[Open the live PPI dashboard]({live_url})** — model forecasts, accuracy and source dates.','']
  if selected:
   values=sorted(r['prediction'] for r in selected);n=len(values);median=(values[(n-1)//2]+values[n//2])/2
   lines += [f"## Latest available forecasts: {month_name(latest)}",'',
@@ -115,7 +131,7 @@ def write_dashboard(root,manifest,requested_month,as_of):
  lines += ['','## Other retained comparisons','',
   'Random forest, sector-first regression and the economic / ML hybrid remain available in the detailed view. Stable-product panels test basket sensitivity. The direct market-price tracker is shown separately as an uncalibrated price index. Category-factor models are retired.','',
   '## Explore','',
-  '- **[Interactive dashboard file](dashboard.html)** — download the file and open it in a browser; choose month, timing, product panel and retained comparison models. It works without a login or external scripts.',
+  f'- **[Live dashboard]({live_url})** — loads the latest frozen forecasts directly from this repository.' if live_url else '- Live dashboard: see the project home for the deployed address.',
   '- [All current model estimates and release availability](product_latest.md)',
   '- [Product and sector attributions in English](attributions.md)',
   '- [Ridge revision: specifications, validation and August comparison](ridge_revision.md)',
@@ -126,7 +142,9 @@ def write_dashboard(root,manifest,requested_month,as_of):
  (root/'reports/README.md').write_text('\n'.join(lines)+'\n')
  template=Path(__file__).with_name('dashboard_template.html').read_text()
  payload=json.dumps(data,ensure_ascii=True,allow_nan=False).replace('<','\\u003c')
- (root/'reports/dashboard.html').write_text(template.replace('__DASHBOARD_DATA__',payload))
+ (root/'reports/dashboard_data.json').write_text(json.dumps(data,ensure_ascii=True,allow_nan=False,indent=2)+'\n')
+ script=Path(__file__).with_name('dashboard_script.js').read_text()
+ (root/'reports/dashboard.html').write_text(template.replace('__DASHBOARD_DATA__',payload).replace('__DASHBOARD_SCRIPT__',script))
  return data
 
 if __name__=='__main__':

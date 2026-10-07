@@ -10,7 +10,7 @@ and preserves each forecast before the official PPI announcement.
 
 | I want to… | Open |
 |---|---|
-| See the visual dashboard and projections | **[PPI dashboard](reports/README.md)** |
+| See the live dashboard and projections | **[Open PPI dashboard](https://china-ppi-nowcast-live.clumsy-cyclic-aqua.chatgpt.site)** |
 | Understand which products drive them | [Forecast explanations](reports/attributions.md) |
 | Find a product in English | [Product glossary](docs/PRODUCTS.md) |
 | Follow adaptive refits and champion–challenger trials | [Adaptive monitoring](reports/adaptive.md) |
@@ -19,6 +19,11 @@ and preserves each forecast before the official PPI announcement.
 | Run or maintain the pipeline | [Operations guide](OPERATIONS.md) |
 
 ## What the system contains
+
+The dashboard opens on the latest available forecast month, with five product-model
+estimates shown prominently and all retained model families in the comparison table.
+It refreshes from the daily repository output when opened and every five minutes
+while visible. [Dashboard operation and source](docs/DASHBOARD.md).
 
 - **29 active product-model variants**, including XGBoost, CatBoost, LightGBM,
   HistGradientBoosting, ridge, random forest and economic and sector benchmarks.
