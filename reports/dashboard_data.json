@@ -1,7 +1,7 @@
 {
   "requested_month": "2026-10",
   "requested_label": "October 2026",
-  "refreshed": "2026-10-07T23:35:53.937724+08:00",
+  "refreshed": "2026-10-08T17:24:53.653782+08:00",
   "latest_month": "2026-09",
   "months": [
     {
@@ -3969,7 +3969,7 @@
   "schema_version": 1,
   "quality": {
     "forecast_month": "2026-09",
-    "checked_as_of": "2026-10-07T23:35:53.937724+08:00",
+    "checked_as_of": "2026-10-08T17:24:53.653782+08:00",
     "models": [
       {
         "model": "catboost",
