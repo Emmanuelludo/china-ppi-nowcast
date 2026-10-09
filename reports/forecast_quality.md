@@ -1,6 +1,6 @@
 # Forecast sense check
 
-Latest saved target: **2026-09**. Checked: 2026-10-08.
+Latest saved target: **2026-09**. Checked: 2026-10-09.
 
 Checks use frozen inputs and model artifacts. No forecasts or fitted models are changed. Current-month forecasts remain pending until their required price windows are available.
 
