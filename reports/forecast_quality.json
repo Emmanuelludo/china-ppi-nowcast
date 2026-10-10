@@ -1,6 +1,6 @@
 {
   "forecast_month": "2026-09",
-  "checked_as_of": "2026-10-09T17:33:30.124373+08:00",
+  "checked_as_of": "2026-10-10T16:54:30.612946+08:00",
   "models": [
     {
       "model": "catboost",
