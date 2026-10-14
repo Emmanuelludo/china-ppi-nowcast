@@ -6,15 +6,17 @@ and aggregate ranking should not be treated as decisive.
 
 | Model | Vintage | n | MAE | RMSE | Bias | Direction |
 |---|---|---:|---:|---:|---:|---:|
-| Category-factor regression | early | 1 | 0.213 | 0.213 | -0.213 | 1.000 |
-| Category-factor regression | final | 1 | 0.121 | 0.121 | -0.121 | 1.000 |
-| Economic / ML hybrid (NBS prices) | early | 1 | 0.089 | 0.089 | -0.089 | 1.000 |
-| Economic / ML hybrid (NBS prices) | final | 1 | 0.030 | 0.030 | -0.030 | 1.000 |
-| HistGradientBoosting | early | 1 | 0.003 | 0.003 | -0.003 | 1.000 |
-| HistGradientBoosting | final | 1 | 0.053 | 0.053 | 0.053 | 1.000 |
-| Product ridge | early | 1 | 0.012 | 0.012 | 0.012 | 1.000 |
-| Product ridge | final | 1 | 0.010 | 0.010 | 0.010 | 1.000 |
-| Random forest | early | 1 | 0.038 | 0.038 | 0.038 | 1.000 |
-| Random forest | final | 1 | 0.109 | 0.109 | 0.109 | 1.000 |
-| Sector-first regression | early | 1 | 0.212 | 0.212 | -0.212 | 1.000 |
-| Sector-first regression | final | 1 | 0.173 | 0.173 | -0.173 | 1.000 |
+| Category-factor regression | early | 4 | 0.923 | 1.010 | -0.923 | 1.000 |
+| Category-factor regression | final | 2 | 0.364 | 0.437 | -0.364 | 1.000 |
+| Economic / ML hybrid (NBS prices) | early | 4 | 0.604 | 0.699 | -0.604 | 1.000 |
+| Economic / ML hybrid (NBS prices) | final | 2 | 0.244 | 0.324 | -0.244 | 1.000 |
+| HistGradientBoosting | early | 4 | 0.464 | 0.547 | -0.464 | 1.000 |
+| HistGradientBoosting | final | 2 | 0.187 | 0.230 | -0.134 | 1.000 |
+| Product ridge | early | 4 | 0.286 | 0.328 | -0.280 | 1.000 |
+| Product ridge | final | 2 | 0.007 | 0.008 | 0.007 | 1.000 |
+| Random forest | early | 4 | 0.499 | 0.567 | -0.480 | 1.000 |
+| Random forest | final | 2 | 0.332 | 0.399 | -0.223 | 1.000 |
+| Sector-first regression | early | 4 | 0.824 | 0.929 | -0.824 | 0.500 |
+| Sector-first regression | final | 2 | 0.355 | 0.399 | -0.355 | 1.000 |
+| Direct trimmed price tracker | final | 1 | 3.846 | 3.846 | 3.846 | 1.000 |
+| 20th-to-20th ridge | final | 1 | 0.420 | 0.420 | -0.420 | 1.000 |

@@ -7,10 +7,19 @@
 | `model_bundle_present` | `True` |
 | `model_bundle_validated` | `True` |
 | `production_inference` | `enabled` |
+| `ingest_discovered` | `15` |
+| `ingest_pending` | `15` |
+| `ingest_snapshots` | `1` |
+| `ingest_observations` | `0` |
+| `ingest_actuals` | `1` |
+| `ingest_failed` | `0` |
+| `ingest_errors` | `[]` |
+| `ingest_warnings` | `[]` |
 | `target_month` | `2026-10` |
-| `forecast_status` | `pending` |
+| `forecast_status` | `blocked` |
 | `forecast_reason` | `target month lacks prior 21-end carry and current 1-10 release` |
-| `forecasts_added` | `0` |
+| `evaluated_forecasts` | `38` |
+| `evaluated_target_months` | `2` |
 
 Frozen August 2026 forecasts remain historical imports. Current inference is
 permitted only from a validated model bundle.
