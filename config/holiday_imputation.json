@@ -1,0 +1,6 @@
+{
+  "midpoint_first_windows": ["2026-10"],
+  "method": "arithmetic_midpoint_absolute_price",
+  "purpose": "October 2026 NBS 1-10 release cancelled for Golden Week; impute only when the 11-20 release is available.",
+  "source": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html"
+}
