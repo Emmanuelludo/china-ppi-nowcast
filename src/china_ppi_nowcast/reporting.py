@@ -55,10 +55,13 @@ def matrix_table(rows,panel='union'):
 def write_product_reports(root,manifest,catalog,month,as_of,outputs,pending):
     root=Path(root)
     outputs=[r for r in outputs if is_active(r["model"])]
-    sources={}
+    sources={};imputations={}
     for r in outputs:
         feature=root/'data/product/vintages'/month/r['forecast_id'][:20]/'features.json'
-        if feature.exists(): sources.update(json.loads(feature.read_text())['sources'])
+        if feature.exists():
+            meta=json.loads(feature.read_text())
+            sources.update(meta['sources'])
+            imputations.update(meta.get('imputations',{}))
     windows=sorted(k for k in sources if k.startswith(month+':'))
     intro=['# China PPI nowcast', '',f'**Target: {month} · Headline PPI month-on-month change**',
            '',f'Report refreshed: {as_of}. Forecast timestamps remain fixed when inputs are unchanged.',
@@ -66,6 +69,8 @@ def write_product_reports(root,manifest,catalog,month,as_of,outputs,pending):
            '', '[Model explanations](../docs/METHODOLOGY.md) · [English product glossary](../docs/PRODUCTS.md) · [Attributions](attributions.md) · [Performance](product_candidates.md)',
            '', '## Product-price models', '',
            'All values are predicted official PPI MoM percentages. A dash means that model/timing combination has no saved output.', '']
+    if imputations:
+        intro += ['**Holiday-imputed scenario:** the cancelled first ten-day window is estimated separately for each product as the midpoint of the prior 21–end and current 11–20 observed price levels. This estimate uses information released on the later date; the early-labelled model variants are NOT genuine early-month vintages.', '']
     lines=intro+matrix_table(outputs)
     lines+=['','## Stable-product sensitivity','','These models use only series with complete coverage in their training sample.','']+matrix_table(outputs,'stable')
     lines+=['','## Direct market-price tracker','',
