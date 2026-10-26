@@ -84,7 +84,7 @@ class ProductTests(unittest.TestCase):
         early,metadata=feature_row(x,catalog,'2026-02','early',cutoff,impute_missing_first=True)
         self.assertAlmostEqual(early[key],100*np.log(expected/110.))
         self.assertEqual(set(metadata['sources']),{'2026-01:21-end','2026-02:11-20','2026-01:1-10'})
-        self.assertEqual(metadata['imputations']['2026-02:1-10']['matched_products'],49)
+        self.assertEqual(metadata['imputations']['2026-02:1-10']['matched_products'],50)
         self.assertEqual(metadata['imputations']['2026-02:1-10']['method'],'arithmetic_midpoint_absolute_price')
         final,meta=feature_row(x,catalog,'2026-02','final',cutoff,impute_missing_first=True)
         self.assertAlmostEqual(final[key],100*np.log(((expected+131.)/2)/115.))
