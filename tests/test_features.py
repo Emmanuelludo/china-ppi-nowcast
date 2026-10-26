@@ -70,6 +70,30 @@ class FeatureTests(unittest.TestCase):
         value = selected.loc[(selected.release_month == "2026-08") & (selected.window == "1-10"), "price_cny"].iloc[0]
         self.assertEqual(float(value), 110.0)
 
+    def test_cancelled_first_period_is_reconstructed_only_after_second(self):
+        rows=[r for r in self.base_rows()
+              if not (r['release_month']=='2026-08' and r['window']=='1-10')]
+        with self.assertRaisesRegex(ValueError, 'lacks prior'):
+            build_feature_vintage(pd.DataFrame(rows),'2026-08','2026-08-24T23:00:00+08:00')
+        with self.assertRaisesRegex(ValueError, 'lacks prior'):
+            build_feature_vintage(pd.DataFrame(rows),'2026-08','2026-08-15T00:00:00+08:00',
+                                  impute_missing_first=True)
+        reconstructed=build_feature_vintage(
+            pd.DataFrame(rows),'2026-08','2026-08-24T23:00:00+08:00',
+            impute_missing_first=True)
+        midpoint=(110.+121.)/2.
+        first_survey=math.sqrt(110.*midpoint)
+        expected=100.*(math.sqrt(first_survey*121.)/100.-1.)
+        actual=float(reconstructed.product_changes.iloc[0]['survey_aligned_change_pct'])
+        self.assertAlmostEqual(actual,expected)
+        self.assertEqual(reconstructed.manifest['vintage'],'final')
+        self.assertEqual(reconstructed.manifest['realtime_status'],'prospective_imputed')
+        self.assertEqual(reconstructed.manifest['imputations']['2026-08:1-10']['matched_products'],1)
+        source_windows={(x['release_month'],x['window']) for x in reconstructed.manifest['sources']}
+        self.assertIn(('2026-07','21-end'),source_windows)
+        self.assertIn(('2026-08','11-20'),source_windows)
+        self.assertNotIn(('2026-08','1-10'),source_windows)
+
     def test_publication_basis_is_explicitly_pseudo_real_time(self) -> None:
         rows = self.base_rows()[:6]
         for item in rows:
