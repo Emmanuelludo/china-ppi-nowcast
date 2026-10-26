@@ -1,6 +1,6 @@
 # Adaptive model monitoring
 
-Updated: 2026-10-13T17:43:58.449903+08:00. Monitoring started: 2026-10-07T05:03:46.644079+08:00.
+Updated: 2026-10-26T17:15:07.354323+08:00. Monitoring started: 2026-10-07T05:03:46.644079+08:00.
 
 Four newly released monthly outcomes form the default monitoring window. Triggered models receive independently fitted challengers. Each frozen champion/challenger pair uses identical source snapshots, and six future matched monthly outcomes determine a provisional promotion. No historical forecast is rewritten.
 
@@ -8,34 +8,34 @@ Diagnostics describe residual bias, sparse histories, extrapolation and model at
 
 | Model | Timing | Panel | Released outcomes | Status / trigger |
 |---|---|---|---:|---|
-| CatBoost | Early month | All historical products | 0 | awaiting released prospective outcomes |
-| HistGradientBoosting | Early month | All historical products | 0 | awaiting released prospective outcomes |
-| LightGBM | Early month | All historical products | 0 | awaiting released prospective outcomes |
-| Product ridge | Early month | All historical products | 0 | awaiting released prospective outcomes |
-| XGBoost | Early month | All historical products | 0 | awaiting released prospective outcomes |
-| CatBoost | Early + carry-in | All historical products | 0 | awaiting released prospective outcomes |
-| HistGradientBoosting | Early + carry-in | All historical products | 0 | awaiting released prospective outcomes |
-| LightGBM | Early + carry-in | All historical products | 0 | awaiting released prospective outcomes |
-| Product ridge | Early + carry-in | All historical products | 0 | awaiting released prospective outcomes |
-| XGBoost | Early + carry-in | All historical products | 0 | awaiting released prospective outcomes |
-| CatBoost | Two-survey period | All historical products | 0 | awaiting released prospective outcomes |
-| HistGradientBoosting | Two-survey period | All historical products | 0 | awaiting released prospective outcomes |
-| LightGBM | Two-survey period | All historical products | 0 | awaiting released prospective outcomes |
-| Product ridge | Two-survey period | All historical products | 0 | awaiting released prospective outcomes |
-| XGBoost | Two-survey period | All historical products | 0 | awaiting released prospective outcomes |
-| CatBoost | 20th-to-20th | Stable products | 0 | awaiting released prospective outcomes |
-| HistGradientBoosting | 20th-to-20th | Stable products | 0 | awaiting released prospective outcomes |
-| LightGBM | 20th-to-20th | Stable products | 0 | awaiting released prospective outcomes |
-| Product ridge | 20th-to-20th | Stable products | 0 | awaiting released prospective outcomes |
-| XGBoost | 20th-to-20th | Stable products | 0 | awaiting released prospective outcomes |
-| CatBoost | 20th-to-20th | All historical products | 0 | awaiting released prospective outcomes |
-| Economic / ML hybrid (NBS prices) | 20th-to-20th | All historical products | 0 | awaiting released prospective outcomes |
-| HistGradientBoosting | 20th-to-20th | All historical products | 0 | awaiting released prospective outcomes |
-| LightGBM | 20th-to-20th | All historical products | 0 | awaiting released prospective outcomes |
-| Random forest | 20th-to-20th | All historical products | 0 | awaiting released prospective outcomes |
-| Product ridge | 20th-to-20th | All historical products | 0 | awaiting released prospective outcomes |
-| Sector-first regression | 20th-to-20th | All historical products | 0 | awaiting released prospective outcomes |
-| XGBoost | 20th-to-20th | All historical products | 0 | awaiting released prospective outcomes |
+| CatBoost | Early month | All historical products | 1 | awaiting released prospective outcomes |
+| HistGradientBoosting | Early month | All historical products | 1 | awaiting released prospective outcomes |
+| LightGBM | Early month | All historical products | 1 | awaiting released prospective outcomes |
+| Product ridge | Early month | All historical products | 1 | awaiting released prospective outcomes |
+| XGBoost | Early month | All historical products | 1 | awaiting released prospective outcomes |
+| CatBoost | Early + carry-in | All historical products | 1 | awaiting released prospective outcomes |
+| HistGradientBoosting | Early + carry-in | All historical products | 1 | awaiting released prospective outcomes |
+| LightGBM | Early + carry-in | All historical products | 1 | awaiting released prospective outcomes |
+| Product ridge | Early + carry-in | All historical products | 1 | awaiting released prospective outcomes |
+| XGBoost | Early + carry-in | All historical products | 1 | awaiting released prospective outcomes |
+| CatBoost | Two-survey period | All historical products | 1 | awaiting released prospective outcomes |
+| HistGradientBoosting | Two-survey period | All historical products | 1 | awaiting released prospective outcomes |
+| LightGBM | Two-survey period | All historical products | 1 | awaiting released prospective outcomes |
+| Product ridge | Two-survey period | All historical products | 1 | awaiting released prospective outcomes |
+| XGBoost | Two-survey period | All historical products | 1 | awaiting released prospective outcomes |
+| CatBoost | 20th-to-20th | Stable products | 1 | awaiting released prospective outcomes |
+| HistGradientBoosting | 20th-to-20th | Stable products | 1 | awaiting released prospective outcomes |
+| LightGBM | 20th-to-20th | Stable products | 1 | awaiting released prospective outcomes |
+| Product ridge | 20th-to-20th | Stable products | 1 | awaiting released prospective outcomes |
+| XGBoost | 20th-to-20th | Stable products | 1 | awaiting released prospective outcomes |
+| CatBoost | 20th-to-20th | All historical products | 1 | awaiting released prospective outcomes |
+| Economic / ML hybrid (NBS prices) | 20th-to-20th | All historical products | 1 | awaiting released prospective outcomes |
+| HistGradientBoosting | 20th-to-20th | All historical products | 1 | awaiting released prospective outcomes |
+| LightGBM | 20th-to-20th | All historical products | 1 | awaiting released prospective outcomes |
+| Random forest | 20th-to-20th | All historical products | 1 | awaiting released prospective outcomes |
+| Product ridge | 20th-to-20th | All historical products | 1 | awaiting released prospective outcomes |
+| Sector-first regression | 20th-to-20th | All historical products | 1 | awaiting released prospective outcomes |
+| XGBoost | 20th-to-20th | All historical products | 1 | awaiting released prospective outcomes |
 
 ## Challenger trials
 
