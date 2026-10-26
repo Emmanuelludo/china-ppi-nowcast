@@ -80,7 +80,16 @@ def forecast_scores(root,champion,actuals):
         m=manifests[version]
         if not m:continue
         c=next((c for c in m['models'] if key(c)==champion['key']),None)
-        if not c or c['artifact_sha256']!=champion['model_id']:continue
+        if not c:continue
+        # Historical bundles predate persisted artifact digests. Verify the
+        # actual saved bytes rather than failing (or accepting an unchecked
+        # artifact) when the optional manifest field is absent.
+        artifact_sha=c.get('artifact_sha256')
+        if artifact_sha is None:
+            artifact=root/'models'/version/c['artifact']
+            if not artifact.is_file():continue
+            artifact_sha=hashlib.sha256(artifact.read_bytes()).hexdigest()
+        if artifact_sha!=champion['model_id']:continue
         if c['training_end']>=r['target_month'] or pd.Timestamp(m['training_actual_cutoff'])>pd.Timestamp(r['as_of']):continue
         previous=selected.get(r['target_month'])
         if previous is None or pd.Timestamp(r['as_of'])>pd.Timestamp(previous['as_of']):selected[r['target_month']]=r
