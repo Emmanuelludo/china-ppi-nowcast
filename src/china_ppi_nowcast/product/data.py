@@ -103,13 +103,30 @@ def available(x,cutoff,realtime=True):
     return selected.merge(snap[['observation_period','content_sha256']],on=['observation_period','content_sha256'])
 
 
-def feature_row(x,catalog,month,variant,cutoff,realtime=True):
+def feature_row(x,catalog,month,variant,cutoff,realtime=True,impute_missing_first=False):
     if variant not in VARIANTS: raise ValueError('unknown timing specification')
-    x=available(x,cutoff,realtime); ids=sorted(catalog['products']); sources={}; baskets=set()
+    x=available(x,cutoff,realtime); ids=sorted(catalog['products']); sources={}; baskets=set(); imputations={}
     prior=str(pd.Period(month,freq='M')-1)
     def price(m,w):
         g=x[x.release_month.eq(m)&x.window.eq(w)]
-        if g.empty: raise ValueError(f'QA: unavailable source release {m}:{w}')
+        if g.empty:
+            if impute_missing_first and m==month and w=='1-10':
+                # The October 2026 first-window NBS survey was cancelled.
+                # Midpoint is per-product in *absolute levels*, never in percentage changes.
+                # Only the requested target window may be imputed; source inputs stay immutable.
+                left=price(prior,'21-end')
+                right=price(month,'11-20')
+                midpoint=(left+right)/2.0
+                matched=int(midpoint.notna().sum())
+                if not matched:
+                    raise ValueError('QA: no matched products for midpoint imputation')
+                imputations[f'{month}:1-10']=dict(
+                    method='arithmetic_midpoint_absolute_price',
+                    left=f'{prior}:21-end',right=f'{month}:11-20',
+                    matched_products=matched,unmatched_products=int(midpoint.isna().sum()),
+                    note='Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release.')
+                return midpoint
+            raise ValueError(f'QA: unavailable source release {m}:{w}')
         expected=basket_at(catalog,g.period_start.iloc[0])
         if set(g.product_id)!=set(expected['active_products']) or g.product_id.duplicated().any():
             raise ValueError(f'QA: unexpected missing product or unit/spec change {m}:{w}')
@@ -133,6 +150,7 @@ def feature_row(x,catalog,month,variant,cutoff,realtime=True):
         values={k:None if pd.isna(v) else float(v) for k,v in changes.items()},
         structural_missing=[k for k,v in changes.items() if pd.isna(v)],
         transformation='100*log(current_level/previous_level)')
+    if imputations: meta['imputations']=imputations
     meta['feature_hash']=digest(meta);meta['as_of']=str(pd.Timestamp(cutoff))
     return changes,meta
 
