@@ -28,6 +28,42 @@ prices to approximate the first survey date, then use 11–20 for the second.
 Their different feature construction explains why similarly named estimators
 can produce different forecasts. See the [benchmark contract](MODEL_CONTRACT.md).
 
+## October 2026 holiday-window reconstruction
+
+The NBS cancelled its October 1–10 circulation-price release during Golden Week.
+The October 11–20 release was published on 24 October and compared prices
+directly with September 21–30. All reported October 11–20 product prices
+remain untouched, and the **20th-to-20th** features use only genuine
+October and September 11–20 prices.
+
+For any model needing the absent October 1–10 level, the specifically opted-in
+October 2026 scenario uses, separately for each product with matched units/specs:
+
+```text
+estimated October 1–10 price =
+    (observed September 21–30 price + observed October 11–20 price) / 2
+```
+
+This is an arithmetic midpoint **of absolute prices**, not an average
+of published percentage changes or of PPI predictions. The usual log-price
+transformations, comparisons, and saved estimators are then applied.
+Products without both boundary observations remain structurally missing.
+No synthetic NBS source release is inserted into raw price history.
+The price-level reconstruction is confined to the current inference feature
+row and is included in its immutable feature hash, status, and provenance.
+Historical pseudo-real-time validation uses observed windows only.
+
+Because the October 11–20 release is an input, forecasts for the
+**Early month**, **Early + carry-in**, **Two-survey**, and reconstructed
+survey-aligned benchmark models are **later-vintage imputed scenarios**,
+not actual early-month forecasts. Keep them distinct from genuinely observed
+20th-to-20th estimates and from retrospectively evaluated models.
+The override is explicit in `config/holiday_imputation.json`; no future
+months are imputed unless separately authorized.
+
+Official source:
+https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html
+
 ## Models
 
 | Family | Role |
