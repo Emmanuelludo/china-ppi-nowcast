@@ -21,11 +21,15 @@ def run(root,bundle,month,as_of):
         raise ValueError('target actual already public; prospective inference prohibited')
     if pd.Timestamp(manifest['training_actual_cutoff'])>cutoff: raise ValueError('model training used later target releases')
     x=canonicalize(pd.read_csv(root/'data/processed/nbs_ten_day_observations.csv.gz'))
+    policy_path=root/'config/holiday_imputation.json'
+    policy=json.loads(policy_path.read_text()) if policy_path.exists() else {}
+    # Explicitly opt in by month. Historical training and other months remain unchanged.
+    midpoint_first=month in policy.get('midpoint_first_windows',[])
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
     outputs=[];pending=[]
     from ..model_policy import is_active
     for variant in VARIANTS:
-        try:features,meta=feature_row(x,catalog,month,variant,cutoff,True)
+        try:features,meta=feature_row(x,catalog,month,variant,cutoff,True,impute_missing_first=midpoint_first)
         except ValueError as e:
             if 'unavailable source release' not in str(e): raise
             pending.append(dict(variant=variant,reason=str(e)));continue
@@ -52,7 +56,8 @@ def run(root,bundle,month,as_of):
                 implied_yoy=None,implied_yoy_status='requires verified official index path',
                 data_cutoff=max(s['published_at'] for sources in meta['sources'].values() for s in sources),
                 hyperparameters=candidate['hyperparameters'],training_end=candidate['training_end'],
-                git_commit=commit,status='frozen_pre_release_candidate',
+                git_commit=commit,status=('frozen_pre_release_imputed_candidate' if meta.get('imputations') else 'frozen_pre_release_candidate'),
+                imputations=meta.get('imputations',{}),
                 unseen_training_features=[c for c in X if c not in model.columns_ and X[c].notna().any()])
             attr=model.attribution(X)
             if attr is not None:

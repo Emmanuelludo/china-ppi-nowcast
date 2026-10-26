@@ -68,6 +68,35 @@ class ProductTests(unittest.TestCase):
         _,m=feature_row(late,self.c,'2026-01','twentieth','2026-01-25T00:00:00Z',False)
         self.assertEqual(m['realtime_status'],'pseudo_real_time')
 
+    def test_cancelled_first_window_midpoint_is_per_product_and_audited(self):
+        raw=fixture()
+        raw=raw[~(raw.release_month.eq('2026-02') & raw.window.eq('1-10'))]
+        x=canonicalize(raw)
+        catalog=catalog_from(x)
+        cutoff='2026-02-25T00:00:00Z'
+        pid=identity('商品0(规格A)','吨')
+        key='price__'+pid
+        expected=(140.+131.)/2
+        # Midpoint is between the prior third and current second ten-day
+        # *price levels*, not between the reported percentage changes.
+        with self.assertRaisesRegex(ValueError,'unavailable source release'):
+            feature_row(x,catalog,'2026-02','early',cutoff)
+        early,metadata=feature_row(x,catalog,'2026-02','early',cutoff,impute_missing_first=True)
+        self.assertAlmostEqual(early[key],100*np.log(expected/110.))
+        self.assertEqual(set(metadata['sources']),{'2026-01:21-end','2026-02:11-20','2026-01:1-10'})
+        self.assertEqual(metadata['imputations']['2026-02:1-10']['matched_products'],50)
+        self.assertEqual(metadata['imputations']['2026-02:1-10']['method'],'arithmetic_midpoint_absolute_price')
+        final,meta=feature_row(x,catalog,'2026-02','final',cutoff,impute_missing_first=True)
+        self.assertAlmostEqual(final[key],100*np.log(((expected+131.)/2)/115.))
+        carry,_=feature_row(x,catalog,'2026-02','early_carry',cutoff,impute_missing_first=True)
+        self.assertAlmostEqual(carry['carry__'+pid],100*np.log(expected/140.))
+        direct,raw_meta=feature_row(x,catalog,'2026-02','twentieth',cutoff,impute_missing_first=True)
+        self.assertAlmostEqual(direct[key],100*np.log(131./120.))
+        self.assertNotIn('imputations',raw_meta)
+        # No extrapolation using future data before the 11-20 publication.
+        with self.assertRaisesRegex(ValueError,'unavailable source release'):
+            feature_row(x,catalog,'2026-02','early','2026-02-20T00:00:00Z',impute_missing_first=True)
+
     def test_fold_local_preprocessing_and_order(self):
         X=pd.DataFrame({'a':[1.,2.,3.,4.,5.,6.],'future':[np.nan]*6,'partial':[np.nan,2.,3.,4.,5.,6.]})
         y=pd.Series([.1,.2,.3,.4,.5,.6])

@@ -58,7 +58,7 @@ def build_data(root,manifest,requested_month,as_of):
   result.append(dict(month=r['target_month'],month_label=month_name(r['target_month']),timing=r['variant'],panel=r['panel'],
    model=r['model'],label=model_name(r['model']),prediction=r['prediction_mom'],frozen_at=r['as_of'],
    model_version=r['model_version'],explanation=EXPLANATIONS[r['model']],products=attr,groups=groups,metrics=forecast_metrics[(r['variant'],r['panel'],r['model'])],
-   forecast_id=r['forecast_id'],data_cutoff=r['data_cutoff'],status=r['status'],sources=contract['sources'],
+   forecast_id=r['forecast_id'],data_cutoff=r['data_cutoff'],status=r['status'],sources=contract['sources'],imputations=contract.get('imputations',{}),
    training_start=fitted['training_start'],training_end=fitted['training_end'],training_rows=fitted['training_rows']))
  months=sorted(set(r['month'] for r in result),reverse=True)
  actuals=[]
@@ -113,6 +113,8 @@ def write_dashboard(root,manifest,requested_month,as_of):
   'Current-month forecasts are available below.' if data['current_available'] else '⏳ **Awaiting the current month’s price releases. No current-month projection has been generated.**', '',
   f"Report refreshed: {as_of.split('T')[0]}. Saved forecast timestamps are preserved.",'']
  if live_url:lines[2:2]=[f'**[Open the live PPI dashboard]({live_url})** — model forecasts, accuracy and source dates.','']
+ if any(r.get('imputations') for r in data['forecasts'] if r['month']==latest):
+  lines += ['**October holiday imputation:** the cancelled 1–10 NBS period is estimated at the per-product arithmetic midpoint of September 21–30 and October 11–20. Results labelled Early month, Early + carry-in, and Two-survey period are reconstructed scenarios produced only after October 11–20 was published—not genuinely early-month forecasts. The 20th-to-20th estimates use observed prices only.','']
  if selected:
   values=sorted(r['prediction'] for r in selected);n=len(values);median=(values[(n-1)//2]+values[n//2])/2
   lines += [f"## Latest available forecasts: {month_name(latest)}",'',

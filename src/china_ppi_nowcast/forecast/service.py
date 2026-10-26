@@ -59,7 +59,12 @@ def create_forecast(
     if not observations_path.exists():
         raise FileNotFoundError("no processed NBS observations are available")
     observations = pd.read_csv(observations_path)
-    vintage = build_feature_vintage(observations, target_month, as_of, carry_weight)
+    imputation_path = root / "config" / "holiday_imputation.json"
+    imputation_policy = json.loads(imputation_path.read_text()) if imputation_path.exists() else {}
+    allow_midpoint = target_month in imputation_policy.get("midpoint_first_windows", [])
+    vintage = build_feature_vintage(
+        observations, target_month, as_of, carry_weight, impute_missing_first=allow_midpoint
+    )
     variant_dir = bundle_dir / str(vintage.manifest["vintage"])
     if not (variant_dir / "manifest.json").exists():
         variant_dir = bundle_dir
@@ -88,9 +93,14 @@ def create_forecast(
                 "data_cutoff": vintage.manifest["as_of"],
                 "feature_hash": vintage.manifest["feature_hash"],
                 "code_commit": _commit_sha(root),
-                "status": "frozen_pre_release",
+                "status": "frozen_pre_release_imputed" if vintage.manifest.get("imputations") else "frozen_pre_release",
                 "created_at": now,
-                "notes": "Generated from immutable prospective source snapshots.",
+                "notes": (
+                    "Scenario: cancelled first-window NBS prices replaced with the per-product midpoint "
+                    "of prior 21-end and current 11-20 observed levels, only after the latter release."
+                    if vintage.manifest.get("imputations")
+                    else "Generated from immutable prospective source snapshots."
+                ),
             }
         )
     added = append_forecasts(root / "data" / "registry" / "forecasts.csv", rows)
@@ -119,6 +129,7 @@ def _write_nowcast_report(root: Path, manifest: dict[str, object], rows: list[di
         f"- Target month: **{manifest['target_month']}**",
         f"- Frozen cutoff: **{manifest['as_of']}**",
         f"- Information set: **{manifest['vintage']}**",
+        f"- First-window imputation: **{'midpoint reconstructed from observed boundaries (not an early-vintage result)' if manifest.get('imputations') else 'none'}**",
         f"- Comparable products: **{manifest['n_products']}**",
         f"- Model median: **{np.median(estimates):+.3f}% MoM**",
         f"- Model range: **{estimates.min():+.3f}% to {estimates.max():+.3f}% MoM**",
