@@ -119,6 +119,7 @@ def build_feature_vintage(
     as_of: str | datetime,
     carry_weight: float = 0.5,
     availability_basis: str = "strict",
+    impute_missing_first: bool = False,
 ) -> FeatureVintage:
     if not 0 <= carry_weight <= 1:
         raise ValueError("carry_weight must lie in [0, 1]")
@@ -127,6 +128,13 @@ def build_feature_vintage(
     available = select_available_observations(observations, cutoff, availability_basis)
     windows = set(zip(available.get("release_month", []), available.get("window", [])))
     vintage = target_vintage(target_month, windows)
+    prior = str(month - 1)
+    can_impute = (impute_missing_first
+                  and (target_month, Window.FIRST.value) not in windows
+                  and (prior, Window.THIRD.value) in windows
+                  and (target_month, Window.SECOND.value) in windows)
+    if vintage == "not_ready" and can_impute:
+        vintage = "final"  # Late, reconstructed first survey; never a genuine early vintage.
     if vintage == "not_ready":
         raise AwaitingSourceRelease("target month lacks prior 21-end carry and current 1-10 release")
     relevant_windows = {
@@ -141,6 +149,20 @@ def build_feature_vintage(
         pd.Series(list(zip(available["release_month"], available["window"])), index=available.index).isin(relevant_windows)
     ].copy()
     table = _log_price_table(available)
+    imputations = {}
+    if can_impute:
+        left = np.exp(_column(table, prior, Window.THIRD))
+        right = np.exp(_column(table, target_month, Window.SECOND))
+        midpoint = (left + right) / 2.0
+        if not midpoint.notna().any():
+            raise AwaitingSourceRelease("no matching product prices for midpoint imputation")
+        table[(target_month, Window.FIRST.value)] = np.log(midpoint)
+        imputations[f"{target_month}:1-10"] = {
+            "method": "arithmetic_midpoint_absolute_price",
+            "left": f"{prior}:21-end", "right": f"{target_month}:11-20",
+            "matched_products": int(midpoint.notna().sum()),
+            "note": "Reconstructed scenario with later 11-20 prices, not a genuine early vintage",
+        }
     current_level, current_components = _month_log_level(
         table, month, carry_weight, allow_first_only=vintage == "early"
     )
@@ -198,7 +220,10 @@ def build_feature_vintage(
         .astype(str)
         .to_dict(orient="records")
     )
-    feature_hash = stable_hash({"schema": "survey-plus-twentieth-v2", "target_month": target_month, "vintage": vintage, "settings": {"carry_weight": carry_weight}, "sources": source_vintages})
+    hash_input = {"schema": "survey-plus-twentieth-v2", "target_month": target_month, "vintage": vintage, "settings": {"carry_weight": carry_weight}, "sources": source_vintages}
+    if imputations:
+        hash_input["imputations"] = imputations
+    feature_hash = stable_hash(hash_input)
     features["feature_hash"] = feature_hash
     manifest = {
         "target_month": target_month,
@@ -214,10 +239,12 @@ def build_feature_vintage(
         "n_products": int(valid.size),
         "n_twentieth_to_twentieth_products": int(twentieth_valid.size),
         "availability_basis": availability_basis,
-        "realtime_status": "prospective" if availability_basis == "strict" else "pseudo_real_time",
+        "realtime_status": ("prospective_imputed" if imputations else "prospective") if availability_basis == "strict" else "pseudo_real_time",
         "historical_snapshot_caveat": (
             None if availability_basis == "strict"
             else "Publication-time cutoff applied to pages retrieved later; revision-vintage correctness is not claimed."
         ),
     }
+    if imputations:
+        manifest["imputations"] = imputations
     return FeatureVintage(pd.DataFrame([features]), product, manifest)
