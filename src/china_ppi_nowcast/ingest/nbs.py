@@ -329,6 +329,17 @@ def ingest_nbs(
 ) -> dict[str, object]:
     client = client or NBSClient()
     links = client.discover(index_url, pages, workers=workers)
+    # NBS changed its index routing during Golden Week. Do not silently skip
+    # a known, officially published release if it falls outside index discovery.
+    policy_path = root / "config" / "holiday_imputation.json"
+    if policy_path.exists():
+        policy = json.loads(policy_path.read_text(encoding="utf-8"))
+        source = policy.get("source")
+        if source and "2026-10" in policy.get("midpoint_first_windows", []):
+            links.append(ReleaseLink(
+                title="2026年10月中旬流通领域重要生产资料市场价格变动情况",
+                url=source, kind="ten_day"))
+    links = list({link.url: link for link in links}.values())
     return _ingest_links(root, links, client, workers, skip_known_urls=False)
 
 
