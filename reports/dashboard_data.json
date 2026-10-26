@@ -1,15 +1,19 @@
 {
   "requested_month": "2026-10",
   "requested_label": "October 2026",
-  "refreshed": "2026-10-13T17:43:59.994810+08:00",
-  "latest_month": "2026-09",
+  "refreshed": "2026-10-26T17:14:53.434728+08:00",
+  "latest_month": "2026-10",
   "months": [
+    {
+      "value": "2026-10",
+      "label": "October 2026"
+    },
     {
       "value": "2026-09",
       "label": "September 2026"
     }
   ],
-  "current_available": false,
+  "current_available": true,
   "timings": {
     "twentieth": "20th-to-20th",
     "final": "Two-survey period",
@@ -132,6 +136,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 143
@@ -261,6 +266,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 131
@@ -308,6 +314,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -355,6 +362,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -402,6 +410,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -515,6 +524,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -636,6 +646,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 140
@@ -765,6 +776,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 131
@@ -878,6 +890,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -1007,6 +1020,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 131
@@ -1120,6 +1134,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -1241,6 +1256,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 140
@@ -1296,6 +1312,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 140
@@ -1417,6 +1434,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 140
@@ -1530,6 +1548,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 143
@@ -1643,6 +1662,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 143
@@ -1690,6 +1710,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 143
@@ -1803,6 +1824,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -1916,6 +1938,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 143
@@ -2029,6 +2052,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -2158,6 +2182,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 131
@@ -2205,6 +2230,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -2318,6 +2344,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -2431,6 +2458,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -2544,6 +2572,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -2665,6 +2694,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 140
@@ -2712,6 +2742,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -2825,6 +2856,7 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 139
@@ -2888,9 +2920,3083 @@
           }
         ]
       },
+      "imputations": {},
       "training_start": "2014-02",
       "training_end": "2026-08",
       "training_rows": 131
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "histgb",
+      "label": "HistGradientBoosting",
+      "prediction": 0.11154421793753669,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
+      "products": [
+        {
+          "label": "Shanxi blended coal (5000 kcal/kg)",
+          "value": 0.08106875709589113
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.07376509964837255
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.07220001477768952
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.0670896104863639
+        },
+        {
+          "label": "Medium steel plate (20mm,Q235)",
+          "value": -0.05793276881207376
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": -0.05741101216812787
+        }
+      ],
+      "groups": [
+        {
+          "label": "Coal and coke",
+          "value": 0.15994415035528256
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.09445330683772728
+        },
+        {
+          "label": "Chemicals",
+          "value": -0.08364995545131225
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.049281823592074114
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.03752580703160854
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.03452704798505088
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.025873784012724544
+        },
+        {
+          "label": "Forest products",
+          "value": 0.002484329701758125
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0011650812668846865
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.0005151191016629368
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.3491513687788056,
+        "rmse": 0.46409969045340593,
+        "median_absolute_error": 0.27294788805097336,
+        "bias": -0.06672968246658958,
+        "maximum_absolute_error": 1.5286359714069535,
+        "directional_accuracy": 0.6956521739130435
+      },
+      "forecast_id": "589a4481983bf01518c3cd1f39920f1c424fe861373f30407782f7535d74c36b",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "stable",
+      "model": "lightgbm",
+      "label": "LightGBM",
+      "prediction": 0.18749427147338854,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.15669201006306685
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.10583874690868596
+        },
+        {
+          "label": "Ordinary Portland cement (P.O42.5bulk)",
+          "value": 0.05932460718225358
+        },
+        {
+          "label": "Liquefied natural gas (LNG)",
+          "value": 0.058444437984474365
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": -0.049160783968589805
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.049001904930715545
+        }
+      ],
+      "groups": [
+        {
+          "label": "Agricultural inputs",
+          "value": 0.15669201006306685
+        },
+        {
+          "label": "Chemicals",
+          "value": -0.10755809895788032
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.08300368030816871
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.08008406948129891
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.05932460718225358
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.04246745381366481
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.022265556910485713
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.020505985889818206
+        },
+        {
+          "label": "Forest products",
+          "value": 0.0
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.32799480833641836,
+        "rmse": 0.43605166795923767,
+        "median_absolute_error": 0.2739590073749598,
+        "bias": -0.07804045602102191,
+        "maximum_absolute_error": 1.4745373294724384,
+        "directional_accuracy": 0.6956521739130435
+      },
+      "forecast_id": "03d6f4aa07a3f614eff12561c16d7d96d5590f3e9e0edaa3a0f833644e750c0e",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early",
+      "panel": "union",
+      "model": "xgboost",
+      "label": "XGBoost",
+      "prediction": 0.5764771103858948,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.15202577412128448
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.1449967324733734
+        },
+        {
+          "label": "PVC (SG5)",
+          "value": 0.0977318063378334
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.07905732840299606
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.06823381036520004
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.05837295576930046
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": 0.30712228489574045
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.14582911634352058
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.12585862862761132
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.11094089859398082
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.0609480245038867
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.038531821221113205
+        },
+        {
+          "label": "Building materials",
+          "value": 0.016396119841374457
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.014839715557172894
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.013710731640458107
+        },
+        {
+          "label": "Forest products",
+          "value": -0.0031746309250593185
+        }
+      ],
+      "metrics": {
+        "n": 119,
+        "mae": 0.33181326791738014,
+        "rmse": 0.4412015573839154,
+        "median_absolute_error": 0.24853243231773375,
+        "bias": -0.105928604099743,
+        "maximum_absolute_error": 1.5125210881233215,
+        "directional_accuracy": 0.7226890756302521
+      },
+      "forecast_id": "6ccdb07857b885ef6a279057e02cbcd13f4496e0b04b1188cddeebeb5f408372",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 143
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early_carry",
+      "panel": "union",
+      "model": "xgboost",
+      "label": "XGBoost",
+      "prediction": 0.44247326254844666,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.16809269785881042
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.07747862488031387
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.07457667589187622
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.06994099169969559
+        },
+        {
+          "label": "Steel angle (5#)",
+          "value": -0.045557331293821335
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.042785827070474625
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": 0.25404516147682443
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.15429494777345099
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.09113666995835956
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.08018328383332118
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.03507534321397543
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.017570180352777243
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.017236862593563274
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.010991026763804257
+        },
+        {
+          "label": "Forest products",
+          "value": -0.005226366920396686
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0027182832127436996
+        }
+      ],
+      "metrics": {
+        "n": 116,
+        "mae": 0.33983959511709233,
+        "rmse": 0.454553902307626,
+        "median_absolute_error": 0.26313911788165567,
+        "bias": -0.11848237747246207,
+        "maximum_absolute_error": 1.5904871225357056,
+        "directional_accuracy": 0.6982758620689655
+      },
+      "forecast_id": "532138aa11714d959c33a9d2df428b7c4abf39772874e308d659240f77b61b92",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 140
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "final",
+      "panel": "union",
+      "model": "histgb",
+      "label": "HistGradientBoosting",
+      "prediction": 0.5953209577879188,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.2668199476880902
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.16993241507355253
+        },
+        {
+          "label": "PVC (SG5)",
+          "value": 0.07423154371204593
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.05880238011691589
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.05542993623472208
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.05048371350321385
+        }
+      ],
+      "groups": [
+        {
+          "label": "Agricultural inputs",
+          "value": 0.23613691551989785
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.22960517068808226
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.1101668162174265
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.09490834407041294
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.08692253480666122
+        },
+        {
+          "label": "Building materials",
+          "value": 0.014173125024791853
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.013360276041843946
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.00946042760229063
+        },
+        {
+          "label": "Forest products",
+          "value": 0.006811445606972612
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.005014785667368725
+        }
+      ],
+      "metrics": {
+        "n": 107,
+        "mae": 0.3276569521866327,
+        "rmse": 0.43122379501203795,
+        "median_absolute_error": 0.2517578804528285,
+        "bias": -0.051837370047124944,
+        "maximum_absolute_error": 1.5029886928801641,
+        "directional_accuracy": 0.6261682242990654
+      },
+      "forecast_id": "303b796fb28944c96a58a61d1878212417246f6f41cf0332e9b8b1f4a0c73f41",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 131
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "catboost",
+      "label": "CatBoost",
+      "prediction": 0.09563927913504901,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.08936848887485531
+        },
+        {
+          "label": "Polypropylene (raffia grade)",
+          "value": 0.05986705015795801
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.05380121699594775
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": -0.04248199173182522
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.03389712965650919
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.025889527162247766
+        }
+      ],
+      "groups": [
+        {
+          "label": "Agricultural inputs",
+          "value": 0.06664529229548205
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.051618868055441226
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.037430258341581854
+        },
+        {
+          "label": "Coal and coke",
+          "value": -0.022581259375952727
+        },
+        {
+          "label": "Chemicals",
+          "value": -0.022056491923467928
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.017784765151249785
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.006878126927364475
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.006123378957615977
+        },
+        {
+          "label": "Forest products",
+          "value": 0.003725268017270003
+        },
+        {
+          "label": "Building materials",
+          "value": -0.0003474754116600155
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.34291850619448727,
+        "rmse": 0.4617653045409446,
+        "median_absolute_error": 0.26449915052393425,
+        "bias": -0.09652551941382286,
+        "maximum_absolute_error": 1.688142206511304,
+        "directional_accuracy": 0.6956521739130435
+      },
+      "forecast_id": "d56516ae59a3b7d80906f07e144598d95dd6353588d213137931825639fed784",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "final",
+      "panel": "union",
+      "model": "ridge",
+      "label": "Product ridge",
+      "prediction": 0.2635122773633771,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 107,
+        "mae": 0.2459545344493116,
+        "rmse": 0.3282662935715774,
+        "median_absolute_error": 0.18551268463922102,
+        "bias": -0.03828303762395699,
+        "maximum_absolute_error": 0.9674409803599248,
+        "directional_accuracy": 0.7476635514018691
+      },
+      "forecast_id": "022276bf5ead8ddd6d8b2b47810420ffd1a005271c05a8c54b46a269635fa6cc",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 131
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early_carry",
+      "panel": "union",
+      "model": "histgb",
+      "label": "HistGradientBoosting",
+      "prediction": 0.46125276904566487,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.13138700489018934
+        },
+        {
+          "label": "Gasoline (95#China VI)",
+          "value": 0.09905220480477067
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.0760286446731398
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.06233332575528642
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.06071171741013445
+        },
+        {
+          "label": "Standard blended coal (4500 kcal/kg)",
+          "value": 0.05286831892190318
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.22836854086164377
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.19814090440217838
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.1262934473101389
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.08857955797456506
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.025437478408985508
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.02498793422395436
+        },
+        {
+          "label": "Forest products",
+          "value": 0.023680774321242052
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.014855555108251588
+        },
+        {
+          "label": "Building materials",
+          "value": 0.00961468408511789
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.004171788757050186
+        }
+      ],
+      "metrics": {
+        "n": 116,
+        "mae": 0.34822204797637657,
+        "rmse": 0.4488173481355114,
+        "median_absolute_error": 0.28825768900744053,
+        "bias": -0.09828824386376657,
+        "maximum_absolute_error": 1.5559234618534679,
+        "directional_accuracy": 0.6896551724137931
+      },
+      "forecast_id": "12428d3986095b4a4b24104271a28164dfc9e10ac8868ff8ca52a7e81304d19a",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 140
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early",
+      "panel": "union",
+      "model": "ridge",
+      "label": "Product ridge",
+      "prediction": 0.3345680530210894,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 119,
+        "mae": 0.2534204647305919,
+        "rmse": 0.3362702350161319,
+        "median_absolute_error": 0.1860176646212477,
+        "bias": -0.08290875692373857,
+        "maximum_absolute_error": 0.9869218925410199,
+        "directional_accuracy": 0.7394957983193278
+      },
+      "forecast_id": "c3d2d82cb6a2e5d24069f05745de361b75aef1e132600cab8dafc71a92485e64",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 143
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early",
+      "panel": "union",
+      "model": "lightgbm",
+      "label": "LightGBM",
+      "prediction": 0.6017808695190524,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.17385970594649647
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.15458105151494836
+        },
+        {
+          "label": "PVC (SG5)",
+          "value": 0.08558617590100495
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.08424698942264935
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.06571138822002014
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.058645562535668896
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": 0.30652234788394594
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.18226755928498056
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.11486557155962429
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.0689310335593274
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.046023396761951156
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.04535538468805188
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.04273471180443194
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.015133446967840563
+        },
+        {
+          "label": "Building materials",
+          "value": 0.007190916531840461
+        },
+        {
+          "label": "Forest products",
+          "value": -0.002859289072499053
+        }
+      ],
+      "metrics": {
+        "n": 119,
+        "mae": 0.32708430467036775,
+        "rmse": 0.43743901291601794,
+        "median_absolute_error": 0.25132045115065094,
+        "bias": -0.10051801427839767,
+        "maximum_absolute_error": 1.6317638425220164,
+        "directional_accuracy": 0.7142857142857143
+      },
+      "forecast_id": "509489ebc66d3352402a67b9c01fe48464fb3c59fa2c256db0297bddadac70a5",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 143
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "ridge",
+      "label": "Product ridge",
+      "prediction": 0.2707944530504705,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 115,
+        "mae": 0.2762470982336666,
+        "rmse": 0.36644558992577797,
+        "median_absolute_error": 0.20195647540116368,
+        "bias": -0.05030056976589508,
+        "maximum_absolute_error": 1.320796213671445,
+        "directional_accuracy": 0.7304347826086957
+      },
+      "forecast_id": "161625ff3433cc43725c542f5102090a62583a7090beaa147c3be0fa814ba1a2",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "stable",
+      "model": "ridge",
+      "label": "Product ridge",
+      "prediction": 0.27999960965980364,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 115,
+        "mae": 0.28203630139208125,
+        "rmse": 0.37108679755460106,
+        "median_absolute_error": 0.20603955428760717,
+        "bias": -0.05329203684315111,
+        "maximum_absolute_error": 1.410076658973471,
+        "directional_accuracy": 0.7391304347826086
+      },
+      "forecast_id": "e938b3db49255f1a5e51c0ea0f895a269881760a5d7cb212d18395e0118b0be3",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "stable",
+      "model": "histgb",
+      "label": "HistGradientBoosting",
+      "prediction": -0.016818172364274693,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
+      "products": [
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.12135208956109897
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.11182177096374174
+        },
+        {
+          "label": "Medium steel plate (20mm,Q235)",
+          "value": -0.07656464129009609
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": -0.05703761449175201
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.05398027749446511
+        },
+        {
+          "label": "Shanxi premium blended coal (5500 kcal/kg)",
+          "value": 0.04495037660743031
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": -0.14943710235909696
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.11182177096374174
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.10428548361265724
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.054935894929018084
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.04495037660743031
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.044649360601426866
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.03904473013763605
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.009107617435326341
+        },
+        {
+          "label": "Forest products",
+          "value": 0.0
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.33510659077982946,
+        "rmse": 0.44332028549829205,
+        "median_absolute_error": 0.28034289901647935,
+        "bias": -0.0884031105179841,
+        "maximum_absolute_error": 1.4612488784891808,
+        "directional_accuracy": 0.7130434782608696
+      },
+      "forecast_id": "c5f56b31473efb07fc1afcce9a1426080d269212d42e41fa1332fa397bde923e",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "lightgbm",
+      "label": "LightGBM",
+      "prediction": 0.2324213764574922,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.11938421229939804
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.07222467916802078
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.06608558754212566
+        },
+        {
+          "label": "Standard blended coal (4500 kcal/kg)",
+          "value": 0.05338897133637142
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": -0.05003480554930694
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.046838129992439824
+        }
+      ],
+      "groups": [
+        {
+          "label": "Coal and coke",
+          "value": 0.1521190601584075
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.09441973203505771
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.0838687236525906
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.08298730001961549
+        },
+        {
+          "label": "Chemicals",
+          "value": -0.06951327005559677
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.03183122512599858
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.021359366734250367
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.0124478116454076
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0032098416578813377
+        },
+        {
+          "label": "Forest products",
+          "value": -0.00041543686927401663
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.3390857858759585,
+        "rmse": 0.45373333316096076,
+        "median_absolute_error": 0.268143687220295,
+        "bias": -0.06565802679640163,
+        "maximum_absolute_error": 1.5529497279150655,
+        "directional_accuracy": 0.6869565217391305
+      },
+      "forecast_id": "1e037ef6ff4bd8bd98ea5e3ac913b22ed8b0967f3300f864f744fb374047a281",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early_carry",
+      "panel": "union",
+      "model": "lightgbm",
+      "label": "LightGBM",
+      "prediction": 0.593495069664491,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.16452127160531804
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.10693472086071716
+        },
+        {
+          "label": "Gasoline (95#China VI)",
+          "value": 0.1063479395693512
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.08901997842917199
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.06734524299830158
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.05096034416200309
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.2738251111263135
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.2485456129363454
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.09453179212618809
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.09022538008724866
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.05783360738014608
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.03405670845303907
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.021973111115856925
+        },
+        {
+          "label": "Building materials",
+          "value": 0.006651123298734992
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.005749293933455908
+        },
+        {
+          "label": "Forest products",
+          "value": 0.001142458098626212
+        }
+      ],
+      "metrics": {
+        "n": 116,
+        "mae": 0.3341587176799359,
+        "rmse": 0.44620793105750295,
+        "median_absolute_error": 0.2475470516938985,
+        "bias": -0.1115723587967435,
+        "maximum_absolute_error": 1.616510410822345,
+        "directional_accuracy": 0.7155172413793104
+      },
+      "forecast_id": "6c0fb853d082b7a67019c848f641836568fc1cf8cd568b63cf9acdb4a9f18689",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 140
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "sector_first",
+      "label": "Sector-first regression",
+      "prediction": 0.3453839364204222,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Groups product changes into sector signals before fitting a regularized regression.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 115,
+        "mae": 0.2548364015977604,
+        "rmse": 0.3606176822575169,
+        "median_absolute_error": 0.16712125992574828,
+        "bias": -0.0005046663638630841,
+        "maximum_absolute_error": 1.7993793085407452,
+        "directional_accuracy": 0.7652173913043478
+      },
+      "forecast_id": "2f039cd54f4c2d973559bc477549f675bc9465ae7f3b801dfe68ffa90204fc27",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "final",
+      "panel": "union",
+      "model": "catboost",
+      "label": "CatBoost",
+      "prediction": 0.20601914869920807,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.15957009119750257
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.09034922314766582
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.04008254922447177
+        },
+        {
+          "label": "Hot-rolled steel sheet (3mm,Q235)",
+          "value": -0.03355751025455472
+        },
+        {
+          "label": "Steel angle (5#)",
+          "value": -0.03145641020821282
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.027777782757203696
+        }
+      ],
+      "groups": [
+        {
+          "label": "Agricultural inputs",
+          "value": 0.1513015451902183
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.12207499601118811
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.09359518497656863
+        },
+        {
+          "label": "Coal and coke",
+          "value": -0.03313967014561258
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.017473196839794283
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.01259534445887756
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.00985076076840627
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.006904350838091706
+        },
+        {
+          "label": "Forest products",
+          "value": -0.0022949874421993133
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0005663504204649276
+        }
+      ],
+      "metrics": {
+        "n": 107,
+        "mae": 0.3262289843263096,
+        "rmse": 0.43952919432038334,
+        "median_absolute_error": 0.25586661849659487,
+        "bias": -0.07952058751772806,
+        "maximum_absolute_error": 1.5608956329402708,
+        "directional_accuracy": 0.719626168224299
+      },
+      "forecast_id": "a4475f1b2acc0975baf7cd4cbfddfab762c464a49f5f04378db9c7872d38d1ea",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 131
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early",
+      "panel": "union",
+      "model": "histgb",
+      "label": "HistGradientBoosting",
+      "prediction": 0.5435763696374538,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.16670422035156712
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.16188217745874167
+        },
+        {
+          "label": "PVC (SG5)",
+          "value": 0.13326743386060858
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.07421306478317866
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.0707860158695557
+        },
+        {
+          "label": "Compound fertilizer (potassium-sulfate-based,NPK content 45%)",
+          "value": -0.03543071355551875
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": 0.3405572909678275
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.12655366397223286
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.12184569298257572
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.111573450457358
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.045322035781015825
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.03243488883081435
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.02721836965068756
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.014457235310485962
+        },
+        {
+          "label": "Building materials",
+          "value": 0.010971824396166382
+        },
+        {
+          "label": "Forest products",
+          "value": -0.0007182188724643905
+        }
+      ],
+      "metrics": {
+        "n": 119,
+        "mae": 0.3408795876862391,
+        "rmse": 0.44889700512440694,
+        "median_absolute_error": 0.2771269879003364,
+        "bias": -0.0973408879192289,
+        "maximum_absolute_error": 1.7289349337505722,
+        "directional_accuracy": 0.680672268907563
+      },
+      "forecast_id": "02ad46bf25065161c95b1a19a17d97e262f6375a55f00e3b8ca280b4b748f338",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 143
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "direct_tracker",
+      "label": "Direct price tracker",
+      "prediction": -0.1737437590430731,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Tracks circulation-market price movements without calibration to headline PPI. This is a price index, not a PPI forecast.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 115,
+        "mae": 2.0382733011114555,
+        "rmse": 2.8049126246551817,
+        "median_absolute_error": 1.4728213367798726,
+        "bias": 0.23252238236863304,
+        "maximum_absolute_error": 11.562377570929588,
+        "directional_accuracy": 0.782608695652174
+      },
+      "forecast_id": "b093b56d7906fb315ec8ee8e7622fe63666a719d44bbe1f6aeb0f888cdba7480",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "final",
+      "panel": "union",
+      "model": "lightgbm",
+      "label": "LightGBM",
+      "prediction": 0.47185750285109673,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.18687317118834385
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.1485831544392387
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.10551893092116207
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.0535472082532352
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.046493031246356106
+        },
+        {
+          "label": "Shanxi blended coal (5000 kcal/kg)",
+          "value": 0.038982183962041346
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.25756841865080915
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.1549779891903843
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.10040436199103457
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.09286543525777735
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.018869131918046338
+        },
+        {
+          "label": "Building materials",
+          "value": 0.011840550718195033
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.010314315626316484
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.002675105716849705
+        },
+        {
+          "label": "Forest products",
+          "value": -0.002231491137752644
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.00021107067156894439
+        }
+      ],
+      "metrics": {
+        "n": 107,
+        "mae": 0.3293763267515431,
+        "rmse": 0.4334372502779209,
+        "median_absolute_error": 0.2542499606709907,
+        "bias": -0.07606044238422593,
+        "maximum_absolute_error": 1.6585787755567214,
+        "directional_accuracy": 0.6728971962616822
+      },
+      "forecast_id": "a9e6d8993a53df134a897e77a9c0d7c51e1b25db07442436b0a0cd890995a45b",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 131
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "random_forest",
+      "label": "Random forest",
+      "prediction": 0.13659685011388528,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Averages many decision trees to test a different nonlinear modelling assumption.",
+      "products": [
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": -0.059346165021818144
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.04847290934915997
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.04492224911110672
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": -0.040856444321963455
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.03052976930215752
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.02746264982179024
+        }
+      ],
+      "groups": [
+        {
+          "label": "Ferrous metals",
+          "value": -0.07931613938372598
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.05690774810029855
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.04398386153926547
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.0398638386779915
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.02188410095018245
+        },
+        {
+          "label": "Building materials",
+          "value": 0.013264612496845364
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.008983042091455255
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.00698214437225497
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.002662523625507583
+        },
+        {
+          "label": "Forest products",
+          "value": 0.0011025975101737898
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.356512995716237,
+        "rmse": 0.4748860252084498,
+        "median_absolute_error": 0.2747493370860362,
+        "bias": -0.07004000666508374,
+        "maximum_absolute_error": 1.503882506699328,
+        "directional_accuracy": 0.6608695652173913
+      },
+      "forecast_id": "933b4a712fb415544e84d6cdc1f21b9103555e2a9bec90e1ca2d116c84ba618c",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "final",
+      "panel": "union",
+      "model": "xgboost",
+      "label": "XGBoost",
+      "prediction": 0.4544433355331421,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.1934705376625061
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.16711416840553284
+        },
+        {
+          "label": "Diesel (0#China VI)",
+          "value": 0.07848545908927917
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.05468085780739784
+        },
+        {
+          "label": "Shanxi blended coal (5000 kcal/kg)",
+          "value": 0.05257299542427063
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": -0.05020815134048462
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.2502149512874894
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.1695586796849966
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.12769949849462137
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.11195384641177952
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.023656783625483513
+        },
+        {
+          "label": "Chemicals",
+          "value": -0.01381127955392003
+        },
+        {
+          "label": "Building materials",
+          "value": 0.009449403500184417
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.00909851206233725
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.005348131177015603
+        },
+        {
+          "label": "Forest products",
+          "value": -0.0014528000028803945
+        }
+      ],
+      "metrics": {
+        "n": 107,
+        "mae": 0.32852687620575255,
+        "rmse": 0.43650234365137364,
+        "median_absolute_error": 0.27718148231506345,
+        "bias": -0.07480473378629675,
+        "maximum_absolute_error": 1.598769187927246,
+        "directional_accuracy": 0.6635514018691588
+      },
+      "forecast_id": "90d2195c564a57f3dbaa3b4ebd1fa5aff6c285558677c949b68d0a97ad71f35c",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 131
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early_carry",
+      "panel": "union",
+      "model": "ridge",
+      "label": "Product ridge",
+      "prediction": 0.403754366926296,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 116,
+        "mae": 0.27987246901274865,
+        "rmse": 0.37953031074182936,
+        "median_absolute_error": 0.19429326272959194,
+        "bias": -0.1123425543000137,
+        "maximum_absolute_error": 1.2403090807956036,
+        "directional_accuracy": 0.7327586206896551
+      },
+      "forecast_id": "85b271608a44a7471b360995f22d02bdeb905ccf9d17b025ae71943deed9e3a5",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 140
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early_carry",
+      "panel": "union",
+      "model": "catboost",
+      "label": "CatBoost",
+      "prediction": 0.38875051599420135,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "products": [
+        {
+          "label": "Gasoline (95#China VI)",
+          "value": 0.12301854092366328
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.1032769866165606
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.05960520573950931
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.05108201231415948
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.04699151003338246
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": 0.04584397206764546
+        }
+      ],
+      "groups": [
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.24762030193764115
+        },
+        {
+          "label": "Chemicals",
+          "value": 0.1190108842958468
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.04161736898259364
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.040946718045633476
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.016617814873820462
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.012808172975266726
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.011820519614084113
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0026865637775761596
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.0010089128261127692
+        },
+        {
+          "label": "Forest products",
+          "value": -0.0007656224633282082
+        }
+      ],
+      "metrics": {
+        "n": 116,
+        "mae": 0.3395535065142495,
+        "rmse": 0.45839870566114727,
+        "median_absolute_error": 0.24371720465588775,
+        "bias": -0.12767215367565185,
+        "maximum_absolute_error": 1.519976134104784,
+        "directional_accuracy": 0.7327586206896551
+      },
+      "forecast_id": "b22e053eae81dfb8561921e8001be5d5a7176231ad5af021b105a767b19fbb00",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 140
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "stable",
+      "model": "catboost",
+      "label": "CatBoost",
+      "prediction": 0.1697065151764234,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.13793952319352776
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.06325968275361225
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": -0.041628191383855304
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.039370757836619225
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.03931886580325227
+        },
+        {
+          "label": "Seamless steel pipe (219*6,20#)",
+          "value": -0.0331018636579004
+        }
+      ],
+      "groups": [
+        {
+          "label": "Agricultural inputs",
+          "value": 0.13793952319352776
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.07629728731789243
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.07526327700840525
+        },
+        {
+          "label": "Chemicals",
+          "value": -0.06780677095560866
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.02356476477400901
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.022380213111069122
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.02203546116989405
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": 0.005138509626901197
+        },
+        {
+          "label": "Forest products",
+          "value": 0.0
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.33314869295486277,
+        "rmse": 0.4469717619551783,
+        "median_absolute_error": 0.26035600568816597,
+        "bias": -0.08849994661477811,
+        "maximum_absolute_error": 1.5514894095872644,
+        "directional_accuracy": 0.7130434782608696
+      },
+      "forecast_id": "5fbb265f1d254c15470b3126c7c3e29a9fb9299501acb69e98b88712cabba94b",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "xgboost",
+      "label": "XGBoost",
+      "prediction": 0.2787025272846222,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.08723562955856323
+        },
+        {
+          "label": "Datong blended coal (5800 kcal/kg)",
+          "value": 0.06996793299913406
+        },
+        {
+          "label": "Shanxi blended coal (5000 kcal/kg)",
+          "value": 0.06865676492452621
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.0680699422955513
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.046867627650499344
+        },
+        {
+          "label": "Methanol (premium grade)",
+          "value": -0.043780047446489334
+        }
+      ],
+      "groups": [
+        {
+          "label": "Coal and coke",
+          "value": 0.17780430824495852
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.1125384233891964
+        },
+        {
+          "label": "Chemicals",
+          "value": -0.06250705174170434
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.05852407030761242
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.04306119226384908
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.03870777785778046
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.019124018115689978
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.01736559218261391
+        },
+        {
+          "label": "Building materials",
+          "value": 0.003987635835073888
+        },
+        {
+          "label": "Forest products",
+          "value": -0.002238080953247845
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.347994445802077,
+        "rmse": 0.4595643978100531,
+        "median_absolute_error": 0.25857651233673096,
+        "bias": -0.08457826243794482,
+        "maximum_absolute_error": 1.4880599975585938,
+        "directional_accuracy": 0.7043478260869566
+      },
+      "forecast_id": "69fc3a728bdbf3ff142c50170cbc533d7390d8a8545b38d8f89aab795469e474",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "union",
+      "model": "economic_ml_hybrid",
+      "label": "Economic / ML hybrid (NBS prices)",
+      "prediction": 0.15431917142246862,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Combines linear and boosting estimates built from NBS price signals.",
+      "products": [],
+      "groups": [],
+      "metrics": {
+        "n": 115,
+        "mae": 0.26768055434063154,
+        "rmse": 0.3656215064523467,
+        "median_absolute_error": 0.1849611159965221,
+        "bias": -0.023774312216544097,
+        "maximum_absolute_error": 1.2088049974085273,
+        "directional_accuracy": 0.7739130434782608
+      },
+      "forecast_id": "6bc99cabde8afe4d4c88be68cef0b1316df6ad2c501510765606998532db307b",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "twentieth",
+      "panel": "stable",
+      "model": "xgboost",
+      "label": "XGBoost",
+      "prediction": 0.25615453720092773,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
+      "products": [
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.15427887439727783
+        },
+        {
+          "label": "Sulfuric acid (98%)",
+          "value": -0.07572542130947113
+        },
+        {
+          "label": "Ordinary Portland cement (P.O42.5bulk)",
+          "value": 0.06648681312799454
+        },
+        {
+          "label": "Liquefied natural gas (LNG)",
+          "value": 0.06086529791355133
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.05946976691484451
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.04393511638045311
+        }
+      ],
+      "groups": [
+        {
+          "label": "Agricultural inputs",
+          "value": 0.15427887439727783
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.10948824463412166
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.07730763498693705
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.06648681312799454
+        },
+        {
+          "label": "Chemicals",
+          "value": -0.05939214210957289
+        },
+        {
+          "label": "Coal and coke",
+          "value": 0.03609422966837883
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.028816576639655977
+        },
+        {
+          "label": "Agricultural products",
+          "value": 0.02637387689901516
+        },
+        {
+          "label": "Forest products",
+          "value": 0.0
+        },
+        {
+          "label": "Building materials",
+          "value": 0.0
+        }
+      ],
+      "metrics": {
+        "n": 115,
+        "mae": 0.33274117956504873,
+        "rmse": 0.4461022666000924,
+        "median_absolute_error": 0.265832681953907,
+        "bias": -0.09756232624630566,
+        "maximum_absolute_error": 1.410964846611023,
+        "directional_accuracy": 0.7130434782608696
+      },
+      "forecast_id": "f4a3c4a69d920160996dd526d447debc17352a49164f15cf2bb2a131e7fec061",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_candidate",
+      "sources": {
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260923_1965403.html",
+            "content_sha256": "63282e245e9d232eb2f6498c7e604ec0c8d2f6487d306f0c9c0ce37132aeb189",
+            "published_at": "2026-09-24 01:30:00+00:00",
+            "retrieved_at": "2026-09-24 07:47:43.160575+00:00"
+          }
+        ]
+      },
+      "imputations": {},
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 139
+    },
+    {
+      "month": "2026-10",
+      "month_label": "October 2026",
+      "timing": "early",
+      "panel": "union",
+      "model": "catboost",
+      "label": "CatBoost",
+      "prediction": 0.356724504691074,
+      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+      "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
+      "products": [
+        {
+          "label": "Methanol (premium grade)",
+          "value": 0.149245257467589
+        },
+        {
+          "label": "Glyphosate herbicide (glyphosate,95%technical grade)",
+          "value": 0.11838296668202128
+        },
+        {
+          "label": "Benzene (petroleum-derived,industrial grade)",
+          "value": 0.06396116872090088
+        },
+        {
+          "label": "Liquefied petroleum gas (LPG)",
+          "value": 0.03838285499432944
+        },
+        {
+          "label": "Hot-rolled steel sheet (3mm,Q235)",
+          "value": -0.03591828529185906
+        },
+        {
+          "label": "Gasoline (95#China VI)",
+          "value": 0.03246884073802636
+        }
+      ],
+      "groups": [
+        {
+          "label": "Chemicals",
+          "value": 0.17703513673371551
+        },
+        {
+          "label": "Petroleum and natural gas",
+          "value": 0.10508322127353525
+        },
+        {
+          "label": "Agricultural inputs",
+          "value": 0.10178335558018267
+        },
+        {
+          "label": "Ferrous metals",
+          "value": -0.06801950716682113
+        },
+        {
+          "label": "Non-metallic mineral products",
+          "value": 0.03250464877081969
+        },
+        {
+          "label": "Non-ferrous metals",
+          "value": -0.020820253294651588
+        },
+        {
+          "label": "Agricultural products",
+          "value": -0.010726794354049819
+        },
+        {
+          "label": "Building materials",
+          "value": 0.009002922596272911
+        },
+        {
+          "label": "Forest products",
+          "value": 0.0015799272284930889
+        },
+        {
+          "label": "Coal and coke",
+          "value": -0.00013142584042574734
+        }
+      ],
+      "metrics": {
+        "n": 119,
+        "mae": 0.328659763935255,
+        "rmse": 0.44348969386839737,
+        "median_absolute_error": 0.2329265038830431,
+        "bias": -0.11105415849790987,
+        "maximum_absolute_error": 1.5155815719352408,
+        "directional_accuracy": 0.7394957983193278
+      },
+      "forecast_id": "3ace6368d89fe2478bb61c088fe44519abfbfe9256534a2921ca00cc5b4e2526",
+      "data_cutoff": "2026-10-24 01:30:00+00:00",
+      "status": "frozen_pre_release_imputed_candidate",
+      "sources": {
+        "2026-09:21-end": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+            "content_sha256": "a00747a6da87166b2f0a9e76bae7a5e451ed4cc36a4fbd372f725d3c03460bf1",
+            "published_at": "2026-10-09 01:30:00+00:00",
+            "retrieved_at": "2026-10-09 09:33:21.517314+00:00"
+          }
+        ],
+        "2026-10:11-20": [
+          {
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html",
+            "content_sha256": "e0c96e77f09543da1b43efd424456b596be633e580187b7e07c53e1ee5a2016c",
+            "published_at": "2026-10-24 01:30:00+00:00",
+            "retrieved_at": "2026-10-26 09:11:04.515777+00:00"
+          }
+        ],
+        "2026-09:1-10": [
+          {
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260914_1965293.html",
+            "content_sha256": "0cee7a8696c3ec481f1026c6278ad80ff14b75cf6f73006d86f4ccce24527492",
+            "published_at": "2026-09-14 01:30:00+00:00",
+            "retrieved_at": "2026-09-14 06:29:08.521976+00:00"
+          }
+        ]
+      },
+      "imputations": {
+        "2026-10:1-10": {
+          "method": "arithmetic_midpoint_absolute_price",
+          "left": "2026-09:21-end",
+          "right": "2026-10:11-20",
+          "matched_products": 50,
+          "unmatched_products": 50,
+          "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+        }
+      },
+      "training_start": "2014-02",
+      "training_end": "2026-08",
+      "training_rows": 143
     }
   ],
   "actuals": [
@@ -3964,87 +7070,55 @@
       "value": 0.4,
       "published_at": "2026-09-09T09:30:00+08:00",
       "source_url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260909_1965262.html"
+    },
+    {
+      "month": "2026-09",
+      "label": "September 2026",
+      "value": 1.2,
+      "published_at": "2026-10-14T09:30:00+08:00",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261014_1965476.html"
     }
   ],
   "schema_version": 1,
   "quality": {
-    "forecast_month": "2026-09",
-    "checked_as_of": "2026-10-13T17:43:59.994810+08:00",
+    "forecast_month": "2026-10",
+    "checked_as_of": "2026-10-26T17:14:53.434728+08:00",
     "models": [
       {
-        "model": "catboost",
-        "variant": "early_carry",
+        "model": "ridge",
+        "variant": "final",
         "panel": "union",
-        "prediction": 0.6052294461394703,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 100,
-        "learned_features": 172,
-        "outside_training_range": 6,
-        "short_history_features": 16,
-        "outside_features": [
-          "price__p_369ce465f81b2b58",
-          "price__p_d03f48cac90afd53",
-          "carry__p_369ce465f81b2b58",
-          "carry__p_cf6f0c8ecd5041af",
-          "carry__p_d03f48cac90afd53",
-          "carry__p_ec63403370289989"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53",
-          "carry__p_09cb91d919e19c81",
-          "carry__p_15e2359392c5042c",
-          "carry__p_369ce465f81b2b58",
-          "carry__p_4868c8af6ebb3048",
-          "carry__p_8f97282e97de7a9b",
-          "carry__p_b4735e773b7401fc",
-          "carry__p_c67eb545eaecb876",
-          "carry__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 7,
-          "price__p_15e2359392c5042c": 7,
-          "price__p_369ce465f81b2b58": 7,
-          "price__p_4868c8af6ebb3048": 7,
-          "price__p_8f97282e97de7a9b": 7,
-          "price__p_b4735e773b7401fc": 7,
-          "price__p_c67eb545eaecb876": 7,
-          "price__p_d03f48cac90afd53": 7,
-          "carry__p_09cb91d919e19c81": 7,
-          "carry__p_15e2359392c5042c": 7,
-          "carry__p_369ce465f81b2b58": 7,
-          "carry__p_4868c8af6ebb3048": 7,
-          "carry__p_8f97282e97de7a9b": 7,
-          "carry__p_b4735e773b7401fc": 7,
-          "carry__p_c67eb545eaecb876": 7,
-          "carry__p_d03f48cac90afd53": 7
-        },
-        "historical_mae": 0.3395535065142495,
-        "recent_12_calendar_month_mae": 0.45692255846788743,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 116,
+        "prediction": 0.2635122773633771,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 40,
+        "learned_features": 69,
+        "outside_training_range": 0,
+        "short_history_features": 0,
+        "outside_features": [],
+        "short_features": [],
+        "short_history_counts": {},
+        "historical_mae": 0.2459545344493116,
+        "recent_12_calendar_month_mae": 0.3367790692937469,
+        "recent_forecast_months": 8,
+        "historical_forecast_months": 107,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
         "model": "histgb",
         "variant": "early",
         "panel": "union",
-        "prediction": 0.5958639183564507,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.5435763696374538,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 50,
         "learned_features": 86,
-        "outside_training_range": 2,
+        "outside_training_range": 4,
         "short_history_features": 8,
         "outside_features": [
           "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
           "price__p_d03f48cac90afd53"
         ],
         "short_features": [
@@ -4074,156 +7148,43 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "ridge",
-        "variant": "early",
-        "panel": "union",
-        "prediction": 0.9126166328137125,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 42,
-        "learned_features": 75,
+        "model": "lightgbm",
+        "variant": "twentieth",
+        "panel": "stable",
+        "prediction": 0.18749427147338854,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 25,
+        "learned_features": 25,
         "outside_training_range": 0,
         "short_history_features": 0,
         "outside_features": [],
         "short_features": [],
         "short_history_counts": {},
-        "historical_mae": 0.2534204647305919,
-        "recent_12_calendar_month_mae": 0.3006007123635808,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 119,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "catboost",
-        "variant": "early",
-        "panel": "union",
-        "prediction": 0.4710153200374126,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 50,
-        "learned_features": 86,
-        "outside_training_range": 2,
-        "short_history_features": 8,
-        "outside_features": [
-          "price__p_369ce465f81b2b58",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 7,
-          "price__p_15e2359392c5042c": 7,
-          "price__p_369ce465f81b2b58": 7,
-          "price__p_4868c8af6ebb3048": 7,
-          "price__p_8f97282e97de7a9b": 7,
-          "price__p_b4735e773b7401fc": 7,
-          "price__p_c67eb545eaecb876": 7,
-          "price__p_d03f48cac90afd53": 7
-        },
-        "historical_mae": 0.328659763935255,
-        "recent_12_calendar_month_mae": 0.494463901531491,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 119,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "catboost",
-        "variant": "twentieth",
-        "panel": "union",
-        "prediction": 0.7287925754890555,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 50,
-        "learned_features": 86,
-        "outside_training_range": 9,
-        "short_history_features": 8,
-        "outside_features": [
-          "price__p_15e2359392c5042c",
-          "price__p_31deb9fdc417508e",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_679f919cb34f89e9",
-          "price__p_b4735e773b7401fc",
-          "price__p_cf6f0c8ecd5041af",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 5,
-          "price__p_15e2359392c5042c": 5,
-          "price__p_369ce465f81b2b58": 5,
-          "price__p_4868c8af6ebb3048": 5,
-          "price__p_8f97282e97de7a9b": 5,
-          "price__p_b4735e773b7401fc": 5,
-          "price__p_c67eb545eaecb876": 5,
-          "price__p_d03f48cac90afd53": 5
-        },
-        "historical_mae": 0.34291850619448727,
-        "recent_12_calendar_month_mae": 0.49555896666535054,
+        "historical_mae": 0.32799480833641836,
+        "recent_12_calendar_month_mae": 0.3985951270603712,
         "recent_forecast_months": 10,
         "historical_forecast_months": 115,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "ridge",
-        "variant": "final",
-        "panel": "union",
-        "prediction": 1.0418570402724336,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 40,
-        "learned_features": 69,
-        "outside_training_range": 3,
-        "short_history_features": 0,
-        "outside_features": [
-          "price__p_212ef5b23dbb70ff",
-          "price__p_4f0bc051d584c367",
-          "price__p_ec63403370289989"
-        ],
-        "short_features": [],
-        "short_history_counts": {},
-        "historical_mae": 0.2459545344493116,
-        "recent_12_calendar_month_mae": 0.3367790692937469,
-        "recent_forecast_months": 8,
-        "historical_forecast_months": 107,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
         "model": "histgb",
         "variant": "early_carry",
         "panel": "union",
-        "prediction": 0.6768973307696738,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.46125276904566487,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 100,
         "learned_features": 172,
         "outside_training_range": 6,
         "short_history_features": 16,
         "outside_features": [
           "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
           "price__p_d03f48cac90afd53",
-          "carry__p_369ce465f81b2b58",
-          "carry__p_cf6f0c8ecd5041af",
-          "carry__p_d03f48cac90afd53",
-          "carry__p_ec63403370289989"
+          "carry__p_c67eb545eaecb876",
+          "carry__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -4268,90 +7229,17 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "histgb",
-        "variant": "twentieth",
-        "panel": "stable",
-        "prediction": 0.6965550790203613,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 25,
-        "learned_features": 25,
-        "outside_training_range": 1,
-        "short_history_features": 0,
-        "outside_features": [
-          "price__p_ec63403370289989"
-        ],
-        "short_features": [],
-        "short_history_counts": {},
-        "historical_mae": 0.33510659077982946,
-        "recent_12_calendar_month_mae": 0.404665267152719,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "ridge",
-        "variant": "early_carry",
-        "panel": "union",
-        "prediction": 1.1959988512839717,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 82,
-        "learned_features": 148,
-        "outside_training_range": 2,
-        "short_history_features": 0,
-        "outside_features": [
-          "carry__p_cf6f0c8ecd5041af",
-          "carry__p_ec63403370289989"
-        ],
-        "short_features": [],
-        "short_history_counts": {},
-        "historical_mae": 0.27987246901274865,
-        "recent_12_calendar_month_mae": 0.36138615186882656,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 116,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "catboost",
-        "variant": "twentieth",
-        "panel": "stable",
-        "prediction": 0.8018520446062121,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 25,
-        "learned_features": 25,
-        "outside_training_range": 1,
-        "short_history_features": 0,
-        "outside_features": [
-          "price__p_ec63403370289989"
-        ],
-        "short_features": [],
-        "short_history_counts": {},
-        "historical_mae": 0.33314869295486277,
-        "recent_12_calendar_month_mae": 0.4042185791891596,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
         "model": "ridge",
         "variant": "twentieth",
         "panel": "union",
-        "prediction": 0.9790618376449911,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.2707944530504705,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 42,
         "learned_features": 78,
-        "outside_training_range": 5,
+        "outside_training_range": 0,
         "short_history_features": 0,
-        "outside_features": [
-          "price__p_31deb9fdc417508e",
-          "price__p_4f0bc051d584c367",
-          "price__p_679f919cb34f89e9",
-          "price__p_cf6f0c8ecd5041af",
-          "price__p_ec63403370289989"
-        ],
+        "outside_features": [],
         "short_features": [],
         "short_history_counts": {},
         "historical_mae": 0.2762470982336666,
@@ -4361,70 +7249,20 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "xgboost",
-        "variant": "final",
-        "panel": "union",
-        "prediction": 0.69620281457901,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 50,
-        "learned_features": 86,
-        "outside_training_range": 5,
-        "short_history_features": 8,
-        "outside_features": [
-          "price__p_212ef5b23dbb70ff",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 5,
-          "price__p_15e2359392c5042c": 5,
-          "price__p_369ce465f81b2b58": 5,
-          "price__p_4868c8af6ebb3048": 5,
-          "price__p_8f97282e97de7a9b": 5,
-          "price__p_b4735e773b7401fc": 5,
-          "price__p_c67eb545eaecb876": 5,
-          "price__p_d03f48cac90afd53": 5
-        },
-        "historical_mae": 0.32852687620575255,
-        "recent_12_calendar_month_mae": 0.46852815544698384,
-        "recent_forecast_months": 8,
-        "historical_forecast_months": 107,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "economic_ml_hybrid",
+        "model": "lightgbm",
         "variant": "twentieth",
         "panel": "union",
-        "prediction": 0.9449884391426807,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.2324213764574922,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 50,
         "learned_features": 86,
-        "outside_training_range": 9,
+        "outside_training_range": 3,
         "short_history_features": 8,
         "outside_features": [
-          "price__p_15e2359392c5042c",
-          "price__p_31deb9fdc417508e",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_679f919cb34f89e9",
           "price__p_b4735e773b7401fc",
-          "price__p_cf6f0c8ecd5041af",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -4446,97 +7284,8 @@
           "price__p_c67eb545eaecb876": 5,
           "price__p_d03f48cac90afd53": 5
         },
-        "historical_mae": 0.26768055434063154,
-        "recent_12_calendar_month_mae": 0.3640847187014423,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "xgboost",
-        "variant": "early",
-        "panel": "union",
-        "prediction": 0.6180062890052795,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 50,
-        "learned_features": 86,
-        "outside_training_range": 2,
-        "short_history_features": 8,
-        "outside_features": [
-          "price__p_369ce465f81b2b58",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 7,
-          "price__p_15e2359392c5042c": 7,
-          "price__p_369ce465f81b2b58": 7,
-          "price__p_4868c8af6ebb3048": 7,
-          "price__p_8f97282e97de7a9b": 7,
-          "price__p_b4735e773b7401fc": 7,
-          "price__p_c67eb545eaecb876": 7,
-          "price__p_d03f48cac90afd53": 7
-        },
-        "historical_mae": 0.33181326791738014,
-        "recent_12_calendar_month_mae": 0.4417171668633818,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 119,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "histgb",
-        "variant": "twentieth",
-        "panel": "union",
-        "prediction": 0.6908999262269802,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 50,
-        "learned_features": 86,
-        "outside_training_range": 9,
-        "short_history_features": 8,
-        "outside_features": [
-          "price__p_15e2359392c5042c",
-          "price__p_31deb9fdc417508e",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_679f919cb34f89e9",
-          "price__p_b4735e773b7401fc",
-          "price__p_cf6f0c8ecd5041af",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 5,
-          "price__p_15e2359392c5042c": 5,
-          "price__p_369ce465f81b2b58": 5,
-          "price__p_4868c8af6ebb3048": 5,
-          "price__p_8f97282e97de7a9b": 5,
-          "price__p_b4735e773b7401fc": 5,
-          "price__p_c67eb545eaecb876": 5,
-          "price__p_d03f48cac90afd53": 5
-        },
-        "historical_mae": 0.3491513687788056,
-        "recent_12_calendar_month_mae": 0.45601743114662063,
+        "historical_mae": 0.3390857858759585,
+        "recent_12_calendar_month_mae": 0.4363611904543611,
         "recent_forecast_months": 10,
         "historical_forecast_months": 115,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
@@ -4545,23 +7294,17 @@
         "model": "sector_first",
         "variant": "twentieth",
         "panel": "union",
-        "prediction": 1.2606370855702207,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.3453839364204222,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 50,
         "learned_features": 86,
-        "outside_training_range": 9,
+        "outside_training_range": 3,
         "short_history_features": 8,
         "outside_features": [
-          "price__p_15e2359392c5042c",
-          "price__p_31deb9fdc417508e",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_679f919cb34f89e9",
           "price__p_b4735e773b7401fc",
-          "price__p_cf6f0c8ecd5041af",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -4590,70 +7333,20 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "xgboost",
-        "variant": "twentieth",
-        "panel": "union",
-        "prediction": 0.6820182204246521,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 50,
-        "learned_features": 86,
-        "outside_training_range": 9,
-        "short_history_features": 8,
-        "outside_features": [
-          "price__p_15e2359392c5042c",
-          "price__p_31deb9fdc417508e",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_679f919cb34f89e9",
-          "price__p_b4735e773b7401fc",
-          "price__p_cf6f0c8ecd5041af",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 5,
-          "price__p_15e2359392c5042c": 5,
-          "price__p_369ce465f81b2b58": 5,
-          "price__p_4868c8af6ebb3048": 5,
-          "price__p_8f97282e97de7a9b": 5,
-          "price__p_b4735e773b7401fc": 5,
-          "price__p_c67eb545eaecb876": 5,
-          "price__p_d03f48cac90afd53": 5
-        },
-        "historical_mae": 0.347994445802077,
-        "recent_12_calendar_month_mae": 0.4485653211176396,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "catboost",
+        "model": "histgb",
         "variant": "final",
         "panel": "union",
-        "prediction": 0.6389016083091132,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.5953209577879188,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 50,
         "learned_features": 86,
-        "outside_training_range": 5,
+        "outside_training_range": 3,
         "short_history_features": 8,
         "outside_features": [
-          "price__p_212ef5b23dbb70ff",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -4675,74 +7368,116 @@
           "price__p_c67eb545eaecb876": 5,
           "price__p_d03f48cac90afd53": 5
         },
-        "historical_mae": 0.3262289843263096,
-        "recent_12_calendar_month_mae": 0.4845346356074694,
+        "historical_mae": 0.3276569521866327,
+        "recent_12_calendar_month_mae": 0.4980392866462021,
         "recent_forecast_months": 8,
         "historical_forecast_months": 107,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "lightgbm",
-        "variant": "twentieth",
-        "panel": "stable",
-        "prediction": 0.7189288716259489,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 25,
-        "learned_features": 25,
-        "outside_training_range": 1,
-        "short_history_features": 0,
+        "model": "catboost",
+        "variant": "early",
+        "panel": "union",
+        "prediction": 0.356724504691074,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 50,
+        "learned_features": 86,
+        "outside_training_range": 4,
+        "short_history_features": 8,
         "outside_features": [
-          "price__p_ec63403370289989"
+          "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
-        "short_features": [],
-        "short_history_counts": {},
-        "historical_mae": 0.32799480833641836,
-        "recent_12_calendar_month_mae": 0.3985951270603712,
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 7,
+          "price__p_15e2359392c5042c": 7,
+          "price__p_369ce465f81b2b58": 7,
+          "price__p_4868c8af6ebb3048": 7,
+          "price__p_8f97282e97de7a9b": 7,
+          "price__p_b4735e773b7401fc": 7,
+          "price__p_c67eb545eaecb876": 7,
+          "price__p_d03f48cac90afd53": 7
+        },
+        "historical_mae": 0.328659763935255,
+        "recent_12_calendar_month_mae": 0.494463901531491,
         "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
+        "historical_forecast_months": 119,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "xgboost",
-        "variant": "twentieth",
-        "panel": "stable",
-        "prediction": 0.6523268222808838,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 25,
-        "learned_features": 25,
-        "outside_training_range": 1,
-        "short_history_features": 0,
+        "model": "lightgbm",
+        "variant": "early",
+        "panel": "union",
+        "prediction": 0.6017808695190524,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 50,
+        "learned_features": 86,
+        "outside_training_range": 4,
+        "short_history_features": 8,
         "outside_features": [
-          "price__p_ec63403370289989"
+          "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
-        "short_features": [],
-        "short_history_counts": {},
-        "historical_mae": 0.33274117956504873,
-        "recent_12_calendar_month_mae": 0.4223196231387556,
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 7,
+          "price__p_15e2359392c5042c": 7,
+          "price__p_369ce465f81b2b58": 7,
+          "price__p_4868c8af6ebb3048": 7,
+          "price__p_8f97282e97de7a9b": 7,
+          "price__p_b4735e773b7401fc": 7,
+          "price__p_c67eb545eaecb876": 7,
+          "price__p_d03f48cac90afd53": 7
+        },
+        "historical_mae": 0.32708430467036775,
+        "recent_12_calendar_month_mae": 0.4096551853943663,
         "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
+        "historical_forecast_months": 119,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
         "model": "xgboost",
         "variant": "early_carry",
         "panel": "union",
-        "prediction": 0.6750144958496094,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.44247326254844666,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 100,
         "learned_features": 172,
         "outside_training_range": 6,
         "short_history_features": 16,
         "outside_features": [
           "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
           "price__p_d03f48cac90afd53",
-          "carry__p_369ce465f81b2b58",
-          "carry__p_cf6f0c8ecd5041af",
-          "carry__p_d03f48cac90afd53",
-          "carry__p_ec63403370289989"
+          "carry__p_c67eb545eaecb876",
+          "carry__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -4787,92 +7522,82 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "ridge",
+        "model": "histgb",
         "variant": "twentieth",
-        "panel": "stable",
-        "prediction": 0.7811748500503188,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 25,
-        "learned_features": 25,
-        "outside_training_range": 1,
-        "short_history_features": 0,
+        "panel": "union",
+        "prediction": 0.11154421793753669,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 50,
+        "learned_features": 86,
+        "outside_training_range": 3,
+        "short_history_features": 8,
         "outside_features": [
-          "price__p_ec63403370289989"
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
-        "short_features": [],
-        "short_history_counts": {},
-        "historical_mae": 0.28203630139208125,
-        "recent_12_calendar_month_mae": 0.3170092365029888,
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 5,
+          "price__p_15e2359392c5042c": 5,
+          "price__p_369ce465f81b2b58": 5,
+          "price__p_4868c8af6ebb3048": 5,
+          "price__p_8f97282e97de7a9b": 5,
+          "price__p_b4735e773b7401fc": 5,
+          "price__p_c67eb545eaecb876": 5,
+          "price__p_d03f48cac90afd53": 5
+        },
+        "historical_mae": 0.3491513687788056,
+        "recent_12_calendar_month_mae": 0.45601743114662063,
         "recent_forecast_months": 10,
         "historical_forecast_months": 115,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "lightgbm",
-        "variant": "final",
-        "panel": "union",
-        "prediction": 0.6706342172791001,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
-        "used_products": 50,
-        "learned_features": 86,
-        "outside_training_range": 5,
-        "short_history_features": 8,
-        "outside_features": [
-          "price__p_212ef5b23dbb70ff",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 5,
-          "price__p_15e2359392c5042c": 5,
-          "price__p_369ce465f81b2b58": 5,
-          "price__p_4868c8af6ebb3048": 5,
-          "price__p_8f97282e97de7a9b": 5,
-          "price__p_b4735e773b7401fc": 5,
-          "price__p_c67eb545eaecb876": 5,
-          "price__p_d03f48cac90afd53": 5
-        },
-        "historical_mae": 0.3293763267515431,
-        "recent_12_calendar_month_mae": 0.4820214726364648,
-        "recent_forecast_months": 8,
-        "historical_forecast_months": 107,
+        "model": "catboost",
+        "variant": "twentieth",
+        "panel": "stable",
+        "prediction": 0.1697065151764234,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 25,
+        "learned_features": 25,
+        "outside_training_range": 0,
+        "short_history_features": 0,
+        "outside_features": [],
+        "short_features": [],
+        "short_history_counts": {},
+        "historical_mae": 0.33314869295486277,
+        "recent_12_calendar_month_mae": 0.4042185791891596,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 115,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "direct_tracker",
+        "model": "xgboost",
         "variant": "twentieth",
         "panel": "union",
-        "prediction": 6.123431983557728,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.2787025272846222,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 50,
         "learned_features": 86,
-        "outside_training_range": 9,
+        "outside_training_range": 3,
         "short_history_features": 8,
         "outside_features": [
-          "price__p_15e2359392c5042c",
-          "price__p_31deb9fdc417508e",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_679f919cb34f89e9",
           "price__p_b4735e773b7401fc",
-          "price__p_cf6f0c8ecd5041af",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -4894,8 +7619,50 @@
           "price__p_c67eb545eaecb876": 5,
           "price__p_d03f48cac90afd53": 5
         },
-        "historical_mae": 2.0382733011114555,
-        "recent_12_calendar_month_mae": 1.0219238647983682,
+        "historical_mae": 0.347994445802077,
+        "recent_12_calendar_month_mae": 0.4485653211176396,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 115,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "economic_ml_hybrid",
+        "variant": "twentieth",
+        "panel": "union",
+        "prediction": 0.15431917142246862,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 50,
+        "learned_features": 86,
+        "outside_training_range": 3,
+        "short_history_features": 8,
+        "outside_features": [
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 5,
+          "price__p_15e2359392c5042c": 5,
+          "price__p_369ce465f81b2b58": 5,
+          "price__p_4868c8af6ebb3048": 5,
+          "price__p_8f97282e97de7a9b": 5,
+          "price__p_b4735e773b7401fc": 5,
+          "price__p_c67eb545eaecb876": 5,
+          "price__p_d03f48cac90afd53": 5
+        },
+        "historical_mae": 0.26768055434063154,
+        "recent_12_calendar_month_mae": 0.3640847187014423,
         "recent_forecast_months": 10,
         "historical_forecast_months": 115,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
@@ -4904,20 +7671,20 @@
         "model": "lightgbm",
         "variant": "early_carry",
         "panel": "union",
-        "prediction": 0.6690865253216454,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.593495069664491,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 100,
         "learned_features": 172,
         "outside_training_range": 6,
         "short_history_features": 16,
         "outside_features": [
           "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
           "price__p_d03f48cac90afd53",
-          "carry__p_369ce465f81b2b58",
-          "carry__p_cf6f0c8ecd5041af",
-          "carry__p_d03f48cac90afd53",
-          "carry__p_ec63403370289989"
+          "carry__p_c67eb545eaecb876",
+          "carry__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -4962,26 +7729,21 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "lightgbm",
-        "variant": "twentieth",
+        "model": "xgboost",
+        "variant": "early",
         "panel": "union",
-        "prediction": 0.6444638946511321,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.5764771103858948,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 50,
         "learned_features": 86,
-        "outside_training_range": 9,
+        "outside_training_range": 4,
         "short_history_features": 8,
         "outside_features": [
-          "price__p_15e2359392c5042c",
-          "price__p_31deb9fdc417508e",
           "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_679f919cb34f89e9",
           "price__p_b4735e773b7401fc",
-          "price__p_cf6f0c8ecd5041af",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -4994,38 +7756,56 @@
           "price__p_d03f48cac90afd53"
         ],
         "short_history_counts": {
-          "price__p_09cb91d919e19c81": 5,
-          "price__p_15e2359392c5042c": 5,
-          "price__p_369ce465f81b2b58": 5,
-          "price__p_4868c8af6ebb3048": 5,
-          "price__p_8f97282e97de7a9b": 5,
-          "price__p_b4735e773b7401fc": 5,
-          "price__p_c67eb545eaecb876": 5,
-          "price__p_d03f48cac90afd53": 5
+          "price__p_09cb91d919e19c81": 7,
+          "price__p_15e2359392c5042c": 7,
+          "price__p_369ce465f81b2b58": 7,
+          "price__p_4868c8af6ebb3048": 7,
+          "price__p_8f97282e97de7a9b": 7,
+          "price__p_b4735e773b7401fc": 7,
+          "price__p_c67eb545eaecb876": 7,
+          "price__p_d03f48cac90afd53": 7
         },
-        "historical_mae": 0.3390857858759585,
-        "recent_12_calendar_month_mae": 0.4363611904543611,
+        "historical_mae": 0.33181326791738014,
+        "recent_12_calendar_month_mae": 0.4417171668633818,
         "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
+        "historical_forecast_months": 119,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "histgb",
+        "model": "ridge",
+        "variant": "early_carry",
+        "panel": "union",
+        "prediction": 0.403754366926296,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 82,
+        "learned_features": 148,
+        "outside_training_range": 0,
+        "short_history_features": 0,
+        "outside_features": [],
+        "short_features": [],
+        "short_history_counts": {},
+        "historical_mae": 0.27987246901274865,
+        "recent_12_calendar_month_mae": 0.36138615186882656,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 116,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "xgboost",
         "variant": "final",
         "panel": "union",
-        "prediction": 0.7439329918547474,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.4544433355331421,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 50,
         "learned_features": 86,
-        "outside_training_range": 5,
+        "outside_training_range": 3,
         "short_history_features": 8,
         "outside_features": [
-          "price__p_212ef5b23dbb70ff",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -5047,8 +7827,8 @@
           "price__p_c67eb545eaecb876": 5,
           "price__p_d03f48cac90afd53": 5
         },
-        "historical_mae": 0.3276569521866327,
-        "recent_12_calendar_month_mae": 0.4980392866462021,
+        "historical_mae": 0.32852687620575255,
+        "recent_12_calendar_month_mae": 0.46852815544698384,
         "recent_forecast_months": 8,
         "historical_forecast_months": 107,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
@@ -5057,23 +7837,17 @@
         "model": "random_forest",
         "variant": "twentieth",
         "panel": "union",
-        "prediction": 0.6144672096304332,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.13659685011388528,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 50,
         "learned_features": 86,
-        "outside_training_range": 9,
+        "outside_training_range": 3,
         "short_history_features": 8,
         "outside_features": [
-          "price__p_15e2359392c5042c",
-          "price__p_31deb9fdc417508e",
-          "price__p_369ce465f81b2b58",
-          "price__p_4f0bc051d584c367",
-          "price__p_679f919cb34f89e9",
           "price__p_b4735e773b7401fc",
-          "price__p_cf6f0c8ecd5041af",
-          "price__p_d03f48cac90afd53",
-          "price__p_ec63403370289989"
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
         ],
         "short_features": [
           "price__p_09cb91d919e19c81",
@@ -5102,18 +7876,19 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "lightgbm",
-        "variant": "early",
+        "model": "catboost",
+        "variant": "final",
         "panel": "union",
-        "prediction": 0.5612003204400942,
-        "forecast_month": "2026-09",
-        "frozen_at": "2026-10-07T04:35:54.229179+08:00",
+        "prediction": 0.20601914869920807,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
         "used_products": 50,
         "learned_features": 86,
-        "outside_training_range": 2,
+        "outside_training_range": 3,
         "short_history_features": 8,
         "outside_features": [
-          "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
           "price__p_d03f48cac90afd53"
         ],
         "short_features": [
@@ -5127,6 +7902,143 @@
           "price__p_d03f48cac90afd53"
         ],
         "short_history_counts": {
+          "price__p_09cb91d919e19c81": 5,
+          "price__p_15e2359392c5042c": 5,
+          "price__p_369ce465f81b2b58": 5,
+          "price__p_4868c8af6ebb3048": 5,
+          "price__p_8f97282e97de7a9b": 5,
+          "price__p_b4735e773b7401fc": 5,
+          "price__p_c67eb545eaecb876": 5,
+          "price__p_d03f48cac90afd53": 5
+        },
+        "historical_mae": 0.3262289843263096,
+        "recent_12_calendar_month_mae": 0.4845346356074694,
+        "recent_forecast_months": 8,
+        "historical_forecast_months": 107,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "lightgbm",
+        "variant": "final",
+        "panel": "union",
+        "prediction": 0.47185750285109673,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 50,
+        "learned_features": 86,
+        "outside_training_range": 3,
+        "short_history_features": 8,
+        "outside_features": [
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 5,
+          "price__p_15e2359392c5042c": 5,
+          "price__p_369ce465f81b2b58": 5,
+          "price__p_4868c8af6ebb3048": 5,
+          "price__p_8f97282e97de7a9b": 5,
+          "price__p_b4735e773b7401fc": 5,
+          "price__p_c67eb545eaecb876": 5,
+          "price__p_d03f48cac90afd53": 5
+        },
+        "historical_mae": 0.3293763267515431,
+        "recent_12_calendar_month_mae": 0.4820214726364648,
+        "recent_forecast_months": 8,
+        "historical_forecast_months": 107,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "direct_tracker",
+        "variant": "twentieth",
+        "panel": "union",
+        "prediction": -0.1737437590430731,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 50,
+        "learned_features": 86,
+        "outside_training_range": 3,
+        "short_history_features": 8,
+        "outside_features": [
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 5,
+          "price__p_15e2359392c5042c": 5,
+          "price__p_369ce465f81b2b58": 5,
+          "price__p_4868c8af6ebb3048": 5,
+          "price__p_8f97282e97de7a9b": 5,
+          "price__p_b4735e773b7401fc": 5,
+          "price__p_c67eb545eaecb876": 5,
+          "price__p_d03f48cac90afd53": 5
+        },
+        "historical_mae": 2.0382733011114555,
+        "recent_12_calendar_month_mae": 1.0219238647983682,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 115,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "catboost",
+        "variant": "early_carry",
+        "panel": "union",
+        "prediction": 0.38875051599420135,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 100,
+        "learned_features": 172,
+        "outside_training_range": 6,
+        "short_history_features": 16,
+        "outside_features": [
+          "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53",
+          "carry__p_c67eb545eaecb876",
+          "carry__p_d03f48cac90afd53"
+        ],
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53",
+          "carry__p_09cb91d919e19c81",
+          "carry__p_15e2359392c5042c",
+          "carry__p_369ce465f81b2b58",
+          "carry__p_4868c8af6ebb3048",
+          "carry__p_8f97282e97de7a9b",
+          "carry__p_b4735e773b7401fc",
+          "carry__p_c67eb545eaecb876",
+          "carry__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
           "price__p_09cb91d919e19c81": 7,
           "price__p_15e2359392c5042c": 7,
           "price__p_369ce465f81b2b58": 7,
@@ -5134,12 +8046,142 @@
           "price__p_8f97282e97de7a9b": 7,
           "price__p_b4735e773b7401fc": 7,
           "price__p_c67eb545eaecb876": 7,
-          "price__p_d03f48cac90afd53": 7
+          "price__p_d03f48cac90afd53": 7,
+          "carry__p_09cb91d919e19c81": 7,
+          "carry__p_15e2359392c5042c": 7,
+          "carry__p_369ce465f81b2b58": 7,
+          "carry__p_4868c8af6ebb3048": 7,
+          "carry__p_8f97282e97de7a9b": 7,
+          "carry__p_b4735e773b7401fc": 7,
+          "carry__p_c67eb545eaecb876": 7,
+          "carry__p_d03f48cac90afd53": 7
         },
-        "historical_mae": 0.32708430467036775,
-        "recent_12_calendar_month_mae": 0.4096551853943663,
+        "historical_mae": 0.3395535065142495,
+        "recent_12_calendar_month_mae": 0.45692255846788743,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 116,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "ridge",
+        "variant": "early",
+        "panel": "union",
+        "prediction": 0.3345680530210894,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 42,
+        "learned_features": 75,
+        "outside_training_range": 0,
+        "short_history_features": 0,
+        "outside_features": [],
+        "short_features": [],
+        "short_history_counts": {},
+        "historical_mae": 0.2534204647305919,
+        "recent_12_calendar_month_mae": 0.3006007123635808,
         "recent_forecast_months": 10,
         "historical_forecast_months": 119,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "histgb",
+        "variant": "twentieth",
+        "panel": "stable",
+        "prediction": -0.016818172364274693,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 25,
+        "learned_features": 25,
+        "outside_training_range": 0,
+        "short_history_features": 0,
+        "outside_features": [],
+        "short_features": [],
+        "short_history_counts": {},
+        "historical_mae": 0.33510659077982946,
+        "recent_12_calendar_month_mae": 0.404665267152719,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 115,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "catboost",
+        "variant": "twentieth",
+        "panel": "union",
+        "prediction": 0.09563927913504901,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 50,
+        "learned_features": 86,
+        "outside_training_range": 3,
+        "short_history_features": 8,
+        "outside_features": [
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 5,
+          "price__p_15e2359392c5042c": 5,
+          "price__p_369ce465f81b2b58": 5,
+          "price__p_4868c8af6ebb3048": 5,
+          "price__p_8f97282e97de7a9b": 5,
+          "price__p_b4735e773b7401fc": 5,
+          "price__p_c67eb545eaecb876": 5,
+          "price__p_d03f48cac90afd53": 5
+        },
+        "historical_mae": 0.34291850619448727,
+        "recent_12_calendar_month_mae": 0.49555896666535054,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 115,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "ridge",
+        "variant": "twentieth",
+        "panel": "stable",
+        "prediction": 0.27999960965980364,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 25,
+        "learned_features": 25,
+        "outside_training_range": 0,
+        "short_history_features": 0,
+        "outside_features": [],
+        "short_features": [],
+        "short_history_counts": {},
+        "historical_mae": 0.28203630139208125,
+        "recent_12_calendar_month_mae": 0.3170092365029888,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 115,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "xgboost",
+        "variant": "twentieth",
+        "panel": "stable",
+        "prediction": 0.25615453720092773,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 25,
+        "learned_features": 25,
+        "outside_training_range": 0,
+        "short_history_features": 0,
+        "outside_features": [],
+        "short_features": [],
+        "short_history_counts": {},
+        "historical_mae": 0.33274117956504873,
+        "recent_12_calendar_month_mae": 0.4223196231387556,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 115,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       }
     ],
@@ -5147,33 +8189,33 @@
       {
         "variant": "twentieth",
         "n": 4,
-        "median": 0.6864590733258161,
-        "minimum": 0.6444638946511321,
-        "maximum": 0.7287925754890555
+        "median": 0.17198279719751444,
+        "minimum": 0.09563927913504901,
+        "maximum": 0.2787025272846222
       },
       {
         "variant": "final",
         "n": 4,
-        "median": 0.6834185159290551,
-        "minimum": 0.6389016083091132,
-        "maximum": 0.7439329918547474
+        "median": 0.4631504191921194,
+        "minimum": 0.20601914869920807,
+        "maximum": 0.5953209577879188
       },
       {
         "variant": "early",
         "n": 4,
-        "median": 0.5785321193982724,
-        "minimum": 0.4710153200374126,
-        "maximum": 0.6180062890052795
+        "median": 0.5600267400116743,
+        "minimum": 0.356724504691074,
+        "maximum": 0.6017808695190524
       },
       {
         "variant": "early_carry",
         "n": 4,
-        "median": 0.6720505105856274,
-        "minimum": 0.6052294461394703,
-        "maximum": 0.6768973307696738
+        "median": 0.4518630157970558,
+        "minimum": 0.38875051599420135,
+        "maximum": 0.593495069664491
       }
     ],
-    "ridge_panel_gap_pp": 0.19788698759467227,
+    "ridge_panel_gap_pp": 0.009205156609333132,
     "prospective_rankings_established": false
   },
   "adaptive": {

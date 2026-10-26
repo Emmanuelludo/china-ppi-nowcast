@@ -1,0 +1,56 @@
+{
+  "forecast_id": "a9e6d8993a53df134a897e77a9c0d7c51e1b25db07442436b0a0cd890995a45b",
+  "target_month": "2026-10",
+  "as_of": "2026-10-26T17:14:53.434728+08:00",
+  "variant": "final",
+  "model": "lightgbm",
+  "panel": "union",
+  "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+  "feature_version": "product-log-v3",
+  "feature_hash": "8412ff34f94735433b7d8f16b02b15112f7d7cd560a79e297fd0167e4630e3d7",
+  "basket_versions": [
+    "basket_b9b653963c9d"
+  ],
+  "prediction_mom": 0.47185750285109673,
+  "implied_yoy": null,
+  "implied_yoy_status": "requires verified official index path",
+  "data_cutoff": "2026-10-24 01:30:00+00:00",
+  "hyperparameters": {
+    "boosting_type": "gbdt",
+    "class_weight": null,
+    "colsample_bytree": 0.8,
+    "importance_type": "split",
+    "learning_rate": 0.04,
+    "max_depth": 2,
+    "min_child_samples": 8,
+    "min_child_weight": 0.001,
+    "min_split_gain": 0.001,
+    "n_estimators": 150,
+    "n_jobs": 1,
+    "num_leaves": 4,
+    "objective": null,
+    "random_state": 20260916,
+    "reg_alpha": 0.1,
+    "reg_lambda": 5.0,
+    "subsample": 0.8,
+    "subsample_for_bin": 200000,
+    "subsample_freq": 1,
+    "verbosity": -1,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "training_end": "2026-08",
+  "git_commit": "1d5d35c1ca84042ab4ff7fc42e2ce5dd2cf7a70c",
+  "status": "frozen_pre_release_imputed_candidate",
+  "imputations": {
+    "2026-10:1-10": {
+      "method": "arithmetic_midpoint_absolute_price",
+      "left": "2026-09:21-end",
+      "right": "2026-10:11-20",
+      "matched_products": 50,
+      "unmatched_products": 50,
+      "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+    }
+  },
+  "unseen_training_features": []
+}

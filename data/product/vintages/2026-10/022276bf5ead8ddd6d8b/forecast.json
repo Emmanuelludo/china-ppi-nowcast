@@ -1,0 +1,49 @@
+{
+  "forecast_id": "022276bf5ead8ddd6d8b2b47810420ffd1a005271c05a8c54b46a269635fa6cc",
+  "target_month": "2026-10",
+  "as_of": "2026-10-26T17:14:53.434728+08:00",
+  "variant": "final",
+  "model": "ridge",
+  "panel": "union",
+  "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+  "feature_version": "product-log-v3",
+  "feature_hash": "8412ff34f94735433b7d8f16b02b15112f7d7cd560a79e297fd0167e4630e3d7",
+  "basket_versions": [
+    "basket_b9b653963c9d"
+  ],
+  "prediction_mom": 0.2635122773633771,
+  "implied_yoy": null,
+  "implied_yoy_status": "requires verified official index path",
+  "data_cutoff": "2026-10-24 01:30:00+00:00",
+  "hyperparameters": {
+    "alpha": 25.0,
+    "min_observations": 24,
+    "scale_floor": 1.0,
+    "stable": false
+  },
+  "training_end": "2026-08",
+  "git_commit": "1d5d35c1ca84042ab4ff7fc42e2ce5dd2cf7a70c",
+  "status": "frozen_pre_release_imputed_candidate",
+  "imputations": {
+    "2026-10:1-10": {
+      "method": "arithmetic_midpoint_absolute_price",
+      "left": "2026-09:21-end",
+      "right": "2026-10:11-20",
+      "matched_products": 50,
+      "unmatched_products": 50,
+      "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+    }
+  },
+  "unseen_training_features": [
+    "price__p_09cb91d919e19c81",
+    "price__p_15e2359392c5042c",
+    "price__p_175e0c5b4d6a8cd9",
+    "price__p_369ce465f81b2b58",
+    "price__p_4868c8af6ebb3048",
+    "price__p_8f97282e97de7a9b",
+    "price__p_b4735e773b7401fc",
+    "price__p_bd3edefacd71ccb9",
+    "price__p_c67eb545eaecb876",
+    "price__p_d03f48cac90afd53"
+  ]
+}

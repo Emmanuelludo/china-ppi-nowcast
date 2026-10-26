@@ -1,0 +1,18 @@
+{
+  "forecast_id": "7c6b93d11a3b359c24bcd3d0a3b631a4be4d8ad84458764fbf4680c7af4d9ebb",
+  "model_version": "product-v3-6ebe4ddbf8e9c7bc",
+  "target_month": "2026-09",
+  "as_of": "2026-09-19T15:31:24.907147+08:00",
+  "variant": "early_carry",
+  "model": "lightgbm",
+  "panel": "union",
+  "prediction": 0.6690865253216454,
+  "actual": 1.2,
+  "error": -0.5309134746783546,
+  "absolute_error": 0.5309134746783546,
+  "squared_error": 0.28186911759504385,
+  "actual_published_at": "2026-10-14T09:30:00+08:00",
+  "actual_source": "https://www.stats.gov.cn/sj/zxfb/202610/t20261014_1965476.html",
+  "actual_sha": "e50ab7dc7d03a9bc30c4aa9b9c4bd5e06b6036cff29124f2a3f53e485fcbcf02",
+  "realtime_status": "prospective"
+}

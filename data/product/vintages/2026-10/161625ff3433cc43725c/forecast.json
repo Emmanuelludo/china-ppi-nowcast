@@ -1,0 +1,38 @@
+{
+  "forecast_id": "161625ff3433cc43725c542f5102090a62583a7090beaa147c3be0fa814ba1a2",
+  "target_month": "2026-10",
+  "as_of": "2026-10-26T17:14:53.434728+08:00",
+  "variant": "twentieth",
+  "model": "ridge",
+  "panel": "union",
+  "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+  "feature_version": "product-log-v3",
+  "feature_hash": "de71e0d1015e05fe4adc1d5bfad8c0d4a05da54f1c119ee02521b29a0ef7c70c",
+  "basket_versions": [
+    "basket_b9b653963c9d"
+  ],
+  "prediction_mom": 0.2707944530504705,
+  "implied_yoy": null,
+  "implied_yoy_status": "requires verified official index path",
+  "data_cutoff": "2026-10-24 01:30:00+00:00",
+  "hyperparameters": {
+    "alpha": 25.0,
+    "min_observations": 12,
+    "scale_floor": 1.0,
+    "stable": false
+  },
+  "training_end": "2026-08",
+  "git_commit": "1d5d35c1ca84042ab4ff7fc42e2ce5dd2cf7a70c",
+  "status": "frozen_pre_release_candidate",
+  "imputations": {},
+  "unseen_training_features": [
+    "price__p_09cb91d919e19c81",
+    "price__p_15e2359392c5042c",
+    "price__p_369ce465f81b2b58",
+    "price__p_4868c8af6ebb3048",
+    "price__p_8f97282e97de7a9b",
+    "price__p_b4735e773b7401fc",
+    "price__p_c67eb545eaecb876",
+    "price__p_d03f48cac90afd53"
+  ]
+}
