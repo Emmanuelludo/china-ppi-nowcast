@@ -1,0 +1,45 @@
+{
+  "forecast_id": "18f2d808a8c679c89241b7ea1147382da02a74d6ecfa170baa797781b3257dc0",
+  "target_month": "2026-10",
+  "as_of": "2026-10-27T16:19:23.315902+08:00",
+  "variant": "early_carry",
+  "model": "catboost",
+  "panel": "union",
+  "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+  "feature_version": "product-log-v3",
+  "feature_hash": "768fd7c024510d1b1272f1907b87c1090b8cdeba916572a440f708fc9b7f0b76",
+  "basket_versions": [
+    "basket_b9b653963c9d"
+  ],
+  "prediction_mom": 0.38875051599420135,
+  "implied_yoy": null,
+  "implied_yoy_status": "requires verified official index path",
+  "data_cutoff": "2026-10-24 01:30:00+00:00",
+  "hyperparameters": {
+    "iterations": 150,
+    "learning_rate": 0.04,
+    "depth": 2,
+    "l2_leaf_reg": 5.0,
+    "loss_function": "RMSE",
+    "nan_mode": "Min",
+    "thread_count": 1,
+    "random_seed": 20260916,
+    "verbose": false,
+    "random_strength": 1,
+    "allow_writing_files": false
+  },
+  "training_end": "2026-08",
+  "git_commit": "dc3d34be7733c4ebfc9964f7dcce539d84fbd1bb",
+  "status": "frozen_pre_release_imputed_candidate",
+  "imputations": {
+    "2026-10:1-10": {
+      "method": "arithmetic_midpoint_absolute_price",
+      "left": "2026-09:21-end",
+      "right": "2026-10:11-20",
+      "matched_products": 50,
+      "unmatched_products": 50,
+      "note": "Scenario reconstruction, not an observed NBS 1-10 release; requires right-bound release."
+    }
+  },
+  "unseen_training_features": []
+}

@@ -1,7 +1,7 @@
 {
   "requested_month": "2026-10",
   "requested_label": "October 2026",
-  "refreshed": "2026-10-26T17:15:09.097664+08:00",
+  "refreshed": "2026-10-27T16:19:23.315902+08:00",
   "latest_month": "2026-10",
   "months": [
     {
@@ -2933,7 +2933,7 @@
       "model": "histgb",
       "label": "HistGradientBoosting",
       "prediction": 0.11154421793753669,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
       "products": [
@@ -3013,7 +3013,7 @@
         "maximum_absolute_error": 1.5286359714069535,
         "directional_accuracy": 0.6956521739130435
       },
-      "forecast_id": "589a4481983bf01518c3cd1f39920f1c424fe861373f30407782f7535d74c36b",
+      "forecast_id": "a71824066f2e33dac6f22cf79443d6c352e293676643810b21fef3e7235838a7",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -3047,7 +3047,7 @@
       "model": "lightgbm",
       "label": "LightGBM",
       "prediction": 0.18749427147338854,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
       "products": [
@@ -3127,7 +3127,7 @@
         "maximum_absolute_error": 1.4745373294724384,
         "directional_accuracy": 0.6956521739130435
       },
-      "forecast_id": "03d6f4aa07a3f614eff12561c16d7d96d5590f3e9e0edaa3a0f833644e750c0e",
+      "forecast_id": "6d7558dddd8fae9cf4b3e3268400823de6accffea05f369e7363bdf2bd5dbde7",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -3292,7 +3292,7 @@
       "model": "xgboost",
       "label": "XGBoost",
       "prediction": 0.44247326254844666,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
       "products": [
@@ -3372,7 +3372,7 @@
         "maximum_absolute_error": 1.5904871225357056,
         "directional_accuracy": 0.6982758620689655
       },
-      "forecast_id": "532138aa11714d959c33a9d2df428b7c4abf39772874e308d659240f77b61b92",
+      "forecast_id": "40378621440519294032368a50bf0e3dd8eeb19999bb9fcb2f5f8f24e9226756",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_imputed_candidate",
       "sources": {
@@ -3562,7 +3562,7 @@
       "model": "catboost",
       "label": "CatBoost",
       "prediction": 0.09563927913504901,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
       "products": [
@@ -3642,7 +3642,7 @@
         "maximum_absolute_error": 1.688142206511304,
         "directional_accuracy": 0.6956521739130435
       },
-      "forecast_id": "d56516ae59a3b7d80906f07e144598d95dd6353588d213137931825639fed784",
+      "forecast_id": "f97cd646e70a00e1466d7957ccf33f8b7ad0ca8a8ab870ff183b801f9273b881",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -3749,7 +3749,7 @@
       "model": "histgb",
       "label": "HistGradientBoosting",
       "prediction": 0.46125276904566487,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
       "products": [
@@ -3829,7 +3829,7 @@
         "maximum_absolute_error": 1.5559234618534679,
         "directional_accuracy": 0.6896551724137931
       },
-      "forecast_id": "12428d3986095b4a4b24104271a28164dfc9e10ac8868ff8ca52a7e81304d19a",
+      "forecast_id": "b364ef38de2b0b10ef87785297352a7cf2b092fdc941305ae7a9bf755d198de7",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_imputed_candidate",
       "sources": {
@@ -4076,7 +4076,7 @@
       "model": "ridge",
       "label": "Product ridge",
       "prediction": 0.2707944530504705,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
       "products": [],
@@ -4090,7 +4090,7 @@
         "maximum_absolute_error": 1.320796213671445,
         "directional_accuracy": 0.7304347826086957
       },
-      "forecast_id": "161625ff3433cc43725c542f5102090a62583a7090beaa147c3be0fa814ba1a2",
+      "forecast_id": "46614dcdccdf5583f11625126f7ebd5b1a346e387830f772c9a78c9208d06bd0",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -4124,7 +4124,7 @@
       "model": "ridge",
       "label": "Product ridge",
       "prediction": 0.27999960965980364,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
       "products": [],
@@ -4138,7 +4138,7 @@
         "maximum_absolute_error": 1.410076658973471,
         "directional_accuracy": 0.7391304347826086
       },
-      "forecast_id": "e938b3db49255f1a5e51c0ea0f895a269881760a5d7cb212d18395e0118b0be3",
+      "forecast_id": "bfe724a298335b68f2dc1309d482165ed2f04e1748743de6adcc4da0d8148856",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -4172,7 +4172,7 @@
       "model": "histgb",
       "label": "HistGradientBoosting",
       "prediction": -0.016818172364274693,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Histogram-based gradient boosting provides a simpler tree-booster benchmark with native missing-value handling.",
       "products": [
@@ -4252,7 +4252,7 @@
         "maximum_absolute_error": 1.4612488784891808,
         "directional_accuracy": 0.7130434782608696
       },
-      "forecast_id": "c5f56b31473efb07fc1afcce9a1426080d269212d42e41fa1332fa397bde923e",
+      "forecast_id": "e35501edae91ec669f020877776d08eb38df83f06202e4752273f434779fdf7a",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -4286,7 +4286,7 @@
       "model": "lightgbm",
       "label": "LightGBM",
       "prediction": 0.2324213764574922,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
       "products": [
@@ -4366,7 +4366,7 @@
         "maximum_absolute_error": 1.5529497279150655,
         "directional_accuracy": 0.6869565217391305
       },
-      "forecast_id": "1e037ef6ff4bd8bd98ea5e3ac913b22ed8b0967f3300f864f744fb374047a281",
+      "forecast_id": "c7cd2dee25de4f7916962a1a419fe3374e96c013422d3d8a16dca5fedcd1cb43",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -4400,7 +4400,7 @@
       "model": "lightgbm",
       "label": "LightGBM",
       "prediction": 0.593495069664491,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "A strongly constrained tree booster tests an alternative way of learning product-price interactions.",
       "products": [
@@ -4480,7 +4480,7 @@
         "maximum_absolute_error": 1.616510410822345,
         "directional_accuracy": 0.7155172413793104
       },
-      "forecast_id": "6c0fb853d082b7a67019c848f641836568fc1cf8cd568b63cf9acdb4a9f18689",
+      "forecast_id": "ee33a7d7380c308a27577199b966ec267928cc5905deafc12b2b6c49e2353eb1",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_imputed_candidate",
       "sources": {
@@ -4531,7 +4531,7 @@
       "model": "sector_first",
       "label": "Sector-first regression",
       "prediction": 0.3453839364204222,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Groups product changes into sector signals before fitting a regularized regression.",
       "products": [],
@@ -4545,7 +4545,7 @@
         "maximum_absolute_error": 1.7993793085407452,
         "directional_accuracy": 0.7652173913043478
       },
-      "forecast_id": "2f039cd54f4c2d973559bc477549f675bc9465ae7f3b801dfe68ffa90204fc27",
+      "forecast_id": "5ea000fb73badc897c158705cf469d2fe694636297c2bbd115de27a29a183262",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -4849,7 +4849,7 @@
       "model": "direct_tracker",
       "label": "Direct price tracker",
       "prediction": -0.1737437590430731,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Tracks circulation-market price movements without calibration to headline PPI. This is a price index, not a PPI forecast.",
       "products": [],
@@ -4863,7 +4863,7 @@
         "maximum_absolute_error": 11.562377570929588,
         "directional_accuracy": 0.782608695652174
       },
-      "forecast_id": "b093b56d7906fb315ec8ee8e7622fe63666a719d44bbe1f6aeb0f888cdba7480",
+      "forecast_id": "d80a34a7d0af302602c879e66dfca62ed6972365e383c4861e19d0d8b00c5483",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -5036,7 +5036,7 @@
       "model": "random_forest",
       "label": "Random forest",
       "prediction": 0.13659685011388528,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Averages many decision trees to test a different nonlinear modelling assumption.",
       "products": [
@@ -5116,7 +5116,7 @@
         "maximum_absolute_error": 1.503882506699328,
         "directional_accuracy": 0.6608695652173913
       },
-      "forecast_id": "933b4a712fb415544e84d6cdc1f21b9103555e2a9bec90e1ca2d116c84ba618c",
+      "forecast_id": "a8a8f9ed7157d16847c296d23c045d805b238f545def8575a12140e3b9bf5f88",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -5288,8 +5288,8 @@
       "panel": "union",
       "model": "ridge",
       "label": "Product ridge",
-      "prediction": 0.403754366926296,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "prediction": 0.40375436692629607,
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Regularized linear regression uses observed-value scaling, fold-local product eligibility and chronological tuning. Sparse missing inputs map to the observed training mean.",
       "products": [],
@@ -5303,7 +5303,7 @@
         "maximum_absolute_error": 1.2403090807956036,
         "directional_accuracy": 0.7327586206896551
       },
-      "forecast_id": "85b271608a44a7471b360995f22d02bdeb905ccf9d17b025ae71943deed9e3a5",
+      "forecast_id": "caafb973c617b842e969800188d92f71988976371d636f8fdcdaba062a41d4ad",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_imputed_candidate",
       "sources": {
@@ -5354,7 +5354,7 @@
       "model": "catboost",
       "label": "CatBoost",
       "prediction": 0.38875051599420135,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
       "products": [
@@ -5434,7 +5434,7 @@
         "maximum_absolute_error": 1.519976134104784,
         "directional_accuracy": 0.7327586206896551
       },
-      "forecast_id": "b22e053eae81dfb8561921e8001be5d5a7176231ad5af021b105a767b19fbb00",
+      "forecast_id": "18f2d808a8c679c89241b7ea1147382da02a74d6ecfa170baa797781b3257dc0",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_imputed_candidate",
       "sources": {
@@ -5485,7 +5485,7 @@
       "model": "catboost",
       "label": "CatBoost",
       "prediction": 0.1697065151764234,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Regularized boosted trees provide an independent nonlinear estimate and handle structural missing prices.",
       "products": [
@@ -5565,7 +5565,7 @@
         "maximum_absolute_error": 1.5514894095872644,
         "directional_accuracy": 0.7130434782608696
       },
-      "forecast_id": "5fbb265f1d254c15470b3126c7c3e29a9fb9299501acb69e98b88712cabba94b",
+      "forecast_id": "cc1600a9ff189e41302c8a80286ef59e8a2a4db2f8a1a14ae0ad95c69160a39e",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -5599,7 +5599,7 @@
       "model": "xgboost",
       "label": "XGBoost",
       "prediction": 0.2787025272846222,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
       "products": [
@@ -5679,7 +5679,7 @@
         "maximum_absolute_error": 1.4880599975585938,
         "directional_accuracy": 0.7043478260869566
       },
-      "forecast_id": "69fc3a728bdbf3ff142c50170cbc533d7390d8a8545b38d8f89aab795469e474",
+      "forecast_id": "1ba369efb4fa9b0560d4ad9734ec934aa7f6d6775074de96dea9cdca03599be2",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -5713,7 +5713,7 @@
       "model": "economic_ml_hybrid",
       "label": "Economic / ML hybrid (NBS prices)",
       "prediction": 0.15431917142246862,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Combines linear and boosting estimates built from NBS price signals.",
       "products": [],
@@ -5727,7 +5727,7 @@
         "maximum_absolute_error": 1.2088049974085273,
         "directional_accuracy": 0.7739130434782608
       },
-      "forecast_id": "6bc99cabde8afe4d4c88be68cef0b1316df6ad2c501510765606998532db307b",
+      "forecast_id": "bef23120b4bfc5b335435c067eb6064148bbc248a68f98cd7c0b9750102ae415",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -5761,7 +5761,7 @@
       "model": "xgboost",
       "label": "XGBoost",
       "prediction": 0.25615453720092773,
-      "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+      "frozen_at": "2026-10-27T16:19:23.315902+08:00",
       "model_version": "product-ridge-v2-3200ca1610c2d8e9",
       "explanation": "Shallow boosted trees learn nonlinear relationships between individual product-price changes and headline PPI.",
       "products": [
@@ -5841,7 +5841,7 @@
         "maximum_absolute_error": 1.410964846611023,
         "directional_accuracy": 0.7130434782608696
       },
-      "forecast_id": "f4a3c4a69d920160996dd526d447debc17352a49164f15cf2bb2a131e7fec061",
+      "forecast_id": "a78427dd5b142621faefea3252eacd01988c1ac32323258d8f8194bebf19df4c",
       "data_cutoff": "2026-10-24 01:30:00+00:00",
       "status": "frozen_pre_release_candidate",
       "sources": {
@@ -7082,7 +7082,7 @@
   "schema_version": 1,
   "quality": {
     "forecast_month": "2026-10",
-    "checked_as_of": "2026-10-26T17:15:09.097664+08:00",
+    "checked_as_of": "2026-10-27T16:19:23.315902+08:00",
     "models": [
       {
         "model": "ridge",
@@ -7153,7 +7153,7 @@
         "panel": "stable",
         "prediction": 0.18749427147338854,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 25,
         "learned_features": 25,
         "outside_training_range": 0,
@@ -7173,7 +7173,7 @@
         "panel": "union",
         "prediction": 0.46125276904566487,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 100,
         "learned_features": 172,
         "outside_training_range": 6,
@@ -7234,7 +7234,7 @@
         "panel": "union",
         "prediction": 0.2707944530504705,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 42,
         "learned_features": 78,
         "outside_training_range": 0,
@@ -7249,12 +7249,115 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
+        "model": "catboost",
+        "variant": "early_carry",
+        "panel": "union",
+        "prediction": 0.38875051599420135,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
+        "used_products": 100,
+        "learned_features": 172,
+        "outside_training_range": 6,
+        "short_history_features": 16,
+        "outside_features": [
+          "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53",
+          "carry__p_c67eb545eaecb876",
+          "carry__p_d03f48cac90afd53"
+        ],
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53",
+          "carry__p_09cb91d919e19c81",
+          "carry__p_15e2359392c5042c",
+          "carry__p_369ce465f81b2b58",
+          "carry__p_4868c8af6ebb3048",
+          "carry__p_8f97282e97de7a9b",
+          "carry__p_b4735e773b7401fc",
+          "carry__p_c67eb545eaecb876",
+          "carry__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 7,
+          "price__p_15e2359392c5042c": 7,
+          "price__p_369ce465f81b2b58": 7,
+          "price__p_4868c8af6ebb3048": 7,
+          "price__p_8f97282e97de7a9b": 7,
+          "price__p_b4735e773b7401fc": 7,
+          "price__p_c67eb545eaecb876": 7,
+          "price__p_d03f48cac90afd53": 7,
+          "carry__p_09cb91d919e19c81": 7,
+          "carry__p_15e2359392c5042c": 7,
+          "carry__p_369ce465f81b2b58": 7,
+          "carry__p_4868c8af6ebb3048": 7,
+          "carry__p_8f97282e97de7a9b": 7,
+          "carry__p_b4735e773b7401fc": 7,
+          "carry__p_c67eb545eaecb876": 7,
+          "carry__p_d03f48cac90afd53": 7
+        },
+        "historical_mae": 0.3395535065142495,
+        "recent_12_calendar_month_mae": 0.45692255846788743,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 116,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
+        "model": "xgboost",
+        "variant": "twentieth",
+        "panel": "union",
+        "prediction": 0.2787025272846222,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
+        "used_products": 50,
+        "learned_features": 86,
+        "outside_training_range": 3,
+        "short_history_features": 8,
+        "outside_features": [
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 5,
+          "price__p_15e2359392c5042c": 5,
+          "price__p_369ce465f81b2b58": 5,
+          "price__p_4868c8af6ebb3048": 5,
+          "price__p_8f97282e97de7a9b": 5,
+          "price__p_b4735e773b7401fc": 5,
+          "price__p_c67eb545eaecb876": 5,
+          "price__p_d03f48cac90afd53": 5
+        },
+        "historical_mae": 0.347994445802077,
+        "recent_12_calendar_month_mae": 0.4485653211176396,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 115,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
         "model": "lightgbm",
         "variant": "twentieth",
         "panel": "union",
         "prediction": 0.2324213764574922,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 50,
         "learned_features": 86,
         "outside_training_range": 3,
@@ -7296,7 +7399,7 @@
         "panel": "union",
         "prediction": 0.3453839364204222,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 50,
         "learned_features": 86,
         "outside_training_range": 3,
@@ -7418,55 +7521,12 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "lightgbm",
-        "variant": "early",
-        "panel": "union",
-        "prediction": 0.6017808695190524,
-        "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
-        "used_products": 50,
-        "learned_features": 86,
-        "outside_training_range": 4,
-        "short_history_features": 8,
-        "outside_features": [
-          "price__p_369ce465f81b2b58",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 7,
-          "price__p_15e2359392c5042c": 7,
-          "price__p_369ce465f81b2b58": 7,
-          "price__p_4868c8af6ebb3048": 7,
-          "price__p_8f97282e97de7a9b": 7,
-          "price__p_b4735e773b7401fc": 7,
-          "price__p_c67eb545eaecb876": 7,
-          "price__p_d03f48cac90afd53": 7
-        },
-        "historical_mae": 0.32708430467036775,
-        "recent_12_calendar_month_mae": 0.4096551853943663,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 119,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
         "model": "xgboost",
         "variant": "early_carry",
         "panel": "union",
         "prediction": 0.44247326254844666,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 100,
         "learned_features": 172,
         "outside_training_range": 6,
@@ -7522,12 +7582,55 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
+        "model": "lightgbm",
+        "variant": "early",
+        "panel": "union",
+        "prediction": 0.6017808695190524,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "used_products": 50,
+        "learned_features": 86,
+        "outside_training_range": 4,
+        "short_history_features": 8,
+        "outside_features": [
+          "price__p_369ce465f81b2b58",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_features": [
+          "price__p_09cb91d919e19c81",
+          "price__p_15e2359392c5042c",
+          "price__p_369ce465f81b2b58",
+          "price__p_4868c8af6ebb3048",
+          "price__p_8f97282e97de7a9b",
+          "price__p_b4735e773b7401fc",
+          "price__p_c67eb545eaecb876",
+          "price__p_d03f48cac90afd53"
+        ],
+        "short_history_counts": {
+          "price__p_09cb91d919e19c81": 7,
+          "price__p_15e2359392c5042c": 7,
+          "price__p_369ce465f81b2b58": 7,
+          "price__p_4868c8af6ebb3048": 7,
+          "price__p_8f97282e97de7a9b": 7,
+          "price__p_b4735e773b7401fc": 7,
+          "price__p_c67eb545eaecb876": 7,
+          "price__p_d03f48cac90afd53": 7
+        },
+        "historical_mae": 0.32708430467036775,
+        "recent_12_calendar_month_mae": 0.4096551853943663,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 119,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
         "model": "histgb",
         "variant": "twentieth",
         "panel": "union",
         "prediction": 0.11154421793753669,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 50,
         "learned_features": 86,
         "outside_training_range": 3,
@@ -7569,7 +7672,7 @@
         "panel": "stable",
         "prediction": 0.1697065151764234,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 25,
         "learned_features": 25,
         "outside_training_range": 0,
@@ -7584,54 +7687,12 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "xgboost",
-        "variant": "twentieth",
-        "panel": "union",
-        "prediction": 0.2787025272846222,
-        "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
-        "used_products": 50,
-        "learned_features": 86,
-        "outside_training_range": 3,
-        "short_history_features": 8,
-        "outside_features": [
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 5,
-          "price__p_15e2359392c5042c": 5,
-          "price__p_369ce465f81b2b58": 5,
-          "price__p_4868c8af6ebb3048": 5,
-          "price__p_8f97282e97de7a9b": 5,
-          "price__p_b4735e773b7401fc": 5,
-          "price__p_c67eb545eaecb876": 5,
-          "price__p_d03f48cac90afd53": 5
-        },
-        "historical_mae": 0.347994445802077,
-        "recent_12_calendar_month_mae": 0.4485653211176396,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
         "model": "economic_ml_hybrid",
         "variant": "twentieth",
         "panel": "union",
         "prediction": 0.15431917142246862,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 50,
         "learned_features": 86,
         "outside_training_range": 3,
@@ -7673,7 +7734,7 @@
         "panel": "union",
         "prediction": 0.593495069664491,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 100,
         "learned_features": 172,
         "outside_training_range": 6,
@@ -7775,9 +7836,9 @@
         "model": "ridge",
         "variant": "early_carry",
         "panel": "union",
-        "prediction": 0.403754366926296,
+        "prediction": 0.40375436692629607,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 82,
         "learned_features": 148,
         "outside_training_range": 0,
@@ -7839,7 +7900,7 @@
         "panel": "union",
         "prediction": 0.13659685011388528,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 50,
         "learned_features": 86,
         "outside_training_range": 3,
@@ -7918,6 +7979,26 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
+        "model": "xgboost",
+        "variant": "twentieth",
+        "panel": "stable",
+        "prediction": 0.25615453720092773,
+        "forecast_month": "2026-10",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
+        "used_products": 25,
+        "learned_features": 25,
+        "outside_training_range": 0,
+        "short_history_features": 0,
+        "outside_features": [],
+        "short_features": [],
+        "short_history_counts": {},
+        "historical_mae": 0.33274117956504873,
+        "recent_12_calendar_month_mae": 0.4223196231387556,
+        "recent_forecast_months": 10,
+        "historical_forecast_months": 115,
+        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
+      },
+      {
         "model": "lightgbm",
         "variant": "final",
         "panel": "union",
@@ -7965,7 +8046,7 @@
         "panel": "union",
         "prediction": -0.1737437590430731,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 50,
         "learned_features": 86,
         "outside_training_range": 3,
@@ -8002,64 +8083,23 @@
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
-        "model": "catboost",
-        "variant": "early_carry",
-        "panel": "union",
-        "prediction": 0.38875051599420135,
+        "model": "ridge",
+        "variant": "twentieth",
+        "panel": "stable",
+        "prediction": 0.27999960965980364,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
-        "used_products": 100,
-        "learned_features": 172,
-        "outside_training_range": 6,
-        "short_history_features": 16,
-        "outside_features": [
-          "price__p_369ce465f81b2b58",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53",
-          "carry__p_c67eb545eaecb876",
-          "carry__p_d03f48cac90afd53"
-        ],
-        "short_features": [
-          "price__p_09cb91d919e19c81",
-          "price__p_15e2359392c5042c",
-          "price__p_369ce465f81b2b58",
-          "price__p_4868c8af6ebb3048",
-          "price__p_8f97282e97de7a9b",
-          "price__p_b4735e773b7401fc",
-          "price__p_c67eb545eaecb876",
-          "price__p_d03f48cac90afd53",
-          "carry__p_09cb91d919e19c81",
-          "carry__p_15e2359392c5042c",
-          "carry__p_369ce465f81b2b58",
-          "carry__p_4868c8af6ebb3048",
-          "carry__p_8f97282e97de7a9b",
-          "carry__p_b4735e773b7401fc",
-          "carry__p_c67eb545eaecb876",
-          "carry__p_d03f48cac90afd53"
-        ],
-        "short_history_counts": {
-          "price__p_09cb91d919e19c81": 7,
-          "price__p_15e2359392c5042c": 7,
-          "price__p_369ce465f81b2b58": 7,
-          "price__p_4868c8af6ebb3048": 7,
-          "price__p_8f97282e97de7a9b": 7,
-          "price__p_b4735e773b7401fc": 7,
-          "price__p_c67eb545eaecb876": 7,
-          "price__p_d03f48cac90afd53": 7,
-          "carry__p_09cb91d919e19c81": 7,
-          "carry__p_15e2359392c5042c": 7,
-          "carry__p_369ce465f81b2b58": 7,
-          "carry__p_4868c8af6ebb3048": 7,
-          "carry__p_8f97282e97de7a9b": 7,
-          "carry__p_b4735e773b7401fc": 7,
-          "carry__p_c67eb545eaecb876": 7,
-          "carry__p_d03f48cac90afd53": 7
-        },
-        "historical_mae": 0.3395535065142495,
-        "recent_12_calendar_month_mae": 0.45692255846788743,
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
+        "used_products": 25,
+        "learned_features": 25,
+        "outside_training_range": 0,
+        "short_history_features": 0,
+        "outside_features": [],
+        "short_features": [],
+        "short_history_counts": {},
+        "historical_mae": 0.28203630139208125,
+        "recent_12_calendar_month_mae": 0.3170092365029888,
         "recent_forecast_months": 10,
-        "historical_forecast_months": 116,
+        "historical_forecast_months": 115,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
       },
       {
@@ -8088,7 +8128,7 @@
         "panel": "stable",
         "prediction": -0.016818172364274693,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 25,
         "learned_features": 25,
         "outside_training_range": 0,
@@ -8108,7 +8148,7 @@
         "panel": "union",
         "prediction": 0.09563927913504901,
         "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
+        "frozen_at": "2026-10-27T16:19:23.315902+08:00",
         "used_products": 50,
         "learned_features": 86,
         "outside_training_range": 3,
@@ -8140,46 +8180,6 @@
         },
         "historical_mae": 0.34291850619448727,
         "recent_12_calendar_month_mae": 0.49555896666535054,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "ridge",
-        "variant": "twentieth",
-        "panel": "stable",
-        "prediction": 0.27999960965980364,
-        "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
-        "used_products": 25,
-        "learned_features": 25,
-        "outside_training_range": 0,
-        "short_history_features": 0,
-        "outside_features": [],
-        "short_features": [],
-        "short_history_counts": {},
-        "historical_mae": 0.28203630139208125,
-        "recent_12_calendar_month_mae": 0.3170092365029888,
-        "recent_forecast_months": 10,
-        "historical_forecast_months": 115,
-        "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
-      },
-      {
-        "model": "xgboost",
-        "variant": "twentieth",
-        "panel": "stable",
-        "prediction": 0.25615453720092773,
-        "forecast_month": "2026-10",
-        "frozen_at": "2026-10-26T17:14:53.434728+08:00",
-        "used_products": 25,
-        "learned_features": 25,
-        "outside_training_range": 0,
-        "short_history_features": 0,
-        "outside_features": [],
-        "short_features": [],
-        "short_history_counts": {},
-        "historical_mae": 0.33274117956504873,
-        "recent_12_calendar_month_mae": 0.4223196231387556,
         "recent_forecast_months": 10,
         "historical_forecast_months": 115,
         "checks": "artifact hash, feature identity, source cutoff and training cutoff passed"
