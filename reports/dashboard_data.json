@@ -1,7 +1,7 @@
 {
-  "requested_month": "2026-10",
-  "requested_label": "October 2026",
-  "refreshed": "2026-10-31T16:47:48.156802+08:00",
+  "requested_month": "2026-11",
+  "requested_label": "November 2026",
+  "refreshed": "2026-11-01T17:37:40.572979+08:00",
   "latest_month": "2026-10",
   "months": [
     {
@@ -13,7 +13,7 @@
       "label": "September 2026"
     }
   ],
-  "current_available": true,
+  "current_available": false,
   "timings": {
     "twentieth": "20th-to-20th",
     "final": "Two-survey period",
@@ -7082,7 +7082,7 @@
   "schema_version": 1,
   "quality": {
     "forecast_month": "2026-10",
-    "checked_as_of": "2026-10-31T16:47:48.156802+08:00",
+    "checked_as_of": "2026-11-01T17:37:40.572979+08:00",
     "models": [
       {
         "model": "ridge",
