@@ -1,6 +1,6 @@
 # Adaptive model monitoring
 
-Updated: 2026-11-02T17:53:32.780827+08:00. Monitoring started: 2026-10-07T05:03:46.644079+08:00.
+Updated: 2026-11-03T17:59:02.929565+08:00. Monitoring started: 2026-10-07T05:03:46.644079+08:00.
 
 Four newly released monthly outcomes form the default monitoring window. Triggered models receive independently fitted challengers. Each frozen champion/challenger pair uses identical source snapshots, and six future matched monthly outcomes determine a provisional promotion. No historical forecast is rewritten.
 

@@ -1,7 +1,7 @@
 {
   "requested_month": "2026-11",
   "requested_label": "November 2026",
-  "refreshed": "2026-11-03T17:58:50.953902+08:00",
+  "refreshed": "2026-11-03T17:59:04.965741+08:00",
   "latest_month": "2026-10",
   "months": [
     {
@@ -7082,7 +7082,7 @@
   "schema_version": 1,
   "quality": {
     "forecast_month": "2026-10",
-    "checked_as_of": "2026-11-03T17:58:50.953902+08:00",
+    "checked_as_of": "2026-11-03T17:59:04.965741+08:00",
     "models": [
       {
         "model": "ridge",
