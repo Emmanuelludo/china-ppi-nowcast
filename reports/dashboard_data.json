@@ -1,7 +1,7 @@
 {
   "requested_month": "2026-11",
   "requested_label": "November 2026",
-  "refreshed": "2026-11-08T17:26:11.458037+08:00",
+  "refreshed": "2026-11-09T18:12:55.899300+08:00",
   "latest_month": "2026-10",
   "months": [
     {
@@ -7077,12 +7077,19 @@
       "value": 1.2,
       "published_at": "2026-10-14T09:30:00+08:00",
       "source_url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261014_1965476.html"
+    },
+    {
+      "month": "2026-10",
+      "label": "October 2026",
+      "value": 0.7,
+      "published_at": "2026-11-09T09:30:00+08:00",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261109_1965794.html"
     }
   ],
   "schema_version": 1,
   "quality": {
     "forecast_month": "2026-10",
-    "checked_as_of": "2026-11-08T17:26:11.458037+08:00",
+    "checked_as_of": "2026-11-09T18:12:55.899300+08:00",
     "models": [
       {
         "model": "ridge",

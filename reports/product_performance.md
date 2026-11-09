@@ -170,10 +170,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Historical (pseudo-real-time)|20th-to-20th|All historical products|XGBoost|12|10|0.449|0.569|-0.196|0.40|
 |Historical (pseudo-real-time)|20th-to-20th|All historical products|XGBoost|24|22|0.321|0.427|-0.030|0.64|
 |Historical (pseudo-real-time)|20th-to-20th|All historical products|XGBoost|full|115|0.348|0.460|-0.085|0.70|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|CatBoost|6|1|0.729|0.729|-0.729|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|CatBoost|12|1|0.729|0.729|-0.729|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|CatBoost|24|1|0.729|0.729|-0.729|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|CatBoost|full|1|0.729|0.729|-0.729|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|CatBoost|6|2|0.536|0.570|-0.536|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|CatBoost|12|2|0.536|0.570|-0.536|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|CatBoost|24|2|0.536|0.570|-0.536|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|CatBoost|full|2|0.536|0.570|-0.536|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|CatBoost|6|1|0.729|0.729|-0.729|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|CatBoost|12|1|0.729|0.729|-0.729|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|CatBoost|24|1|0.729|0.729|-0.729|1.00|
@@ -182,10 +182,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|CatBoost|12|1|0.805|0.805|-0.805|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|CatBoost|24|1|0.805|0.805|-0.805|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|CatBoost|full|1|0.805|0.805|-0.805|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|HistGradientBoosting|6|1|0.604|0.604|-0.604|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|HistGradientBoosting|12|1|0.604|0.604|-0.604|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|HistGradientBoosting|24|1|0.604|0.604|-0.604|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|HistGradientBoosting|full|1|0.604|0.604|-0.604|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|HistGradientBoosting|6|2|0.380|0.441|-0.380|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|HistGradientBoosting|12|2|0.380|0.441|-0.380|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|HistGradientBoosting|24|2|0.380|0.441|-0.380|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|HistGradientBoosting|full|2|0.380|0.441|-0.380|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|HistGradientBoosting|6|1|0.604|0.604|-0.604|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|HistGradientBoosting|12|1|0.604|0.604|-0.604|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|HistGradientBoosting|24|1|0.604|0.604|-0.604|1.00|
@@ -194,10 +194,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|HistGradientBoosting|12|1|0.903|0.903|-0.903|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|HistGradientBoosting|24|1|0.903|0.903|-0.903|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|HistGradientBoosting|full|1|0.903|0.903|-0.903|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|LightGBM|6|1|0.639|0.639|-0.639|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|LightGBM|12|1|0.639|0.639|-0.639|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|LightGBM|24|1|0.639|0.639|-0.639|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|LightGBM|full|1|0.639|0.639|-0.639|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|LightGBM|6|2|0.369|0.457|-0.369|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|LightGBM|12|2|0.369|0.457|-0.369|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|LightGBM|24|2|0.369|0.457|-0.369|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|LightGBM|full|2|0.369|0.457|-0.369|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|LightGBM|6|1|0.639|0.639|-0.639|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|LightGBM|12|1|0.639|0.639|-0.639|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|LightGBM|24|1|0.639|0.639|-0.639|1.00|
@@ -206,10 +206,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|LightGBM|12|1|0.684|0.684|-0.684|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|LightGBM|24|1|0.684|0.684|-0.684|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|LightGBM|full|1|0.684|0.684|-0.684|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|Product ridge|6|1|0.287|0.287|-0.287|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|Product ridge|12|1|0.287|0.287|-0.287|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|Product ridge|24|1|0.287|0.287|-0.287|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|Product ridge|full|1|0.287|0.287|-0.287|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|Product ridge|6|2|0.326|0.329|-0.326|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|Product ridge|12|2|0.326|0.329|-0.326|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|Product ridge|24|2|0.326|0.329|-0.326|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|Product ridge|full|2|0.326|0.329|-0.326|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|Product ridge|6|1|0.287|0.287|-0.287|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|Product ridge|12|1|0.287|0.287|-0.287|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|Product ridge|24|1|0.287|0.287|-0.287|1.00|
@@ -218,10 +218,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|Product ridge|12|1|0.432|0.432|-0.432|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|Product ridge|24|1|0.432|0.432|-0.432|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|Product ridge|full|1|0.432|0.432|-0.432|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|XGBoost|6|1|0.582|0.582|-0.582|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|XGBoost|12|1|0.582|0.582|-0.582|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|XGBoost|24|1|0.582|0.582|-0.582|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|XGBoost|full|1|0.582|0.582|-0.582|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|XGBoost|6|2|0.353|0.421|-0.353|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|XGBoost|12|2|0.353|0.421|-0.353|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|XGBoost|24|2|0.353|0.421|-0.353|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early month|All historical products|XGBoost|full|2|0.353|0.421|-0.353|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|XGBoost|6|1|0.582|0.582|-0.582|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|XGBoost|12|1|0.582|0.582|-0.582|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early month|All historical products|XGBoost|24|1|0.582|0.582|-0.582|1.00|
@@ -230,10 +230,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|XGBoost|12|1|0.735|0.735|-0.735|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|XGBoost|24|1|0.735|0.735|-0.735|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early month|All historical products|XGBoost|full|1|0.735|0.735|-0.735|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|CatBoost|6|1|0.595|0.595|-0.595|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|CatBoost|12|1|0.595|0.595|-0.595|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|CatBoost|24|1|0.595|0.595|-0.595|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|CatBoost|full|1|0.595|0.595|-0.595|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|CatBoost|6|2|0.453|0.475|-0.453|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|CatBoost|12|2|0.453|0.475|-0.453|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|CatBoost|24|2|0.453|0.475|-0.453|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|CatBoost|full|2|0.453|0.475|-0.453|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|CatBoost|6|1|0.595|0.595|-0.595|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|CatBoost|12|1|0.595|0.595|-0.595|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|CatBoost|24|1|0.595|0.595|-0.595|1.00|
@@ -242,10 +242,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|CatBoost|12|1|0.649|0.649|-0.649|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|CatBoost|24|1|0.649|0.649|-0.649|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|CatBoost|full|1|0.649|0.649|-0.649|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|HistGradientBoosting|6|1|0.523|0.523|-0.523|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|HistGradientBoosting|12|1|0.523|0.523|-0.523|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|HistGradientBoosting|24|1|0.523|0.523|-0.523|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|HistGradientBoosting|full|1|0.523|0.523|-0.523|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|HistGradientBoosting|6|2|0.381|0.407|-0.381|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|HistGradientBoosting|12|2|0.381|0.407|-0.381|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|HistGradientBoosting|24|2|0.381|0.407|-0.381|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|HistGradientBoosting|full|2|0.381|0.407|-0.381|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|HistGradientBoosting|6|1|0.523|0.523|-0.523|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|HistGradientBoosting|12|1|0.523|0.523|-0.523|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|HistGradientBoosting|24|1|0.523|0.523|-0.523|1.00|
@@ -254,10 +254,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|HistGradientBoosting|12|1|0.927|0.927|-0.927|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|HistGradientBoosting|24|1|0.927|0.927|-0.927|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|HistGradientBoosting|full|1|0.927|0.927|-0.927|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|LightGBM|6|1|0.531|0.531|-0.531|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|LightGBM|12|1|0.531|0.531|-0.531|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|LightGBM|24|1|0.531|0.531|-0.531|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|LightGBM|full|1|0.531|0.531|-0.531|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|LightGBM|6|2|0.319|0.383|-0.319|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|LightGBM|12|2|0.319|0.383|-0.319|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|LightGBM|24|2|0.319|0.383|-0.319|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|LightGBM|full|2|0.319|0.383|-0.319|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|LightGBM|6|1|0.531|0.531|-0.531|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|LightGBM|12|1|0.531|0.531|-0.531|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|LightGBM|24|1|0.531|0.531|-0.531|1.00|
@@ -266,10 +266,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|LightGBM|12|1|0.870|0.870|-0.870|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|LightGBM|24|1|0.870|0.870|-0.870|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|LightGBM|full|1|0.870|0.870|-0.870|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|Product ridge|6|1|0.004|0.004|-0.004|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|Product ridge|12|1|0.004|0.004|-0.004|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|Product ridge|24|1|0.004|0.004|-0.004|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|Product ridge|full|1|0.004|0.004|-0.004|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|Product ridge|6|2|0.150|0.209|-0.150|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|Product ridge|12|2|0.150|0.209|-0.150|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|Product ridge|24|2|0.150|0.209|-0.150|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|Product ridge|full|2|0.150|0.209|-0.150|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|Product ridge|6|1|0.007|0.007|0.007|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|Product ridge|12|1|0.007|0.007|0.007|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|Product ridge|24|1|0.007|0.007|0.007|1.00|
@@ -278,10 +278,10 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|Product ridge|12|1|0.232|0.232|-0.232|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|Product ridge|24|1|0.232|0.232|-0.232|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|Product ridge|full|1|0.232|0.232|-0.232|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|XGBoost|6|1|0.525|0.525|-0.525|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|XGBoost|12|1|0.525|0.525|-0.525|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|XGBoost|24|1|0.525|0.525|-0.525|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|XGBoost|full|1|0.525|0.525|-0.525|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|XGBoost|6|2|0.391|0.413|-0.391|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|XGBoost|12|2|0.391|0.413|-0.391|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|XGBoost|24|2|0.391|0.413|-0.391|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Early + carry-in|All historical products|XGBoost|full|2|0.391|0.413|-0.391|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|XGBoost|6|1|0.525|0.525|-0.525|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|XGBoost|12|1|0.525|0.525|-0.525|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Early + carry-in|All historical products|XGBoost|24|1|0.525|0.525|-0.525|1.00|
@@ -290,154 +290,154 @@ Small differences are not grounds to remove models. At least six prospective rel
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|XGBoost|12|1|0.622|0.622|-0.622|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|XGBoost|24|1|0.622|0.622|-0.622|1.00|
 |Prospective: product-v3-f62708ba53ea7b1d|Early + carry-in|All historical products|XGBoost|full|1|0.622|0.622|-0.622|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|CatBoost|6|1|0.561|0.561|-0.561|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|CatBoost|12|1|0.561|0.561|-0.561|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|CatBoost|24|1|0.561|0.561|-0.561|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|CatBoost|full|1|0.561|0.561|-0.561|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|CatBoost|6|2|0.528|0.529|-0.528|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|CatBoost|12|2|0.528|0.529|-0.528|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|CatBoost|24|2|0.528|0.529|-0.528|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|CatBoost|full|2|0.528|0.529|-0.528|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|CatBoost|6|1|0.561|0.561|-0.561|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|CatBoost|12|1|0.561|0.561|-0.561|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|CatBoost|24|1|0.561|0.561|-0.561|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|CatBoost|full|1|0.561|0.561|-0.561|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|HistGradientBoosting|6|1|0.456|0.456|-0.456|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|HistGradientBoosting|12|1|0.456|0.456|-0.456|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|HistGradientBoosting|24|1|0.456|0.456|-0.456|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|HistGradientBoosting|full|1|0.456|0.456|-0.456|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|HistGradientBoosting|6|2|0.280|0.331|-0.280|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|HistGradientBoosting|12|2|0.280|0.331|-0.280|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|HistGradientBoosting|24|2|0.280|0.331|-0.280|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|HistGradientBoosting|full|2|0.280|0.331|-0.280|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|HistGradientBoosting|6|1|0.456|0.456|-0.456|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|HistGradientBoosting|12|1|0.456|0.456|-0.456|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|HistGradientBoosting|24|1|0.456|0.456|-0.456|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|HistGradientBoosting|full|1|0.456|0.456|-0.456|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|LightGBM|6|1|0.529|0.529|-0.529|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|LightGBM|12|1|0.529|0.529|-0.529|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|LightGBM|24|1|0.529|0.529|-0.529|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|LightGBM|full|1|0.529|0.529|-0.529|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|LightGBM|6|2|0.379|0.408|-0.379|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|LightGBM|12|2|0.379|0.408|-0.379|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|LightGBM|24|2|0.379|0.408|-0.379|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|LightGBM|full|2|0.379|0.408|-0.379|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|LightGBM|6|1|0.529|0.529|-0.529|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|LightGBM|12|1|0.529|0.529|-0.529|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|LightGBM|24|1|0.529|0.529|-0.529|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|LightGBM|full|1|0.529|0.529|-0.529|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|Product ridge|6|1|0.158|0.158|-0.158|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|Product ridge|12|1|0.158|0.158|-0.158|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|Product ridge|24|1|0.158|0.158|-0.158|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|Product ridge|full|1|0.158|0.158|-0.158|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|Product ridge|6|2|0.297|0.328|-0.297|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|Product ridge|12|2|0.297|0.328|-0.297|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|Product ridge|24|2|0.297|0.328|-0.297|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|Product ridge|full|2|0.297|0.328|-0.297|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|Product ridge|6|1|0.018|0.018|0.018|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|Product ridge|12|1|0.018|0.018|0.018|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|Product ridge|24|1|0.018|0.018|0.018|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|Product ridge|full|1|0.018|0.018|0.018|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|XGBoost|6|1|0.504|0.504|-0.504|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|XGBoost|12|1|0.504|0.504|-0.504|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|XGBoost|24|1|0.504|0.504|-0.504|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|XGBoost|full|1|0.504|0.504|-0.504|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|XGBoost|6|2|0.375|0.396|-0.375|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|XGBoost|12|2|0.375|0.396|-0.375|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|XGBoost|24|2|0.375|0.396|-0.375|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|Two-survey period|All historical products|XGBoost|full|2|0.375|0.396|-0.375|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|XGBoost|6|1|0.504|0.504|-0.504|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|XGBoost|12|1|0.504|0.504|-0.504|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|XGBoost|24|1|0.504|0.504|-0.504|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|Two-survey period|All historical products|XGBoost|full|1|0.504|0.504|-0.504|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|CatBoost|6|1|0.398|0.398|-0.398|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|CatBoost|12|1|0.398|0.398|-0.398|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|CatBoost|24|1|0.398|0.398|-0.398|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|CatBoost|full|1|0.398|0.398|-0.398|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|CatBoost|6|2|0.464|0.469|-0.464|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|CatBoost|12|2|0.464|0.469|-0.464|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|CatBoost|24|2|0.464|0.469|-0.464|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|CatBoost|full|2|0.464|0.469|-0.464|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|CatBoost|6|1|0.398|0.398|-0.398|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|CatBoost|12|1|0.398|0.398|-0.398|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|CatBoost|24|1|0.398|0.398|-0.398|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|CatBoost|full|1|0.398|0.398|-0.398|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|HistGradientBoosting|6|1|0.503|0.503|-0.503|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|HistGradientBoosting|12|1|0.503|0.503|-0.503|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|HistGradientBoosting|24|1|0.503|0.503|-0.503|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|HistGradientBoosting|full|1|0.503|0.503|-0.503|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|HistGradientBoosting|6|2|0.610|0.619|-0.610|0.50|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|HistGradientBoosting|12|2|0.610|0.619|-0.610|0.50|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|HistGradientBoosting|24|2|0.610|0.619|-0.610|0.50|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|HistGradientBoosting|full|2|0.610|0.619|-0.610|0.50|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|HistGradientBoosting|6|1|0.503|0.503|-0.503|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|HistGradientBoosting|12|1|0.503|0.503|-0.503|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|HistGradientBoosting|24|1|0.503|0.503|-0.503|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|HistGradientBoosting|full|1|0.503|0.503|-0.503|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|LightGBM|6|1|0.481|0.481|-0.481|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|LightGBM|12|1|0.481|0.481|-0.481|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|LightGBM|24|1|0.481|0.481|-0.481|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|LightGBM|full|1|0.481|0.481|-0.481|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|LightGBM|6|2|0.497|0.497|-0.497|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|LightGBM|12|2|0.497|0.497|-0.497|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|LightGBM|24|2|0.497|0.497|-0.497|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|LightGBM|full|2|0.497|0.497|-0.497|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|LightGBM|6|1|0.481|0.481|-0.481|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|LightGBM|12|1|0.481|0.481|-0.481|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|LightGBM|24|1|0.481|0.481|-0.481|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|LightGBM|full|1|0.481|0.481|-0.481|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|Product ridge|6|1|0.419|0.419|-0.419|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|Product ridge|12|1|0.419|0.419|-0.419|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|Product ridge|24|1|0.419|0.419|-0.419|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|Product ridge|full|1|0.419|0.419|-0.419|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|Product ridge|6|2|0.419|0.419|-0.419|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|Product ridge|12|2|0.419|0.419|-0.419|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|Product ridge|24|2|0.419|0.419|-0.419|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|Product ridge|full|2|0.419|0.419|-0.419|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|Product ridge|6|1|0.386|0.386|-0.386|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|Product ridge|12|1|0.386|0.386|-0.386|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|Product ridge|24|1|0.386|0.386|-0.386|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|Product ridge|full|1|0.386|0.386|-0.386|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|XGBoost|6|1|0.548|0.548|-0.548|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|XGBoost|12|1|0.548|0.548|-0.548|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|XGBoost|24|1|0.548|0.548|-0.548|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|XGBoost|full|1|0.548|0.548|-0.548|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|XGBoost|6|2|0.496|0.498|-0.496|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|XGBoost|12|2|0.496|0.498|-0.496|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|XGBoost|24|2|0.496|0.498|-0.496|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|Stable products|XGBoost|full|2|0.496|0.498|-0.496|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|XGBoost|6|1|0.548|0.548|-0.548|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|XGBoost|12|1|0.548|0.548|-0.548|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|XGBoost|24|1|0.548|0.548|-0.548|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|Stable products|XGBoost|full|1|0.548|0.548|-0.548|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|CatBoost|6|1|0.471|0.471|-0.471|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|CatBoost|12|1|0.471|0.471|-0.471|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|CatBoost|24|1|0.471|0.471|-0.471|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|CatBoost|full|1|0.471|0.471|-0.471|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|CatBoost|6|2|0.538|0.542|-0.538|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|CatBoost|12|2|0.538|0.542|-0.538|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|CatBoost|24|2|0.538|0.542|-0.538|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|CatBoost|full|2|0.538|0.542|-0.538|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|CatBoost|6|1|0.471|0.471|-0.471|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|CatBoost|12|1|0.471|0.471|-0.471|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|CatBoost|24|1|0.471|0.471|-0.471|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|CatBoost|full|1|0.471|0.471|-0.471|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Direct price tracker|6|1|4.923|4.923|4.923|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Direct price tracker|12|1|4.923|4.923|4.923|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Direct price tracker|24|1|4.923|4.923|4.923|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Direct price tracker|full|1|4.923|4.923|4.923|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Direct price tracker|6|2|2.899|3.536|2.025|0.50|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Direct price tracker|12|2|2.899|3.536|2.025|0.50|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Direct price tracker|24|2|2.899|3.536|2.025|0.50|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Direct price tracker|full|2|2.899|3.536|2.025|0.50|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Direct price tracker|6|1|4.923|4.923|4.923|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Direct price tracker|12|1|4.923|4.923|4.923|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Direct price tracker|24|1|4.923|4.923|4.923|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Direct price tracker|full|1|4.923|4.923|4.923|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|6|1|0.255|0.255|-0.255|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|12|1|0.255|0.255|-0.255|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|24|1|0.255|0.255|-0.255|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|full|1|0.255|0.255|-0.255|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|6|2|0.400|0.426|-0.400|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|12|2|0.400|0.426|-0.400|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|24|2|0.400|0.426|-0.400|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|full|2|0.400|0.426|-0.400|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|6|1|0.255|0.255|-0.255|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|12|1|0.255|0.255|-0.255|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|24|1|0.255|0.255|-0.255|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Economic / ML hybrid (NBS prices)|full|1|0.255|0.255|-0.255|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|HistGradientBoosting|6|1|0.509|0.509|-0.509|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|HistGradientBoosting|12|1|0.509|0.509|-0.509|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|HistGradientBoosting|24|1|0.509|0.509|-0.509|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|HistGradientBoosting|full|1|0.509|0.509|-0.509|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|HistGradientBoosting|6|2|0.549|0.550|-0.549|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|HistGradientBoosting|12|2|0.549|0.550|-0.549|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|HistGradientBoosting|24|2|0.549|0.550|-0.549|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|HistGradientBoosting|full|2|0.549|0.550|-0.549|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|HistGradientBoosting|6|1|0.509|0.509|-0.509|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|HistGradientBoosting|12|1|0.509|0.509|-0.509|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|HistGradientBoosting|24|1|0.509|0.509|-0.509|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|HistGradientBoosting|full|1|0.509|0.509|-0.509|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|LightGBM|6|1|0.556|0.556|-0.556|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|LightGBM|12|1|0.556|0.556|-0.556|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|LightGBM|24|1|0.556|0.556|-0.556|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|LightGBM|full|1|0.556|0.556|-0.556|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|LightGBM|6|2|0.512|0.513|-0.512|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|LightGBM|12|2|0.512|0.513|-0.512|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|LightGBM|24|2|0.512|0.513|-0.512|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|LightGBM|full|2|0.512|0.513|-0.512|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|LightGBM|6|1|0.556|0.556|-0.556|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|LightGBM|12|1|0.556|0.556|-0.556|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|LightGBM|24|1|0.556|0.556|-0.556|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|LightGBM|full|1|0.556|0.556|-0.556|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Random forest|6|1|0.586|0.586|-0.586|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Random forest|12|1|0.586|0.586|-0.586|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Random forest|24|1|0.586|0.586|-0.586|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Random forest|full|1|0.586|0.586|-0.586|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Random forest|6|2|0.574|0.575|-0.574|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Random forest|12|2|0.574|0.575|-0.574|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Random forest|24|2|0.574|0.575|-0.574|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Random forest|full|2|0.574|0.575|-0.574|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Random forest|6|1|0.586|0.586|-0.586|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Random forest|12|1|0.586|0.586|-0.586|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Random forest|24|1|0.586|0.586|-0.586|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Random forest|full|1|0.586|0.586|-0.586|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Product ridge|6|1|0.221|0.221|-0.221|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Product ridge|12|1|0.221|0.221|-0.221|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Product ridge|24|1|0.221|0.221|-0.221|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Product ridge|full|1|0.221|0.221|-0.221|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Product ridge|6|2|0.325|0.341|-0.325|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Product ridge|12|2|0.325|0.341|-0.325|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Product ridge|24|2|0.325|0.341|-0.325|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Product ridge|full|2|0.325|0.341|-0.325|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Product ridge|6|1|1.542|1.542|-1.542|0.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Product ridge|12|1|1.542|1.542|-1.542|0.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Product ridge|24|1|1.542|1.542|-1.542|0.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Product ridge|full|1|1.542|1.542|-1.542|0.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Sector-first regression|6|1|0.061|0.061|0.061|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Sector-first regression|12|1|0.061|0.061|0.061|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Sector-first regression|24|1|0.061|0.061|0.061|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Sector-first regression|full|1|0.061|0.061|0.061|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Sector-first regression|6|2|0.208|0.254|-0.147|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Sector-first regression|12|2|0.208|0.254|-0.147|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Sector-first regression|24|2|0.208|0.254|-0.147|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|Sector-first regression|full|2|0.208|0.254|-0.147|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Sector-first regression|6|1|0.061|0.061|0.061|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Sector-first regression|12|1|0.061|0.061|0.061|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Sector-first regression|24|1|0.061|0.061|0.061|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|Sector-first regression|full|1|0.061|0.061|0.061|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|XGBoost|6|1|0.518|0.518|-0.518|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|XGBoost|12|1|0.518|0.518|-0.518|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|XGBoost|24|1|0.518|0.518|-0.518|1.00|
-|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|XGBoost|full|1|0.518|0.518|-0.518|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|XGBoost|6|2|0.470|0.472|-0.470|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|XGBoost|12|2|0.470|0.472|-0.470|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|XGBoost|24|2|0.470|0.472|-0.470|1.00|
+|Prospective: product-ridge-v2-3200ca1610c2d8e9|20th-to-20th|All historical products|XGBoost|full|2|0.470|0.472|-0.470|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|XGBoost|6|1|0.518|0.518|-0.518|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|XGBoost|12|1|0.518|0.518|-0.518|1.00|
 |Prospective: product-v3-6ebe4ddbf8e9c7bc|20th-to-20th|All historical products|XGBoost|24|1|0.518|0.518|-0.518|1.00|

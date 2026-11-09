@@ -1,0 +1,18 @@
+{
+  "forecast_id": "a8a8f9ed7157d16847c296d23c045d805b238f545def8575a12140e3b9bf5f88",
+  "model_version": "product-ridge-v2-3200ca1610c2d8e9",
+  "target_month": "2026-10",
+  "as_of": "2026-10-27T16:19:23.315902+08:00",
+  "variant": "twentieth",
+  "model": "random_forest",
+  "panel": "union",
+  "prediction": 0.13659685011388528,
+  "actual": 0.7,
+  "error": -0.5634031498861147,
+  "absolute_error": 0.5634031498861147,
+  "squared_error": 0.31742310930159584,
+  "actual_published_at": "2026-11-09T09:30:00+08:00",
+  "actual_source": "https://www.stats.gov.cn/sj/zxfb/202611/t20261109_1965794.html",
+  "actual_sha": "c100661cfbab14abc4b36413f439ec23bde9e6705a11e31dc61005b46792a6ff",
+  "realtime_status": "prospective"
+}
