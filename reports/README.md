@@ -8,7 +8,7 @@
 
 ⏳ **Awaiting the current month’s price releases. No current-month projection has been generated.**
 
-Report refreshed: 2026-11-13. Saved forecast timestamps are preserved.
+Report refreshed: 2026-11-14. Saved forecast timestamps are preserved.
 
 **October holiday imputation:** the cancelled 1–10 NBS period is estimated at the per-product arithmetic midpoint of September 21–30 and October 11–20. Results labelled Early month, Early + carry-in, and Two-survey period are reconstructed scenarios produced only after October 11–20 was published—not genuinely early-month forecasts. The 20th-to-20th estimates use observed prices only.
 

@@ -2,7 +2,7 @@
 
 **Target: 2026-11 · Headline PPI month-on-month change**
 
-Report refreshed: 2026-11-13T17:56:38.143789+08:00. Forecast timestamps remain fixed when inputs are unchanged.
+Report refreshed: 2026-11-14T17:19:52.694346+08:00. Forecast timestamps remain fixed when inputs are unchanged.
 
 Current-month price windows incorporated: **None yet**.
 
@@ -30,9 +30,9 @@ This is an uncalibrated circulation-market price index, **not an official PPI fo
 ## Awaiting data
 
 - 20th-to-20th: awaiting price release 2026-11:11-20.
-- Two-survey period: awaiting price release 2026-11:1-10.
-- Early month: awaiting price release 2026-11:1-10.
-- Early + carry-in: awaiting price release 2026-11:1-10.
+- Two-survey period: awaiting price release 2026-11:11-20.
+- Early month: awaiting price release 2026-10:1-10.
+- Early + carry-in: awaiting price release 2026-10:1-10.
 
 ## How to read the timings
 
