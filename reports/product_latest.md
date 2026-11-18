@@ -2,7 +2,7 @@
 
 **Target: 2026-11 · Headline PPI month-on-month change**
 
-Report refreshed: 2026-11-18T18:39:06.925280+08:00. Forecast timestamps remain fixed when inputs are unchanged.
+Report refreshed: 2026-11-18T18:39:18.558275+08:00. Forecast timestamps remain fixed when inputs are unchanged.
 
 Current-month price windows incorporated: **None yet**.
 
