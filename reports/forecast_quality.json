@@ -1,6 +1,6 @@
 {
   "forecast_month": "2026-10",
-  "checked_as_of": "2026-11-19T18:43:46.196207+08:00",
+  "checked_as_of": "2026-11-19T18:43:59.161263+08:00",
   "models": [
     {
       "model": "ridge",
