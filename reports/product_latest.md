@@ -2,9 +2,9 @@
 
 **Target: 2026-11 · Headline PPI month-on-month change**
 
-Report refreshed: 2026-11-23T19:09:01.798000+08:00. Forecast timestamps remain fixed when inputs are unchanged.
+Report refreshed: 2026-11-24T20:52:52.880754+08:00. Forecast timestamps remain fixed when inputs are unchanged.
 
-Current-month price windows incorporated: **None yet**.
+Current-month price windows incorporated: **11-20**.
 
 [Model explanations](../docs/METHODOLOGY.md) · [English product glossary](../docs/PRODUCTS.md) · [Attributions](attributions.md) · [Performance](product_candidates.md)
 
@@ -14,6 +14,14 @@ All values are predicted official PPI MoM percentages. A dash means that model/t
 
 | Model | 20th-to-20th | Two-survey period | Early month | Early + carry-in |
 |---|---:|---:|---:|---:|
+| XGBoost | -0.260% | — | — | — |
+| CatBoost | -0.396% | — | — | — |
+| LightGBM | -0.191% | — | — | — |
+| HistGradientBoosting | -0.155% | — | — | — |
+| Product ridge | -0.233% | — | — | — |
+| Random forest | -0.227% | — | — | — |
+| Sector-first regression | -0.162% | — | — | — |
+| Economic / ML hybrid (NBS prices) | -0.333% | — | — | — |
 
 ## Stable-product sensitivity
 
@@ -21,16 +29,21 @@ These models use only series with complete coverage in their training sample.
 
 | Model | 20th-to-20th | Two-survey period | Early month | Early + carry-in |
 |---|---:|---:|---:|---:|
+| XGBoost | -0.416% | — | — | — |
+| CatBoost | -0.337% | — | — | — |
+| LightGBM | -0.371% | — | — | — |
+| HistGradientBoosting | -0.344% | — | — | — |
+| Product ridge | -0.364% | — | — | — |
 
 ## Direct market-price tracker
 
 This is an uncalibrated circulation-market price index, **not an official PPI forecast**. It is excluded from forecast summaries.
 
+- 20th-to-20th: **-3.458%**.
 
 ## Awaiting data
 
-- 20th-to-20th: awaiting price release 2026-11:11-20.
-- Two-survey period: awaiting price release 2026-11:11-20.
+- Two-survey period: awaiting price release 2026-10:1-10.
 - Early month: awaiting price release 2026-10:1-10.
 - Early + carry-in: awaiting price release 2026-10:1-10.
 
@@ -49,6 +62,8 @@ Training-source coverage: 2014-01-01 to 2026-09-10. This is the fitted model's t
 
 | Price window | Publication time | Official source |
 |---|---|---|
+| 2026-10 / 11-20 | 2026-10-24 01:30:00+00:00 | [NBS release](https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261023_1965679.html) |
+| 2026-11 / 11-20 | 2026-11-24 01:30:00+00:00 | [NBS release](https://www.stats.gov.cn/sj/zxfb/202611/t20261123_1965935.html) |
 
 ## Forecast archive
 

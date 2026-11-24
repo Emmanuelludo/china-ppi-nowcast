@@ -6,17 +6,15 @@
 
 ## Current update: November 2026
 
-⏳ **Awaiting the current month’s price releases. No current-month projection has been generated.**
+Current-month forecasts are available below.
 
-Report refreshed: 2026-11-23. Saved forecast timestamps are preserved.
+Report refreshed: 2026-11-24. Saved forecast timestamps are preserved.
 
-**October holiday imputation:** the cancelled 1–10 NBS period is estimated at the per-product arithmetic midpoint of September 21–30 and October 11–20. Results labelled Early month, Early + carry-in, and Two-survey period are reconstructed scenarios produced only after October 11–20 was published—not genuinely early-month forecasts. The 20th-to-20th estimates use observed prices only.
+## Latest available forecasts: November 2026
 
-## Latest available forecasts: October 2026
+**20th-to-20th · 5 product-price estimators · Median -0.233% MoM**
 
-**20th-to-20th · 5 product-price estimators · Median +0.232% MoM**
-
-5 of 5 displayed models project an increase; 0 project a decline. The estimates span **+0.096% to +0.279%**. The median describes this model group; it is not a selected ensemble or a confidence interval.
+0 of 5 displayed models project an increase; 5 project a decline. The estimates span **-0.396% to -0.155%**. The median describes this model group; it is not a selected ensemble or a confidence interval.
 
 ![Forecast comparison](forecast_comparison.svg)
 
@@ -26,7 +24,7 @@ Report refreshed: 2026-11-23. Saved forecast timestamps are preserved.
 
 ## Robustness check
 
-Ridge changes by **0.009 percentage points** between the all-product and stable-product 20th-to-20th panels. This measures sensitivity to product coverage; read it alongside rolling forecast errors. Several live product changes exceed their fitted historical ranges.
+Ridge changes by **0.131 percentage points** between the all-product and stable-product 20th-to-20th panels. This measures sensitivity to product coverage; read it alongside rolling forecast errors. Several live product changes exceed their fitted historical ranges.
 
 [Read the forecast sense check, recent errors and all retained model estimates](forecast_quality.md)
 
