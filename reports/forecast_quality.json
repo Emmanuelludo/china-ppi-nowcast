@@ -1,6 +1,6 @@
 {
   "forecast_month": "2026-11",
-  "checked_as_of": "2026-11-24T20:53:02.380489+08:00",
+  "checked_as_of": "2026-11-25T19:39:33.114374+08:00",
   "models": [
     {
       "model": "random_forest",
