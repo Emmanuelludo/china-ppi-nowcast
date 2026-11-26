@@ -8,7 +8,7 @@
 
 Current-month forecasts are available below.
 
-Report refreshed: 2026-11-25. Saved forecast timestamps are preserved.
+Report refreshed: 2026-11-26. Saved forecast timestamps are preserved.
 
 ## Latest available forecasts: November 2026
 
