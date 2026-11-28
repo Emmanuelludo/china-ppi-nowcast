@@ -34,7 +34,7 @@ Baseline: **+0.0253 pp** · Forecast: **-0.396% MoM**
 | Forest products | -0.0036 |
 | Building materials | -0.0003 |
 
-[Full attribution record](../data/product/vintages/2026-11/4cbd9bab0a2e0a64762b/shap.json)
+[Full attribution record](../data/product/vintages/2026-11/96223c3f5df387d597eb/shap.json)
 
 ## HistGradientBoosting — 20th-to-20th
 
@@ -64,7 +64,7 @@ Baseline: **+0.0301 pp** · Forecast: **-0.155% MoM**
 | Petroleum and natural gas | +0.0196 |
 | Building materials | +0.0009 |
 
-[Full attribution record](../data/product/vintages/2026-11/53fe2617ef9d8a92010b/shap.json)
+[Full attribution record](../data/product/vintages/2026-11/61fd32a8db3e7fbc3f30/shap.json)
 
 ## LightGBM — 20th-to-20th
 
@@ -94,7 +94,7 @@ Baseline: **+0.0306 pp** · Forecast: **-0.191% MoM**
 | Petroleum and natural gas | -0.0036 |
 | Building materials | +0.0024 |
 
-[Full attribution record](../data/product/vintages/2026-11/95d4c7307a16d1cef962/shap.json)
+[Full attribution record](../data/product/vintages/2026-11/bba6ae7f477ba5fc169c/shap.json)
 
 ## Random forest — 20th-to-20th
 
@@ -124,7 +124,7 @@ Baseline: **+0.0382 pp** · Forecast: **-0.227% MoM**
 | Building materials | +0.0071 |
 | Forest products | -0.0026 |
 
-[Full attribution record](../data/product/vintages/2026-11/ac2bee06bbe2f2363a25/shap.json)
+[Full attribution record](../data/product/vintages/2026-11/40e9729aad8ec3c81043/shap.json)
 
 ## XGBoost — 20th-to-20th
 
@@ -154,4 +154,4 @@ Baseline: **+0.0241 pp** · Forecast: **-0.260% MoM**
 | Forest products | -0.0148 |
 | Building materials | +0.0021 |
 
-[Full attribution record](../data/product/vintages/2026-11/f8723cc108395abf077c/shap.json)
+[Full attribution record](../data/product/vintages/2026-11/fd7867e6bbbc4a1abb7b/shap.json)
